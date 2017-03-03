@@ -1,0 +1,105 @@
+/*-------------------------------------
+zTree Style
+业务底图的样式 需要依赖于ztreeStyle
+version:	3.5.19
+author:		zhangshuangshuang
+email:		wjshuang@yeah.net
+
+-------------------------------------*/
+.ztree li span.button.icon01_ico_docu,.ztree li span.button.icon01_ico_open,.ztree li span.button.icon01_ico_close{margin-right:2px;width:0px; height:0px;}
+/*图片样式的图例*/
+.ztree li span.button.icon03_ico_docu,.ztree li span.button.icon03_ico_open,.ztree li span.button.icon03_ico_close{margin:0px;width:0px; height:0px;}
+.ztree li a.legend-img{
+	display:inline-block;
+	width: 90%;
+	height: 100px;
+	overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+.ztree li a.legend-img img{height:100px;}
+/*图片样式的图例*/
+.ztree li span.button.noline_open,.ztree li span.button.noline_close{
+	background-image: url(./img/indexImg.png);
+	background-position: -39px 0;
+	margin-top: 3px;
+	margin-right: 10px;
+	width: 9pt;
+	height: 7px;
+	float: right;
+		transition: .1s;
+	transform: rotate(180deg);
+}
+.ztree li span.button.level0.noline_open,.ztree li span.button.level0.noline_close{margin-top: 17px;}
+.ztree li span.button.noline_close{
+	transform: rotate(0deg);
+}
+ul.ztree{background:none;    overflow-y: auto;}
+ul.ztree li.level0{border: 1px solid #eee;margin-top:6px; }
+.ztree li a.cursNode::before {
+    position: absolute;
+    z-index: -1;
+    color: #DDD;
+    font-size: 120px;
+    font-family: serif;
+    font-weight: bolder;
+    display: block;
+    width: 242px;
+    content: "";
+    background: #ddd;
+    height: 17px;
+    left: -10px;
+}
+.ztree li a.level0{
+	display: block;
+	padding-left: 10px;
+	height: 40px;
+	line-height: 40px;
+	
+}
+.ztree li a.level0 span{font-size: 14px;line-height: 34px;}
+.ztree li a.level0:hover{
+	background: #eaf1fb;
+	display: block;
+	padding-left: 10px;
+	height: 40px;
+	line-height: 40px;
+}
+.ztree li a:hover{
+	text-decoration:none;
+}
+.ztree li a.curSelectedNode{
+	background: none;
+	border: 0px solid #eee;
+	filter:alpha(opacity=100);
+	-moz-opacity:1;
+  -khtml-opacity:1;
+		 opacity:1;
+		 
+}
+.ztree li a.checkedNode{background: #eaf1fb;color: #4187e7;}
+
+.ztree li span.button.chk.checkbox_false_full,.ztree li span.button.chk.checkbox_false_full_focus,.ztree li span.button.chk.checkbox_true_full,.ztree li span.button.chk.checkbox_true_full_focus{
+	background-image: url(./img/indexImg.png);
+	background-position: -90px 0;
+	width:14px;
+	height:14px;
+}
+.ztree li span.button.chk.checkbox_true_full,.ztree li span.button.chk.checkbox_true_full_focus{
+	background-position: -78pt 0;
+}
+.ztree *{
+	font-size:13px;
+}
+.ztree li span.button.noline_docu{width:0px;}
+.ztree{padding:0px;}
+ul.ztree {
+    margin-top: 0px; 
+    border: 0px solid #617775;
+    /* width: 220px; */
+    /* height: 360px; */
+	width: 234px;
+    overflow-y: auto;
+}
+.ztree li.level1{padding: 4px 0px 4px 0px;}
+.ztree li span.button.ico_docu,.ztree li span.button.ico_open,.ztree li span.button.ico_close{background: none;width: 0px;}
