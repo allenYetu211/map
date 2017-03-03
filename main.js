@@ -32,15 +32,6 @@ require.config({
 });
 require(["map", "menutree", "floattool", "lefttool","drag","echarts","somoselect","statictable", "chart"],
 function(c, t, a, b, d,echarts,s,st,ch) {
-	console.log('c:', c, 
-	 't:',t,
-	 'a:',a,
-	 'b:',b,
-	 'd:',d,
-	 'echarts:', echarts,
-	 's:',s,
-	 'st:', st,
-	 'ch:',ch)
 	// console.log(ch)
 	c.loadMap("map","t");
 	t.initTree("ywdtTree");
