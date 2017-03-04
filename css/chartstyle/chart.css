@@ -317,38 +317,6 @@
     box-sizing:border-box;
     border-bottom:1px solid #E9E9E9;
 }
-.introduct h2{
-    font-size: 18px;
-    font-weight: bold;
-    padding:0px 0px 15px 0px;
-    color: #03538D;
-    letter-spacing: 0.64px;
-    border-bottom:2px solid #03538D;
-}
-.introduct table{
-    padding:10px 0px 0px 0px;
-}
-.introduct table tr{
-
-}
-.introduct table td:first-child{
-    width:120px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #222222;
-    letter-spacing: 0.64px;
-    line-height: 30px;
-    text-align: left;
-}
-.introduct table td:last-child{
-    width:240px;
-    font-size: 16px;
-    color: #949494;
-    letter-spacing: 0.57px;
-    line-height: 30px;
-    text-align: right;
-    
-}
 
 
 /************ RIGHT ************/
@@ -426,11 +394,24 @@
     display: flex;
     justify-content: space-between;
     line-height: 32px;
+    padding: 0 15px;
+}
+.typeText:first-child{
+    margin-top: 15px;
 }
 .typeText span:first-child {
-    font-weight: 800;
+    font-size: 14px;
+    font-weight: bold;
+    color: #222222;
+    letter-spacing: 0.64px;
+    line-height: 30px;
+    text-align: left;
 }
 
 .typeText span:last-child {
-    color:#999;
+    font-size: 12px;
+    color: #949494;
+    letter-spacing: 0.57px;
+    line-height: 30px;
+    text-align: right;
 }
