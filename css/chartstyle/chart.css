@@ -612,3 +612,12 @@
     border-left: 7px solid #0c1123;
     border-bottom: 8px solid transparent;
 }
+
+#left-sidebar.dark .typeText span:first-child ,#right-sidebar.dark .typeText span:first-child {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.64px;
+    line-height: 30px;
+    text-align: left;
+}
