@@ -271,8 +271,8 @@
     bottom: 0px;
     width: 400px;
     background-color:#fff;
-    overflow: scroll;
     box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+    // transition: transform 0.5s;
 }
 #left-sidebar .search{
     width: 400px;
@@ -327,8 +327,8 @@
     bottom: 0px;
     width: 400px;
     background-color:#fff;
-    overflow: scroll;
     box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+    // transition: transform 0.5s;
 }
 
 #right-sidebar .datetime{
@@ -414,4 +414,29 @@
     letter-spacing: 0.57px;
     line-height: 30px;
     text-align: right;
+}
+.openCloseSidebar-left{
+    position: absolute;
+    right:-20px;
+    width: 20px;
+    background: red;
+}
+
+.openCloseSidebar-right{
+    position: absolute;
+    left:-20px;
+    width: 20px;
+    background: red;
+}
+.left-cnj,.right-cng {
+    overflow:scroll;
+        overflow-x: hidden;
+}
+
+#left-sidebar.close {
+        transform: translate3d(-100%, 0,0);
+}
+
+#right-sidebar.close {
+        transform: translate3d(100%, 0,0);
 }
