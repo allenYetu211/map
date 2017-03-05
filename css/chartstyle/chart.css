@@ -221,7 +221,7 @@
     width: 400px;
     background-color:#fff;
     background-color:#f6f6f6;
-    overflow: scroll;
+    // overflow: scroll;
     box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
     // transition: transform 0.5s;
 }
@@ -281,7 +281,7 @@
     width: 400px;
     background-color:#fff;
     background-color:#f6f6f6;
-    overflow: scroll;
+    // overflow: scroll;
     box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
     // transition: transform 0.5s;
 }
@@ -383,9 +383,10 @@
     width: 20px;
     background: red;
 }
-.left-cnj,.right-cng {
+.left-cnj,.right-cnj {
     overflow:scroll;
         overflow-x: hidden;
+        height: 100%;
 }
 
 #left-sidebar.close {
