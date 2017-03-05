@@ -162,7 +162,7 @@
 #map-control{
     position: absolute;
     bottom: 20px;
-    right: 420px;
+    right: 440px;
     
     z-index: 999;
     
@@ -216,14 +216,15 @@
 #left-sidebar{
     position: absolute;
     left: 0;
-    top: 60px;
+    top: 0px;
     bottom: 0px;
     width: 400px;
+    height: 100%;
     background-color:#fff;
     background-color:#f6f6f6;
     // overflow: scroll;
     box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
-    // transition: transform 0.5s;
+    transition: transform 0.4s ease;
 }
 #left-sidebar .search{
     width: 400px;
@@ -276,14 +277,15 @@
 #right-sidebar {
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 0px;
     bottom: 0px;
     width: 400px;
+    height: 100%;
     background-color:#fff;
     background-color:#f6f6f6;
     // overflow: scroll;
     box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
-    // transition: transform 0.5s;
+    transition: transform 0.4s ease;
 }
 
 #right-sidebar .datetime{
@@ -372,27 +374,62 @@
 }
 .openCloseSidebar-left{
     position: absolute;
+    height: 100%;
     right:-20px;
     width: 20px;
-    background: red;
+    background: #fff;
+    border:0px;
+    border-left:1px solid #E9E9E9;
+    border-right:1px solid #E9E9E9;
+    outline:0;
+}
+.openCloseSidebar-left span{
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 8px solid transparent;
+    border-right: 7px solid #e9e9e9;
+    border-bottom: 8px solid transparent;
 }
 
 .openCloseSidebar-right{
     position: absolute;
     left:-20px;
     width: 20px;
-    background: red;
+    height: 100%;
+    background: #fff;
+    border:0px;
+    border-left:1px solid #E9E9E9;
+    border-right:1px solid #E9E9E9;
+    outline:0;
+}
+.openCloseSidebar-right span{
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 8px solid transparent;
+    border-left: 7px solid #e9e9e9;
+    border-bottom: 8px solid transparent;
 }
 .left-cnj,.right-cnj {
     overflow:scroll;
-        overflow-x: hidden;
-        height: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    padding-top:60px;
+    box-sizing:border-box;
+
 }
 
 #left-sidebar.close {
-        transform: translate3d(-100%, 0,0);
+    transform: translate3d(-100%, 0,0);
+}
+#left-sidebar.close span{
+    transform: rotate(180deg);
 }
 
 #right-sidebar.close {
-        transform: translate3d(100%, 0,0);
+    transform: translate3d(100%, 0,0);
+}
+#right-sidebar.close span{
+    transform: rotate(180deg);
 }
