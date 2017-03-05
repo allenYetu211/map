@@ -178,6 +178,36 @@
     background:#fff;
     outline:0;
     box-shadow: 0 2px 24px 0 rgba(0,0,0,0.23);
+    cursor:pointer;
+}
+.zoom button:hover{
+    background:#f6f6f6;
+}
+.switch button{
+    width: 40px;
+    height: 40px;
+    display: block;
+    box-sizing:border-box;
+    padding:3px;
+    overflow: hidden;
+    border:0;
+    outline:0;
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.23);
+    cursor:pointer;
+}
+.switch button.map1{
+    background:url(../../images/chart/mapmode1.png) #fff;
+}
+.switch button.map2{
+    background:url(../../images/chart/mapmode2.png) #fff;
+}
+.switch button img{
+    width: 34px;
+    height: 34px;
+}
+.switch button.active:after{
+    content:'<span></span>'
+    background-image:url(../../images/chart/icon_right.png);
 }
 
 
