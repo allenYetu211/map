@@ -320,11 +320,22 @@
 }
 #right-sidebar .information,
 #left-sidebar  .information {
-        // display: flex;
-        // flex-wrap: wrap;
         box-sizing:border-box;
         float: left;
+        position: relative;
 
+}
+#right-sidebar .information a,
+#left-sidebar  .information a {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    z-index: 99999;
+    background: url('../../images/chart/icon_link.png');
+    background-size: 100% 100%;
 }
 .information:after {
         content: '';
@@ -432,10 +443,88 @@
     transform: rotate(180deg);
 }
 
+
+/************ LEFT ************/
 #left-sidebar.dark{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0px;
+    width: 400px;
+    height: 100%;
     background:#202131;
+    // overflow: scroll;
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+    transition: transform 0.4s ease;
 }
 
-#right-sidebar.dark{
+#left-sidebar.dark .search{
+    width: 400px;
+    height: 60px;
+    background-color:#f6f6f6;
+    border-bottom:1px solid #0c1123;
+}
+#left-sidebar.dark .search img{
+    padding:18px 18px 18px 18px;
+    float: left;
+    width:60px;
+    height: 60px;
+    background-color:#202131;
+    box-sizing:border-box;
+}
+
+#left-sidebar.dark .search input.searchbar{
+    font-size: 18px;
+    color: #222222;
+    background-color:#202131;
+    line-height: 40px;
+    width: 260px;
+    padding:10px 0px;
+    border:0px;
+    margin:0;
+    float: left;
+    outline:0;
+}
+#left-sidebar.dark .search button{
+    float: right;
+    width: 80px;
+    height:60px;
     background:#202131;
+    font-size: 18px;
+    font-weight: bold;
+    color: #03538D;
+    letter-spacing: 5px;
+    text-align: center;
+    border:0;
+    cursor:pointer;
+    outline:0;
+}
+#left-sidebar.dark .introduct{
+    width: 400px;
+    padding:20px;
+    box-sizing:border-box;
+    border-bottom:1px solid #E9E9E9;
+}
+
+
+/************ RIGHT ************/
+#right-sidebar.dark{
+    position: absolute;
+    right: 0;
+    top: 0px;
+    bottom: 0px;
+    width: 400px;
+    height: 100%;
+    background:#202131;
+    // overflow: scroll;
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+    transition: transform 0.4s ease;
+}
+
+#left-sidebar.dark .type-big,#left-sidebar.dark .type-middle,#right-sidebar.dark .type-big,#right-sidebar.dark .type-middle{
+    min-height: 270px;
+    overflow-y: auto;
+    box-shadow:0px 0px 1px #0c1123;
+    box-sizing:border-box;
+    // background-color:red;
 }
