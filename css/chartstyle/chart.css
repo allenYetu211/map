@@ -189,12 +189,9 @@
     top: 60px;
     bottom: 0px;
     width: 400px;
-<<<<<<< HEAD
     background-color:#fff;
-=======
     background-color:#f6f6f6;
     overflow: scroll;
->>>>>>> e4c092d9e24ec91fce877277faaf752828a62b76
     box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
     // transition: transform 0.5s;
 }
@@ -252,12 +249,9 @@
     top: 60px;
     bottom: 0px;
     width: 400px;
-<<<<<<< HEAD
     background-color:#fff;
-=======
     background-color:#f6f6f6;
     overflow: scroll;
->>>>>>> e4c092d9e24ec91fce877277faaf752828a62b76
     box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
     // transition: transform 0.5s;
 }
