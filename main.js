@@ -17,6 +17,8 @@ require.config({
 		"point2":"tool/point2",
 		"pie":"tool/pie",
 		"drag": "tool/drag",
+		"config":"tool/config",
+		"bar":"tool/bar",
 		"somoselect":"tool/somoselect",
 		"statictable":"tool/statictable",
 		"staticchart":"tool/staticchart",
@@ -34,22 +36,22 @@ require(["map", "menutree", "floattool", "lefttool","drag","echarts","somoselect
 function(c, t, a, b, d,echarts,s,st,ch) {
 	// console.log(ch)
 	c.loadMap("map","t");
-	t.initTree("ywdtTree");
+	// t.initTree("ywdtTree");
 	b.initEvent();
 	a.loadFloatTool()
-	d.dragBox("box",function(e){
-		console.log(e.width());
-		console.log(e.height());
-		console.log(e);
-		var $o = e[0], $img = e.find("img");
-		$img.css({width: e.width(),
-		height:e.height()});
-		console.log()
-	});
-	d.dragBox("main_table",function(e){
-	});
-	d.dragBox("main_char",function(e){
-	});
+	// d.dragBox("box",function(e){
+	// 	console.log(e.width());
+	// 	console.log(e.height());
+	// 	console.log(e);
+	// 	var $o = e[0], $img = e.find("img");
+	// 	$img.css({width: e.width(),
+	// 	height:e.height()});
+	// 	console.log()
+	// });
+	// d.dragBox("main_table",function(e){
+	// });
+	// d.dragBox("main_char",function(e){
+	// });
 	
 	
 });
