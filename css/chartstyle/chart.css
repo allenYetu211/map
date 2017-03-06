@@ -86,11 +86,12 @@
 }
 #top-sidebar .toolbar button span{
     margin-left: 4px;
+    margin-right: 4px;
     font-size: 14px;
 
 }
 #top-sidebar .toolbar button:hover{
-    width:125px;
+    width:130px;
 }
 
 #top-sidebar .phase {
@@ -392,7 +393,7 @@
 #left-sidebar  .information a {
     position: absolute;
     right: 15px;
-    top: 5px;
+    top: 14px;
     display: block;
     width: 14px;
     height: 14px;
@@ -426,7 +427,7 @@
     padding: 0 15px;
 }
 .typeText:first-child{
-    margin-top: 15px;
+    margin-top: 32px;
 }
 .typeText span:first-child {
     font-size: 14px;
@@ -521,19 +522,12 @@
     padding:10px 0px;
 }
 #top-sidebar.dark .toolbar{
-    position: absolute;
-    width: 100px;
-    height: 60px;
-    right: 400px;
+    
 }
 #top-sidebar.dark .toolbar button{
-    width: 100px;
-    height: 30px;
-    box-shadow:0px 0px 1px #202131;
-    border:0;
+    border-left: 1px solid #202131;
     color:#fff;
     background:#0c1123;
-    outline:0;
 }
 #top-sidebar.dark .toolbar button:hover{
     background:#0c1123;
@@ -550,6 +544,17 @@
     right: 0;
     border-left: 1px solid #202131;
     border-right: 1px solid #202131;
+}
+#top-sidebar.dark .phase  button.prev-button span{
+    border-top: 12px solid transparent;
+    border-right: 14px solid #ffffff;
+    border-bottom: 12px solid transparent;
+}
+
+#top-sidebar.dark .phase  button.next-button span{
+    border-top: 12px solid transparent;
+    border-left: 14px solid #ffffff;
+    border-bottom: 12px solid transparent;
 }
 /************ LEFT ************/
 #left-sidebar.dark{
