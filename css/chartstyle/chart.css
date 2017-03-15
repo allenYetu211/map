@@ -418,7 +418,7 @@
     overflow-y: auto;
     box-shadow:0px 0px 1px #E9E9E9;
     box-sizing:border-box;
-    // background-color:red;
+    /*background-color:red;*/
 }
 
 .typeText{
@@ -446,6 +446,10 @@
     line-height: 30px;
     text-align: right;
 }
+.typeText span.highlighted {
+    color: #fff;
+}
+
 .openCloseSidebar-left{
     position: absolute;
     height: 100%;
