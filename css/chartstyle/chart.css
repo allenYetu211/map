@@ -219,15 +219,21 @@ body {
     right: 440px;
     z-index: 999;
 }
-
-.zoom {
+#map-control .tools {
+    width: 50px;
+    position: absolute;
+    top: -240px;
+    right: 0;
+}
+#map-control .zoom {
     width: 50px;
     position: absolute;
     top: -120px;
     right: 0;
 }
 
-.zoom button {
+#map-control .zoom button,
+#map-control .tools button {
     width: 50px;
     height: 50px;
     display: block;
@@ -242,7 +248,8 @@ body {
     cursor: pointer;
 }
 
-.zoom button:hover {
+#map-control .zoom button:hover,
+#map-control .tools button:hover {
     background: #f6f6f6;
 }
 
@@ -799,19 +806,21 @@ body {
 
 .CatalogPopup {
     position: absolute;
-    top: 100px;
-    right: 500px;
+    top: 80px;
+    right: 440px;
     width: 300px;
-    padding: 20px 0;
+    padding-bottom: 20px;
     background-color: #fff;
     z-index: -999;
     display: none;
+    color:#fff;
 }
 
 .CatalogPopup.open {
     z-index: 999;
     display: block;
-    background-color: rgba(255, 255, 255, 0.9)
+    background: rgba(27,34,65,0.90);
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
 }
 
 #CatalogPopup-ul>li {
@@ -824,9 +833,9 @@ body {
 }
 
 #CatalogPopup-ul>li>.catalogParse {
-    color: #03538D;
+    color: #0088EB;
     font-size: 14px;
-    border: 1px solid #E9E9E9;
+    border: 1px solid #0c1123;
     border-right: none;
     border-left: none;
     font-weight: 700;
@@ -838,19 +847,9 @@ body {
     /*display: none;*/
 }
 
-#CatalogPopup-ul>li>ul ._option {
-    margin-left: 10px;
-    width: 0;
-    height: 0;
-    display: inline-block;
-    border-left: 3px solid transparent;
-    border-top: 4px solid #C4C4C4;
-    border-right: 3px solid transparent;
-}
-
 #CatalogPopup-ul>li>ul>li {
     font-size: 12px;
-    color: #222222;
+    color: #fff;
 }
 
 #CatalogPopup-ul>li>ul>ul {
@@ -858,20 +857,30 @@ body {
 }
 
 .BaseMap {
-    padding: 0 20px 20px 20px;
-    font-size: 18px;
-    font-weight: 600;
+    height:60px;
+    box-sizing:border-box;
+    padding:16px;
+    
 }
-
-._option {
-    margin-left: 10px;
-    width: 0;
-    height: 0;
+.BaseMap img{
+    width:26px;
+    vertical-align: middle;
+}
+.BaseMap span{
+    font-size: 14px;
+    color:#fff;
+    margin-left:10px;
+}
+.js_ontp span{
     display: inline-block;
-    border-left: 6px solid transparent;
-    border-top: 7px solid #03538D;
-    border-right: 6px solid transparent;
-    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    box-sizing:border-box;
+    padding:5px;
+}
+.js_ontp span img{
+    width:14px;
+    vertical-align: middle;
 }
 
 .right-options {
