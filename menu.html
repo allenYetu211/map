@@ -182,14 +182,8 @@
 
 
 
-    <div id="top-sidebar" clas s="dark">
-        <div class="formData" style="display: flex">
+    <div id="top-sidebar" class="dark">
 
-            <input class="mapUser" type="text"></input>
-            <input class="mapPasw" type="password"></input>
-
-            <button type="button" class="_login">登陆</button>
-        </div>
         <div class="logo"><img src="images/chart/logodark@2x.png" alt=""></div>
         <div class="toolbar">
             <button type="button" class="line"><img src="images/chart/icon_line@2x.png" alt=""><span>红线比选</span></button>
@@ -207,7 +201,32 @@
             <div id="Day"></div>
         </div> -->
     </div>
-    <div id="left-sidebar" class="dark">
+
+    <div class="formData">
+        <h2><img src="images/chart/logo@2x.png" alt=""></h2>
+        <div class="user">
+            <label for="">用户名</label>
+            <input class="mapUser" type="text" placeholder="请输入用户名"></input>
+
+        </div>
+        <div class="pasw">
+            <label for="">密码</label>
+            <input class="mapPasw" type="password" placeholder="请输入密码"></input>
+
+        </div>
+        <div class="login_informations">
+
+            <button type="button" class="_login">登陆</button>
+            <button type="button" class="_close">取消</button>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div id="left-sidebar" class="dark close">
         <button class="openCloseSidebar-left" type="button"><span></span></button>
         <div class="left-cnj">
 
@@ -251,7 +270,13 @@
             </table>
         </div> -->
     </div>
-    <div id="right-sidebar" class="dark">
+    <div id="right-sidebar" class="dark close">
+        <div class="CatalogPopup">
+            <div class="BaseMap">
+                底图加载
+            </div>
+            <ul id="CatalogPopup-ul"></ul>
+        </div>
         <button class="openCloseSidebar-right" type="button"><span></span></button>
         <div class="right-cnj"></div>
         <div id="map-control">
@@ -268,6 +293,10 @@
                 <button id="img_type" class="map2 "></button>
             </div>
         </div>
+
+        <!-- 显示列表-->
+
+
         <!--   <div class="chart_type_1"><img src="images/chart/chart_type_1_1.png" alt=""></div>
         <div class="chart_type_1"><img src="images/chart/chart_type_1_2.png" alt=""></div>
         <div class="chart_type_2"><img src="images/chart/chart_type_2_1.png" alt=""></div>
@@ -276,6 +305,10 @@
         <div class="chart_type_3"><img src="images/chart/chart_type_3_2.png" alt=""></div>
         <div class="chart_type_3"><img src="images/chart/chart_type_3_3.png" alt=""></div>
         <div class="chart_type_2"><img src="images/chart/chart_type_2_2.png" alt=""></div> -->
+    </div>
+    <div class="popupMenuInformation">
+        <div class="close"></div>
+        <div class="popupMenuInformation-child"></div>
     </div>
 </body>
 
