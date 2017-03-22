@@ -117,8 +117,6 @@ body {
     height: 60px;
     display: flex;
     left:400px;
-    border-left: 1px solid #0c1123;
-    border-right: 1px solid #0c1123;
 }
 
 #top-sidebar .phase button {
@@ -217,7 +215,7 @@ body {
     position: absolute;
     bottom: 20px;
     right: 440px;
-    z-index: 999;
+    z-index: 990;
 }
 #map-control .tools {
     width: 50px;
@@ -508,8 +506,8 @@ body {
     padding: 0 15px;
 }
 
-.typeText:first-child {
-    margin-top: 32px;
+.typeTexttitle {
+    margin:10px 15px;
 }
 
 .typeText span:first-child {
@@ -629,21 +627,20 @@ body {
 #top-sidebar.dark .toolbar button:hover {
     background: #0c1123;
 }
-
 #top-sidebar.dark .phase h4 {
     color: #fff;
 }
 
 #top-sidebar.dark .phase button.prev-button {
     left: 0;
-    border-right: 1px solid #151E3E;
-    border-left: 1px solid #151E3E;
+    border-right: 1px solid #0c1123;
+    border-left: 1px solid #0c1123;
 }
 
 #top-sidebar.dark .phase button.next-button {
     right: 0;
-    border-left: 1px solid #151E3E;
-    border-right: 1px solid #151E3E;
+    border-left: 1px solid #0c1123;
+    border-right: 1px solid #0c1123;
 }
 
 #top-sidebar.dark .phase button.prev-button span {
@@ -710,7 +707,7 @@ body {
     background: #1B2341;
     font-size: 18px;
     font-weight: bold;
-    color: #03538D;
+    color: #0088EB;
     letter-spacing: 5px;
     text-align: center;
     border: 0;
@@ -793,7 +790,10 @@ body {
     border-left: 7px solid #0c1123;
     border-bottom: 8px solid transparent;
 }
-
+#left-sidebar.dark .typeTexttitle,
+#right-sidebar.dark .typeTexttitle {
+    color: #fff;
+}
 #left-sidebar.dark .typeText span:first-child,
 #right-sidebar.dark .typeText span:first-child {
     font-size: 14px;
@@ -803,7 +803,9 @@ body {
     line-height: 30px;
     text-align: left;
 }
-
+.dark .CatalogPopup{
+    color:#fff;
+}
 .CatalogPopup {
     position: absolute;
     top: 80px;
@@ -813,10 +815,15 @@ body {
     background-color: #fff;
     z-index: -999;
     display: none;
-    color:#fff;
+    color:#222;
 }
-
 .CatalogPopup.open {
+    z-index: 999;
+    display: block;
+    background: rgba(255,255,255,0.90);
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+}
+.dark .CatalogPopup.open {
     z-index: 999;
     display: block;
     background: rgba(27,34,65,0.90);
@@ -831,8 +838,16 @@ body {
 #CatalogPopup-ul li {
     list-style: none;
 }
-
-#CatalogPopup-ul>li>.catalogParse {
+.CatalogPopup #CatalogPopup-ul>li>.catalogParse {
+    color: #0088EB;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+    border-left: none;
+    font-weight: 700;
+    padding: 0 15px;
+}
+.dark .CatalogPopup #CatalogPopup-ul>li>.catalogParse {
     color: #0088EB;
     font-size: 14px;
     border: 1px solid #0c1123;
@@ -849,7 +864,6 @@ body {
 
 #CatalogPopup-ul>li>ul>li {
     font-size: 12px;
-    color: #fff;
 }
 
 #CatalogPopup-ul>li>ul>ul {
@@ -868,8 +882,15 @@ body {
 }
 .BaseMap span{
     font-size: 14px;
-    color:#fff;
     margin-left:10px;
+}
+.BaseMap button{
+    float: right;
+    background:transparent;
+    border:0px;
+    color: #0088EB;
+    line-height:24px;
+    cursor:pointer;
 }
 .js_ontp span{
     display: inline-block;
