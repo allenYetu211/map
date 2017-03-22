@@ -3,6 +3,7 @@ require.config({
     baseUrl: "lib",
     paths: {
         "jquery": "jquery/jquery-1.11.1.min",
+        // "jquery": "jquery/jquery-3.1.1.min",
         "leaflet": "leaflet/leaflet",
         "map": "leaflet/map",
         "ztree": "ztree/jquery.ztree.all",
