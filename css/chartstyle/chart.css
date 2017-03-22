@@ -916,6 +916,18 @@ body {
     padding: 30px;
     width: 400px;
     height: 370px;
+    background-color: #fff;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.formData.dark {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 30px;
+    width: 400px;
+    height: 370px;
     background-color: #151E3E;
     z-index: 999;
     top: 50%;
@@ -931,7 +943,7 @@ body {
     width: 100%;
 }
 
-.formData label {
+.formData.dark label {
     display: block;
     font-size: 14px;
     color: #fff;
@@ -939,8 +951,16 @@ body {
     letter-spacing: 0.16px;
     text-indent:5px;
 }
+.formData label{
+    display: block;
+    font-size: 14px;
+    margin-bottom:7px;
+    letter-spacing: 0.16px;
+    text-indent:5px;
+    color:#222;
+}
 
-.formData input {
+.formData.dark input {
     display: block;
     box-sizing: border-box;
     padding: 5px 10px;
@@ -951,6 +971,18 @@ body {
     line-height: 44px;
     font-size: 14px;
     color:#fff;
+}
+.formData input{
+    background: #e0e0e0;
+    color:#222;
+    display: block;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    width: 100%;
+    border: none;
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
 }
 
 div.login_informations {
@@ -986,20 +1018,60 @@ div.login_informations button._close {
     top: 0;
     transform: translateX(-50%);
     box-sizing: border-box;
-    width: 300px;
-    background-color: #fff;
-    padding: 20px;
+    width: 240px;
+    background: rgba(255,255,255,0.90);
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+    padding: 12px;
+    font-size: 12px;
     z-index: 998;
     display: none;
+    color: #222;
+    border-radius:4px;
+}
+.popupMenuInformation:before{
+    content:"";
+    width:0px;
+    height:0px;
+    position: absolute;
+    top: -7px;
+    right: 47%;
+    border-bottom: 7px solid rgba(255,255,255,0.90);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+
+.popupMenuInformation.dark{
+    background: rgba(27,34,65,0.90);
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+    color: #fff;
+}
+.popupMenuInformation.dark:before{
+    content:"";
+    width:0px;
+    height:0px;
+    position: absolute;
+    top: -7px;
+    right: 47%;
+    border-bottom: 7px solid rgba(27,34,65,0.90);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
 }
 
 .popupMenuInformation.open {
     display: block;
 }
+.popupMenuInformation .popupClose{
+    
+}
+.popupMenuInformation .popupClose img{
+    width: 14px;
+    float: right;
+    vertical-align: middle;
+}
 
 .popupMenuInformation div span:first-child {
     font-size: 12px;
-    color: #222;
+    
 }
 
 .popupMenuInformation div span:last-child {
