@@ -116,7 +116,7 @@ body {
     width: 400px;
     height: 60px;
     display: flex;
-    left:400px;
+    left: 400px;
 }
 
 #top-sidebar .phase button {
@@ -217,12 +217,14 @@ body {
     right: 440px;
     z-index: 990;
 }
+
 #map-control .tools {
     width: 50px;
     position: absolute;
     top: -240px;
     right: 0;
 }
+
 #map-control .zoom {
     width: 50px;
     position: absolute;
@@ -461,6 +463,7 @@ body {
     background: url('../../images/chart/icon_link.png');
     background-size: 100% 100%;
 }
+
 #right-sidebar .information button,
 #left-sidebar .information button {
     position: absolute;
@@ -470,8 +473,8 @@ body {
     width: 14px;
     height: 14px;
     z-index: 9;
-    border:0px;
-    outline:0;
+    border: 0px;
+    outline: 0;
     background: url(../../images/chart/icon_mapdata.png);
     background-size: 100% 100%;
 }
@@ -507,7 +510,7 @@ body {
 }
 
 .typeTexttitle {
-    margin:10px 15px;
+    margin: 10px 15px;
 }
 
 .typeText span:first-child {
@@ -627,6 +630,7 @@ body {
 #top-sidebar.dark .toolbar button:hover {
     background: #0c1123;
 }
+
 #top-sidebar.dark .phase h4 {
     color: #fff;
 }
@@ -790,10 +794,12 @@ body {
     border-left: 7px solid #0c1123;
     border-bottom: 8px solid transparent;
 }
+
 #left-sidebar.dark .typeTexttitle,
 #right-sidebar.dark .typeTexttitle {
     color: #fff;
 }
+
 #left-sidebar.dark .typeText span:first-child,
 #right-sidebar.dark .typeText span:first-child {
     font-size: 14px;
@@ -803,9 +809,11 @@ body {
     line-height: 30px;
     text-align: left;
 }
-.dark .CatalogPopup{
-    color:#fff;
+
+.dark .CatalogPopup {
+    color: #fff;
 }
+
 .CatalogPopup {
     position: absolute;
     top: 80px;
@@ -815,19 +823,21 @@ body {
     background-color: #fff;
     z-index: -999;
     display: none;
-    color:#222;
+    color: #222;
 }
+
 .CatalogPopup.open {
     z-index: 999;
     display: block;
-    background: rgba(255,255,255,0.90);
-    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.20);
 }
+
 .dark .CatalogPopup.open {
     z-index: 999;
     display: block;
-    background: rgba(27,34,65,0.90);
-    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+    background: rgba(27, 34, 65, 0.90);
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.20);
 }
 
 #CatalogPopup-ul>li {
@@ -838,6 +848,7 @@ body {
 #CatalogPopup-ul li {
     list-style: none;
 }
+
 .CatalogPopup #CatalogPopup-ul>li>.catalogParse {
     color: #0088EB;
     font-size: 14px;
@@ -847,6 +858,7 @@ body {
     font-weight: 700;
     padding: 0 15px;
 }
+
 .dark .CatalogPopup #CatalogPopup-ul>li>.catalogParse {
     color: #0088EB;
     font-size: 14px;
@@ -871,36 +883,40 @@ body {
 }
 
 .BaseMap {
-    height:60px;
-    box-sizing:border-box;
-    padding:16px;
-    
+    height: 60px;
+    box-sizing: border-box;
+    padding: 16px;
 }
-.BaseMap img{
-    width:26px;
+
+.BaseMap img {
+    width: 26px;
     vertical-align: middle;
 }
-.BaseMap span{
+
+.BaseMap span {
     font-size: 14px;
-    margin-left:10px;
+    margin-left: 10px;
 }
-.BaseMap button{
+
+.BaseMap button {
     float: right;
-    background:transparent;
-    border:0px;
+    background: transparent;
+    border: 0px;
     color: #0088EB;
-    line-height:24px;
-    cursor:pointer;
+    line-height: 24px;
+    cursor: pointer;
 }
-.js_ontp span{
+
+.js_ontp span {
     display: inline-block;
     width: 24px;
     height: 24px;
-    box-sizing:border-box;
-    padding:5px;
+    box-sizing: border-box;
+    padding: 5px;
 }
-.js_ontp span img{
-    width:14px;
+
+.js_ontp span img {
+    width: 14px;
     vertical-align: middle;
 }
 
@@ -922,6 +938,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .formData.dark {
     position: absolute;
     box-sizing: border-box;
@@ -947,17 +964,18 @@ body {
     display: block;
     font-size: 14px;
     color: #fff;
-    margin-bottom:7px;
+    margin-bottom: 7px;
     letter-spacing: 0.16px;
-    text-indent:5px;
+    text-indent: 5px;
 }
-.formData label{
+
+.formData label {
     display: block;
     font-size: 14px;
-    margin-bottom:7px;
+    margin-bottom: 7px;
     letter-spacing: 0.16px;
-    text-indent:5px;
-    color:#222;
+    text-indent: 5px;
+    color: #222;
 }
 
 .formData.dark input {
@@ -970,11 +988,12 @@ body {
     height: 44px;
     line-height: 44px;
     font-size: 14px;
-    color:#fff;
+    color: #fff;
 }
-.formData input{
+
+.formData input {
     background: #e0e0e0;
-    color:#222;
+    color: #222;
     display: block;
     box-sizing: border-box;
     padding: 5px 10px;
@@ -988,7 +1007,7 @@ body {
 div.login_informations {
     display: flex;
     justify-content: center;
-    margin-top:36px;
+    margin-top: 36px;
 }
 
 div.login_informations button {
@@ -1019,40 +1038,42 @@ div.login_informations button._close {
     transform: translateX(-50%);
     box-sizing: border-box;
     width: 240px;
-    background: rgba(255,255,255,0.90);
-    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.20);
     padding: 12px;
     font-size: 12px;
     z-index: 998;
     display: none;
     color: #222;
-    border-radius:4px;
+    border-radius: 4px;
 }
-.popupMenuInformation:before{
-    content:"";
-    width:0px;
-    height:0px;
+
+.popupMenuInformation:before {
+    content: "";
+    width: 0px;
+    height: 0px;
     position: absolute;
     top: -7px;
     right: 47%;
-    border-bottom: 7px solid rgba(255,255,255,0.90);
+    border-bottom: 7px solid rgba(255, 255, 255, 0.90);
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
 }
 
-.popupMenuInformation.dark{
-    background: rgba(27,34,65,0.90);
-    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.20);
+.popupMenuInformation.dark {
+    background: rgba(27, 34, 65, 0.90);
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.20);
     color: #fff;
 }
-.popupMenuInformation.dark:before{
-    content:"";
-    width:0px;
-    height:0px;
+
+.popupMenuInformation.dark:before {
+    content: "";
+    width: 0px;
+    height: 0px;
     position: absolute;
     top: -7px;
     right: 47%;
-    border-bottom: 7px solid rgba(27,34,65,0.90);
+    border-bottom: 7px solid rgba(27, 34, 65, 0.90);
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
 }
@@ -1060,10 +1081,10 @@ div.login_informations button._close {
 .popupMenuInformation.open {
     display: block;
 }
-.popupMenuInformation .popupClose{
-    
-}
-.popupMenuInformation .popupClose img{
+
+.popupMenuInformation .popupClose {}
+
+.popupMenuInformation .popupClose img {
     width: 14px;
     float: right;
     vertical-align: middle;
@@ -1071,7 +1092,6 @@ div.login_informations button._close {
 
 .popupMenuInformation div span:first-child {
     font-size: 12px;
-    
 }
 
 .popupMenuInformation div span:last-child {
@@ -1079,3 +1099,44 @@ div.login_informations button._close {
     float: right;
     color: #0088EB;
 }
+
+
+/**
+*   information control panel styleCss   START
+**/
+
+#controlPanel {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    background-color: #fff;
+    z-index: 99;
+}
+
+#controlPanel .cp-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 15px;
+    border-top: 5px solid #0088EB;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#controlPanel .cp-information {
+    display: flex;
+    height: 100%;
+    background-color: #fff;
+}
+
+#controlPanel .cp-leftList {
+    background: #F7F7F7;
+    width: 280px;
+}
+
+
+/**
+*   information control panel styleCss   END
+**/
