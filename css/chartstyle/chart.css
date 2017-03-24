@@ -451,8 +451,8 @@ body {
     display: none;
 }
 
-#right-sidebar .information a,
-#left-sidebar .information a {
+#right-sidebar .information button.introduceButton,
+#left-sidebar .information button.introduceButton {
     position: absolute;
     right: 15px;
     top: 14px;
@@ -1107,12 +1107,20 @@ div.login_informations button._close {
 
 #controlPanel {
     position: absolute;
-    left: 10%;
-    right: 10%;
-    top: 10%;
-    bottom: 10%;
+    top: 50%;
+    left: 50%;
+    width: 1020px;
+    min-height: 500px;
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     background-color: #fff;
-    z-index: 99;
+    z-index: 9999;
+    display: none;
+}
+
+#controlPanel.open {
+    display: block;
 }
 
 #controlPanel .cp-title {
@@ -1133,7 +1141,16 @@ div.login_informations button._close {
 
 #controlPanel .cp-leftList {
     background: #F7F7F7;
-    width: 280px;
+    width: 170px;
+}
+
+#controlPanel .cp-leftList li {
+    padding: 0 20px;
+    list-style: none;
+}
+
+#controlPanel .cp-rightIntroduce {
+    flex: 1;
 }
 
 
