@@ -1144,6 +1144,10 @@ div.login_informations button._close {
     width: 170px;
 }
 
+#controlPanel .cp-leftList>ul div:first-child {
+    border-left: 5px solid #0088EB;
+}
+
 #controlPanel .cp-leftList li {
     padding: 0 20px;
     list-style: none;
@@ -1151,6 +1155,134 @@ div.login_informations button._close {
 
 #controlPanel .cp-rightIntroduce {
     flex: 1;
+}
+
+.draw-chart {
+    display: flex;
+}
+
+.draw-chart>div {
+    flex: 1;
+    margin: 5px;
+}
+
+.cp-pointer {
+    display: none;
+}
+
+._dataGet .selectField {
+    display: flex;
+    justify-content: row;
+    align-items: center;
+}
+
+._dataGet .selectField .selcetInfo {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+}
+
+._dataGet .selectField .selcetInfo .select_cf {
+    margin: 5px 10px;
+    padding: 3px 15px;
+    border-radius: 10px;
+    background-color: #0088EB;
+    color: #fff;
+}
+
+._dataGet .selectField .filed {
+    width: 100px;
+}
+
+._dataGet .selectField .addFiled {
+    width: 50px;
+}
+
+._dataGet .select .bg-color {
+    background-color: #C4C4C4;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+._dataGet .condition {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+._dataGet .condition .filedState {
+    dispaly: flex;
+    align-items: center;
+}
+
+._dataGet .condition .filedState {
+    display: flex;
+    align-items: center;
+}
+
+._dataGet .condition .filedState .filedCondition {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+._dataGet .condition .filedState .filedCondition div {
+    padding: 0px 5px;
+}
+
+._dataGet .condition .filedState .filedCondition div.active {
+    background-color: #0098Ec;
+    color: #0058EB;
+}
+
+._dataGet .condition .filedState .fileReverse {
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+._dataGet .addRuleValue {
+    display: flex;
+    background: #8aebb3;
+    border-radius: 5px;
+}
+
+._dataGet .addRuleValue div {}
+
+._dataGet .addRuleValue div:first-child {
+    border-right: 1px solid #fff;
+}
+
+._dataGet .selectGetDataButton {
+    display: flex;
+}
+
+.selectGetDataButton div {
+    color: #0088EB;
+    margin-right: 10px;
+    border: 1px solid #0088EB;
+    padding: 10px 12px;
+}
+
+._dataGet .addFiled {
+    position: relative;
+    background: #fff;
+}
+
+._dataGet .tableField {
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 200px;
+    overflow-y: auto;
+    display: none;
 }
 
 
