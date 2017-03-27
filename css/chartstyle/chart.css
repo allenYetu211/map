@@ -1173,6 +1173,8 @@ div.login_informations button._close {
     background-color: #232C4D;
     z-index: 9999;
     display: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
 }
 
 #controlPanel.open {
@@ -1187,13 +1189,18 @@ div.login_informations button._close {
     padding: 0 15px;
     background-color: #1B2341;
     border-top: 5px solid #0088EB;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #0E142A;
+    border-radius: 5px 5px 0px 0px;
+}
+#controlPanel .cp-title h2{
+    font-size: 18px;
+    color: #fff;
+    text-indent: 2px;
 }
 
 #controlPanel .cp-information {
     display: flex;
     height: 100%;
-    padding: 10px 0;
 }
 
 #controlPanel .cp-leftList {
@@ -1201,6 +1208,7 @@ div.login_informations button._close {
     width: 170px;
     background-color: #232C4D;
     border-right: 1px solid #0E142A;
+    padding:10px 0px;
 }
 
 #controlPanel .cp-leftList>ul {
@@ -1211,18 +1219,35 @@ div.login_informations button._close {
     border-left: 3px solid #0088EB;
     padding-left: 15px;
     font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 10px;
 }
 
 #controlPanel .cp-leftList li {
-    padding: 0 20px;
     list-style: none;
     font-size: 12px;
-    line-height: 25px;
-    font-weight: 300;
+    line-height: 28px;
+    text-indent: 30px;
+    position:relative;
+}
+#controlPanel .cp-leftList li li{
+    text-indent: 45px;
 }
 
 #controlPanel .cp-leftList li.active {
     color: #0088EB;
+    background: #151E3E;
+}
+#controlPanel .cp-leftList li.active:before{
+    content: " ";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #0088EB;
+    border-radius: 10px;
+    position: absolute;
+    top:46%;
+    right:10px;
 }
 
 #controlPanel .cp-rightIntroduce {
@@ -1232,8 +1257,8 @@ div.login_informations button._close {
 
 .draw-chart {
     display: flex;
-    max-height: 600px;
     overflow-y: auto;
+    padding:5px;
 }
 
 .draw-chart>div {
@@ -1241,9 +1266,13 @@ div.login_informations button._close {
     margin: 5px;
 }
 
+// .draw-chart .information{
+//     margin-bottom: 10px;
+// }
+
 .cp-pointer {
     display: none;
-    max-height: 700px;
+    max-height: 840px;
     overflow-y: auto;
 }
 
