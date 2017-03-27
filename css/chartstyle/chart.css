@@ -345,7 +345,8 @@ body {
     border-bottom: 1px solid #E9E9E9;
     position: relative;
 }
-#left-sidebar .search .filedCondition{
+
+#left-sidebar .search .filedCondition {
     display: none;
     position: absolute;
     top: 92%;
@@ -359,16 +360,19 @@ body {
     padding: 20px;
     color: #222;
 }
-#left-sidebar .search .filedCondition span{
+
+#left-sidebar .search .filedCondition span {
     display: inline-block;
     height: 40px;
-    color:#0088EB;
+    color: #0088EB;
 }
+
 #left-sidebar .search .filedCondition p {
     height: 40px;
     text-indent: 20px;
     line-height: 40px;
 }
+
 .search img {
     padding: 18px 18px 18px 18px;
     float: left;
@@ -721,11 +725,13 @@ body {
     padding: 20px;
     color: #fff;
 }
-#left-sidebar.dark .search .filedCondition span{
+
+#left-sidebar.dark .search .filedCondition span {
     display: inline-block;
     height: 40px;
-    color:#0088EB;
+    color: #0088EB;
 }
+
 #left-sidebar.dark .search .filedCondition p {
     height: 40px;
     text-indent: 20px;
@@ -1160,11 +1166,11 @@ div.login_informations button._close {
     top: 50%;
     left: 50%;
     width: 1020px;
-    min-height: 500px;
+    /*min-height: 500px;*/
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #232C4D;
     z-index: 9999;
     display: none;
 }
@@ -1179,6 +1185,7 @@ div.login_informations button._close {
     align-items: center;
     height: 50px;
     padding: 0 15px;
+    background-color: #1B2341;
     border-top: 5px solid #0088EB;
     border-bottom: 1px solid #f0f0f0;
 }
@@ -1186,29 +1193,47 @@ div.login_informations button._close {
 #controlPanel .cp-information {
     display: flex;
     height: 100%;
-    background-color: #fff;
+    padding: 10px 0;
 }
 
 #controlPanel .cp-leftList {
-    background: #F7F7F7;
+    color: #fff;
     width: 170px;
+    background-color: #232C4D;
+    border-right: 1px solid #0E142A;
+}
+
+#controlPanel .cp-leftList>ul {
+    margin-bottom: 30px;
 }
 
 #controlPanel .cp-leftList>ul div:first-child {
-    border-left: 5px solid #0088EB;
+    border-left: 3px solid #0088EB;
+    padding-left: 15px;
+    font-size: 16px;
 }
 
 #controlPanel .cp-leftList li {
     padding: 0 20px;
     list-style: none;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+#controlPanel .cp-leftList li.active {
+    color: #0088EB;
 }
 
 #controlPanel .cp-rightIntroduce {
     flex: 1;
+    background-color: #232C4D;
 }
 
 .draw-chart {
     display: flex;
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 .draw-chart>div {
@@ -1218,6 +1243,8 @@ div.login_informations button._close {
 
 .cp-pointer {
     display: none;
+    max-height: 700px;
+    overflow-y: auto;
 }
 
 ._dataGet .selectField {
@@ -1234,10 +1261,12 @@ div.login_informations button._close {
 
 ._dataGet .selectField .selcetInfo .select_cf {
     margin: 5px 10px;
-    padding: 3px 15px;
+    padding: 0px 15px;
     border-radius: 10px;
     background-color: #0088EB;
     color: #fff;
+    font-size: 12px;
+    font-weight: 200;
 }
 
 ._dataGet .selectField .filed {
@@ -1249,8 +1278,8 @@ div.login_informations button._close {
 }
 
 ._dataGet .select .bg-color {
-    background-color: #C4C4C4;
-    padding: 5px;
+    background-color: #1b2341;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -1261,8 +1290,9 @@ div.login_informations button._close {
 }
 
 ._dataGet .condition .filedState {
-    dispaly: flex;
+    display: flex;
     align-items: center;
+    height: 24px;
 }
 
 ._dataGet .condition .filedState {
@@ -1273,35 +1303,53 @@ div.login_informations button._close {
 ._dataGet .condition .filedState .filedCondition {
     display: flex;
     align-items: center;
-    border-radius: 10px;
-    background-color: #fff;
+    border-radius: 3px;
+    background-color: #0E142A;
     margin-right: 10px;
     overflow: hidden;
+    color: #fff;
 }
 
 ._dataGet .condition .filedState .filedCondition div {
-    padding: 0px 5px;
+    padding: 0px 7px;
+    font-size: 12px;
+    font-weight: 200;
 }
 
 ._dataGet .condition .filedState .filedCondition div.active {
-    background-color: #0098Ec;
-    color: #0058EB;
+    background-color: rgba(0, 136, 235, .2);
+    color: #0088EB;
 }
 
 ._dataGet .condition .filedState .fileReverse {
-    background-color: #fff;
+    background-color: #0E142A;
     padding: 0 5px;
     border-radius: 3px;
+    font-size: 12px;
+    font-weight: 200;
 }
 
 .addRuleValue {
     display: flex;
-    background: #8aebb3;
+    background: #8BC34A;
     border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 200;
+    height: 24px;
+    line-height: 24px;
+}
+
+._dataGet .select {
+    background: #232C4D;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 ._dataGet .addRuleValue div {
     display: flex;
+    padding: 0 10px;
 }
 
 ._dataGet .addRuleValue div:first-child {
@@ -1316,12 +1364,12 @@ div.login_informations button._close {
     color: #0088EB;
     margin-right: 10px;
     border: 1px solid #0088EB;
-    padding: 10px 12px;
+    padding: 5px 12px;
+    border-radius: 5px;
 }
 
 ._dataGet .addFiled {
     position: relative;
-    background: #fff;
 }
 
 ._dataGet .tableField {
@@ -1335,29 +1383,89 @@ div.login_informations button._close {
     height: 200px;
     overflow-y: auto;
     display: none;
+    background-color: #0B1330;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px;
 }
 
 .bg-color .selectOn_ {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #0E142A;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-.bg-color .selectOn_ .selectl {
+.bg-color .selectOn_ .selectr {
+    width: 15px;
+}
+
+.bg-color .selectOn_ .selectr img {
+    width: 100%;
+}
+
+.bg-color .selectOn_ ._selectl {
     display: flex;
     align-items: center;
 }
 
-._filed {
+.bg-color .selectOn_ ._selectl .category {
+    margin-right: 10px;
+    width: 15px;
+}
+
+.bg-color .selectOn_ ._selectl .category img {
+    width: 100%;
+}
+
+.selectOn_ .select {
+    width: 15px;
+}
+
+.selectOn_ .select {
+    width: 100%;
+}
+
+.equal select {
+    background-color: #232C4D;
+    color: #fff;
+    height: 32px;
+    border: none;
+}
+
+.equal ._filed {
     width: 120px;
 }
 
-._symbol {
+.equal ._symbol {
     width: 100px;
 }
 
-._val {
+.equal ._val {
     width: 200px;
+}
+
+.showFieldData {
+    display: none;
+}
+
+.showFieldData img {
+    width: 100%;
+}
+
+.sw-dark2 img {
+    width: 100%;
+}
+
+.__infors {
+    display: none;
+}
+
+.__infors img {
+    width: 100%;
 }
 
 
