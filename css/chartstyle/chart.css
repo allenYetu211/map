@@ -1285,8 +1285,8 @@ div.login_informations button._close {
 
 .cp-pointer {
     display: none;
-    max-height: 840px;
-    overflow-y: auto;
+    // max-height: 840px;
+    // overflow-y: auto;
 }
 
 ._dataGet .selectField {
@@ -1398,6 +1398,8 @@ div.login_informations button._close {
     color: #fff;
     box-sizing: border-box;
     padding: 10px;
+    position: absolute;
+    width: 850px;
 }
 
 ._dataGet .addRuleValue div {
@@ -1506,6 +1508,7 @@ div.login_informations button._close {
 .showFieldData {
     display: none;
     padding:10px;
+    padding-top: 220px;
 }
 
 .showFieldData img {
