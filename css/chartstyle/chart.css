@@ -1209,6 +1209,9 @@ div.login_informations button._close {
     background-color: #232C4D;
     border-right: 1px solid #0E142A;
     padding:10px 0px;
+    max-height: 660px;
+    overflow-y: scroll;
+    box-sizing: border-box;
 }
 
 #controlPanel .cp-leftList>ul {
@@ -1253,6 +1256,9 @@ div.login_informations button._close {
 #controlPanel .cp-rightIntroduce {
     flex: 1;
     background-color: #232C4D;
+    max-height: 660px;
+    overflow-y: scroll;
+    box-sizing: border-box;
 }
 
 .draw-chart {
@@ -1281,6 +1287,7 @@ div.login_informations button._close {
     display: flex;
     justify-content: row;
     align-items: center;
+    margin: 8px 0px 16px;
 }
 
 ._dataGet .selectField .selcetInfo {
@@ -1290,7 +1297,7 @@ div.login_informations button._close {
 }
 
 ._dataGet .selectField .selcetInfo .select_cf {
-    margin: 5px 10px;
+    margin: 0px 15px 0px 0px;
     padding: 0px 15px;
     border-radius: 10px;
     background-color: #0088EB;
@@ -1300,12 +1307,21 @@ div.login_informations button._close {
 }
 
 ._dataGet .selectField .filed {
-    width: 100px;
+    text-indent:3px;
+    margin-right: 20px;
 }
 
 ._dataGet .selectField .addFiled {
-    width: 50px;
+    width: 20px;
+    position:relative;
 }
+._dataGet .selectField .addFiled button{
+    background-color: #0088EB;
+    color: #fff;
+    border: 0px;
+    border-radius: 25px;
+}
+
 
 ._dataGet .select .bg-color {
     background-color: #1b2341;
@@ -1317,6 +1333,7 @@ div.login_informations button._close {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 2px 0px 12px;
 }
 
 ._dataGet .condition .filedState {
@@ -1383,11 +1400,12 @@ div.login_informations button._close {
 }
 
 ._dataGet .addRuleValue div:first-child {
-    border-right: 1px solid #fff;
+    border-right: 1px solid #1b2341;
 }
 
 ._dataGet .selectGetDataButton {
     display: flex;
+    margin-top: 20px;
 }
 
 .selectGetDataButton div {
@@ -1403,20 +1421,21 @@ div.login_informations button._close {
 }
 
 ._dataGet .tableField {
-    width: 200px;
+    width: 100px;
     position: absolute;
-    left: 50%;
-    top: 100%;
+    left: 50px;
+    top: 25px;
     -webkit-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
-    height: 200px;
+    height: 105px;
     overflow-y: auto;
     display: none;
     background-color: #0B1330;
     font-size: 12px;
     font-weight: 400;
     padding: 8px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
 }
 
 .bg-color .selectOn_ {
@@ -1425,7 +1444,7 @@ div.login_informations button._close {
     align-items: center;
     background-color: #0E142A;
     margin: 5px 0;
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 5px;
 }
 
@@ -1480,6 +1499,7 @@ div.login_informations button._close {
 
 .showFieldData {
     display: none;
+    padding:10px;
 }
 
 .showFieldData img {
@@ -1492,6 +1512,7 @@ div.login_informations button._close {
 
 .__infors {
     display: none;
+    padding:10px;
 }
 
 .__infors img {
