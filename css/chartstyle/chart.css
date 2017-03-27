@@ -549,10 +549,16 @@ body {
     line-height: 30px;
     text-align: left;
 }
-
-.typeText span:last-child {
+#left-sidebar.dark .typeText span:last-child {
     font-size: 12px;
-    color: #949494;
+    color: #f2f2f2;
+    letter-spacing: 0.57px;
+    line-height: 30px;
+    text-align: right;
+}
+#left-sidebar .typeText span:last-child {
+    font-size: 12px;
+    color: #555;
     letter-spacing: 0.57px;
     line-height: 30px;
     text-align: right;
@@ -1161,7 +1167,7 @@ div.login_informations button._close {
 *   information control panel styleCss   START
 **/
 
-#controlPanel {
+#controlPanel.dark {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1177,11 +1183,11 @@ div.login_informations button._close {
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
 }
 
-#controlPanel.open {
+#controlPanel.dark.open {
     display: block;
 }
 
-#controlPanel .cp-title {
+#controlPanel.dark .cp-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1193,18 +1199,18 @@ div.login_informations button._close {
     border-radius: 5px 5px 0px 0px;
 }
 
-#controlPanel .cp-title h2 {
+#controlPanel.dark .cp-title h2 {
     font-size: 18px;
     color: #fff;
     text-indent: 2px;
 }
 
-#controlPanel .cp-information {
+#controlPanel.dark .cp-information {
     display: flex;
     height: 100%;
 }
 
-#controlPanel .cp-leftList {
+#controlPanel.dark .cp-leftList {
     color: #fff;
     width: 170px;
     background-color: #232C4D;
@@ -1215,11 +1221,11 @@ div.login_informations button._close {
     box-sizing: border-box;
 }
 
-#controlPanel .cp-leftList>ul {
+#controlPanel.dark .cp-leftList>ul {
     margin-bottom: 30px;
 }
 
-#controlPanel .cp-leftList>ul div:first-child {
+#controlPanel.dark .cp-leftList>ul div:first-child {
     border-left: 3px solid #0088EB;
     padding-left: 15px;
     font-size: 16px;
@@ -1227,7 +1233,7 @@ div.login_informations button._close {
     margin-bottom: 10px;
 }
 
-#controlPanel .cp-leftList li {
+#controlPanel.dark .cp-leftList li {
     list-style: none;
     font-size: 12px;
     line-height: 28px;
@@ -1235,19 +1241,19 @@ div.login_informations button._close {
     position: relative;
 }
 
-#controlPanel .cp-leftList li li {
+#controlPanel.dark .cp-leftList li li {
     text-indent: 45px;
 }
 
-#controlPanel .cp-leftList li.active,
-#controlPanel .cp-leftList p.active {
+#controlPanel.dark .cp-leftList li.active,
+#controlPanel.dark .cp-leftList p.active {
     color: #0088EB;
     background: #151E3E;
     position: relative;
 }
 
-#controlPanel .cp-leftList li.active:before,
-#controlPanel .cp-leftList p.active:before {
+#controlPanel.dark .cp-leftList li.active:before,
+#controlPanel.dark .cp-leftList p.active:before {
     content: " ";
     display: inline-block;
     width: 6px;
@@ -1259,7 +1265,7 @@ div.login_informations button._close {
     right: 10px;
 }
 
-#controlPanel .cp-rightIntroduce {
+#controlPanel.dark .cp-rightIntroduce {
     flex: 1;
     background-color: #232C4D;
     max-height: 660px;
@@ -1278,7 +1284,7 @@ div.login_informations button._close {
     margin: 5px;
 }
 
-.draw-chart .information .type-big {
+#controlPanel.dark .draw-chart .information .type-big {
     margin-bottom: 10px;
     box-shadow: 0px 0px 1px #0E142A;
 }
@@ -1302,7 +1308,7 @@ div.login_informations button._close {
     max-width: 400px;
 }
 
-._dataGet .selectField .selcetInfo .select_cf {
+#controlPanel.dark ._dataGet .selectField .selcetInfo .select_cf {
     margin: 0px 15px 0px 0px;
     padding: 0px 15px;
     border-radius: 10px;
@@ -1321,7 +1327,7 @@ div.login_informations button._close {
     width: 20px;
     position:relative;
 }
-._dataGet .selectField .addFiled button{
+#controlPanel.dark ._dataGet .selectField .addFiled button{
     background-color: #0088EB;
     color: #fff;
     border: 0px;
@@ -1329,7 +1335,7 @@ div.login_informations button._close {
 }
 
 
-._dataGet .select .bg-color {
+#controlPanel.dark ._dataGet .select .bg-color {
     background-color: #1b2341;
     padding: 10px;
     box-sizing: border-box;
@@ -1353,7 +1359,7 @@ div.login_informations button._close {
     align-items: center;
 }
 
-._dataGet .condition .filedState .filedCondition {
+#controlPanel.dark ._dataGet .condition .filedState .filedCondition {
     display: flex;
     align-items: center;
     border-radius: 3px;
@@ -1369,12 +1375,12 @@ div.login_informations button._close {
     font-weight: 200;
 }
 
-._dataGet .condition .filedState .filedCondition div.active {
+#controlPanel.dark ._dataGet .condition .filedState .filedCondition div.active {
     background-color: rgba(0, 136, 235, .2);
     color: #0088EB;
 }
 
-._dataGet .condition .filedState .fileReverse {
+#controlPanel.dark ._dataGet .condition .filedState .fileReverse {
     background-color: #0E142A;
     padding: 0 5px;
     border-radius: 3px;
@@ -1382,7 +1388,7 @@ div.login_informations button._close {
     font-weight: 200;
 }
 
-.addRuleValue {
+#controlPanel.dark .addRuleValue {
     display: flex;
     background: #8BC34A;
     border-radius: 5px;
@@ -1393,7 +1399,7 @@ div.login_informations button._close {
     line-height: 24px;
 }
 
-._dataGet .select {
+#controlPanel.dark ._dataGet .select {
     background: #232C4D;
     color: #fff;
     box-sizing: border-box;
@@ -1407,7 +1413,7 @@ div.login_informations button._close {
     padding: 0 10px;
 }
 
-._dataGet .addRuleValue div:first-child {
+#controlPanel.dark ._dataGet .addRuleValue div:first-child {
     border-right: 1px solid #1b2341;
 }
 
@@ -1416,7 +1422,7 @@ div.login_informations button._close {
     margin-top: 20px;
 }
 
-.selectGetDataButton div {
+#controlPanel.dark .selectGetDataButton div {
     color: #0088EB;
     margin-right: 10px;
     border: 1px solid #0088EB;
@@ -1428,7 +1434,7 @@ div.login_informations button._close {
     position: relative;
 }
 
-._dataGet .tableField {
+#controlPanel.dark ._dataGet .tableField {
     width: 100px;
     position: absolute;
     left: 50px;
@@ -1446,7 +1452,7 @@ div.login_informations button._close {
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
 }
 
-.bg-color .selectOn_ {
+#controlPanel.dark .bg-color .selectOn_ {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1486,7 +1492,7 @@ div.login_informations button._close {
     width: 100%;
 }
 
-.equal select {
+#controlPanel.dark .equal select {
     background-color: #232C4D;
     color: #fff;
     height: 32px;
@@ -1530,6 +1536,229 @@ div.login_informations button._close {
 
 .mouseMove>img {
     width: 100%;
+}
+
+/*control panel dark*/
+#controlPanel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1020px;
+    /*min-height: 500px;*/
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 9999;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
+}
+
+#controlPanel.open {
+    display: block;
+}
+
+#controlPanel .cp-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 15px;
+    background-color: #fff;
+    border-top: 5px solid #0088EB;
+    border-bottom: 1px solid #E9EFF4;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#controlPanel .cp-title h2 {
+    font-size: 18px;
+    color: #222;
+    text-indent: 2px;
+}
+
+#controlPanel .cp-information {
+    display: flex;
+    height: 100%;
+}
+
+#controlPanel .cp-leftList {
+    color: #222;
+    width: 170px;
+    background-color: #f7f7f7;
+    border-right: 1px solid #E9EFF4;
+    padding:10px 0px;
+    max-height: 660px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+#controlPanel .cp-leftList>ul {
+    margin-bottom: 30px;
+}
+
+#controlPanel .cp-leftList>ul div:first-child {
+    border-left: 3px solid #0088EB;
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+#controlPanel .cp-leftList li {
+    list-style: none;
+    font-size: 12px;
+    line-height: 28px;
+    text-indent: 30px;
+    position: relative;
+}
+
+#controlPanel .cp-leftList li li {
+    text-indent: 45px;
+}
+
+#controlPanel .cp-leftList li.active,
+#controlPanel .cp-leftList p.active {
+    color: #0088EB;
+    background: #fff;
+    position: relative;
+}
+
+#controlPanel .cp-leftList li.active:before,
+#controlPanel .cp-leftList p.active:before {
+    content: " ";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #0088EB;
+    border-radius: 10px;
+    position: absolute;
+    top: 46%;
+    right: 10px;
+}
+
+#controlPanel .cp-rightIntroduce {
+    flex: 1;
+    background-color: #fff;
+    max-height: 660px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+#controlPanel .draw-chart .information .type-big {
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 1px #c7c7c7;
+}
+
+#controlPanel ._dataGet .selectField .selcetInfo .select_cf {
+    margin: 0px 15px 0px 0px;
+    padding: 0px 15px;
+    border-radius: 10px;
+    background-color: #0088EB;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+#controlPanel ._dataGet .selectField .addFiled button{
+    background-color: #0088EB;
+    color: #fff;
+    border: 0px;
+    border-radius: 25px;
+}
+
+
+#controlPanel ._dataGet .select .bg-color {
+    background-color: #EEEEEE;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#controlPanel ._dataGet .condition .filedState .filedCondition {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-right: 10px;
+    overflow: hidden;
+    color: #222;
+}
+
+#controlPanel ._dataGet .condition .filedState .filedCondition div.active {
+    background-color: rgba(0, 136, 235, .2);
+    color: #0088EB;
+}
+
+#controlPanel ._dataGet .condition .filedState .fileReverse {
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+#controlPanel .addRuleValue {
+    display: flex;
+    background: #8BC34A;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 200;
+    height: 24px;
+    line-height: 24px;
+}
+
+#controlPanel ._dataGet .select {
+    background: #fff;
+    color: #222;
+    box-sizing: border-box;
+    padding: 10px;
+    position: absolute;
+    width: 850px;
+}
+
+#controlPanel ._dataGet .addRuleValue div:first-child {
+    border-right: 1px solid #1b2341;
+}
+
+#controlPanel .selectGetDataButton div {
+    color: #0088EB;
+    margin-right: 10px;
+    border: 1px solid #0088EB;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+#controlPanel .bg-color .selectOn_ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+#controlPanel .equal select {
+    background-color: #f2f2f2;
+    color: #222;
+    height: 32px;
+    border: none;
+}
+
+#controlPanel ._dataGet .tableField {
+    width: 100px;
+    position: absolute;
+    left: 50px;
+    top: 25px;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 105px;
+    overflow-y: auto;
+    display: none;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
 }
 
 
