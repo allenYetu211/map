@@ -1266,9 +1266,10 @@ div.login_informations button._close {
     margin: 5px;
 }
 
-// .draw-chart .information{
-//     margin-bottom: 10px;
-// }
+.draw-chart .information .type-big{
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 1px #0E142A;
+}
 
 .cp-pointer {
     display: none;
