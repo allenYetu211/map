@@ -670,7 +670,7 @@ body {
     width: 400px;
     height: 100%;
     background: #1B2341;
-    // overflow: scroll;
+    /*// overflow: scroll;*/
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.20);
     transition: transform 0.4s ease;
 }
@@ -1260,13 +1260,15 @@ div.login_informations button._close {
     border-radius: 3px;
 }
 
-._dataGet .addRuleValue {
+.addRuleValue {
     display: flex;
     background: #8aebb3;
     border-radius: 5px;
 }
 
-._dataGet .addRuleValue div {}
+._dataGet .addRuleValue div {
+    display: flex;
+}
 
 ._dataGet .addRuleValue div:first-child {
     border-right: 1px solid #fff;
@@ -1299,6 +1301,29 @@ div.login_informations button._close {
     height: 200px;
     overflow-y: auto;
     display: none;
+}
+
+.bg-color .selectOn_ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-color .selectOn_ .selectl {
+    display: flex;
+    align-items: center;
+}
+
+._filed {
+    width: 120px;
+}
+
+._symbol {
+    width: 100px;
+}
+
+._val {
+    width: 200px;
 }
 
 
