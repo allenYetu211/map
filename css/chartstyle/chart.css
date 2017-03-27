@@ -680,6 +680,22 @@ body {
     height: 60px;
     background-color: #f6f6f6;
     border-bottom: 1px solid #0c1123;
+    position: relative;
+}
+
+#left-sidebar.dark .search .filedCondition {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+#left-sidebar.dark .search .filedCondition p {
+    height: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: 20px;
 }
 
 #left-sidebar.dark .search img {
@@ -693,7 +709,7 @@ body {
 
 #left-sidebar.dark .search input.searchbar {
     font-size: 18px;
-    color: #222222;
+    color: #fff;
     background-color: #1B2341;
     line-height: 40px;
     width: 260px;
