@@ -1497,6 +1497,10 @@ div.login_informations button._close {
     width: 100%;
 }
 
+.mouseMove>img {
+    width: 100%;
+}
+
 
 /**
 *   information control panel styleCss   END
