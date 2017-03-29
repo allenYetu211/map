@@ -82,7 +82,7 @@ body {
 }
 
 #top-sidebar .toolbar button {
-    width: 60px;
+    width: 35px;
     height: 60px;
     float: left;
     border: 0;
@@ -97,7 +97,7 @@ body {
 
 #top-sidebar .toolbar button img {
     width: 26px;
-    padding: 12px;
+    /*padding: 12px;*/
     vertical-align: middle;
 }
 
@@ -549,6 +549,7 @@ body {
     line-height: 30px;
     text-align: left;
 }
+
 #left-sidebar.dark .typeText span:last-child {
     font-size: 12px;
     color: #f2f2f2;
@@ -556,6 +557,7 @@ body {
     line-height: 30px;
     text-align: right;
 }
+
 #left-sidebar .typeText span:last-child {
     font-size: 12px;
     color: #555;
@@ -634,6 +636,18 @@ body {
 #right-sidebar.close .openCloseSidebar-right span {
     transform: rotate(180deg);
 }
+
+#left-sidebar .drawMap,
+#right-sidebar .drawMap {
+    background: #fafafa !important;
+}
+
+#left-sidebar.dark .drawMap,
+#right-sidebar.dark .drawMap {
+    background: #222C51 !important;
+}
+
+#left-sidebar .searchbar-Emptied {}
 
 
 /************ TOP ************/
@@ -779,6 +793,20 @@ body {
     border: 0;
     cursor: pointer;
     outline: 0;
+}
+
+#left-sidebar.dark .search button.searchbar-Emptied {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: 20px;
+    right: 65px;
+}
+
+#left-sidebar.dark .search button.searchbar-Emptied img {
+    width: 100%;
+    padding: 0;
+    height: auto;
 }
 
 #left-sidebar.dark .introduct {
@@ -1215,7 +1243,7 @@ div.login_informations button._close {
     width: 170px;
     background-color: #232C4D;
     border-right: 1px solid #0E142A;
-    padding:10px 0px;
+    padding: 10px 0px;
     max-height: 660px;
     overflow-y: scroll;
     box-sizing: border-box;
@@ -1319,21 +1347,21 @@ div.login_informations button._close {
 }
 
 ._dataGet .selectField .filed {
-    text-indent:3px;
+    text-indent: 3px;
     margin-right: 20px;
 }
 
 ._dataGet .selectField .addFiled {
     width: 20px;
-    position:relative;
+    position: relative;
 }
-#controlPanel.dark ._dataGet .selectField .addFiled button{
+
+#controlPanel.dark ._dataGet .selectField .addFiled button {
     background-color: #0088EB;
     color: #fff;
     border: 0px;
     border-radius: 25px;
 }
-
 
 #controlPanel.dark ._dataGet .select .bg-color {
     background-color: #1b2341;
@@ -1513,7 +1541,7 @@ div.login_informations button._close {
 
 .showFieldData {
     display: none;
-    padding:10px;
+    padding: 10px;
     padding-top: 220px;
 }
 
@@ -1527,7 +1555,7 @@ div.login_informations button._close {
 
 .__infors {
     display: none;
-    padding:10px;
+    padding: 10px;
 }
 
 .__infors img {
@@ -1538,7 +1566,9 @@ div.login_informations button._close {
     width: 100%;
 }
 
+
 /*control panel dark*/
+
 #controlPanel {
     position: absolute;
     top: 50%;
@@ -1587,7 +1617,7 @@ div.login_informations button._close {
     width: 170px;
     background-color: #f7f7f7;
     border-right: 1px solid #E9EFF4;
-    padding:10px 0px;
+    padding: 10px 0px;
     max-height: 660px;
     overflow-y: scroll;
     box-sizing: border-box;
@@ -1660,19 +1690,19 @@ div.login_informations button._close {
     font-weight: 200;
 }
 
-#controlPanel ._dataGet .selectField .addFiled button{
+#controlPanel ._dataGet .selectField .addFiled button {
     background-color: #0088EB;
     color: #fff;
     border: 0px;
     border-radius: 25px;
 }
 
-
 #controlPanel ._dataGet .select .bg-color {
     background-color: #EEEEEE;
     padding: 10px;
     box-sizing: border-box;
 }
+
 #controlPanel ._dataGet .condition .filedState .filedCondition {
     display: flex;
     align-items: center;
@@ -1727,6 +1757,7 @@ div.login_informations button._close {
     padding: 5px 12px;
     border-radius: 5px;
 }
+
 #controlPanel .bg-color .selectOn_ {
     display: flex;
     justify-content: space-between;
@@ -1736,6 +1767,7 @@ div.login_informations button._close {
     padding: 5px 15px;
     border-radius: 5px;
 }
+
 #controlPanel .equal select {
     background-color: #f2f2f2;
     color: #222;

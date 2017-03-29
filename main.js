@@ -26,6 +26,8 @@ require.config({
         "chart": "theChart/drawChart",
         "chartInformations": "theChart/chartinformations",
         "mapIntroduce": "theChart/introduceMap"
+            // "querybuilder": "sqlToolJs/query-builder",
+            // "sqlbuilder": "sqlToolJs/sql-builder"
     },
     shim: {
         "sumoselect": ["jquery", "perfect", "mousewheel"],
