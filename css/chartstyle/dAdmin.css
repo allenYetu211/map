@@ -1,0 +1,12 @@
+.exhibition {
+  display: flex;
+  height: 100%;
+}
+
+.exhibition .dAdminTree {
+  width: 400px;
+}
+
+.exhibition .mapPosition {
+  flex: 1;
+}
