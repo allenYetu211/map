@@ -25,14 +25,37 @@ require.config({
         "staticchart": "tool/staticchart",
         "chart": "theChart/drawChart",
         "chartInformations": "theChart/chartinformations",
-        "mapIntroduce": "theChart/introduceMap"
-            // "querybuilder": "sqlToolJs/query-builder",
-            // "sqlbuilder": "sqlToolJs/sql-builder"
+        "mapIntroduce": "theChart/introduceMap",
+        "bootstrap": "sqlToolJs/bootstrap.min",
+        "bootstrapSelect": "sqlToolJs/bootstrap-select.min",
+        "bootbox": "sqlToolJs/bootbox",
+        "bootstrapSlider": "sqlToolJs/bootstrap-slider.min",
+        "bootstrapDatepicker": "sqlToolJs/bootstrap-datepicker.min",
+        "selectize": "sqlToolJs/selectize.min",
+        "jQueryExtendext": "sqlToolJs/jQuery.extendext.min",
+        "sqlParser": "sqlToolJs/sql-parser",
+        "doT": "sqlToolJs/doT",
+        "interact": "sqlToolJs/interact",
+        "queryBuilder": "sqlToolJs/query-builder",
+        "sqlBuilder": "sqlToolJs/sql-builder"
     },
     shim: {
         "sumoselect": ["jquery", "perfect", "mousewheel"],
         'echarts': {
             exports: 'echarts/echarts'
+
+        },
+        "bootstrap": {
+            deps: ["jquery", ""],
+            exports: "_"
+        },
+        "sqlBuilder": {
+            deps: ["jquery"],
+            exports: "sq"
+        },
+        "queryBuilder": {
+            deps: ["jquery"],
+            exports: 'qb'
         }
     },
     waitSeconds: 0
