@@ -23,9 +23,12 @@ require.config({
         "somoselect": "tool/somoselect",
         "statictable": "tool/statictable",
         "staticchart": "tool/staticchart",
+
         "chart": "theChart/drawChart",
         "chartInformations": "theChart/chartinformations",
         "mapIntroduce": "theChart/introduceMap",
+        "dataAdmin": "theChart/dataAdmin",
+
         "bootstrap": "sqlToolJs/bootstrap.min",
         "bootstrapSelect": "sqlToolJs/bootstrap-select.min",
         "bootbox": "sqlToolJs/bootbox",
@@ -60,7 +63,7 @@ require.config({
     },
     waitSeconds: 0
 });
-require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce"],
+require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin"],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, t, a, b, d, echarts, s, st, ch, ma) {
         // console.log(ch)

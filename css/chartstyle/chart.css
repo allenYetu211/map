@@ -1450,7 +1450,7 @@ div.login_informations button._close {
     color: #fff;
     box-sizing: border-box;
     padding: 10px;
-    position: absolute;
+    /*position: absolute;*/
     width: 850px;
 }
 
@@ -1560,11 +1560,16 @@ div.login_informations button._close {
 .showFieldData {
     display: none;
     padding: 10px;
-    padding-top: 220px;
+    /*padding-top: 220px;*/
 }
 
-.showFieldData img {
+
+/*.showFieldData img {
     width: 100%;
+}*/
+
+.showFieldData table {
+    color: #fff;
 }
 
 .sw-dark2 img {
@@ -1584,7 +1589,7 @@ div.login_informations button._close {
     width: 100%;
 }
 
-.dark .mouseMove table {
+.dark table {
     width: 100%;
     color: #fff;
     border-left: 1px solid #e0e0e0;
@@ -1594,19 +1599,19 @@ div.login_informations button._close {
     text-align: center;
 }
 
-.dark .mouseMove table ._column {
+.dark table ._column {
     background-color: #0B1330;
 }
 
-.dark .mouseMove table td,
-.dark .mouseMove table th {
+.dark table td,
+.dark table th {
     vertical-align: middle;
     border-right: 1px solid #e0e0e0;
     border-top: 1px solid #e0e0e0;
     padding: 5px;
 }
 
-.mouseMove table {
+table {
     width: 100%;
     color: #333;
     border-left: 1px solid #e0e0e0;
@@ -1615,12 +1620,12 @@ div.login_informations button._close {
     font-size: 12px;
 }
 
-.mouseMove table ._column {
+table ._column {
     background-color: #e0e0e0;
 }
 
-.mouseMove table td,
-.mouseMove table th {
+table td,
+table th {
     vertical-align: middle;
     border-right: 1px solid #e0e0e0;
     border-top: 1px solid #e0e0e0;
