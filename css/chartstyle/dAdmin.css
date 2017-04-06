@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+#sql-builder {}
+
 .exhibition {
     display: flex;
     height: 100%;

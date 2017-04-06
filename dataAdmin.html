@@ -133,14 +133,6 @@
             z-index: 9999999999;
             background-color: #fff;
         }
-        
-        #sql-builder {
-            position: absolute;
-            left: 50px;
-            top: 50px;
-            width: 800px;
-            height: 800px;
-        }
     </style>
 </head>
 
@@ -247,7 +239,7 @@
                     <div class="f-i">
                         <img src="images/chart/icon_layer@2x.png">
                     </div>
-                    <div class="f-i">
+                    <div class="f-i selectPop">
                         <img src="images/chart/icon_layer@2x.png">
                     </div>
                 </div>
@@ -302,6 +294,35 @@
         </div>
         <!--map End-->
     </div>
+
+
+    <!-- Select Popup Start-->
+
+    <div class="SelectPopup">
+        <div class="select">
+            <div class="selectField">
+                <div class="filed">选择字段</div>
+                <div class="selcetInfo"></div>
+                <div class="addFiled">
+                    <button>+</button>
+                    <div class="tableField">
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="confirmInformation">
+                <button> 提交查询 </button>
+            </div>
+
+            <div id="sql-builder"></div>
+            <button class="_getsql">getSql</button>
+            <button class="_reset">reset</button>
+
+        </div>
+    </div>
+
+    <!-- Slect Popup End-->
 
 
 

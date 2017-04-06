@@ -24,6 +24,9 @@ require.config({
         "statictable": "tool/statictable",
         "staticchart": "tool/staticchart",
 
+        "markercluster": "tool/markercluster",
+        "surveydata": "tool/surveydata",
+
         "chart": "theChart/drawChart",
         "chartInformations": "theChart/chartinformations",
         "mapIntroduce": "theChart/introduceMap",
