@@ -293,9 +293,12 @@
             </div>
         </div>
         <div class="toolbar">
-            <button type="button" class="line"><img src="images/chart/icon_line@2x.png" alt=""><span>红线比选</span></button>
-            <button type="button" class="layer"><img src="images/chart/icon_layer@2x.png" alt=""><span>加载底图</span></button>
-            <button type="button" class="layer"><img src="images/chart/icon_admin@2x.png" alt=""><span>用户操作</span></button>
+            <button type="button" class="user"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></button>
+            <button type="button" class="user"><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></button>
+            <button type="button" class="user"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></button>
+            <button type="button" class="user"><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></button>
+            <button type="button" class="user"><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></button>
+            <button type="button" class="user"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></button>
         </div>
 
         <!-- <div class="datetime">
@@ -325,7 +328,7 @@
 
 
 
-    <div id="left-sidebar" class="dark close">
+    <div id="left-sidebar" class="dark closed">
         <button class="openCloseSidebar-left" type="button"><span></span></button>
         <div class="left-cnj">
             <div class="phase">
@@ -369,7 +372,7 @@
             </table>
         </div> -->
     </div>
-    <div id="right-sidebar" class="dark close">
+    <div id="right-sidebar" class="dark closed">
         <div class="CatalogPopup">
             <div class="BaseMap">
                 <img src="images/chart/icon_layer@2x.png" alt=""><span>底图加载</span>
@@ -379,7 +382,7 @@
         </div>
         <button class="openCloseSidebar-right" type="button"><span></span></button>
         <div class="right-cnj"></div>
-        <div id="map-control">
+        <!--<div id="map-control">
             <div class="tools">
                 <button class="distance"><img src="images/chart/icon_mapdistance.png" alt=""></button>
                 <button class="area"><img src="images/chart/icon_maparea.png" alt=""></button>
@@ -396,6 +399,18 @@
                 <button id="vec_type" class="map1 active"></button>
                 <button id="img_type" class="map2 "></button>
             </div>
+        </div>-->
+        <div id="map-control">
+            <ul class="">
+                <li><button class="layer"><img src="images/chart/icon_layer.png" alt=""></button></li>
+                <li><button class="line"><img src="images/chart/icon_line.png" alt=""></button></li>
+                <li><button class="distance"><img src="images/chart/icon_mapdistance.png" alt=""></button></li>
+                <li><button class="area"><img src="images/chart/icon_maparea.png" alt=""></button></li>
+                <li><button class="zoomout"><img src="images/chart/icon_mapzoomout.png" alt=""></button></li>
+                <li><button class="zoomin"><img src="images/chart/icon_mapzoomin.png" alt=""></button></li>
+                <li><button id="vec_type" class="map1"><img src="images/chart/mapmode1.png" alt=""></button></li>
+                <li><button id="img_type" class="map2 active"><img src="images/chart/mapmode2active.png" alt=""></button></li>
+            </ul>
         </div>
 
         <!-- 显示列表-->
@@ -430,8 +445,6 @@
 
         <div class="cp-information">
             <div class="cp-leftList">
-
-                <button class="openCloseSidebar-cp-leftList" type="button"><span></span></button>
 
                 <ul data-onin="0" class="cp-oninter themeAnalysis">
                     <div>主题分析</div>
