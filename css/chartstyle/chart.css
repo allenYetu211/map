@@ -558,7 +558,7 @@ body {
 
 #left-sidebar.dark .typeText span:last-child {
     font-size: 12px;
-    color: #f2f2f2;
+    color: #c5b4b4;
     letter-spacing: 0.57px;
     line-height: 30px;
     text-align: right;
@@ -572,7 +572,7 @@ body {
     text-align: right;
 }
 
-.typeText span.highlighted {
+#left-sidebar.dark .typeText span.highlighted {
     color: #fff;
 }
 
@@ -1250,13 +1250,38 @@ div.login_informations button._close {
 
 #controlPanel.dark .cp-leftList {
     color: #fff;
-    width: 170px;
+    width: 200px;
     background-color: #232C4D;
     border-right: 1px solid #0E142A;
     padding: 10px 0px;
     max-height: 660px;
     overflow-y: scroll;
     box-sizing: border-box;
+}
+
+#controlPanel.dark .openCloseSidebar-cp-leftList {
+    position: absolute;
+    right: 0px;
+    width: 20px;
+    height: 100%;
+    background: #1B2341;
+    border: 0px;
+    border-left: 1px solid #0c1123;
+    border-right: 1px solid #0c1123;
+    outline: 0;
+}
+
+#controlPanel.dark .openCloseSidebar-cp-leftList span {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 8px solid transparent;
+    border-right: 7px solid #fff;
+    border-bottom: 8px solid transparent;
+}
+
+#controlPanel .openCloseSidebar-cp-leftList {
+    background: #fff;
 }
 
 #controlPanel.dark .cp-leftList>ul {
@@ -1269,6 +1294,7 @@ div.login_informations button._close {
     font-size: 16px;
     line-height: 32px;
     margin-bottom: 10px;
+    background-color: rgba(0, 136, 235, 0.2);
 }
 
 #controlPanel.dark .cp-leftList li {
@@ -1311,7 +1337,7 @@ div.login_informations button._close {
     box-sizing: border-box;
 }
 
-#controlPanel.dark .cp-rightIntroduce button {
+._dataGet button {
     background-color: transparent;
     border: 1px solid #7789cc;
     border-radius: 3px;
@@ -1330,15 +1356,15 @@ div.login_informations button._close {
     margin: 5px;
 }
 
-#controlPanel.dark .draw-chart .information .type-big {
+.dark .draw-chart .information .type-big {
     margin-bottom: 10px;
     box-shadow: 0px 0px 1px #0E142A;
 }
 
 .cp-pointer {
     display: none;
-    // max-height: 840px;
-    // overflow-y: auto;
+    /*// max-height: 840px;
+    // overflow-y: auto;*/
 }
 
 ._dataGet .selectField {
@@ -1351,11 +1377,11 @@ div.login_informations button._close {
 ._dataGet .selectField .selcetInfo {
     display: flex;
     flex-wrap: wrap;
-    max-width: 400px;
+    max-width: 550px;
 }
 
-#controlPanel.dark ._dataGet .selectField .selcetInfo .select_cf {
-    margin: 0px 15px 0px 0px;
+.dark ._dataGet .selectField .selcetInfo .select_cf {
+    margin: 5px 10px;
     padding: 0px 15px;
     border-radius: 10px;
     background-color: #0088EB;
@@ -1374,14 +1400,14 @@ div.login_informations button._close {
     position: relative;
 }
 
-#controlPanel.dark ._dataGet .selectField .addFiled button {
+.dark ._dataGet .selectField .addFiled button {
     background-color: #0088EB;
     color: #fff;
     border: 0px;
-    border-radius: 25px;
+    /*border-radius: 25px;*/
 }
 
-#controlPanel.dark ._dataGet .select .bg-color {
+.dark ._dataGet .select .bg-color {
     background-color: #1b2341;
     padding: 10px;
     box-sizing: border-box;
@@ -1405,7 +1431,7 @@ div.login_informations button._close {
     align-items: center;
 }
 
-#controlPanel.dark ._dataGet .condition .filedState .filedCondition {
+.dark ._dataGet .condition .filedState .filedCondition {
     display: flex;
     align-items: center;
     border-radius: 3px;
@@ -1421,12 +1447,12 @@ div.login_informations button._close {
     font-weight: 200;
 }
 
-#controlPanel.dark ._dataGet .condition .filedState .filedCondition div.active {
+.dark ._dataGet .condition .filedState .filedCondition div.active {
     background-color: rgba(0, 136, 235, .2);
     color: #0088EB;
 }
 
-#controlPanel.dark ._dataGet .condition .filedState .fileReverse {
+.dark ._dataGet .condition .filedState .fileReverse {
     background-color: #0E142A;
     padding: 0 5px;
     border-radius: 3px;
@@ -1445,7 +1471,7 @@ div.login_informations button._close {
     line-height: 24px;
 }
 
-#controlPanel.dark ._dataGet .select {
+.dark ._dataGet .select {
     background: #232C4D;
     color: #fff;
     box-sizing: border-box;
@@ -1459,7 +1485,7 @@ div.login_informations button._close {
     padding: 0 10px;
 }
 
-#controlPanel.dark ._dataGet .addRuleValue div:first-child {
+.dark ._dataGet .addRuleValue div:first-child {
     border-right: 1px solid #1b2341;
 }
 
@@ -1480,22 +1506,13 @@ div.login_informations button._close {
     position: relative;
 }
 
-#controlPanel.dark ._dataGet .tableField {
-    width: 100px;
-    position: absolute;
-    left: 50px;
-    top: 25px;
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
+.dark ._dataGet .tableField {
+    background-color: #0B1330;
+}
+
+._dataGet .tableField ul {
     height: 105px;
     overflow-y: auto;
-    display: none;
-    background-color: #0B1330;
-    font-size: 12px;
-    font-weight: 400;
-    padding: 8px;
-    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
 }
 
 #controlPanel.dark .bg-color .selectOn_ {
@@ -1561,6 +1578,8 @@ div.login_informations button._close {
     display: none;
     padding: 10px;
     /*padding-top: 220px;*/
+    overflow-x: auto;
+    width: 100%;
 }
 
 
@@ -1630,6 +1649,7 @@ table th {
     border-right: 1px solid #e0e0e0;
     border-top: 1px solid #e0e0e0;
     padding: 5px;
+    min-width: 150px;
 }
 
 
@@ -1680,13 +1700,14 @@ table th {
 
 #controlPanel .cp-leftList {
     color: #222;
-    width: 170px;
+    width: 200px;
     background-color: #f7f7f7;
     border-right: 1px solid #E9EFF4;
     padding: 10px 0px;
     max-height: 660px;
     overflow-y: scroll;
     box-sizing: border-box;
+    position: relative;
 }
 
 #controlPanel .cp-leftList>ul {
@@ -1746,7 +1767,7 @@ table th {
     box-shadow: 0px 0px 1px #c7c7c7;
 }
 
-#controlPanel ._dataGet .selectField .selcetInfo .select_cf {
+._dataGet .selectField .selcetInfo .select_cf {
     margin: 0px 15px 0px 0px;
     padding: 0px 15px;
     border-radius: 10px;
@@ -1756,14 +1777,28 @@ table th {
     font-weight: 200;
 }
 
-#controlPanel ._dataGet .selectField .addFiled button {
+._dataGet .selectField .addFiled button {
     background-color: #0088EB;
     color: #fff;
     border: 0px;
-    border-radius: 25px;
 }
 
-#controlPanel ._dataGet .select .bg-color {
+._dataGet ._tableFieldclose {
+    display: flex;
+    justify-content: flex-end;
+}
+
+._dataGet ._tableFieldclose span {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+._dataGet ._tableFieldclose span img {
+    width: 100%;
+}
+
+._dataGet .select .bg-color {
     background-color: #EEEEEE;
     padding: 10px;
     box-sizing: border-box;
@@ -1803,7 +1838,7 @@ table th {
     line-height: 24px;
 }
 
-#controlPanel ._dataGet .select {
+._dataGet .select {
     background: #fff;
     color: #222;
     box-sizing: border-box;
@@ -1841,7 +1876,7 @@ table th {
     border: none;
 }
 
-#controlPanel ._dataGet .tableField {
+._dataGet .tableField {
     width: 100px;
     position: absolute;
     left: 50px;
@@ -1849,15 +1884,59 @@ table th {
     -webkit-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
-    height: 105px;
-    overflow-y: auto;
     display: none;
     background-color: #f2f2f2;
     font-size: 12px;
     font-weight: 400;
     padding: 8px;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
+    z-index: 9;
 }
+
+
+/*插件样式 开始*/
+
+._dataGet .query-builder .rules-group-container {
+    background-color: #1b2341;
+    border: none;
+}
+
+._dataGet .query-builder .rule-container {
+    background-color: #0B1330;
+    border: none;
+    padding: 5px;
+    list-style: none;
+}
+
+._dataGet .form-control {
+    background-color: #232C4D;
+    color: #fff;
+    border: none;
+}
+
+._dataGet .btn-success {
+    background-color: #8BC34A;
+}
+
+._dataGet .btn-success:hover {
+    background-color: #8BC34A;
+}
+
+._dataGet .btn-danger {
+    /*color: #232C4D;*/
+    border: none;
+}
+
+._dataGet .btn-danger:hover {
+    background-color: #232C4D;
+}
+
+._dataGet .query-builder .rules-list>*:last-child::before {
+    border: none;
+}
+
+
+/*插件样式 结束*/
 
 
 /**

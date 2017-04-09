@@ -194,6 +194,47 @@
 }
 
 
+/*浮层*/
+
+.SelectPopup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 750px;
+    max-height: 500px;
+    overflow-y: auto;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
+    display: none;
+}
+
+.SelectPopup.dark {
+    background: #232C4D;
+}
+
+.dark._dataGet .select {
+    background: #232C4D;
+    color: #fff;
+}
+
+.dark._dataGet .tableField {
+    background: #232C4D;
+}
+
+._closePop {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+._closePop img {
+    width: 100%;
+}
+
+
 /*
 数据面板
 */

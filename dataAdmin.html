@@ -18,6 +18,14 @@
     <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
     <link rel="stylesheet" type="text/css" href="css/chartstyle/dAdmin.css">
     <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
+    <!--sqlTool STYLE-->
+    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/sqlToolStyle/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="css/sqlToolStyle/selectize.bootstrap3.css">
+    <link rel="stylesheet" href="css/sqlToolStyle/query-builder.default.css" id="qb-theme">
+    <link rel="stylesheet" href="css/sqlToolStyle/builder.css">
 
 
     <script src="echarts.min.js"></script>
@@ -298,7 +306,11 @@
 
     <!-- Select Popup Start-->
 
-    <div class="SelectPopup">
+    <div class="SelectPopup dark _dataGet">
+
+        <div class="_closePop">
+            <img src="images/chart/icon_close@2x.png" alt="">
+        </div>
         <div class="select">
             <div class="selectField">
                 <div class="filed">选择字段</div>
@@ -306,20 +318,25 @@
                 <div class="addFiled">
                     <button>+</button>
                     <div class="tableField">
+                        <div class="_tableFieldclose">
+                            <span> <img src="images/chart/icon_close@2x.png" alt=""></span>
+                        </div>
                         <ul></ul>
                     </div>
                 </div>
             </div>
-
+            <!--
             <div class="confirmInformation">
                 <button> 提交查询 </button>
-            </div>
+            </div>-->
 
             <div id="sql-builder"></div>
             <button class="_getsql">getSql</button>
             <button class="_reset">reset</button>
 
         </div>
+
+        <div class="showFieldData"></div>
     </div>
 
     <!-- Slect Popup End-->
