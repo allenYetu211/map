@@ -1,5 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+﻿<html>
 
 <head>
     <title>Test EnterpriseSheet</title>
@@ -9,20 +8,49 @@
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="This is my page">
     <meta http-equiv="Content-Type" content="text/html" />
-    <link rel="stylesheet" type="text/css" href="sheetPanel/sheet/extjs4.2.1/packages/ext-theme-gray/build/resources/ext-theme-gray-all.css"></link>
-    <link rel="stylesheet" type="text/css" href="sheetPanel/sheet/EnterpriseSheet/resources/css/common.css"></link>
-    <link rel="stylesheet" type="text/css" href="sheetPanel/sheet/EnterpriseSheet/resources/css/sheet.css"></link>
-    <link rel="stylesheet" type="text/css" href="sheetPanel/sheet/EnterpriseSheet/resources/css/toolbar.css"></link>
-    <link rel="stylesheet" type="text/css" href="sheetPanel/sheet/EnterpriseSheet/resources/css/icon.css"></link>
 
+    <script src="sheetPanel/SheetPanel.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var _sheetPanel;
+        window.onload = function() {
+            _sheetPanel = new SheetPanel("sheet-markup", true);
+        }
+
+        function loadStyle() {
+            var report = document.getElementById("report").value;
+            var perPage = document.getElementById("perPage").value;
+            _sheetPanel.loadStyle(report, perPage, false);
+        }
+
+        function loadValue() {
+            var report = document.getElementById("report").value;
+            var term = document.getElementById("term").value;
+            var code = document.getElementById("code").value;
+            _sheetPanel.loadValue(report, term, code, 1);
+        }
+
+        function attachCellclick() {
+            _sheetPanel.attachEvent('cellClick', cellclick);
+        }
+
+        function cellclick(row, col) {
+            console.log(row + "," + col + "," + _sheetPanel.getCellValue(row, col));
+        }
+
+        function ins_sheetPanel(report, perPage) {
+            _sheetPanel.loadStyle(report, perPage, false);
+
+        }
+    </script>
 
     <style>
         #sheet-markup {
-            /*position: absolute;*/
-            /*left: 300px;*/
-            /*top: 110px;*/
-            width: 1200px;
-            height: 650px;
+            /*   position:absolute;
+       left:300px;
+       top:110px;
+       width:1200px;
+       height:650px;*/
         }
         
         .txtBox {
@@ -47,54 +75,9 @@
 
     <input type="button" onclick="loadValue()" value="loadValue">
 
-
     <div id="sheet-markup"></div>
 
-
-
-
-
-
-
-    <script type="text/javascript" src="sheetPanel/sheet/extjs4.2.1/ext-all.js"></script>
-    <script type="text/javascript" src="sheetPanel/sheet/extjs4.2.1/locale/ext-lang-en.js"></script>
-    <script type="text/javascript" src="sheetPanel/sheet/EnterpriseSheet/src/language/en.js"></script>
-    <script type="text/javascript" src="sheetPanel/sheet/EnterpriseSheet/src/EnterpriseSheet/Config.js"></script>
-    <script type="text/javascript" src="sheetPanel/sheet/EnterpriseSheet/enterprisesheet.js"></script>
-    <script type="text/javascript" src="sheetPanel/sheet/EnterpriseSheet/src/EnterpriseSheet/api/SheetAPI.js"></script>
-    <script src="sheetPanel/SheetPanel.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-        var _sheetPanel;
-        window.onload = function() {
-            _sheetPanel = new SheetPanel("sheet-markup", true);
-        }
-
-        function ins_sheetPanel(report, perPage) {
-            _sheetPanel.loadStyle(report, perPage, false);
-        }
-
-        function loadStyle() {
-            var report = document.getElementById("report").value;
-            var perPage = document.getElementById("perPage").value;
-            _sheetPanel.loadStyle(report, perPage, false);
-        }
-
-        function loadValue() {
-            var report = document.getElementById("report").value;
-            var term = document.getElementById("term").value;
-            var code = document.getElementById("code").value;
-            _sheetPanel.loadValue(report, term, code, 1);
-        }
-
-        function attachCellclick() {
-            _sheetPanel.attachEvent('cellClick', cellclick);
-        }
-
-        function cellclick(row, col) {
-            console.log(row + "," + col + "," + _sheetPanel.getCellValue(row, col));
-        }
-    </script>
+    </div>
 
 </body>
 

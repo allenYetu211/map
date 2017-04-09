@@ -1654,6 +1654,11 @@ div.login_informations button._close {
     padding: 5px;
 }
 
+#left-sidebar.dark table td,
+#right-sidebar.dark table th {
+    min-width: auto;
+}
+
 table {
     width: 100%;
     color: #333;
@@ -1673,7 +1678,13 @@ table th {
     border-right: 1px solid #e9e9e9;
     border-top: 1px solid #e9e9e9;
     padding: 5px;
-    min-width: 150px;
+    /*min-width: 150px;*/
+}
+
+.table-titles {
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
 }
 
 
