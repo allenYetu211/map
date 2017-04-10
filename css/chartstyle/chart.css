@@ -1335,7 +1335,6 @@ div.login_informations button._close {
     display: none;
     border-radius: 5px;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
-    height: 500px;
 }
 
 #controlPanel.dark.open {
@@ -1405,7 +1404,7 @@ div.login_informations button._close {
     margin-bottom: 30px;
 }
 
-#controlPanel.dark .cp-leftList>div._tbmLaber {
+#controlPanel .cp-leftList>div._tbmLaber {
     border-left: 3px solid #0088EB;
     padding-left: 15px;
     font-size: 16px;
@@ -1414,7 +1413,9 @@ div.login_informations button._close {
     background-color: rgba(0, 136, 235, 0.2);
 }
 
-#controlPanel.dark .cp-leftList .cp-oninter {
+#controlPanel.dark .cp-leftList>div._tbmLaber {}
+
+#controlPanel .cp-leftList .cp-oninter {
     display: none;
 }
 
@@ -1498,17 +1499,11 @@ div.login_informations button._close {
 ._dataGet .selectField .selcetInfo {
     display: flex;
     flex-wrap: wrap;
-    max-width: 550px;
+    max-width: 670px;
 }
 
 .dark ._dataGet .selectField .selcetInfo .select_cf {
-    margin: 5px 10px;
-    padding: 0px 15px;
-    border-radius: 10px;
     background-color: #0088EB;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 200;
 }
 
 ._dataGet .selectField .filed {
@@ -1696,17 +1691,81 @@ div.login_informations button._close {
 }
 
 .showFieldData {
-    display: none;
+    /*display: none;*/
     padding: 10px;
-    /*padding-top: 220px;*/
     overflow-x: auto;
     width: 100%;
+    position: relative;
+    min-height: 100px;
+}
+
+.showFieldData .FieldDataloading {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 100px;
+    display: none;
+}
+
+.spinner {
+    margin: 0 auto;
+    width: 70px;
+    text-align: center;
+}
+
+.spinner>div {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
 }
 
 
 /*.showFieldData img {
     width: 100%;
 }*/
+
+.showFieldData .showFieldDataTab tr._column {
+    text-align: center;
+    /*display: none;*/
+}
 
 .showFieldData table {
     color: #fff;
@@ -1743,6 +1802,11 @@ div.login_informations button._close {
     background-color: #0B1330;
 }
 
+._dataGet table td,
+._dataGet table th {
+    color: #333;
+}
+
 .dark table td,
 .dark table th {
     vertical-align: middle;
@@ -1751,6 +1815,12 @@ div.login_informations button._close {
     padding: 5px;
     color: #fff;
 }
+
+
+/*.showFieldData table td,
+.showFieldData table th {
+    min-width: 150px;
+}*/
 
 #left-sidebar.dark table td,
 #right-sidebar.dark table th {
@@ -1805,6 +1875,7 @@ table th {
     display: none;
     border-radius: 5px;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
+    height: 500px;
 }
 
 #controlPanel.open {
@@ -1904,10 +1975,9 @@ table th {
 }
 
 ._dataGet .selectField .selcetInfo .select_cf {
-    margin: 0px 15px 0px 0px;
+    margin: 5px 10px;
     padding: 0px 15px;
     border-radius: 10px;
-    background-color: #0088EB;
     color: #fff;
     font-size: 12px;
     font-weight: 200;
@@ -2015,11 +2085,11 @@ table th {
 ._dataGet .tableField {
     width: 100px;
     position: absolute;
-    left: 50px;
+    left: 0px;
     top: 25px;
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-74%);
+    -o-transform: translateX(-74%);
+    transform: translateX(-74%);
     display: none;
     background-color: #f2f2f2;
     font-size: 12px;
@@ -2033,21 +2103,37 @@ table th {
 /*插件样式 开始*/
 
 ._dataGet .query-builder .rules-group-container {
-    background-color: #1b2341;
+    background-color: #f3f4f6;
     border: none;
 }
 
+.dark ._dataGet .query-builder .rules-group-container {
+    background-color: #1b2341;
+}
+
 ._dataGet .query-builder .rule-container {
-    background-color: #0B1330;
+    background-color: #a5acbb;
     border: none;
     padding: 5px;
     list-style: none;
 }
 
+._dataGet .query-builder .rule-container {
+    background-color: #a5acbb;
+}
+
+.dark ._dataGet .query-builder .rule-container {
+    background-color: #0B1330;
+}
+
 ._dataGet .form-control {
-    background-color: #232C4D;
+    background-color: #697284;
     color: #fff;
     border: none;
+}
+
+.dark ._dataGet .form-control {
+    background-color: #232C4D;
 }
 
 ._dataGet .btn-success {

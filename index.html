@@ -445,17 +445,17 @@
 
         <div class="cp-information">
             <div class="cp-leftList">
-                <div class="_tbmLaber">主题分析</div>
+                <div class="_tbmLaber" data-onin="0">主题分析</div>
 
                 <ul data-onin="0" class="cp-oninter themeAnalysis">
                 </ul>
-                <div class="_tbmLaber">报表展示</div>
+                <div class="_tbmLaber" data-onin="1">报表展示</div>
 
                 <ul data-onin="1" class="cp-oninter reportShow">
                 </ul>
-                <div class="_tbmLaber">数据查询</div>
+                <div class="_tbmLaber  reportID" data-onin="2">数据查询</div>
 
-                <ul data-onin="2" class="cp-oninter reportID">
+                <ul data-onin="2" class="cp-oninter">
                 </ul>
 
 
@@ -523,14 +523,27 @@
 
 
                         <div id="sql-builder"></div>
-                        <button class="_getsql">getSql</button>
-                        <button class="_reset">reset</button>
+                        <button class="_getsql">查询数据</button>
+                        <button class="_reset">清空信息</button>
 
                     </div>
 
                     <!-- 显示查询数据内容 -->
 
                     <div class="showFieldData">
+
+                        <div class="FieldDataloading">
+                            <div class="spinner">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+
+                        <div class="showFieldDataTab">
+
+                        </div>
+
                     </div>
 
                 </div>
