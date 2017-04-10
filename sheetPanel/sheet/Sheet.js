@@ -87,7 +87,7 @@ Sheet.prototype.loadDictionary = function(reportId) {
     $.ajax({
         url: _this._serviceUrl + 'LoadDictionary',
         type: 'GET',
-        async: false,
+        // async: false,
         data: param,
         success: function(response) {
             var result = JSON.parse(response.firstChild.innerHTML);
@@ -112,7 +112,7 @@ Sheet.prototype.getRecordCount = function(reportId, termValue, codeValue) {
     $.ajax({
         url: _this._serviceUrl + 'GetRecordCount',
         type: 'GET',
-        async: false,
+        // async: false,
         data: param,
         success: function(response) {
             recordCount = response.firstChild.innerHTML;
@@ -131,7 +131,7 @@ Sheet.prototype.loadValue = function(reportId, termValue, codeValue, pageIndex) 
     $.ajax({
         url: _this._serviceUrl + 'LoadPageVariable',
         type: 'GET',
-        async: false,
+        // async: false,
         data: param,
         success: function(response) {
             if (_this._clearVar.length == 0) {
@@ -163,7 +163,7 @@ Sheet.prototype.saveValue = function(reportId, pageIndex) {
     $.ajax({
         url: _this._serviceUrl + 'SavePageVariable',
         type: 'GET',
-        async: false,
+        // async: false,
         data: param,
         success: function(response) {
             _this.resetHistory();
