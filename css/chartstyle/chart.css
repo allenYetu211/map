@@ -217,7 +217,7 @@ body {
 #right-sidebar.dark #map-control {
     position: absolute;
     top: 80px;
-    width: 256px;
+    width: 224px;
     height: 32px;
     right: 440px;
     z-index: 990;
@@ -229,7 +229,7 @@ body {
 #right-sidebar #map-control {
     position: absolute;
     top: 80px;
-    width: 256px;
+    width: 224px;
     height: 32px;
     right: 440px;
     z-index: 990;
@@ -276,12 +276,27 @@ body {
     border-radius: 0px 3px 3px 0px;
 }
 
-#map-control ul li .map1 {}
+#right-sidebar #map-control ul li.mapmodelist {
+    position: relative;
+}
 
-#map-control ul li .map2 {}
+#right-sidebar #map-control ul li .mapmode_choice {
+    position: absolute;
+    top: 32px;
+    padding-top: 5px;
+    display: none;
+}
+
+#right-sidebar #map-control ul li.mapmodelist:hover .mapmode_choice {
+    display: block;
+}
+
+#map-control ul li .map1 img {
+    border-radius: 3px 3px 0px 0px;
+}
 
 #map-control ul li .map2 img {
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 0px 3px 3px;
 }
 
 #map-control ul li .map1,
