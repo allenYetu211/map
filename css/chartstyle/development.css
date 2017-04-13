@@ -31,6 +31,11 @@
 
 .dataDisplay .listAry li {
     padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 35px;
     -webkit-transition: background 0.3s;
     -o-transition: background 0.3s;
     transition: background 0.3s;
@@ -70,12 +75,6 @@
 
 .dataDisplay .listAry li .gr-feature img {
     width: 100%;
-}
-
-.dataDisplay .listAry li {
-    position: relative;
-    line-height: 35px;
-    height: 35px;
 }
 
 .dataDisplay .listAry input.change-group {
