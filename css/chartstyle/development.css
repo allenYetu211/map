@@ -114,6 +114,10 @@
     height: 40px;
 }
 
+.dataDisplay .tableList td._null {
+    background-color: rgba(182, 36, 38, 0.1);
+}
+
 .dataDisplay .tableList td input,
 .dataDisplay .tableList td select {
     width: 100%;
