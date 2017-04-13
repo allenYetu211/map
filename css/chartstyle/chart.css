@@ -2,6 +2,10 @@ body {
     overflow: hidden;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 
 /************ GLOBAL ************/
 
@@ -1890,7 +1894,7 @@ table th {
     display: none;
     border-radius: 5px;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
-    height: 500px;
+    height: 570px;
 }
 
 #controlPanel.open {
@@ -1918,6 +1922,7 @@ table th {
 #controlPanel .cp-information {
     display: flex;
     height: 100%;
+    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 #controlPanel .cp-leftList {
@@ -2115,7 +2120,7 @@ table th {
 }
 
 
-/*插件样式 开始*/
+/*æ’ä»¶æ ·å¼ å¼€å§‹*/
 
 ._dataGet .query-builder .rules-group-container {
     background-color: #f3f4f6;
@@ -2173,7 +2178,7 @@ table th {
 }
 
 
-/*插件样式 结束*/
+/*æ’ä»¶æ ·å¼ ç»“æŸ*/
 
 button._hide {
     display: none;

@@ -1,0 +1,166 @@
+.dataDisplay {
+    height: 100%;
+    padding-top: 60px;
+    background-color: #e9eff4;
+}
+
+.dataDisplay .listAry {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    width: 300px;
+    border-right: 1px solid #e0e0e0;
+    overflow: auto;
+    z-index: 9;
+    background-color: #e9eff4;
+    padding: 5px;
+}
+
+.dataDisplay .listAry ul {
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.dataDisplay .listAry .addListAry {
+    padding: 5px;
+    background: #fff;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dataDisplay .listAry li {
+    padding: 0 5px;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.dataDisplay .listAry li.active {
+    background-color: #f9f9f9;
+}
+
+.dataDisplay .listAry li:hover {
+    background-color: #f9f9f9;
+}
+
+.dataDisplay .listAry li span {
+    cursor: pointer;
+}
+
+.dataDisplay .listAry li div.gr-feature {
+    float: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.dataDisplay .listAry li:hover div.gr-feature {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dataDisplay .listAry li .gr-feature span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.dataDisplay .listAry li .gr-feature img {
+    width: 100%;
+}
+
+.dataDisplay .listAry li {
+    position: relative;
+    line-height: 35px;
+    height: 35px;
+}
+
+.dataDisplay .listAry input.change-group {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.dataDisplay .listAry input._show {
+    display: block;
+}
+
+
+/*.dataDisplay .management {
+    float: right;
+    width: 200px;
+    height: 100%;
+}*/
+
+.dataDisplay .tableList {
+    width: 100%;
+    padding-left: 300px;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    /*position: relative;*/
+}
+
+.dataDisplay .tableList th {
+    min-width: 150px;
+}
+
+.dataDisplay .tableList td {
+    text-align: center;
+    position: relative;
+    height: 40px;
+}
+
+.dataDisplay .tableList td input,
+.dataDisplay .tableList td select {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    padding: 5px 10px;
+    border: none;
+    display: none;
+}
+
+.dataDisplay .addSeve {
+    padding: 5px;
+    display: flex;
+    height: 50px;
+    position: absolute;
+    left: 300px;
+    right: 0;
+    z-index: 9;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+}
+
+.tebleListinfo {
+    padding-top: 60px;
+}
+
+._deleteTr.active,
+._addTr.active {
+    background-color: #d0c7c7;
+}
+
+.addSeve button {
+    border: none;
+    background: #efeded;
+    margin: 0 3px;
+    border-radius: 3px;
+}
+
+.addSeve button:focus {
+    outline: none;
+}
+
+.addListData.active,
+.changeListData.active,
+.deleteListData.active {
+    background-color: #bfacac;
+}

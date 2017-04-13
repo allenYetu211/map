@@ -31,6 +31,7 @@ require.config({
         "chartInformations": "theChart/chartinformations",
         "mapIntroduce": "theChart/introduceMap",
         "dataAdmin": "theChart/dataAdmin",
+        "development": "theChart/development",
 
         "bootstrap": "sqlToolJs/bootstrap.min",
         "bootstrapSelect": "sqlToolJs/bootstrap-select.min",
@@ -66,7 +67,7 @@ require.config({
     },
     waitSeconds: 0
 });
-require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin"],
+require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development"],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, t, a, b, d, echarts, s, st, ch, ma) {
         // console.log(ch)
@@ -74,6 +75,7 @@ require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somosel
         // t.initTree("ywdtTree");
         b.initEvent();
         a.loadFloatTool()
+            // ma.load()
             // d.dragBox("box",function(e){
             // 	console.log(e.width());
             // 	console.log(e.height());
