@@ -4,7 +4,7 @@
     background-color: #e9eff4;
 }
 
-.dataDisplay .listAry {
+.dataDisplay .listAry_cs {
     position: absolute;
     top: 60px;
     bottom: 0;
@@ -16,12 +16,12 @@
     padding: 5px;
 }
 
-.dataDisplay .listAry ul {
+.dataDisplay .listAry_cs ul {
     border-radius: 3px;
     background-color: #fff;
 }
 
-.dataDisplay .listAry .addListAry {
+.dataDisplay .listAry_cs .addListAry {
     padding: 5px;
     background: #fff;
     margin-bottom: 5px;
@@ -29,7 +29,7 @@
     cursor: pointer;
 }
 
-.dataDisplay .listAry li {
+.dataDisplay .listAry_cs li {
     padding: 0 5px;
     display: flex;
     justify-content: space-between;
@@ -41,19 +41,32 @@
     transition: background 0.3s;
 }
 
-.dataDisplay .listAry li.active {
+.dataDisplay .listAry_cs li.active {
+    position: relative;
     background-color: #f9f9f9;
 }
 
-.dataDisplay .listAry li:hover {
+.dataDisplay .listAry_cs li.active:after {
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 15px;
+    border-radius: 50%;
+    background-color: #7ed321;
+    width: 6px;
+    height: 6px;
+    content: '';
+}
+
+.dataDisplay .listAry_cs li:hover {
     background-color: #f9f9f9;
 }
 
-.dataDisplay .listAry li span {
+.dataDisplay .listAry_cs li span {
     cursor: pointer;
 }
 
-.dataDisplay .listAry li div.gr-feature {
+.dataDisplay .listAry_cs li div.gr-feature {
     float: right;
     opacity: 0;
     -webkit-transition: opacity 0.3s;
@@ -62,29 +75,29 @@
     pointer-events: none;
 }
 
-.dataDisplay .listAry li:hover div.gr-feature {
+.dataDisplay .listAry_cs li:hover div.gr-feature {
     opacity: 1;
     pointer-events: auto;
 }
 
-.dataDisplay .listAry li .gr-feature span {
+.dataDisplay .listAry_cs li .gr-feature span {
     display: inline-block;
     width: 20px;
     height: 20px;
 }
 
-.dataDisplay .listAry li .gr-feature img {
+.dataDisplay .listAry_cs li .gr-feature img {
     width: 100%;
 }
 
-.dataDisplay .listAry input.change-group {
+.dataDisplay .listAry_cs input.change-group {
     position: absolute;
     left: 0;
     top: 0;
     display: none;
 }
 
-.dataDisplay .listAry input._show {
+.dataDisplay .listAry_cs input._show {
     display: block;
 }
 

@@ -1,0 +1,112 @@
+.dataDisplay ._laysthList {
+    background-color: #fff;
+}
+
+._laysthList button {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+}
+
+._laysthList .in_parents {
+    display: none;
+}
+
+._laysthList .in_parents li {
+    cursor: pointer;
+}
+
+.dataDisplay .laysthTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dataDisplay .laysthTitle .icons-Display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataDisplay .laysthTitle .icons-Display span {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+.dataDisplay .laysthTitle .icons-Display span img {
+    width: 100%;
+}
+
+
+/***
+  Popup -- Css Start
+**/
+
+.popupAddChange {
+    padding: 20px;
+    width: 400px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-top: 2px solid #0088EB;
+    border-radius: 3px 3px 0 0;
+}
+
+.popupAddChange ._popupSelect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0px;
+    position: relative;
+}
+
+.popupAddChange ._popupSelect ._drop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.popupAddChange ._popupSelect ._drop:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-left: 4px solid transparent;
+    border-top: 6px solid #000;
+    border-right: 4px solid transparent;
+}
+
+.popupAddChange ._liSelect {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 9;
+    display: none;
+}
+
+.popupAddChange ._liSelect li._selected {
+    background-color: #e0e0e0;
+}
+
+.popupAddChange ._liSelect li {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.popupAddChange ._liSelect li:hover {
+    background-color: #e0e0e0;
+}

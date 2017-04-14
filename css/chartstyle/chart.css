@@ -70,6 +70,29 @@ body {
     padding: 10px 0px;
 }
 
+#top-sidebar .tsidebar-l {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top-sidebar .dataPageList {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#top-sidebar .dataPageList a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#top-sidebar .dataPageList a img {
+    width: 25px;
+    height: 25px;
+}
+
 #top-sidebar .logo {
     width: 344px;
     height: 40px;

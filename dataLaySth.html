@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
-    <title>制度制定 | 移民快速调查综合服务平台</title>
+    <title>数据展示 | 移民快速调查综合服务平台</title>
     <!--首页加载需要使用到的css样式表-->
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
     <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
     <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
+    <link rel="stylesheet" type="text/css" href="css/chartstyle/dataLaySth.css">
     <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
 
 
@@ -35,9 +36,20 @@
     <div id="map"></div>
     <div id="top-sidebar">
 
-        <div class="logo">
-            <a href="menu.html"><img src="images/chart/logo@2x.png" alt=""></a>
+        <div class="tsidebar-l">
+            <div class="logo">
+                <a href="menu.html"><img src="images/chart/logo@2x.png" alt=""></a>
+            </div>
+
+            <div class="dataPageList">
+                <a href="#"><img src="images/chart/icon_zdzd@2x.png" alt="">数据展示</a>
+                <a href="#"><img src="images/chart/icon_zdzd@2x.png" alt="">数据跳转</a>
+                <a href="#"><img src="images/chart/icon_zdzd@2x.png" alt="">数据**</a>
+            </div>
         </div>
+
+
+
 
         <div class="toolbar">
             <button type="button" class="user"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></button>
@@ -54,30 +66,37 @@
 
     <div class="dataDisplay">
 
-        <div class="listAry listAry_cs">
-        </div>
-
-        <!--<div class="management">
-        </div>-->
-
-        <div class="tableList">
-            <div class="addSeve">
-                <button class="addListData" type="button">addListData</button>
-                <button class="changeListData" type="button">changeListData</button>
-                <button class="deleteListData" type="button">deleteListData</button>
-                <button class="serverListData" type="button">seveListData</button>
-
+        <div class=" _laysthList listAry_cs ">
+            <div class="laysthTitle">
+                报表
+                <div class="icons-Display">
+                    <span class="_Addlaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
+                    <span class="_Changelaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
+                    <span class="_Deletelaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
+                </div>
             </div>
 
-            <div class="tebleListinfo">
-
-            </div>
+            <div class="_j_laysthList"></div>
         </div>
 
 
     </div>
 
     <!--dataDisplay Show Left End-->
+
+    <!--Pop-up Data Start-->
+
+    <div class="popupAddChange">
+        <div class="fillInSelection"></div>
+        <div class="qfButton">
+            <button>确认</button>
+            <button>取消</button>
+        </div>
+
+    </div>
+
+
+    <!--Pop-up Data End-->
 
 
 </body>
