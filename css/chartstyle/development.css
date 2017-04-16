@@ -66,6 +66,11 @@
     cursor: pointer;
 }
 
+.dataDisplay .listAry_cs li span.group {
+    display: block;
+    min-width: 50%;
+}
+
 .dataDisplay .listAry_cs li div.gr-feature {
     float: right;
     opacity: 0;
@@ -73,6 +78,7 @@
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
     pointer-events: none;
+    margin-right: 15px;
 }
 
 .dataDisplay .listAry_cs li:hover div.gr-feature {
@@ -144,7 +150,7 @@
 }
 
 .dataDisplay .addSeve {
-    padding: 5px;
+    padding: 10px 5px;
     display: flex;
     height: 50px;
     position: absolute;
@@ -153,6 +159,7 @@
     z-index: 9;
     background-color: #fff;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    /*display: none;*/
 }
 
 .tebleListinfo {
@@ -166,9 +173,17 @@
 
 .addSeve button {
     border: none;
-    background: #efeded;
     margin: 0 3px;
     border-radius: 3px;
+    background-color: transparent;
+    border: 1px solid #0088eb;
+    padding: 0 15px;
+}
+
+.addSeve button img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
 }
 
 .addSeve button:focus {

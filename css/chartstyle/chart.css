@@ -80,17 +80,31 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-left: 15px;
 }
 
 #top-sidebar .dataPageList a {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    height: 60px;
+    line-height: 60px;
+    color: #333;
+    padding: 0 15px;
+}
+
+#top-sidebar .dataPageList a:hover {
+    background-color: #f4f4f4;
 }
 
 #top-sidebar .dataPageList a img {
     width: 25px;
     height: 25px;
+    vertical-align: middle;
+}
+
+#top-sidebar .dataPageList a.active {
+    background-color: #f4f4f4;
 }
 
 #top-sidebar .logo {
@@ -133,6 +147,10 @@ body {
     margin-left: 4px;
     margin-right: 4px;
     font-size: 14px;
+}
+
+#top-sidebar .toolbar button a {
+    color: #000;
 }
 
 #top-sidebar .toolbar button:hover {
