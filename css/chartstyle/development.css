@@ -5,15 +5,13 @@
 }
 
 .dataDisplay .listAry_cs {
-    position: absolute;
     top: 60px;
     bottom: 0;
     width: 300px;
-    border-right: 1px solid #e0e0e0;
-    /*overflow: auto;*/
     z-index: 9;
     background-color: #e9eff4;
     padding: 5px;
+    float: left;
 }
 
 .dataDisplay .listAry_cs ul {
@@ -47,7 +45,7 @@
 }
 
 .dataDisplay .listAry_cs li {
-    padding: 0 5px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,6 +67,7 @@
 
 .dataDisplay .listAry_cs li span {
     cursor: pointer;
+    margin: 0 2px;
 }
 
 .dataDisplay .listAry_cs li span.group {
@@ -83,7 +82,6 @@
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
     pointer-events: none;
-    margin-right: 15px;
 }
 
 .dataDisplay .listAry_cs li.active div.gr-feature {
@@ -170,16 +168,16 @@
 }*/
 
 .dataDisplay .tableList {
-    width: 100%;
-    padding-left: 300px;
+    width: calc(100%-300px);
+    padding: 5px;
     height: 100%;
     overflow: auto;
-    background-color: #fff;
+    background-color: #e9eff4;
     /*position: relative;*/
 }
 
 .dataDisplay .tableList th {
-    min-width: 60px;
+    min-width: 30px;
 }
 
 .dataDisplay .tableList td {
@@ -208,17 +206,15 @@
     padding: 10px 5px;
     display: flex;
     height: 50px;
-    position: absolute;
-    left: 300px;
-    right: 0;
-    z-index: 9;
     background-color: #fff;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
-    /*display: none;*/
+    border-radius: 5px 5px 0px 0px;
 }
 
 .tebleListinfo {
-    padding-top: 60px;
+    background-color: #fff;
+    padding: 8px;
+    height: calc(100% - 55px);
+    overflow: scroll;
 }
 
 ._deleteTr.active,
