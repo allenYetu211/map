@@ -224,6 +224,11 @@
     background-color: #d0c7c7;
 }
 
+._deleteTr.action,
+._addTr.action {
+    background-color: red;
+}
+
 .addSeve button {
     border: none;
     margin: 0 3px;
