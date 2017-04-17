@@ -88,6 +88,10 @@
     min-width: 150px;
 }
 
+.dataView-Pages tr.active {
+    background: red;
+}
+
 
 /*
  dark 模式
