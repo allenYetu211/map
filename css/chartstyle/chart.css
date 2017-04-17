@@ -2191,14 +2191,14 @@ table th {
 }
 
 ._dataGet .query-builder .rule-container {
-    background-color: #a5acbb;
+    /*background-color: #a5acbb;*/
     border: none;
     padding: 5px;
     list-style: none;
 }
 
 ._dataGet .query-builder .rule-container {
-    background-color: #a5acbb;
+    background-color: #d9dce1;
 }
 
 .dark ._dataGet .query-builder .rule-container {
@@ -2206,7 +2206,7 @@ table th {
 }
 
 ._dataGet .form-control {
-    background-color: #697284;
+    background-color: #c4cad5;
     color: #fff;
     border: none;
 }
