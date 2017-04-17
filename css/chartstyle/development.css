@@ -254,3 +254,62 @@
 .deleteListData.active {
     background-color: rgba(0, 136, 235, .2);
 }
+
+.al-popup-prompt {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.al-popup-prompt .al-popup {
+    width: 300px;
+    /*height: 200px;*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 10px 15px;
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.al-popup-prompt .al-popup .al-closer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0px 15px;
+}
+
+.al-popup-prompt .al-popup .al-closer button {
+    background: transparent;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.al-popup-prompt .al-popup .al-closer button img {
+    width: 100%;
+}
+
+.al-popup-prompt .al-popup .al-prompt-informations {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.al-popup-prompt .al-popup .al-prompt-informations+button {
+    border: 1px solid #e0e0e0;
+    background: transparent;
+}
+
+.al-popup-prompt .al-popup .al-prompt-informations+button img {
+    width: 25px;
+    height: 25px;
+}
