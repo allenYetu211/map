@@ -45,7 +45,7 @@
     width: 120px;
     height: 40px;
     margin: 0 3px;
-    border-radius: 3px 3px 0 0;
+    border-radius: 5px 5px 0 0;
 }
 
 .exhibition .mapPosition .module-features {
@@ -69,7 +69,7 @@
 .exhibition .mapFiled-view {
     width: 100%;
     height: calc(100% - 120px);
-    padding: 5px;
+    padding: 8px;
     overflow-y: auto;
     border-radius: 3px;
     /*background-color: rgba(255, 255, 255, .1);*/
@@ -94,12 +94,12 @@
 */
 
 .exhibition._changeNew .mapPosition {
-    /*background-color: #0E142A;*/
+    background-color: #E9EFF4;
 }
 
 .exhibition._changeNew .mapPosition .module-md div {
     color: #C4C4C4;
-    background-color: #e7e4e4;
+    background-color: #F7F7F7;
 }
 
 .exhibition .mapPosition .module-md div.active {
@@ -121,13 +121,26 @@
 }
 
 .exhibition._changeNew .tree-radius>p {
+    position: relative;
     height: 40px;
     line-height: 40px;
     color: #0088EB;
     background-color: #f7f7f7;
-    font-size: 20px;
+    font-size: 16px;
     padding: 0 20px;
     margin: 0;
+}
+
+.exhibition._changeNew .tree-radius>p:after {
+    display: block;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    right: 21px;
+    top: 42%;
+    border-radius: 50%;
+    content: '';
+    background-color: #7ED321;
 }
 
 .exhibition._changeNew .tree-parents .tree-bg {
@@ -151,20 +164,21 @@
 .exhibition._changeNew .tree-parents .tree-branch:after {
     display: block;
     position: absolute;
-    right: 15px;
+    right: 0px;
     top: 42%;
     content: '';
     border-left: 4px solid transparent;
-    border-top: 6px solid #333;
+    border-top: 6px solid #0088EB;
     border-right: 4px solid transparent;
-    transition: border .3s;
+    transition: transform .3s;
 }
 
 .exhibition._changeNew .tree-parents .tree-branch.open:after {
-    border-top: 0px solid transparent;
+    /*border-top: 0px solid transparent;
     border-left: 4px solid transparent;
-    border-bottom: 6px solid #333;
-    border-right: 4px solid transparent;
+    border-bottom: 6px solid #0088EB;
+    border-right: 4px solid transparent;*/
+    transform: rotate(180deg);
 }
 
 .exhibition._changeNew .tree-parents .tree-p-branch ul {
@@ -182,7 +196,8 @@
 }
 
 .exhibition._changeNew .tree-parents .tree-p-branch ul li.active {
-    background-color: rgba(255, 255, 255, .1);
+    background-color: #F9F9F9;
+    color: #0088EB;
 }
 
 .exhibition._changeNew .tree-parents .tree-p-branch ul li.active:after {
@@ -190,8 +205,8 @@
     width: 6px;
     height: 6px;
     position: absolute;
-    right: 35px;
-    top: 50%;
+    right: 21px;
+    top: 40%;
     border-radius: 50%;
     content: '';
     background-color: #7ED321;
@@ -223,13 +238,14 @@
 }
 
 .dark._dataGet .tableField {
-    background: #232C4D;
+    background: #fff;
+    color: #222;
 }
 
 ._closePop {
     position: absolute;
     right: 15px;
-    top: 5px;
+    top: 21px;
     width: 25px;
     height: 25px;
 }
@@ -256,8 +272,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 60px;
+    height: 50px;
+    padding: 15px;
     color: #333;
+    border-radius: 5px;
+    background: #f9f9f9;
 }
 
 .vi-pages button {
@@ -273,7 +292,7 @@
 
 .vi-pages input {
     width: 50px;
-    background-color: transparent;
+    background-color: #fff;
     border: 1px solid #e0e0e0;
     margin: 0 5px;
     color: #333;

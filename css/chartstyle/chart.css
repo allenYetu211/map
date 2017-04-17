@@ -137,6 +137,10 @@ body {
     text-overflow: none;
 }
 
+#top-sidebar .toolbar button.active {
+    border-bottom: 4px solid #0088EB;
+}
+
 #top-sidebar .toolbar button img {
     width: 26px;
     margin-right: 12px;
@@ -150,7 +154,8 @@ body {
 }
 
 #top-sidebar .toolbar button a {
-    color: #000;
+    color: #222;
+    text-decoration: none;
 }
 
 #top-sidebar .toolbar button:hover {
@@ -842,12 +847,15 @@ body {
     padding: 10px 0px;
 }
 
-#top-sidebar.dark .toolbar {}
-
 #top-sidebar.dark .toolbar button {
     border-left: 1px solid #0c1123;
     color: #fff;
     background: #151E3E;
+}
+
+#top-sidebar.dark .toolbar button a {
+    color: #fff;
+    text-decoration: none;
 }
 
 #top-sidebar.dark .toolbar button:hover {
@@ -1890,23 +1898,26 @@ div.login_informations button._close {
 table {
     width: 100%;
     color: #333;
-    border-left: 1px solid #e9e9e9;
-    border-bottom: 1px solid #e9e9e9;
+    border-left: 1px solid #E9EFF4;
+    border-bottom: 1px solid #E9EFF4;
     border-collapse: collapse;
     font-size: 12px;
 }
 
 table ._column {
-    background-color: #e9e9e9;
+    background-color: #E9EFF4;
 }
 
 table td,
 table th {
     vertical-align: middle;
-    border-right: 1px solid #e9e9e9;
-    border-top: 1px solid #e9e9e9;
+    border-right: 1px solid #E9EFF4;
+    border-top: 1px solid #E9EFF4;
     padding: 5px;
     /*min-width: 150px;*/
+    height: 36px;
+    min-height: 36px;
+    text-align: center;
 }
 
 .table-titles {
@@ -2036,7 +2047,7 @@ table th {
 }
 
 ._dataGet .selectField .selcetInfo .select_cf {
-    margin: 5px 10px;
+    margin: 5px 5px;
     padding: 0px 15px;
     border-radius: 10px;
     color: #fff;
@@ -2069,6 +2080,11 @@ table th {
     background-color: #EEEEEE;
     padding: 10px;
     box-sizing: border-box;
+}
+
+._dataGet ._getsql,
+._dataGet ._reset {
+    color: #0088EB;
 }
 
 #controlPanel ._dataGet .condition .filedState .filedCondition {
