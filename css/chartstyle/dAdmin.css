@@ -85,7 +85,7 @@
 
 .dataView-Pages th,
 .dataView-Pages td {
-    min-width: 30px;
+    min-width: 100px;
 }
 
 .dataView-Pages tr.active {
@@ -281,6 +281,7 @@
     color: #333;
     border-radius: 5px;
     background: #f9f9f9;
+    font-size: 12px;
 }
 
 .vi-pages button {
@@ -314,6 +315,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.isShow {
+    justify-content: flex-end;
+}
+
+.numberCount,
+.isShow {
+    width: 150px;
 }
 
 .SelectPopup._dataGet .selectField .filed {
