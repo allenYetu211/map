@@ -110,7 +110,7 @@
 .popupAddChange {
     display: none;
     width: 350px;
-    padding: 10px 20px;
+    padding: 0 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -184,6 +184,12 @@
     padding: 0 10px;
 }
 
+.popupAddChange ._popupSelect>input[type='file'] {
+    height: auto;
+    border: none;
+    padding: 0;
+}
+
 .popupAddChange ._popupSelect>input:focus {
     outline: none;
 }
@@ -212,4 +218,37 @@
 
 .popupAddChange ._liSelect li:hover {
     background-color: #e0e0e0;
+}
+
+.popupAddChange .qfButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    background-color: #f9f9f9;
+    margin: 0 -20px;
+}
+
+.popupAddChange .qfButton button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #2399ed;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.popupAddChange .qfButton button:hover {
+    background-color: rgba(0, 136, 235, .2)
+}
+
+.popupAddChange .qfButton button img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
 }
