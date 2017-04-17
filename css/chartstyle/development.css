@@ -92,6 +92,11 @@
     margin-right: 15px;
 }
 
+.dataDisplay .listAry_cs li.active div.gr-feature {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .dataDisplay .listAry_cs li:hover div.gr-feature {
     opacity: 1;
     pointer-events: auto;
@@ -136,6 +141,7 @@
     right: 0;
     z-index: 99;*/
     background-color: #f7f7f7;
+    border-radius: 5px 5px 0px 0px;
 }
 
 .dataDisplay .laysthTitle .icons-Display {
@@ -152,8 +158,9 @@
 
 .dataDisplay .laysthTitle .icons-Display span {
     display: block;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
 }
 
 .dataDisplay .laysthTitle .icons-Display span img {
