@@ -27,6 +27,8 @@
     margin-bottom: 5px;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 12px;
+    color: #0088eb;
 }
 
 .dataDisplay .listAry_cs ._listinfoAdd {
@@ -38,9 +40,10 @@
 }
 
 .dataDisplay .listAry_cs .addListAry img {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+    margin-right: 5px;
 }
 
 .dataDisplay .listAry_cs li {
@@ -219,12 +222,12 @@
 
 ._deleteTr.active,
 ._addTr.active {
-    background-color: #d0c7c7;
+    background-color: #ffe8e8;
 }
 
 ._deleteTr.action,
 ._addTr.action {
-    background-color: red;
+    background-color: #f9f9f9;
 }
 
 .addSeve button {
@@ -251,5 +254,5 @@
 .addListData.active,
 .changeListData.active,
 .deleteListData.active {
-    background-color: #bfacac;
+    background-color: rgba(0, 136, 235, .2);
 }

@@ -85,11 +85,11 @@
 
 .dataView-Pages th,
 .dataView-Pages td {
-    min-width: 150px;
+    min-width: 30px;
 }
 
 .dataView-Pages tr.active {
-    background: red;
+    background: #f9f9f9;
 }
 
 
