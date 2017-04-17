@@ -174,16 +174,18 @@
 .addSeve button {
     border: none;
     margin: 0 3px;
-    border-radius: 3px;
+    border-radius: 4px;
     background-color: transparent;
     border: 1px solid #0088eb;
-    padding: 0 15px;
+    padding: 0 12px;
+    font-size: 14px;
 }
 
 .addSeve button img {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+    margin-right: 10px;
 }
 
 .addSeve button:focus {
