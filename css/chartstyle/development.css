@@ -10,7 +10,7 @@
     bottom: 0;
     width: 300px;
     border-right: 1px solid #e0e0e0;
-    overflow: auto;
+    /*overflow: auto;*/
     z-index: 9;
     background-color: #e9eff4;
     padding: 5px;
@@ -27,6 +27,17 @@
     margin-bottom: 5px;
     border-radius: 3px;
     cursor: pointer;
+}
+
+.dataDisplay .listAry_cs ._listinfoAdd {
+    height: calc(100% - 45px);
+    overflow: auto;
+}
+
+.dataDisplay .listAry_cs .addListAry img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
 }
 
 .dataDisplay .listAry_cs li {
@@ -105,6 +116,48 @@
 
 .dataDisplay .listAry_cs input._show {
     display: block;
+}
+
+.dataDisplay ._listinfo {
+    /*padding-top: 45px;*/
+    /*height: 100%;
+    overflow: auto;*/
+}
+
+.dataDisplay .laysthTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    /*position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 99;*/
+    background-color: #f7f7f7;
+}
+
+.dataDisplay .laysthTitle .icons-Display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataDisplay .laysthTitle .laysthTitle-h2 {
+    font-size: 16px;
+    color: #2a9bec;
+    font-weight: 700;
+}
+
+.dataDisplay .laysthTitle .icons-Display span {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+.dataDisplay .laysthTitle .icons-Display span img {
+    width: 100%;
 }
 
 
