@@ -176,7 +176,7 @@
     border-right: 4px solid transparent;
 }
 
-.popupAddChange ._popupSelect input {
+.popupAddChange ._popupSelect>input {
     width: 60%;
     height: 40px;
     margin-bottom: 5px;
@@ -184,7 +184,7 @@
     padding: 0 10px;
 }
 
-.popupAddChange ._popupSelect input:focus {
+.popupAddChange ._popupSelect>input:focus {
     outline: none;
 }
 
