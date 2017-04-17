@@ -153,12 +153,13 @@
 }
 
 .popupAddChange ._popupSelect ._drop {
+    width: 25px;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
+    top: 1;
+    right: 1px;
+    bottom: 6px;
     cursor: pointer;
+    background-color: #fff;
 }
 
 .popupAddChange ._popupSelect ._drop:after {
@@ -175,12 +176,26 @@
     border-right: 4px solid transparent;
 }
 
+.popupAddChange ._popupSelect input {
+    width: 60%;
+    height: 40px;
+    margin-bottom: 5px;
+    border: 1px solid #e0e0e0;
+    padding: 0 10px;
+}
+
+.popupAddChange ._popupSelect input:focus {
+    outline: none;
+}
+
 .popupAddChange ._liSelect {
+    width: 60%;
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 40px;
     z-index: 9;
     display: none;
+    background: #fff;
 }
 
 .popupAddChange ._liSelect li._selected {
@@ -188,6 +203,8 @@
 }
 
 .popupAddChange ._liSelect li {
+    padding: 0 10px;
+    list-style: none;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
