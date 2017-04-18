@@ -177,7 +177,7 @@
 }
 
 .dataDisplay .tableList th {
-    min-width: 30px;
+    min-width: 130px;
 }
 
 .dataDisplay .tableList td {
@@ -266,11 +266,11 @@
 
 .al-popup-prompt .al-popup {
     width: 300px;
-    /*height: 200px;*/
     position: absolute;
     left: 50%;
     top: 50%;
-    padding: 10px 15px;
+    padding: 5px 15px;
+    border-top: 3px solid #0088eb;
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -307,9 +307,15 @@
 .al-popup-prompt .al-popup .al-prompt-informations+button {
     border: 1px solid #e0e0e0;
     background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
 }
 
 .al-popup-prompt .al-popup .al-prompt-informations+button img {
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
 }

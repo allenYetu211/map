@@ -1569,7 +1569,7 @@ div.login_informations button._close {
 ._dataGet .selectField .selcetInfo {
     display: flex;
     flex-wrap: wrap;
-    max-width: 670px;
+    max-width: 580px;
 }
 
 .dark ._dataGet .selectField .selcetInfo .select_cf {

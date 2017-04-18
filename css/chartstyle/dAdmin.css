@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+input:focus {
+    outline: none;
+}
+
 #sql-builder {}
 
 .exhibition {
@@ -52,6 +56,27 @@
     display: none;
 }
 
+.exhibition .mapPosition .module-features .module-select {
+    position: relative;
+}
+
+.exhibition .mapPosition .module-features .module-select span {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 8px;
+}
+
+.exhibition .mapPosition .module-features .module-select input {
+    border: none;
+    padding: 10px 10px 10px 30px;
+    margin-right: 10px;
+}
+
+.exhibition .mapPosition .module-features .module-select input[attr="placeholder"] {
+    color: #e0e0e0;
+}
+
 .exhibition .mapPosition .module-features.open {
     display: flex;
 }
@@ -87,7 +112,7 @@
 
 .dataView-Pages th,
 .dataView-Pages td {
-    min-width: 100px;
+    min-width: 150px;
 }
 
 .dataView-Pages tr.active {
@@ -225,7 +250,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 750px;
+    width: 850px;
     max-height: 500px;
     overflow-y: auto;
     transform: translate(-50%, -50%);
@@ -248,17 +273,29 @@
     color: #222;
 }
 
-._closePop {
-    position: absolute;
-    right: 15px;
-    top: 21px;
-    width: 25px;
-    height: 25px;
+._selectTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-top: 3px solid #0088EB;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
 }
 
-._closePop img {
-    width: 100%;
+._selectTitle h2 {
+    margin: 0;
+    font-size: 16px;
 }
+
+._selectTitle button {
+    border: none;
+}
+
+
+/*._closePop img {
+    width: 100%;
+}*/
 
 
 /*
