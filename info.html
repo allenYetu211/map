@@ -142,7 +142,7 @@
             color: #0088EB;
             font-size: 18px;
         }
-        #left-sidebar .select1{
+        #left-sidebar .select1,#left-sidebar .select2{
             width: 140px;
             height: 32px;
             background: #E9EFF4 url("images/chart/icon_bigmapfold.png") no-repeat scroll 120px center;
@@ -174,6 +174,7 @@
             margin: 0 auto;
             border-radius: 5px;
             padding: 10px 10px;
+            overflow-y:auto
         }
         #left-sidebar .survey1 .content .item img{
             float: right;
@@ -197,12 +198,12 @@
         #left-sidebar .survey1 .content .item .item-title{
             font-size: 18px;
         }
-        #left-sidebar .btn{
+        #left-sidebar .mission{
             width: 380px;
-            margin: 10px;
+            margin: 20px auto;
             padding: 0;
         }
-        #left-sidebar .btn button{
+        #left-sidebar .mission button{
             width:180px;
             height:40px;
             border:1px solid #0088EB;
@@ -210,9 +211,14 @@
             background: #ffffff;
             color: #0088EB;
             font-size: 12px;
+            outline: none;
         }
-        #left-sidebar .btn button:hover{
+        #left-sidebar .mission .inventory{
+            float: right;
+        }
+        #left-sidebar .mission button:hover{
             background: rgba(0,136,235,0.2);
+            outline: none;
         }
     </style>
 </head>
@@ -310,7 +316,7 @@
                     <option value="4">农户3</option>
                     <option value="5">农户4</option>
                 </select>
-                <select class="select1">
+                <select class="select2">
                     <option value="1">农户</option>
                     <option value="2">农户1</option>
                     <option value="3">农户2</option>
@@ -359,6 +365,7 @@
                             <img src="./images/chart/icon_data_info.png" alt="">
                         </p>
                     </div>
+                    <br><br><br><br><br><br><br>
                 </div>
             </div>
             <!--调查表2-->
@@ -405,9 +412,9 @@
                 </div>
             </div>
             <!--任务生成，任务清单-->
-            <div class="btn">
-                <button>任务生成</button>
-                <button>任务清单</button>
+            <div class="mission">
+                <button class="generate">任务生成</button>
+                <button class="inventory">任务清单</button>
             </div>
         </div>
 
