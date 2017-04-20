@@ -132,6 +132,9 @@
     </style>
 
     <style>
+        #left-sidebar{
+            color: #222222;
+        }
         #left-sidebar .task{
             padding: 25px 10px;
         }
@@ -142,7 +145,15 @@
         #left-sidebar .select1{
             width: 140px;
             height: 32px;
-            background: #E9EFF4;
+            background: #E9EFF4 url("images/chart/icon_bigmapfold.png") no-repeat scroll 120px center;
+            font-size: 12px;
+            padding-left: 10px;
+            margin-left: 10px;
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            border: none;
+            outline: none;
         }
         #left-sidebar .survey1 .title{
             padding: 20px 10px;
@@ -173,11 +184,23 @@
             margin: 0 10px;
             width: 18px;
             height: 18px;
+            /*appearance:none;*/
+            /*-moz-appearance:none;*/
+            /*-webkit-appearance:none;*/
             border:none;
             outline:none;
+            background: #ffffff;
+            border-radius: 3px;
+            position: relative;
+            top:3px;
         }
         #left-sidebar .survey1 .content .item .item-title{
             font-size: 18px;
+        }
+        #left-sidebar .btn{
+            width: 380px;
+            margin: 10px;
+            padding: 0;
         }
         #left-sidebar .btn button{
             width:180px;
@@ -348,7 +371,7 @@
                 </div>
                 <div class="content">
                     <div class="item">
-                        <p class="item-title">行政村</p>
+                        <p class="item-title">奉化市</p>
                         <p>
                             <label><input type="checkbox">农户登记表</label>
                             <img src="./images/chart/icon_data_info.png" alt="">
