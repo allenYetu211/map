@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a0eedc29-7843-4c13-9d89-42f73b36c8d7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info.html" afterPath="$PROJECT_DIR$/info.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/chartstyle/dataLaySth.css" afterPath="$PROJECT_DIR$/css/chartstyle/dataLaySth.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataLaySth.html" afterPath="$PROJECT_DIR$/dataLaySth.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/theChart/chartinformations.js" afterPath="$PROJECT_DIR$/lib/theChart/chartinformations.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/theChart/dataAdmin.js" afterPath="$PROJECT_DIR$/lib/theChart/dataAdmin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/theChart/dataLaySth.js" afterPath="$PROJECT_DIR$/lib/theChart/dataLaySth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/theChart/development.js" afterPath="$PROJECT_DIR$/lib/theChart/development.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/theChart/info.js" afterPath="$PROJECT_DIR$/lib/theChart/info.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,8 +32,8 @@
           <file leaf-file-name="info.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/info.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+                <state relative-caret-position="1151">
+                  <caret line="221" column="9" lean-forward="true" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
                   <folding>
                     <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -45,35 +48,11 @@
           <file leaf-file-name="chartinformations.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/theChart/chartinformations.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="591">
-                  <caret line="391" column="0" lean-forward="true" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
+                <state relative-caret-position="4892">
+                  <caret line="425" column="41" lean-forward="true" selection-start-line="425" selection-start-column="41" selection-end-line="425" selection-end-column="41" />
                   <folding>
-                    <element signature="e#156#858#0" expanded="false" />
-                    <element signature="e#899#1597#0" expanded="false" />
-                    <element signature="e#1641#1673#0" expanded="false" />
-                    <element signature="e#1716#1747#0" expanded="false" />
-                    <element signature="e#1805#1861#0" expanded="false" />
-                    <element signature="e#1921#2041#0" expanded="false" />
-                    <element signature="e#2089#2724#0" expanded="false" />
-                    <element signature="e#2769#2906#0" expanded="false" />
-                    <element signature="e#3720#3771#0" expanded="false" />
-                    <element signature="e#3938#4141#0" expanded="false" />
-                    <element signature="e#4213#4908#0" expanded="false" />
-                    <element signature="e#4951#5005#0" expanded="false" />
-                    <element signature="e#5058#5376#0" expanded="false" />
-                    <element signature="e#5432#6017#0" expanded="false" />
-                    <element signature="e#6071#6233#0" expanded="false" />
-                    <element signature="e#6279#6409#0" expanded="false" />
-                    <element signature="e#6474#6536#0" expanded="false" />
-                    <element signature="e#6588#6744#0" expanded="false" />
-                    <element signature="e#6793#7153#0" expanded="false" />
-                    <element signature="e#7207#7282#0" expanded="false" />
-                    <element signature="e#7335#7655#0" expanded="false" />
-                    <element signature="e#7720#7856#0" expanded="false" />
-                    <element signature="e#8837#12792#0" expanded="false" />
-                    <element signature="e#14038#15794#0" expanded="false" />
-                    <marker date="1492679873000" expanded="true" signature="25100:25106" ph=" " />
-                    <marker date="1492679873000" expanded="true" signature="25132:25138" ph=" " />
+                    <marker date="1492743623000" expanded="true" signature="22830:22836" ph=" " />
+                    <marker date="1492743623000" expanded="true" signature="22862:22868" ph=" " />
                   </folding>
                 </state>
               </provider>
@@ -82,32 +61,34 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="521">
-                  <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+                <state relative-caret-position="561">
+                  <caret line="33" column="46" lean-forward="false" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dataAdmin.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="dataAdmin.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/theChart/dataAdmin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="641">
-                  <caret line="189" column="33" lean-forward="true" selection-start-line="189" selection-start-column="33" selection-end-line="189" selection-end-column="33" />
-                  <folding />
+                <state relative-caret-position="589">
+                  <caret line="216" column="40" lean-forward="true" selection-start-line="216" selection-start-column="40" selection-end-line="216" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#3877#5049#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="info.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="info.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/theChart/info.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="30" />
+                <state relative-caret-position="85">
+                  <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -117,6 +98,11 @@
       </split-second>
     </splitter>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>GetCategory</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -124,9 +110,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/info.html" />
-        <option value="$PROJECT_DIR$/lib/theChart/chartinformations.js" />
         <option value="$PROJECT_DIR$/lib/theChart/info.js" />
         <option value="$PROJECT_DIR$/lib/theChart/dataAdmin.js" />
+        <option value="$PROJECT_DIR$/lib/theChart/chartinformations.js" />
       </list>
     </option>
   </component>
@@ -137,8 +123,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="213" />
-    <option name="y" value="234" />
+    <option name="x" value="86" />
+    <option name="y" value="178" />
     <option name="width" value="2380" />
     <option name="height" value="988" />
   </component>
@@ -157,7 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -218,6 +203,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -277,6 +263,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -312,12 +304,13 @@
       <updated>1492502413719</updated>
       <workItem from="1492502414817" duration="231000" />
       <workItem from="1492503157036" duration="10534000" />
-      <workItem from="1492655902007" duration="13502000" />
+      <workItem from="1492655902007" duration="14218000" />
+      <workItem from="1492742706960" duration="883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24267000" />
+    <option name="totallyTimeSpent" value="25866000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -329,13 +322,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="213" y="234" width="2380" height="988" extended-state="0" />
+    <frame x="86" y="178" width="2380" height="988" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10420168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -347,6 +339,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -363,6 +356,57 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theChart/chartinformations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="38" lean-forward="true" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+          <folding>
+            <marker date="1492743623000" expanded="true" signature="22830:22836" ph=" " />
+            <marker date="1492743623000" expanded="true" signature="22862:22868" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="46" lean-forward="false" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theChart/dataAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3128">
+          <caret line="184" column="10" lean-forward="true" selection-start-line="184" selection-start-column="10" selection-end-line="184" selection-end-column="10" />
+          <folding>
+            <element signature="e#3877#5049#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theChart/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -403,7 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -415,10 +458,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="46" lean-forward="false" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theChart/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theChart/dataAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="216" column="40" lean-forward="true" selection-start-line="216" selection-start-column="40" selection-end-line="216" selection-end-column="40" />
+          <folding>
+            <element signature="e#3877#5049#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        <state relative-caret-position="1151">
+          <caret line="221" column="9" lean-forward="true" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -429,62 +498,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/theChart/dataAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="189" column="33" lean-forward="true" selection-start-line="189" selection-start-column="33" selection-end-line="189" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/theChart/chartinformations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="391" column="0" lean-forward="true" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
+        <state relative-caret-position="4892">
+          <caret line="425" column="41" lean-forward="true" selection-start-line="425" selection-start-column="41" selection-end-line="425" selection-end-column="41" />
           <folding>
-            <element signature="e#156#858#0" expanded="false" />
-            <element signature="e#899#1597#0" expanded="false" />
-            <element signature="e#1641#1673#0" expanded="false" />
-            <element signature="e#1716#1747#0" expanded="false" />
-            <element signature="e#1805#1861#0" expanded="false" />
-            <element signature="e#1921#2041#0" expanded="false" />
-            <element signature="e#2089#2724#0" expanded="false" />
-            <element signature="e#2769#2906#0" expanded="false" />
-            <element signature="e#3720#3771#0" expanded="false" />
-            <element signature="e#3938#4141#0" expanded="false" />
-            <element signature="e#4213#4908#0" expanded="false" />
-            <element signature="e#4951#5005#0" expanded="false" />
-            <element signature="e#5058#5376#0" expanded="false" />
-            <element signature="e#5432#6017#0" expanded="false" />
-            <element signature="e#6071#6233#0" expanded="false" />
-            <element signature="e#6279#6409#0" expanded="false" />
-            <element signature="e#6474#6536#0" expanded="false" />
-            <element signature="e#6588#6744#0" expanded="false" />
-            <element signature="e#6793#7153#0" expanded="false" />
-            <element signature="e#7207#7282#0" expanded="false" />
-            <element signature="e#7335#7655#0" expanded="false" />
-            <element signature="e#7720#7856#0" expanded="false" />
-            <element signature="e#8837#12792#0" expanded="false" />
-            <element signature="e#14038#15794#0" expanded="false" />
-            <marker date="1492679873000" expanded="true" signature="25100:25106" ph=" " />
-            <marker date="1492679873000" expanded="true" signature="25132:25138" ph=" " />
+            <marker date="1492743623000" expanded="true" signature="22830:22836" ph=" " />
+            <marker date="1492743623000" expanded="true" signature="22862:22868" ph=" " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/theChart/info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
