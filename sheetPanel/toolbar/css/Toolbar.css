@@ -1,0 +1,10 @@
+.x-body {
+	font-size: 100%;
+}
+
+#divSave {
+	display: none;
+	position: absolute;
+	width:15px;
+	height: 15px;
+}

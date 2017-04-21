@@ -40,7 +40,6 @@ var jMask = (function($, undefined){
         if(this.cfg.resizable){
             $(window).bind('resize', this.resizeFunc);
         }
-
     };
 
     /**
