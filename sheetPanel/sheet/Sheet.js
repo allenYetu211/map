@@ -16,10 +16,11 @@ function Sheet(divId, zoomSize, withRowColTitle, withComment) {
     this._zoomSize = zoomSize;
     this._withComment = withComment;
     this._clearVar = [];
-    this._serviceUrl = 'http://192.168.0.224:8055/ReportService/ReportService.asmx/';
+    this._serviceUrl = 'http://122.224.94.108:8002/ZJService/NewReportService/ReportService.asmx/';
+    // this._serviceUrl = 'http://192.168.0.224:8055/ReportService/ReportService.asmx/';
     this._namespace = 'TH.ReportSystem';
     var _this = this;
-    Ext.onReady(function () {
+    Ext.onReady(function() {
         _this._SHEET_API = Ext.create('EnterpriseSheet.api.SheetAPI', {
             openFileByOnlyLoadDataFlag: true
         });
@@ -42,7 +43,7 @@ function Sheet(divId, zoomSize, withRowColTitle, withComment) {
     _this._SHEET_API.zoom(this._SHEET_API_HD, zoomSize);
 }
 
-Sheet.prototype.loadStyle = function (reportId, callback) {
+Sheet.prototype.loadStyle = function(reportId, callback) {
     var _this = this;
     var param = {
         reportId: reportId,
@@ -53,7 +54,7 @@ Sheet.prototype.loadStyle = function (reportId, callback) {
         type: 'GET',
         async: false,
         data: param,
-        success: function (response) {
+        success: function(response) {
             var result = Ext.decode(response.firstChild.innerHTML);
             if (!result.sheets) {
                 result = {
@@ -79,7 +80,7 @@ Sheet.prototype.loadStyle = function (reportId, callback) {
     })
 }
 
-Sheet.prototype.getRecordCount = function (reportId, termValue, codeValue) {
+Sheet.prototype.getRecordCount = function(reportId, termValue, codeValue) {
     var _this = this;
     var recordCount = 0;
     var param = {
@@ -91,14 +92,14 @@ Sheet.prototype.getRecordCount = function (reportId, termValue, codeValue) {
         type: 'GET',
         async: false,
         data: param,
-        success: function (response) {
+        success: function(response) {
             recordCount = parseInt(response.firstChild.innerHTML);
         }
     })
     return recordCount;
 }
 
-Sheet.prototype.loadValue = function (reportId, termValue, codeValue, pageIndex) {
+Sheet.prototype.loadValue = function(reportId, termValue, codeValue, pageIndex) {
     var _this = this;
     var param = {
         reportId: reportId,
@@ -110,7 +111,7 @@ Sheet.prototype.loadValue = function (reportId, termValue, codeValue, pageIndex)
         type: 'GET',
         async: false,
         data: param,
-        success: function (response) {
+        success: function(response) {
             if (_this._clearVar.length == 0) {
                 _this._clearVar = _this._SHEET_API.getCellVariables(_this._SHEET_API_HD);
             }
@@ -122,7 +123,7 @@ Sheet.prototype.loadValue = function (reportId, termValue, codeValue, pageIndex)
     })
 }
 
-Sheet.prototype.saveValue = function (reportId, pageIndex) {
+Sheet.prototype.saveValue = function(reportId, pageIndex) {
     var variable = this._SHEET_API.getCellVariables(this._SHEET_API_HD);
     for (var key in variable) {
         var value = variable[key];
@@ -141,13 +142,13 @@ Sheet.prototype.saveValue = function (reportId, pageIndex) {
         type: 'GET',
         async: false,
         data: param,
-        success: function (response) {
+        success: function(response) {
             _this.resetHistory();
         }
     })
 }
 
-Sheet.prototype.getAllChanges = function () {
+Sheet.prototype.getAllChanges = function() {
     if (this._SHEET_API.getAllChanges(this._SHEET_API_HD).length > 0) {
         return true;
     } else {
@@ -155,22 +156,24 @@ Sheet.prototype.getAllChanges = function () {
     }
 }
 
-Sheet.prototype.resetHistory = function () {
+Sheet.prototype.resetHistory = function() {
     this._SHEET_API.resetHistory(this._SHEET_API_HD);
 }
 
-Sheet.prototype.attachEvent = function (eventName, fn) {
+Sheet.prototype.attachEvent = function(eventName, fn) {
     this._SHEET_API_HD.sheet.on(eventName, fn);
 }
 
-Sheet.prototype.getSelectedRange = function () {
-    var ss = this._SHEET_API_HD.sheet, sm = ss.getSelectionModel(), pos = sm.getMinMaxPos();
+Sheet.prototype.getSelectedRange = function() {
+    var ss = this._SHEET_API_HD.sheet,
+        sm = ss.getSelectionModel(),
+        pos = sm.getMinMaxPos();
     var minLetter = this._toLetter(pos.mincol) + pos.minrow;
     var maxLetter = this._toLetter(pos.maxcol) + pos.maxrow;
     return minLetter + ':' + maxLetter;
 }
 
-Sheet.prototype.addComment = function (cellRange, comment) {
+Sheet.prototype.addComment = function(cellRange, comment) {
     var numRange = this._rangeToNumber(cellRange);
     var rowMin = numRange[0];
     var colMin = numRange[1];
@@ -180,7 +183,7 @@ Sheet.prototype.addComment = function (cellRange, comment) {
     for (var i = rowMin; i <= rowMax; i++) {
         for (var j = colMin; j <= colMax; j++) {
             cells.push({
-                sheet:  this._SHEET_API_HD.sheet.sheetId,
+                sheet: this._SHEET_API_HD.sheet.sheetId,
                 row: i,
                 col: j,
                 json: {
@@ -194,17 +197,17 @@ Sheet.prototype.addComment = function (cellRange, comment) {
     this._SHEET_API.updateCells(this._SHEET_API_HD, cells);
 }
 
-Sheet.prototype.deleteComment = function (cellRange) {
+Sheet.prototype.deleteComment = function(cellRange) {
     var numRange = this._rangeToNumber(cellRange);
     this._SHEET_API.deleteCommentForCoord(this._SHEET_API_HD, [this._SHEET_API_HD.sheet.sheetId, numRange[0], numRange[1], numRange[2], numRange[3]]);
 }
 
-Sheet.prototype.getCellValue = function (row, col) {
+Sheet.prototype.getCellValue = function(row, col) {
     var sheetId = this._SHEET_API_HD.sheet.sheetId;
     return this._SHEET_API.getCellValue(this._SHEET_API_HD, sheetId, row, col).data;
 }
 
-Sheet.prototype.setCellValue = function (row, col, value) {
+Sheet.prototype.setCellValue = function(row, col, value) {
     var sheetId = this._SHEET_API_HD.sheet.sheetId;
     var cells = [];
     cells.push({
@@ -219,14 +222,14 @@ Sheet.prototype.setCellValue = function (row, col, value) {
     this._SHEET_API.updateCells(this._SHEET_API_HD, cells);
 }
 
-Sheet.prototype.zoom = function (zoomSize) {
+Sheet.prototype.zoom = function(zoomSize) {
     if (zoomSize != this._zoomSize) {
         this._SHEET_API.zoom(this._SHEET_API_HD, zoomSize);
         this._zoomSize = zoomSize;
     }
 }
 
-Sheet.prototype._loadDictionary = function (reportId) {
+Sheet.prototype._loadDictionary = function(reportId) {
     var _this = this;
     var param = {
         reportId: reportId
@@ -236,14 +239,14 @@ Sheet.prototype._loadDictionary = function (reportId) {
         type: 'GET',
         async: false,
         data: param,
-        success: function (response) {
+        success: function(response) {
             var result = JSON.parse(response.firstChild.innerHTML);
             _this._SHEET_API.updateCells(_this._SHEET_API_HD, result);
         }
     })
 }
 
-Sheet.prototype._toLetter = function (number) {
+Sheet.prototype._toLetter = function(number) {
     var letter = "";
     if (number > 0) {
         if (number >= 1 && number <= 26) {
@@ -267,7 +270,7 @@ Sheet.prototype._toLetter = function (number) {
     return letter;
 }
 
-Sheet.prototype._rangeToNumber = function (cellRange) {
+Sheet.prototype._rangeToNumber = function(cellRange) {
     var range = cellRange.toUpperCase().split(':');
     if (range.length >= 1 && range.length <= 2) {
         var rowMax, colMax;
@@ -276,8 +279,7 @@ Sheet.prototype._rangeToNumber = function (cellRange) {
         if (range.length == 1) {
             rowMax = rowMin;
             colMax = colMin;
-        }
-        else if (range.length == 2) {
+        } else if (range.length == 2) {
             rowMax = parseInt(range[1].replace(/[^0-9]+/ig, ""));
             colMax = this._toNumber(range[1].replace(/[^A-Z]+/ig, ""));
         }
@@ -285,7 +287,7 @@ Sheet.prototype._rangeToNumber = function (cellRange) {
     }
 }
 
-Sheet.prototype._toNumber = function (letter) {
+Sheet.prototype._toNumber = function(letter) {
     var len = letter.length;
     var number = 0;
     for (var i = 0; i < len; i++) {
