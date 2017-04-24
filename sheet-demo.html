@@ -19,8 +19,8 @@
             var editable = Boolean(parseInt(document.getElementById("editable").value));
             var withRowColTitle = Boolean(parseInt(document.getElementById("withRowColTitle").value));
             var withComment = Boolean(parseInt(document.getElementById("withComment").value));
-            // _sheetPanel = new SheetPanel("sheet-markup", zoomSize, editable, withRowColTitle, withComment);
-            _sheetPanel = new SheetPanel("sheet-markup", 1, 1, 1, 1);
+            _sheetPanel = new SheetPanel("sheet-markup", zoomSize, editable, withRowColTitle, withComment);
+            // _sheetPanel = new SheetPanel("sheet-markup", 1, 1, 1, 1);
         }
 
         function loadStyle() {
@@ -66,7 +66,7 @@
         }
 
         function ins_displaySheet() {
-            _sheetPanel = new SheetPanel("sheet-markup", 1, 1, 1, 1);
+            _sheetPanel = new SheetPanel("sheet-markup", 1, true, true, true);
         }
     </script>
 
