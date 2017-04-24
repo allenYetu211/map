@@ -174,7 +174,7 @@
             margin: 0 auto;
             border-radius: 5px;
             padding: 10px 10px;
-            overflow-y:auto
+            overflow-y:auto;
         }
         #left-sidebar .survey1 .content .item img{
             float: right;
@@ -223,6 +223,70 @@
             background: rgba(0,136,235,0.2);
             outline: none;
         }
+
+        #task-table{
+            width: 1100px;
+            height: 830px;
+            background: #ffffff;
+            position: absolute;
+            top:calc(50% - 415px);
+            left:calc(50% - 550px);
+            z-index: 9999;
+            border-radius: 5px;
+            border-top:5px solid #0088EB;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        }
+        #task-table h3{
+            width: 100%;
+        }
+        #task-table .content{
+            border-top:1px solid #E9E9E9;
+            padding: 8px 10px;
+            height: 690px;
+            margin-bottom: 20px;
+            overflow-y:auto;
+        }
+        #task-table .content table th{
+            font-weight: bold;
+        }
+        #task-table .content table tr:nth-child(odd){
+             background: #F9F9F9;
+        }
+        #task-table .content table tr:nth-child(1){
+            background: #E9EFF4;
+        }
+        #task-table .table-btn{
+            display: flex;
+            justify-content:center;
+        }
+        #task-table .table-btn button{
+            width:112px;
+            height:40px;
+            border:1px solid #0088EB;
+            border-radius: 4px;
+            background: #ffffff;
+            color: #0088EB;
+            font-size: 12px;
+            outline: none;
+            margin: 0 10px;
+        }
+        #task-table .table-btn button:hover{
+            background: rgba(0,136,235,0.2);
+            outline: none;
+        }
+        #progress-bar{
+            width: 450px;
+            height: 140px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: absolute;
+            top:40%;
+            left:30%;
+            z-index: 10000;
+            text-align: center;
+            color: #0088EB;
+        }
+
     </style>
 </head>
 
@@ -312,13 +376,7 @@
             <!--任务单元-->
             <div class="task">
                 <span class="left-title">任务单元</span>
-                <select class="select1">
-                    <option value="1">农户</option>
-                    <option value="2">农户1</option>
-                    <option value="3">农户2</option>
-                    <option value="4">农户3</option>
-                    <option value="5">农户4</option>
-                </select>
+                <select class="select1"></select>
                 <select class="select2">
                     <option value="1">农户</option>
                     <option value="2">农户1</option>
@@ -405,6 +463,342 @@
             </div>
         </div>
 
+    </div>
+
+    <!--进度条-->
+    <div id="progress-bar">
+        <h3>生成进度</h3>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                60%
+            </div>
+        </div>
+    </div>
+
+    <!--生成表格-->
+    <div id="task-table">
+        <h3 class="container">自然村登记表 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
+        <div class="content">
+            <table>
+                <tr>
+                    <th>户主姓名</th>
+                    <th>编号</th>
+                    <th>该户总人</th>
+                    <th>册内人</th>
+                    <th>册外人</th>
+                    <th>其他人</th>
+                    <th>册内农业</th>
+                    <th>册外农业</th>
+                    <th>册外</th>
+                    <th>其他农业</th>
+                    <th>其他</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+            </table>
+        </div>
+        <div class="table-btn">
+            <button class="delete">删除</button>
+            <button class="confirm">确定</button>
+            <button class="cancel">取消</button>
+        </div>
     </div>
    
 
