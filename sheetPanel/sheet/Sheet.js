@@ -109,7 +109,7 @@ Sheet.prototype.loadValue = function(reportId, termValue, codeValue, pageIndex) 
     $.ajax({
         url: _this._serviceUrl + 'LoadPageVariable',
         type: 'GET',
-        async: false,
+        // async: false,
         data: param,
         success: function(response) {
             if (_this._clearVar.length == 0) {
