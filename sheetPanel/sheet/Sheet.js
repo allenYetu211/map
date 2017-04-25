@@ -240,7 +240,12 @@ Sheet.prototype._loadDictionary = function(reportId) {
         async: false,
         data: param,
         success: function(response) {
-            var result = JSON.parse(response.firstChild.innerHTML);
+            //    var result = ''
+            if (response.firstChild.innerHTML == '') {
+                var result = ''
+            } else {
+                var result = JSON.parse(response.firstChild.innerHTML);
+            }
             _this._SHEET_API.updateCells(_this._SHEET_API_HD, result);
         }
     })
