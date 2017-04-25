@@ -74,6 +74,10 @@
             _sheetPanel = new SheetPanel("sheet-markup", 1, true, true, true);
 
         }
+
+        function ins_make(cellRange) {
+            _sheetPanel.addComment(cellRange);
+        }
         // ins_displaySheet();
         // _sheetPanel.attachEvent('cellmouseup', function() {
         //     console.log('321321')
