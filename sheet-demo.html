@@ -26,7 +26,7 @@
         function loadStyle() {
             var report = document.getElementById("report").value;
             var perPage = document.getElementById("perPage").value;
-            _sheetPanel.loadStyle(report, perPage, false);
+            _sheetPanel.loadStyle(report, perPage, true);
         }
 
         function loadValue() {
@@ -66,16 +66,24 @@
             _sheetPanel.deleteComment(cellRange);
         }
 
-        function ins_sheetPanel(report, perPage) {
-            _sheetPanel.loadStyle(report, perPage, false);
+        function ins_sheetPanel(report, perPage, label) {
+            _sheetPanel.loadStyle(report, perPage, label);
+            _sheetPanel.attachEvent('cellmouseup', function() {
+                parent.C.ifr._selectedRange(_sheetPanel.getSelectedRange())
+            });
         }
+
 
         function ins_displaySheet() {
             _sheetPanel = new SheetPanel("sheet-markup", 1, true, true, true);
 
         }
 
-        function ins_make(cellRange) {
+        function ins_addmake(cellRange, comment) {
+            _sheetPanel.addComment(cellRange, comment)
+        }
+
+        function ins_deletemake(cellRange) {
             _sheetPanel.addComment(cellRange);
         }
         // ins_displaySheet();
@@ -102,7 +110,7 @@
 </head>
 
 <body>
-    <label for="zoomSize">zoomSize</label>
+    <!--<label for="zoomSize">zoomSize</label>
     <input type="text" id="zoomSize" value="1.3" class="txtBox" />
     <label for="editable">editable</label>
     <input type="text" id="editable" value="1" class="txtBox" />
@@ -123,7 +131,7 @@
     <label for="code">code</label>
     <input type="text" id="code" value="11" class="txtBox" />
     <input type="button" onclick="loadValue()" value="loadValue">
-    <!--<input type="button" onclick="addCellclick()" value="addCellclick">-->
+    <input type="button" onclick="addCellclick()" value="addCellclick">
     <br>
     <input type="button" onclick="addCellmouseup()" value="addCellmouseup">
     <label for="response">response</label>
@@ -134,7 +142,7 @@
     <input type="text" id="cellRange" value="B1:B30" class="txtBox" />
     <input type="text" id="comment" value="aaa" class="txtBox" />
     <input type="button" onclick="addComment()" value="addComment">
-    <br>
+    <br>-->
     <div id="sheet-markup"></div>
 </body>
 
