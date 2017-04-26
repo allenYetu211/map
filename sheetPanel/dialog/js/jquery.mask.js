@@ -2,16 +2,16 @@
  * 遮罩层，通过jMask.init(options)即可展示一个遮罩层
  * @author zhaoxianlie
  */
-var jMask = (function($, undefined){
+var jMask = (function ($, undefined) {
     /**
      * 遮罩层
      * @param options 配置项
      */
-    var MaskClass = function(options){
+    var MaskClass = function (options) {
         var self = this;
         // 配置项
         this.cfg = $.extend({
-            zIndex : 1024,
+            zIndex: 1024,
             resizable: true
         }, options);
 
@@ -19,25 +19,25 @@ var jMask = (function($, undefined){
         this.element = $('<div class="j-dialog-mask ' + (this.cfg.className || '') + '"/>').appendTo(document.body)
             .css({
                 'display': 'none',
-                'zIndex' : this.cfg.zIndex,
+                'zIndex': this.cfg.zIndex,
                 'width': this.width(),
-                'height' : this.height()
+                'height': this.height()
             });
 
         // 显示遮罩
-        if(this.cfg.show) {
+        if (this.cfg.show) {
             this.show();
         }
 
         // 尺寸重绘方法
-        this.resizeFunc = function(){
+        this.resizeFunc = function () {
             self.css("width", self.width());
             self.css("height", self.height());
             self.triggerHandler('resize');
         };
 
         //绑定resize事件
-        if(this.cfg.resizable){
+        if (this.cfg.resizable) {
             $(window).bind('resize', this.resizeFunc);
         }
     };
@@ -51,7 +51,7 @@ var jMask = (function($, undefined){
         /**
          * 显示
          */
-        show: function(){
+        show: function () {
             this.element.show.apply(this.element, arguments);
             this._processTages(1);
         },
@@ -59,7 +59,7 @@ var jMask = (function($, undefined){
         /**
          * 隐藏
          */
-        hide: function(){
+        hide: function () {
             this.element.hide.apply(this.element, arguments);
             this._processTages(0);
         },
@@ -67,80 +67,75 @@ var jMask = (function($, undefined){
         /**
          * 获取当前可视区域窗口的宽度
          */
-        width: function() {
+        width: function () {
             return $('body').width();
         },
 
         /**
          * 获取当前可视区域窗口的高度
          */
-        height: function() {
-            return Math.max($('body').height(),$(window).height());
+        height: function () {
+            return Math.max($('body').height(), $(window).height());
         },
 
         /**
          * 设置遮罩层的样式
          */
-        css: function(){
+        css: function () {
             this.element.css.apply(this.element, arguments);
         },
 
         /**
          * 事件触发
          */
-        triggerHandler: function(){
+        triggerHandler: function () {
             this.element.triggerHandler.apply(this.element, arguments);
         },
 
         /**
          * 事件绑定
          */
-        bind: function(){
+        bind: function () {
             this.element.bind.apply(this.element, arguments);
         },
 
         /**
          * 析构方法
          */
-        remove: function(){
+        remove: function () {
             this._processTages(0);
             this.element && this.element.remove();
             $(window).unbind('resize', this.resizeFunc);
-            for(var i in this)
+            for (var i in this)
                 delete this[i];
         },
 
-        _processTages: function(isHide){
+        _processTages: function (isHide) {
             var self = this;
 
             var userAgent = navigator.userAgent.toLowerCase();
-            var isMSIE = /msie/.test( userAgent ) && !/opera/.test( userAgent );
-            if(!isMSIE) {
+            var isMSIE = /msie/.test(userAgent) && !/opera/.test(userAgent);
+            if (!isMSIE) {
                 return;
             }
-
             self.special = self.special || [];
-            if(isHide){
-                if(self.special.length > 0)
+            if (isHide) {
+                if (self.special.length > 0)
                     return;
-
                 var doms = $("SELECT");
-
-                if(this.cfg.safety){
-                    doms = doms.filter(function(index){
+                if (this.cfg.safety) {
+                    doms = doms.filter(function (index) {
                         return self.cfg.safety.find(this).length == 0;
                     });
-
                 }
-                doms.each(function(){
+                doms.each(function () {
                     var obj = $(this);
-
                     self.special.push({dom: this, css: obj.css('visibility')});
                     obj.css('visibility', 'hidden');
                 })
             }
-            else{
-                for(var i = 0, len = self.special.length; i < len; i++){
+            else {
+                for (var i = 0, len = self.special.length; i < len; i++) {
                     $(self.special[i].dom).css('visibility', self.special[i].css || '');
                     self.special[i].dom = null;
                 }
@@ -154,11 +149,11 @@ var jMask = (function($, undefined){
      * @return {*}
      * @private
      */
-    var _init = function(options) {
+    var _init = function (options) {
         return new MaskClass(options);
     }
 
     return {
-        init : _init
+        init: _init
     };
 })(jQuery);

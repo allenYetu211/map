@@ -220,5 +220,3 @@ Paging.prototype.setPage = function (recordCount, perPage, pageIndex) {
 // Paging.prototype.getCurrentPage = function () {
 // return $('#'+this._divPageId).data('pagination').currentPage + 1;
 // };
-
-
