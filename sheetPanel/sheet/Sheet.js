@@ -17,7 +17,6 @@ function Sheet(divId, zoomSize, withRowColTitle, withComment) {
     this._withComment = withComment;
     this._clearVar = [];
     this._serviceUrl = 'http://122.224.94.108:8002/ZJService/NewReportService/ReportService.asmx/';
-    // this._serviceUrl = 'http://192.168.0.224:8055/ReportService/ReportService.asmx/';
     this._namespace = 'TH.ReportSystem';
     var _this = this;
     Ext.onReady(function() {
@@ -52,7 +51,7 @@ Sheet.prototype.loadStyle = function(reportId, callback) {
     $.ajax({
         url: _this._serviceUrl + 'LoadStyle',
         type: 'GET',
-        async: false,
+        async: true,
         data: param,
         success: function(response) {
             var result = Ext.decode(response.firstChild.innerHTML);
@@ -66,19 +65,25 @@ Sheet.prototype.loadStyle = function(reportId, callback) {
                 };
             }
             _this._SHEET_API.loadData(_this._SHEET_API_HD, result);
-            _this._clearVar = [];
-            if (!_this._withRowColTitle) {
-                _this._SHEET_API.toggleColumnName(_this._SHEET_API_HD);
-                _this._SHEET_API.toggleRowName(_this._SHEET_API_HD);
-            }
-            _this._loadDictionary(reportId);
             _this._SHEET_API.zoom(_this._SHEET_API_HD, _this._zoomSize);
-            if (callback) {
-                callback();
+            _this._clearVar = [];
+            var success = true;
+            try {
+                _this._loadDictionary(reportId);
+            } catch (e) {
+                success = false;
+            }
+            if (typeof callback === 'function') {
+                callback(success);
+            }
+        },
+        error: function(response) {
+            if (typeof callback === 'function') {
+                callback(false);
             }
         }
     })
-}
+};
 
 Sheet.prototype.getRecordCount = function(reportId, termValue, codeValue) {
     var _this = this;
@@ -97,7 +102,7 @@ Sheet.prototype.getRecordCount = function(reportId, termValue, codeValue) {
         }
     })
     return recordCount;
-}
+};
 
 Sheet.prototype.loadValue = function(reportId, termValue, codeValue, pageIndex) {
     var _this = this;
@@ -109,7 +114,7 @@ Sheet.prototype.loadValue = function(reportId, termValue, codeValue, pageIndex) 
     $.ajax({
         url: _this._serviceUrl + 'LoadPageVariable',
         type: 'GET',
-        // async: false,
+        async: false,
         data: param,
         success: function(response) {
             if (_this._clearVar.length == 0) {
@@ -121,7 +126,7 @@ Sheet.prototype.loadValue = function(reportId, termValue, codeValue, pageIndex) 
             //_this._SHEET_API.updateCells(_this._SHEET_API_HD, result.verify);
         }
     })
-}
+};
 
 Sheet.prototype.saveValue = function(reportId, pageIndex) {
     var variable = this._SHEET_API.getCellVariables(this._SHEET_API_HD);
@@ -146,7 +151,7 @@ Sheet.prototype.saveValue = function(reportId, pageIndex) {
             _this.resetHistory();
         }
     })
-}
+};
 
 Sheet.prototype.getAllChanges = function() {
     if (this._SHEET_API.getAllChanges(this._SHEET_API_HD).length > 0) {
@@ -154,15 +159,15 @@ Sheet.prototype.getAllChanges = function() {
     } else {
         return false;
     }
-}
+};
 
 Sheet.prototype.resetHistory = function() {
     this._SHEET_API.resetHistory(this._SHEET_API_HD);
-}
+};
 
 Sheet.prototype.attachEvent = function(eventName, fn) {
     this._SHEET_API_HD.sheet.on(eventName, fn);
-}
+};
 
 Sheet.prototype.getSelectedRange = function() {
     var ss = this._SHEET_API_HD.sheet,
@@ -171,7 +176,7 @@ Sheet.prototype.getSelectedRange = function() {
     var minLetter = this._toLetter(pos.mincol) + pos.minrow;
     var maxLetter = this._toLetter(pos.maxcol) + pos.maxrow;
     return minLetter + ':' + maxLetter;
-}
+};
 
 Sheet.prototype.addComment = function(cellRange, comment) {
     var numRange = this._rangeToNumber(cellRange);
@@ -195,17 +200,17 @@ Sheet.prototype.addComment = function(cellRange, comment) {
         }
     }
     this._SHEET_API.updateCells(this._SHEET_API_HD, cells);
-}
+};
 
 Sheet.prototype.deleteComment = function(cellRange) {
     var numRange = this._rangeToNumber(cellRange);
     this._SHEET_API.deleteCommentForCoord(this._SHEET_API_HD, [this._SHEET_API_HD.sheet.sheetId, numRange[0], numRange[1], numRange[2], numRange[3]]);
-}
+};
 
 Sheet.prototype.getCellValue = function(row, col) {
     var sheetId = this._SHEET_API_HD.sheet.sheetId;
     return this._SHEET_API.getCellValue(this._SHEET_API_HD, sheetId, row, col).data;
-}
+};
 
 Sheet.prototype.setCellValue = function(row, col, value) {
     var sheetId = this._SHEET_API_HD.sheet.sheetId;
@@ -220,14 +225,14 @@ Sheet.prototype.setCellValue = function(row, col, value) {
         applyWay: 'apply'
     });
     this._SHEET_API.updateCells(this._SHEET_API_HD, cells);
-}
+};
 
 Sheet.prototype.zoom = function(zoomSize) {
     if (zoomSize != this._zoomSize) {
         this._SHEET_API.zoom(this._SHEET_API_HD, zoomSize);
         this._zoomSize = zoomSize;
     }
-}
+};
 
 Sheet.prototype._loadDictionary = function(reportId) {
     var _this = this;
@@ -240,16 +245,11 @@ Sheet.prototype._loadDictionary = function(reportId) {
         async: false,
         data: param,
         success: function(response) {
-            //    var result = ''
-            if (response.firstChild.innerHTML == '') {
-                var result = ''
-            } else {
-                var result = JSON.parse(response.firstChild.innerHTML);
-            }
+            var result = JSON.parse(response.firstChild.innerHTML);
             _this._SHEET_API.updateCells(_this._SHEET_API_HD, result);
         }
     })
-}
+};
 
 Sheet.prototype._toLetter = function(number) {
     var letter = "";
@@ -273,7 +273,7 @@ Sheet.prototype._toLetter = function(number) {
         }
     }
     return letter;
-}
+};
 
 Sheet.prototype._rangeToNumber = function(cellRange) {
     var range = cellRange.toUpperCase().split(':');
@@ -290,13 +290,14 @@ Sheet.prototype._rangeToNumber = function(cellRange) {
         }
         return [rowMin, colMin, rowMax, colMax];
     }
-}
+};
 
 Sheet.prototype._toNumber = function(letter) {
     var len = letter.length;
     var number = 0;
     for (var i = 0; i < len; i++) {
-        number += i * 26 + letter.charCodeAt(i) - 64;
+        var offset = letter.charCodeAt(i) - 64;
+        number += offset * Math.pow(26, len - 1 - i);
     }
     return number;
-}
+};

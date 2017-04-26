@@ -46,20 +46,24 @@ function SheetPanel(divId, zoomSize, editable, withRowColTitle, withComment) {
     var valueChangedFn = function (value) {
         _this._sheet.zoom(value / 100);
     };
-    var range = new Range(valueChangedFn, zoomSize * 100);
-    var divRange = document.getElementsByClassName('srs-slider')[0];
-    divRange.style.top = divSheet.offsetTop + divSheet.offsetHeight - 49 + 'px';
-    divRange.style.left = divSheet.offsetLeft + divSheet.offsetWidth - 230 + 'px';
+    var top = divSheet.offsetTop + divSheet.offsetHeight - 49 + 'px';
+    var left = divSheet.offsetLeft + divSheet.offsetWidth - 230 + 'px';
+    initRange(valueChangedFn, zoomSize * 100, top, left);
 }
 
 SheetPanel.prototype.loadStyle = function (reportId, perPage) {
-    ZENG.msgbox.show('加载中，请稍后...', 6, 10000000);
     this._report = reportId;
-    this._sheet.loadStyle(reportId, function () {
-        ZENG.msgbox.show('加载成功', 4, 1500);
-    });
     this._pageIndex = -1;
     this._perPage = perPage;
+    ZENG.msgbox.show('加载中，请稍后...', 6, 10000000);
+    this._sheet.loadStyle(reportId, function (success) {
+        if (success == true) {
+            ZENG.msgbox.show('加载成功!', 4, 1500);
+        }
+        else {
+            ZENG.msgbox.show('加载失败!', 5, 1500);
+        }
+    });
 };
 
 SheetPanel.prototype.loadValue = function (report, term, code, pageIndex) {
@@ -79,15 +83,15 @@ SheetPanel.prototype.loadValue = function (report, term, code, pageIndex) {
 
 SheetPanel.prototype.attachEvent = function (eventName, fn) {
     this._sheet.attachEvent(eventName, fn);
-}
+};
 
 SheetPanel.prototype.getSelectedRange = function () {
     return this._sheet.getSelectedRange();
-}
+};
 
 SheetPanel.prototype.getCellValue = function (row, col) {
     return this._sheet.getCellValue(row, col);
-}
+};
 
 SheetPanel.prototype.addComment = function (cellRange, comment) {
     this._sheet.addComment(cellRange, comment);
@@ -95,7 +99,7 @@ SheetPanel.prototype.addComment = function (cellRange, comment) {
 
 SheetPanel.prototype.deleteComment = function (cellRange) {
     this._sheet.deleteComment(cellRange);
-}
+};
 
 SheetPanel.prototype._chagnePage = function (sender, pageIndex) {
     if (sender._sheet.getAllChanges()) {
@@ -109,7 +113,7 @@ SheetPanel.prototype._chagnePage = function (sender, pageIndex) {
                 sender._sheet.resetHistory();
                 dialog.close();
                 sender._paging.setPage(sender._recordCount, sender._perPage, pageIndex);
-                ZENG.msgbox.show('保存成功', 4, 1500);
+                ZENG.msgbox.show('保存成功!', 4, 1500);
             }
         }, {
             handler: function (button, dialog) {
@@ -132,5 +136,5 @@ SheetPanel.prototype._saveValue = function (sender) {
     sender._sheet.loadValue(sender._report, sender._term, sender._code, sender._pageIndex);
     sender._recordCount = this._sheet.getRecordCount(sender._report, sender._term, sender._code);
     this._paging.setPage(sender._recordCount, sender._perPage, sender._pageIndex);
-    ZENG.msgbox.show('保存成功', 4, 1500);
+    ZENG.msgbox.show('保存成功!', 4, 1500);
 };

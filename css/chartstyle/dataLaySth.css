@@ -276,7 +276,53 @@
 
 ._fieldRqpost {
     width: 300px;
+    height: 100%;
     background-color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 60px;
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    -o-transition: transform .5s;
+}
+
+._fieldRqpost.close {
+    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+}
+
+._fieldOpenC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 20px;
+    left: -20px;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+._fieldOpenC span {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 8px solid transparent;
+    border-left: 7px solid #0c1123;
+    border-bottom: 8px solid transparent;
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    -o-transition: transform .5s;
+}
+
+._fieldRqpost.close ._fieldOpenC span {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
 }
 
 ._dataFiled tr:nth-child(2n) {
@@ -329,6 +375,12 @@
     justify-content: space-between;
     align-items: center;
     height: 50px;
+}
+
+._operating {
+    justify-content: space-around;
+    background: #f7f7f7;
+    border-top: 1px solid #e0e0e0;
 }
 
 ._fieldoperating {
