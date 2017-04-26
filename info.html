@@ -155,6 +155,7 @@
             border: none;
             outline: none;
         }
+        /*调查表*/
         #left-sidebar .survey1 .title{
             padding: 20px 10px;
         }
@@ -201,6 +202,54 @@
         #left-sidebar .survey1 .content .item .item-title{
             font-size: 18px;
         }
+        /*调查对象*/
+        #left-sidebar .survey2 .title{
+            padding: 20px 10px;
+        }
+        #left-sidebar .survey2 .title .right{
+            float: right;
+        }
+        #left-sidebar .survey2 .title .right span{
+            color: #0088EB;
+            font-size: 14px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        #left-sidebar .survey2 .content{
+            width: 380px;
+            height: 352px;
+            background: #E9EFF4;
+            margin: 0 auto;
+            border-radius: 5px;
+            padding: 10px 10px;
+            overflow-y:auto;
+        }
+        #left-sidebar .survey2 .content .item img{
+            float: right;
+            width: 18px;
+            height: 18px;
+        }
+        #left-sidebar .survey2 .content .item input{
+            margin: 0 10px;
+            width: 18px;
+            height: 18px;
+            /*appearance:none;*/
+            /*-moz-appearance:none;*/
+            /*-webkit-appearance:none;*/
+            border:none;
+            outline:none;
+            background: #ffffff;
+            border-radius: 3px;
+            position: relative;
+            top:3px;
+        }
+        #left-sidebar .survey2 .content .item label{
+            cursor: pointer;
+        }
+        #left-sidebar .survey2 .content .item .item-title{
+            font-size: 18px;
+        }
+
         #left-sidebar .mission{
             width: 380px;
             margin: 20px auto;
@@ -378,13 +427,7 @@
             <div class="task">
                 <span class="left-title">任务单元</span>
                 <select class="select1"></select>
-                <select class="select2">
-                    <option value="1">农户</option>
-                    <option value="2">农户1</option>
-                    <option value="3">农户2</option>
-                    <option value="4">农户3</option>
-                    <option value="5">农户4</option>
-                </select>
+                <select class="select2"></select>
             </div>
             <!--调查表1-->
             <div class="survey1">
@@ -395,43 +438,43 @@
                     </div>
                 </div>
                 <div class="content">
-                    <div class="item">
-                        <p class="item-title">行政村</p>
-                        <p>
-                            <label><input type="checkbox">农户登记表</label>
-                            <img src="./images/chart/icon_data_info.png" alt="">
-                        </p>
-                    </div>
-                    <div class="item">
-                        <p class="item-title">自然村</p>
-                        <p>
-                            <label><input type="checkbox">乡镇登记表</label>
-                            <img src="./images/chart/icon_data_info.png" alt="">
-                        </p>
-                    </div>
-                    <div class="item">
-                        <p class="item-title">村民小组</p>
-                        <p>
-                            <label><input type="checkbox">区县登记表</label>
-                            <img src="./images/chart/icon_data_info.png" alt="">
-                        </p>
-                    </div>
-                    <div class="item">
-                        <p class="item-title">农户</p>
-                        <p>
-                            <label><input type="checkbox">实物补偿登记卡</label>
-                            <img src="./images/chart/icon_data_info.png" alt="">
-                        </p>
-                        <p>
-                            <label><input type="checkbox">工商企业房屋登记表</label>
-                            <img src="./images/chart/icon_data_info.png" alt="">
-                        </p>
-                    </div>
-                    <br><br><br><br><br><br><br>
+                    <!--<div class="item">-->
+                        <!--<p class="item-title">行政村</p>-->
+                        <!--<p>-->
+                            <!--<label><input type="checkbox">农户登记表</label>-->
+                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--</p>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<p class="item-title">自然村</p>-->
+                        <!--<p>-->
+                            <!--<label><input type="checkbox">乡镇登记表</label>-->
+                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--</p>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<p class="item-title">村民小组</p>-->
+                        <!--<p>-->
+                            <!--<label><input type="checkbox">区县登记表</label>-->
+                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--</p>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<p class="item-title">农户</p>-->
+                        <!--<p>-->
+                            <!--<label><input type="checkbox">实物补偿登记卡</label>-->
+                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--<label><input type="checkbox">工商企业房屋登记表</label>-->
+                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--</p>-->
+                    <!--</div>-->
                 </div>
             </div>
+
             <!--调查表2-->
-            <div class="survey1">
+            <div class="survey2">
                 <div class="title">
                     <span class="left-title">调查对象</span>
                     <div class="right">
@@ -439,22 +482,22 @@
                     </div>
                 </div>
                 <div class="content">
-                    <div class="item">
-                        <p class="item-title">奉化市</p>
-                        <p>&nbsp;&nbsp;尚田镇</p>
-                        <p class="village"><label><input type="checkbox">葛岙村</label></p>
-                        <p class="village"><label><input type="checkbox">下蒋村</label></p>
-                        <p class="village"><label><input type="checkbox">沙栋头村</label></p>
-                        <p class="village"><label><input type="checkbox">排溪村</label></p>
-                        <p>&nbsp;B镇</p>
-                        <p>&nbsp;C镇</p>
-                    </div>
-                    <div class="item">
-                        <p class="item-title">九江市</p>
-                    </div>
-                    <div class="item">
-                        <p class="item-title">景德镇市</p>
-                    </div>
+                    <!--<div class="item">-->
+                        <!--<p class="item-title">奉化市</p>-->
+                        <!--<p>&nbsp;&nbsp;尚田镇</p>-->
+                        <!--<p class="village"><label><input type="checkbox">葛岙村</label></p>-->
+                        <!--<p class="village"><label><input type="checkbox">下蒋村</label></p>-->
+                        <!--<p class="village"><label><input type="checkbox">沙栋头村</label></p>-->
+                        <!--<p class="village"><label><input type="checkbox">排溪村</label></p>-->
+                        <!--<p>&nbsp;B镇</p>-->
+                        <!--<p>&nbsp;C镇</p>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<p class="item-title">九江市</p>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<p class="item-title">景德镇市</p>-->
+                    <!--</div>-->
                 </div>
             </div>
             <!--任务生成，任务清单-->
