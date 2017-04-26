@@ -135,6 +135,31 @@
         #left-sidebar{
             color: #222222;
         }
+        #left-sidebar .phase ul li.active {
+            opacity: 1;
+        }
+        #left-sidebar .phase .prev-btn{
+
+        }
+        #left-sidebar .phase .next-btn{
+            right: 0;
+        }
+        #left-sidebar .phase .prev-btn span{
+            width: 0;
+            height: 0;
+            display: inline-block;
+            border-top: 12px solid transparent;
+            border-right: 14px solid #222;
+            border-bottom: 12px solid transparent;
+        }
+        #left-sidebar .phase .next-btn span{
+            width: 0;
+            height: 0;
+            display: inline-block;
+            border-top: 12px solid transparent;
+            border-left: 14px solid #222;
+            border-bottom: 12px solid transparent;
+        }
         #left-sidebar .task{
             padding: 25px 10px;
         }
@@ -419,70 +444,84 @@
         <div class="left-cnj">
             <div class="phase">
                 <ul>
+                    <!--<li class="button_d" data-id="1">-->
+                        <!--<h2>1</h2>-->
+                        <!--<h4>设计阶段</h4>-->
+                    <!--</li>-->
+                    <!--<li class="button_d" data-id="2">-->
+                    <!--<h2>2</h2>-->
+                        <!--<h4>实施阶段</h4>-->
+                    <!--</li>-->
+                    <!--<li class="button_d active" data-id="3">-->
+                        <!--<h2>3</h2>-->
+                        <!--<h4>后扶阶段</h4>-->
+                    <!--</li>-->
                 </ul>
-                <button type="button" class="prev-button"><span></span></button>
-                <button type="button" class="next-button"><span></span></button>
+                <button type="button" class="prev-btn"><span></span></button>
+                <button type="button" class="next-btn"><span></span></button>
             </div>
-            <!--任务单元-->
-            <div class="task">
-                <span class="left-title">任务单元</span>
-                <select class="select1"></select>
-                <select class="select2"></select>
-            </div>
-            <!--调查表1-->
-            <div class="survey1">
-                <div class="title">
-                    <span class="left-title">调查表</span>
-                    <div class="right">
-                        <span class="selectAll">全选</span><span class="unSelect">取消</span>
-                    </div>
+            <!--1.设计阶段-->
+            <div class="phase-content">
+                <!--任务单元-->
+                <div class="task">
+                    <span class="left-title">任务单元</span>
+                    <select class="select1"></select>
+                    <select class="select2"></select>
                 </div>
-                <div class="content">
-                    <!--<div class="item">-->
+                <!--调查表1-->
+                <div class="survey1">
+                    <div class="title">
+                        <span class="left-title">调查表</span>
+                        <div class="right">
+                            <span class="selectAll">全选</span><span class="unSelect">取消</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <!--<div class="item">-->
                         <!--<p class="item-title">行政村</p>-->
                         <!--<p>-->
-                            <!--<label><input type="checkbox">农户登记表</label>-->
-                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--<label><input type="checkbox">农户登记表</label>-->
+                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
                         <!--</p>-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
+                        <!--</div>-->
+                        <!--<div class="item">-->
                         <!--<p class="item-title">自然村</p>-->
                         <!--<p>-->
-                            <!--<label><input type="checkbox">乡镇登记表</label>-->
-                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--<label><input type="checkbox">乡镇登记表</label>-->
+                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
                         <!--</p>-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
+                        <!--</div>-->
+                        <!--<div class="item">-->
                         <!--<p class="item-title">村民小组</p>-->
                         <!--<p>-->
-                            <!--<label><input type="checkbox">区县登记表</label>-->
-                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--<label><input type="checkbox">区县登记表</label>-->
+                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
                         <!--</p>-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
+                        <!--</div>-->
+                        <!--<div class="item">-->
                         <!--<p class="item-title">农户</p>-->
                         <!--<p>-->
-                            <!--<label><input type="checkbox">实物补偿登记卡</label>-->
-                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--<label><input type="checkbox">实物补偿登记卡</label>-->
+                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
                         <!--</p>-->
                         <!--<p>-->
-                            <!--<label><input type="checkbox">工商企业房屋登记表</label>-->
-                            <!--<img src="./images/chart/icon_data_info.png" alt="">-->
+                        <!--<label><input type="checkbox">工商企业房屋登记表</label>-->
+                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
                         <!--</p>-->
-                    <!--</div>-->
-                </div>
-            </div>
-
-            <!--调查表2-->
-            <div class="survey2">
-                <div class="title">
-                    <span class="left-title">调查对象</span>
-                    <div class="right">
-                        <span class="selectAll">全选</span><span class="unSelect">取消</span>
+                        <!--</div>-->
                     </div>
                 </div>
-                <div class="content">
-                    <!--<div class="item">-->
+
+                <!--调查表2-->
+                <div class="survey2">
+                    <div class="title">
+                        <span class="left-title">调查对象</span>
+                        <div class="right">
+                            <span class="selectAll">全选</span><span class="unSelect">取消</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <!--<div class="item">-->
                         <!--<p class="item-title">奉化市</p>-->
                         <!--<p>&nbsp;&nbsp;尚田镇</p>-->
                         <!--<p class="village"><label><input type="checkbox">葛岙村</label></p>-->
@@ -491,20 +530,25 @@
                         <!--<p class="village"><label><input type="checkbox">排溪村</label></p>-->
                         <!--<p>&nbsp;B镇</p>-->
                         <!--<p>&nbsp;C镇</p>-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
+                        <!--</div>-->
+                        <!--<div class="item">-->
                         <!--<p class="item-title">九江市</p>-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
+                        <!--</div>-->
+                        <!--<div class="item">-->
                         <!--<p class="item-title">景德镇市</p>-->
-                    <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <!--任务生成，任务清单-->
+                <div class="mission">
+                    <button class="generate">任务生成</button>
+                    <button class="inventory">任务清单</button>
                 </div>
             </div>
-            <!--任务生成，任务清单-->
-            <div class="mission">
-                <button class="generate">任务生成</button>
-                <button class="inventory">任务清单</button>
-            </div>
+            <!--2.实施阶段-->
+            <div class="phase-content" style="background: seagreen">222</div>
+            <!--3.后扶阶段-->
+            <div class="phase-content" style="background: sandybrown">333</div>
         </div>
 
     </div>
