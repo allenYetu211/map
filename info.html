@@ -249,12 +249,15 @@
             padding: 10px 10px;
             overflow-y:auto;
         }
-        #left-sidebar .survey2 .content .item img{
-            float: right;
-            width: 18px;
-            height: 18px;
+        #left-sidebar .survey2 .content ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
-        #left-sidebar .survey2 .content .item input{
+        #left-sidebar .survey2 .content li{
+            list-style: none;
+        }
+        #left-sidebar .survey2 .content input{
             margin: 0 10px;
             width: 18px;
             height: 18px;
@@ -268,12 +271,22 @@
             position: relative;
             top:3px;
         }
-        #left-sidebar .survey2 .content .item label{
+        #left-sidebar .survey2 .content label{
             cursor: pointer;
         }
-        #left-sidebar .survey2 .content .item .item-title{
+        #left-sidebar .survey2 .content .city{
             font-size: 18px;
+            margin-bottom: 10px;
         }
+        #left-sidebar .survey2 .content .town{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        #left-sidebar .survey2 .content .village{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
 
         #left-sidebar .mission{
             width: 380px;
@@ -360,6 +373,10 @@
             z-index: 10000;
             text-align: center;
             color: #0088EB;
+        }
+
+        #progress-bar{
+            display: none;
         }
 
     </style>
@@ -557,8 +574,8 @@
     <div id="progress-bar">
         <h3>生成进度</h3>
         <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                60%
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                0%
             </div>
         </div>
     </div>
