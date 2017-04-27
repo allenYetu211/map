@@ -393,6 +393,7 @@
     height: 50px;
     line-height: 50px;
     background: none;
+    flex: 1;
     border: none;
     position: relative;
     padding: 0 20px;
@@ -402,6 +403,10 @@
 
 button:focus {
     outline: none;
+}
+
+._fieldTab {
+    width: 100%;
 }
 
 ._fieldTab button.active {
