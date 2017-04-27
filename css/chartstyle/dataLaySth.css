@@ -378,9 +378,10 @@
 }
 
 ._operating {
-    justify-content: space-around;
+    /*justify-content: space-around;*/
     background: #f7f7f7;
     border-top: 1px solid #e0e0e0;
+    padding: 0 15px;
 }
 
 ._fieldoperating {
@@ -424,13 +425,32 @@ button:focus {
     content: '';
 }
 
-._operating button {
-    width: 25px;
+._operating .operating-r button {
+    width: 24px;
     padding: 0;
     background: none;
     border: none;
 }
 
-._operating button img {
-    width: 25px;
+._operating .operating-r button img {
+    width: 24px;
+}
+
+.operating-l button._OpenActive {
+    width: 36px
+}
+
+.operating-l ._OpenActive {
+    background-color: transparent;
+    border: none;
+}
+
+.operating-l ._OpenActive img {
+    width: 36px;
+}
+
+.operating-r {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
