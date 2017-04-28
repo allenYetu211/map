@@ -203,6 +203,7 @@
             float: right;
             width: 18px;
             height: 18px;
+            cursor: pointer;
         }
         #left-sidebar .survey1 .content .item input{
             margin: 0 10px;
@@ -307,7 +308,7 @@
             background: rgba(0,136,235,0.2);
             outline: none;
         }
-
+        /*查看任务开始*/
         #task-table{
             width: 1100px;
             height: 830px;
@@ -319,7 +320,7 @@
             border-radius: 5px;
             border-top:5px solid #0088EB;
             box-shadow: 0 0 50px rgba(0,0,0,0.5);
-            /*display: none;*/
+            display: none;
         }
         #task-table h3{
             width: 100%;
@@ -359,6 +360,78 @@
             background: rgba(0,136,235,0.2);
             outline: none;
         }
+        /*查看任务结束*/
+        /*任务清单开始*/
+        #GetTask{
+            width: 1100px;
+            height: 830px;
+            background: #ffffff;
+            position: absolute;
+            top:calc(50% - 415px);
+            left:calc(50% - 550px);
+            z-index: 9999;
+            border-radius: 5px;
+            border-top:5px solid #0088EB;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            display: none;
+        }
+        #GetTask h3{
+            width: 100%;
+        }
+        #GetTask .content{
+            border-top:1px solid #E9E9E9;
+            padding: 8px 10px;
+            height: 690px;
+            margin-bottom: 20px;
+            overflow-y:auto;
+        }
+        #GetTask .content tr:hover{
+            background: #0088EB;
+        }
+        #GetTask .content table th{
+            font-weight: bold;
+        }
+        #GetTask .content table tr:nth-child(odd){
+            background: #F9F9F9;
+        }
+        #GetTask .content table tr:nth-child(1){
+            background: #E9EFF4;
+        }
+        #GetTask .table-btn{
+            display: flex;
+            justify-content:center;
+        }
+        #GetTask .table-btn button{
+            width:112px;
+            height:40px;
+            border:1px solid #0088EB;
+            border-radius: 4px;
+            background: #ffffff;
+            color: #0088EB;
+            font-size: 12px;
+            outline: none;
+            margin: 0 10px;
+        }
+        #GetTask .table-btn button:hover{
+            background: rgba(0,136,235,0.2);
+            outline: none;
+            background: #ffffff;
+        }
+        #GetTask-search{
+            position: absolute;
+            top:18px;
+            left: 15%;
+        }
+        #GetTask-search input,#GetTask-search button{
+            border: none;
+            outline: none;
+        }
+        #GetTask-search button{
+            font-size: 18px;
+            color: #0088EB;
+            background: #ffffff;
+        }
+        /*任务清单结束*/
         #progress-bar{
             width: 450px;
             height: 140px;
@@ -402,6 +475,7 @@
             right: 10px;
             cursor: pointer;
         }
+
     </style>
 </head>
 
@@ -607,19 +681,43 @@
         <h3>任务生成成功</h3>
         <img src="images/chart/icon_close@2x.png" alt="">
     </div>
-    <!--生成表格-->
+    <!--查看任务-->
     <div id="task-table">
         <h3 class="container">自然村登记表 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
         <div class="content">
-            <!--<iframe id="inforIframe" src="./sheet-demo.html" style="width: 100%; height: 100%;"></iframe>-->
+            <iframe id="inforIframe" src="./sheet-demo.html" style="width: 100%; height: 100%;"></iframe>
         </div>
 
-        <iframe id="inforIframe" src="./sheet-demo.html" style="width: 100%; height: 100%;"></iframe>
+        <!--<iframe id="inforIframe" src="./sheet-demo.html" style="width: 100%; height: 100%;"></iframe>-->
 
         <div class="table-btn">
             <button class="delete">删除</button>
             <button class="confirm">确定</button>
             <button class="cancel">取消</button>
+        </div>
+    </div>
+    <!--任务清单-->
+    <div id="GetTask">
+        <h3 class="container"> 任务清单 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
+        <div class="content">
+
+        </div>
+
+        <div class="table-btn">
+            <button class="delete">删除</button>
+            <button class="confirm">确定</button>
+            <button class="cancel">取消</button>
+        </div>
+        <!--搜索框-->
+        <div id="GetTask-search" class="search">
+            <img src="images/chart/icon_search.png" alt="">
+            <input class="searchbar" type="text" placeholder="Search">
+            <button class="searchbar-Emptied" type="button">
+                <img src="images/chart/icon_close@2x.png" alt="">
+            </button>
+            <button class="selectSearchbar">搜索</button>
+            <div class="filedCondition">
+            </div>
         </div>
     </div>
    
