@@ -157,7 +157,7 @@
             border-left: 14px solid #222;
             border-bottom: 12px solid transparent;
         }
-        #left-sidebar .task{
+        #left-sidebar .classify{
             padding: 25px 10px;
         }
         #left-sidebar .left-title{
@@ -176,6 +176,43 @@
             -webkit-appearance:none;
             border: none;
             outline: none;
+        }
+        #left-sidebar .tab-page{
+            width: 380px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #left-sidebar .tab-page ul{
+            height: 38px;
+            margin: 0;
+        }
+        #left-sidebar .tab-page ul li{
+            width: 80px;
+            height: 38px;
+            background: #ECECEC;
+            margin-right: 1px;
+            list-style: none;
+            float: left;
+            color: #BFBFBF;
+            text-align: center;
+            line-height: 38px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        #left-sidebar .tab-page ul li.active{
+            background: #0088EB;
+            color: #FFFFFF;
+        }
+        #left-sidebar .tab-page ._table{
+            border: 1px solid #0088EB;
+        }
+        #left-sidebar .tab-page .allocation-list{
+            position: absolute;
+            right: 0;
+            top:10px;
+            color: #0088EB;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -278,9 +315,38 @@
             <!--1.设计阶段-->
             <div class="phase-content">
                 <!--分类目录-->
-                <div class="task">
+                <div class="classify">
                     <span class="left-title">分类目录</span>
                     <select class="select1"></select>
+                </div>
+                <div class="tab-page">
+                    <ul>
+                        <li class="active" data-status="-1">全部</li>
+                        <li data-status="0">已分配</li>
+                        <li data-status="1">未分配</li>
+                    </ul>
+                    <span class="allocation-list">分配清单</span>
+                    <div class="_table"></div>
+                    <!--<table>-->
+                        <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<th>11</th>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<th>22</th>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<th>33</th>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<th>44</th>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>12</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>12</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>12</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>12</td>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>13</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>13</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>13</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>13</td>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+                    <!--</table>-->
                 </div>
             </div>
             <!--2.实施阶段-->
