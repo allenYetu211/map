@@ -308,6 +308,7 @@
             background: rgba(0,136,235,0.2);
             outline: none;
         }
+
         /*查看任务开始*/
         #task-table{
             width: 1020px;
@@ -361,6 +362,7 @@
             outline: none;
         }
         /*查看任务结束*/
+
         /*任务清单开始*/
         #GetTask{
             width: 1020px;
@@ -386,6 +388,9 @@
             overflow-y:auto;
         }
         #GetTask .content tr:hover{
+            background: rgba(0,136,235,0.1);
+        }
+        #GetTask .content tr.active{
             background: rgba(0,136,235,0.2);
         }
         #GetTask .content table th{
@@ -399,7 +404,7 @@
             justify-content:center;
         }
         #GetTask .table-btn button{
-            width:112px;
+            width:120px;
             height:40px;
             border:1px solid #0088EB;
             border-radius: 4px;
@@ -427,7 +432,32 @@
             color: #0088EB;
             background: #ffffff;
         }
+        #GetTask .make-sure{
+            width: 300px;
+            height: 120px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: absolute;
+            top:45%;
+            left:30%;
+            z-index: 10000;
+            text-align: center;
+            color: #0088EB;
+            display: none;
+        }
+        #GetTask .make-sure button{
+            width:100px;
+            height:40px;
+            background: #ffffff;
+            color: #0088EB;
+            font-size: 12px;
+            border:none;
+            outline: none;
+            margin: 0 10px;
+
+        }
         /*任务清单结束*/
+
         #progress-bar{
             width: 450px;
             height: 140px;
@@ -688,8 +718,8 @@
 
         <div class="table-btn">
             <button class="delete">删除</button>
-            <button class="confirm">确定</button>
-            <button class="cancel">取消</button>
+            <!--<button class="confirm">确定</button>-->
+            <!--<button class="cancel">取消</button>-->
         </div>
     </div>
     <!--任务清单-->
@@ -701,8 +731,8 @@
 
         <div class="table-btn">
             <button class="delete">删除</button>
-            <button class="confirm">确定</button>
-            <button class="cancel">取消</button>
+            <!--<button class="confirm">确定</button>-->
+            <!--<button class="cancel">取消</button>-->
         </div>
         <!--搜索框-->
         <div id="GetTask-search" class="search">
@@ -714,6 +744,11 @@
             <button class="selectSearchbar">搜索</button>
             <div class="filedCondition">
             </div>
+        </div>
+        <div class="make-sure">
+            <h3>确定要删除吗？</h3>
+            <button class="confirm">确定</button>
+            <button class="cancel">取消</button>
         </div>
     </div>
    
