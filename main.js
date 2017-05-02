@@ -75,7 +75,7 @@ require.config({
     },
     waitSeconds: 0
 });
-require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "info", "infor_reported"],
+require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported"],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, t, a, b, d, echarts, s, st, ch, ma) {
         // console.log(ch)

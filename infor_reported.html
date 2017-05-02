@@ -2,31 +2,31 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="renderer" content="webkit">
-    <title>信息填报 | 移民快速调查综合服务平台</title>
-    <!--首页加载需要使用到的css样式表-->
-    <link rel="stylesheet" type="text/css" href="css/demo.css">
-    <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
-    <link rel="stylesheet" type="text/css" href="css/index_tool.css">
-    <link rel="stylesheet" type="text/css" href="css/statictable.css">
-    <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/dataLaySth.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/informationRepored.css">
-    <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit">
+  <title>信息填报 | 移民快速调查综合服务平台</title>
+  <!--首页加载需要使用到的css样式表-->
+  <link rel="stylesheet" type="text/css" href="css/demo.css">
+  <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
+  <link rel="stylesheet" type="text/css" href="css/index_tool.css">
+  <link rel="stylesheet" type="text/css" href="css/statictable.css">
+  <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/dataLaySth.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/infor_reported.css">
+  <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
 
 
-    <script src="echarts.min.js"></script>
-    <script src="md5.js"></script>
-    <script src="require.js"></script>
-    <script src="main.js"></script>
+  <script src="echarts.min.js"></script>
+  <script src="md5.js"></script>
+  <script src="require.js"></script>
+  <script src="main.js"></script>
 
 
 </head>
@@ -34,113 +34,128 @@
 <body>
 
 
-    <div id="map"></div>
-    <div id="top-sidebar">
+  <div id="map"></div>
+  <div id="top-sidebar">
 
-        <div class="tsidebar-l">
-            <div class="logo">
-                <a href="index.html"><img src="images/chart/logo@2x.png" alt=""></a>
-            </div>
+    <div class="tsidebar-l">
+      <div class="logo">
+        <a href="index.html"><img src="images/chart/logo@2x.png" alt=""></a>
+      </div>
 
-            <div class="dataPageList">
-                <a href="./dataLaySth.html" class="active"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">信息填报</a>
-            </div>
-        </div>
-
-
-
-
-        <div class="toolbar">
-            <button type="button" class="user"><a href="./index.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>
-            <button type="button" class="user active"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>
-            <button type="button" class="user"><a  href="./dataAdmin.html"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></a></button>
-        </div>
-
+      <div class="dataPageList">
+        <a href="./dataLaySth.html" class="active"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">信息填报</a>
+      </div>
     </div>
 
-    <!--dataDisplay Show Left Stant-->
-
-    <div class="dataDisplay">
-
-        <div class=" _laysthList listAry_cs ">
-            <div class="laysthTitle">
-                <div class="laysthTitle-h2">行政区域</div>
-
-                <div class="icons-Display">
-                    <span class="_Addlaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
-                    <span class="_Changelaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
-                    <span class="_Deletelaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
-                </div>
-            </div>
-
-            <div class="selecteInput">
-                <input type="text" name="" value="" placeholder="请搜索">
-                <button type="button">搜索</button>
-            </div>
-
-            <div class="_j_inforReported _laysthList-bgc"></div>
-        </div>
 
 
 
+    <div class="toolbar">
+      <button type="button" class="user"><a href="./index.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>
+      <button type="button" class="user active"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>
+      <button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>
+      <button type="button" class="user"><a  href="./dataAdmin.html"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></a></button>
+      <button type="button" class="user"><a href><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></a></button>
+      <button type="button" class="user"><a href><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></a></button>
+      <button type="button" class="user"><a href><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></a></button>
     </div>
 
-    <!--dataDisplay Show Left End-->
+  </div>
+
+  <!--dataDisplay Show Left Stant-->
+
+  <div class="dataDisplay">
+
+    <div class=" _laysthList listAry_cs ">
+      <div class="laysthTitle">
+        <div class="laysthTitle-h2">行政区域</div>
+
+        <div class="icons-Display">
+          <span class="_Addlaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
+          <span class="_Changelaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
+          <span class="_Deletelaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
+        </div>
+      </div>
+
+      <div class="selecteInput">
+        <input type="text" name="" value="" placeholder="请搜索">
+        <button type="button">搜索</button>
+      </div>
+
+      <div class="_j_inforReported _laysthList-bgc"></div>
+    </div>
+
+
+    <div class="_laySelectList">
+
+      <div class="_selecteTabel">
+          <div class="_moreInforTabel">
+            测试
+          </div>
+      </div>
+
+      <div class="reported-iframe">
+        <iframe src="./sheet-demo.html" style="width: 100%"></iframe>
+      </div>
+      
+    </div>
+
+
+
+  </div>
+
+  <!--dataDisplay Show Left End-->
 
 
 
 
-    <!--Pop-up Data Start-->
-    <div class="popupAddChange _j_popup">
-        <div class="popupTitle">
-            <h2 class="popupTitle-h2">提示</h2>
-            <span class="popup_close">
+  <!--Pop-up Data Start-->
+  <div class="popupAddChange _j_popup">
+    <div class="popupTitle">
+      <h2 class="popupTitle-h2">提示</h2>
+      <span class="popup_close">
                 <img src="images/chart/icon_close@2x.png" alt="">
             </span>
-        </div>
-        <div class="fillInSelection"></div>
-        <div class="qfButton">
-            <button class="confirm"><img src="images/chart/icon_close@2x.png" alt="">确认</button>
-            <button class="closer"><img src="images/chart/icon_close@2x.png" alt="">取消</button>
-        </div>
-
     </div>
-    <!--Pop-up Data End-->
+    <div class="fillInSelection"></div>
+    <div class="qfButton">
+      <button class="confirm"><img src="images/chart/icon_close@2x.png" alt="">确认</button>
+      <button class="closer"><img src="images/chart/icon_close@2x.png" alt="">取消</button>
+    </div>
+
+  </div>
+  <!--Pop-up Data End-->
 
 
 
 
-    <div class="popupAddChangeZD _j_popup">
-        <div class="popupTitle">
-            <h2 class="popupTitle-h2">提示</h2>
-            <span class="popup_close">
+  <div class="popupAddChangeZD _j_popup">
+    <div class="popupTitle">
+      <h2 class="popupTitle-h2">提示</h2>
+      <span class="popup_close">
                 <img src="images/chart/icon_close@2x.png" alt="">
             </span>
-        </div>
-        <div class="PopupAdd-ZD"></div>
-        <div class="qfButton">
-            <button class="_PopBconfirm"><img src="images/chart/icon_close@2x.png" alt="">确认</button>
-            <button class="_PopBcloser"><img src="images/chart/icon_close@2x.png" alt="">取消</button>
-        </div>
-
+    </div>
+    <div class="PopupAdd-ZD"></div>
+    <div class="qfButton">
+      <button class="_PopBconfirm"><img src="images/chart/icon_close@2x.png" alt="">确认</button>
+      <button class="_PopBcloser"><img src="images/chart/icon_close@2x.png" alt="">取消</button>
     </div>
 
-    <div class="al-popup-prompt">
+  </div>
 
-        <div class="al-popup">
+  <div class="al-popup-prompt">
 
-            <div class="al-closer">
-                <span>提示：</span>
-                <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
-            </div>
-            <p class="al-prompt-informations"></p>
-            <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt="">关闭</button>
-        </div>
+    <div class="al-popup">
+
+      <div class="al-closer">
+        <span>提示：</span>
+        <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
+      </div>
+      <p class="al-prompt-informations"></p>
+      <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt="">关闭</button>
     </div>
+  </div>
 
 </body>
 
