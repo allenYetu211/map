@@ -9,8 +9,8 @@
     <!--首页加载需要使用到的css样式表-->
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">-->
     <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
     <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
     <link rel="stylesheet" type="text/css" href="css/index_tool.css">
@@ -38,7 +38,7 @@
 
         <div class="tsidebar-l">
             <div class="logo">
-                <a href="index.html"><img src="images/chart/logo@2x.png" alt=""></a>
+                <a href="platform.html"><img src="images/chart/logo@2x.png" alt=""></a>
             </div>
 
             <div class="dataPageList">
@@ -51,7 +51,7 @@
 
 
         <div class="toolbar">
-            <button type="button" class="user"><a href="./index.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>
+            <button type="button" class="user"><a href="./platform.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>
             <button type="button" class="user active"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>
             <button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>
             <button type="button" class="user"><a  href="./dataAdmin.html"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></a></button>
@@ -87,31 +87,33 @@
             <div class="_fieldOpenC">
                 <span></span>
             </div>
-            <div class="_fieldoperating">
-                <div class="_fieldTab">
-                    <button class="active">字段绑定</button>
-                    <button>字段约束</button>
+
+            <div class="_fieldFlex">
+                <div class="_fieldoperating">
+                    <div class="_fieldTab">
+                        <button class="active">字段绑定</button>
+                        <button>字段约束</button>
+                    </div>
+
+
+                </div>
+                <div class="_operating">
+
+                    <div class="operating-l">
+                        <button class="_OpenActive"><img src="images/chart/icon_switch_off@2x.png" alt=""></button>
+                    </div>
+
+                    <div class="operating-r">
+                        <button class="_addTable"><img src="images/chart/icon_zdplus@2x.png" alt=""></button>
+                        <button class="_changeTable"><img src="images/chart/icon_zdedit@2x.png" alt=""></button>
+                        <button class="_deleteTable"><img src="images/chart/icon_zddelete@2x.png" alt=""></button>
+                        <button class="_createTable"><img src="images/chart/icon_zdexport@2x.png" alt=""></button>
+                    </div>
+
                 </div>
 
-
+                <div class="_dataFiled"></div>
             </div>
-            <div class="_operating">
-
-                <div class="operating-l">
-                    <button class="_OpenActive"><img src="images/chart/icon_switch_off@2x.png" alt=""></button>
-                </div>
-
-                <div class="operating-r">
-                    <button class="_addTable"><img src="images/chart/icon_zdplus@2x.png" alt=""></button>
-                    <button class="_changeTable"><img src="images/chart/icon_zdedit@2x.png" alt=""></button>
-                    <button class="_deleteTable"><img src="images/chart/icon_zddelete@2x.png" alt=""></button>
-                    <button class="_createTable"><img src="images/chart/icon_zdexport@2x.png" alt=""></button>
-                </div>
-
-            </div>
-
-            <div class="_dataFiled"></div>
-
         </div>
 
 
@@ -121,8 +123,8 @@
 
     <!--Pop-up Data Start-->
 
-    <div class="popupAddChange _j_popup">
-        <div class="popupTitle">
+    <div class="popupAddChange _j_popup _a_translate">
+        <div class="popupTitle _j_translate">
             <h2 class="popupTitle-h2"></h2>
             <span class="popup_close">
                 <img src="images/chart/icon_close@2x.png" alt="">
@@ -139,8 +141,8 @@
 
     <!--Pop-up Data End-->
 
-    <div class="popupAddChangeZD _j_popup">
-        <div class="popupTitle">
+    <div class="popupAddChangeZD _j_popup _a_translate">
+        <div class="popupTitle _j_translate">
             <h2 class="popupTitle-h2">绑定字段</h2>
             <span class="popup_close">
                 <img src="images/chart/icon_close@2x.png" alt="">

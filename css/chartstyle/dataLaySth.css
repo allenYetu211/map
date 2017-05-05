@@ -52,6 +52,8 @@
     display: none;
     border-left: 1px solid #e0e0e0;
     border-right: 1px solid #e0e0e0;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 ._laysthList .in_parents li {
@@ -276,7 +278,7 @@
 
 ._fieldRqpost {
     width: 300px;
-    height: 100%;
+    /*height: 100%;*/
     background-color: #fff;
     position: absolute;
     right: 0;
@@ -291,6 +293,17 @@
     transform: translate3d(100%, 0, 0);
     -webkit-transform: translate3d(100%, 0, 0);
     -o-transform: translate3d(100%, 0, 0);
+}
+
+._fieldFlex {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+._fieldFlex ._dataFiled {
+    flex: 1;
+    overflow-y: auto;
 }
 
 ._fieldOpenC {

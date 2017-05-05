@@ -1,10 +1,17 @@
 .x-body {
-	font-size: 100%;
+    font-size: 100%;
 }
 
 #divSave {
-	display: none;
-	position: absolute;
-	width:15px;
-	height: 15px;
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 240px !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: 60px !important;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }

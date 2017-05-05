@@ -19,38 +19,129 @@
     height: 40px;
     line-height: 40px;
     border: none;
-    background-color: transparent;
+    background-color: rgb(223, 238, 247);
     position: absolute;
     right: 0;
     top: 5px;
 }
 
-._laysthList-bgc {}
 
+}
+._laysthList-bgc {
+    overflow-y: auto;
+    height: 100%;
+}
 ._laysthList-bgc div {
     display: block;
     width: 100%;
+    /*height: 35px;*/
+    /*line-height: 35px;*/
+}
+._laysthList-bgc ._parmis {
+    padding: 0 10px;
+}
+._laysthList-bgc p._j_treeSelect {
     height: 35px;
     line-height: 35px;
+    position: relative;
 }
-
+._laysthList-bgc p._j_treeSelect:hover span:after {
+    opacity: 1;
+}
+._laysthList-bgc p._j_treeSelect span {
+    display: block;
+    cursor: pointer;
+}
+._laysthList-bgc p._j_treeSelect.active span:after {
+    opacity: 1;
+}
+._laysthList-bgc p._j_treeSelect span:after {
+    height: 100%;
+    width: 300px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: #dfe8ef;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: -1;
+    content: '';
+}
 .dataDisplay .listAry_cs ._laysthList-bgc li {
     display: block;
+    height: auto;
 }
-
 ._selecteTabel {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     white-space: nowrap;
     overflow: auto;
+    padding: 0 5px;
 }
-
+._selecteTabel ._selecteLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+._selecteTabel ._moreInfor {
+    display: flex;
+    margin-right: 10px;
+}
 ._selecteTabel ._moreInforTabel {
     width: 200px;
     padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
 }
-
+._selecteTabel ._moreInforTabel.active {
+    background-color: #f8fcff;
+    position: relative;
+}
+._selecteTabel ._moreInforTabel.active:after {
+    display: block;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #0088EB;
+    content: '';
+}
 ._laySelectList {
     width: 100%;
+}
+._termCounts {
+    height: 45px;
+    line-height: 45px;
+    background-color: #f8fcff;
+    padding: 0 10px;
+    position: relative;
+    border: none;
+}
+._term {
+    position: relative;
+}
+._potoshop {
+    height: 45px;
+    line-height: 45px;
+    background-color: #f8fcff;
+    padding: 0 10px;
+    position: relative;
+}
+._potoshop:after,
+._term:after {
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0088EB;
+    content: '';
 }

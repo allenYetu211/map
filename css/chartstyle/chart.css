@@ -6,6 +6,14 @@ body {
     box-sizing: border-box;
 }
 
+._j_translate:hover {
+    cursor: move;
+}
+
+input:focus {
+    outline: none;
+}
+
 
 /************ GLOBAL ************/
 
@@ -507,6 +515,8 @@ body {
 }
 
 #top-sidebar .search .filedCondition {
+    width: 80%;
+    max-height: 300px;
     display: none;
     position: absolute;
     top: 92%;
@@ -516,8 +526,8 @@ body {
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.40);
     z-index: 9999;
     box-sizing: border-box;
-    width: 80%;
     padding: 20px;
+    overflow-y: auto;
     color: #222;
 }
 
