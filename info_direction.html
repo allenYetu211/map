@@ -157,17 +157,17 @@
             border-left: 14px solid #222;
             border-bottom: 12px solid transparent;
         }
-        #left-sidebar .task{
+        #left-sidebar .classify{
             padding: 25px 10px;
         }
         #left-sidebar .left-title{
             color: #0088EB;
             font-size: 18px;
         }
-        #left-sidebar .select1,#left-sidebar .select2{
-            width: 130px;
+        #left-sidebar .select1{
+            width: 280px;
             height: 32px;
-            background: #E9EFF4 url("images/chart/icon_bigmapfold.png") no-repeat 110px center;
+            background: #E9EFF4 url("images/chart/icon_bigmapfold.png") no-repeat 260px center;
             font-size: 12px;
             padding-left: 10px;
             margin-left: 10px;
@@ -177,234 +177,109 @@
             border: none;
             outline: none;
         }
-        /*调查表*/
-        #left-sidebar .survey1 .title{
-            padding: 20px 10px;
-        }
-        #left-sidebar .survey1 .title .right{
-            float: right;
-        }
-        #left-sidebar .survey1 .title .right span{
-            color: #0088EB;
-            font-size: 14px;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        #left-sidebar .survey1 .content{
+        #left-sidebar .tab-page{
             width: 380px;
-            height: 352px;
-            background: #E9EFF4;
+            height: 300px;
             margin: 0 auto;
-            border-radius: 5px;
-            padding: 10px 10px;
-            overflow-y:auto;
-        }
-        #left-sidebar .survey1 .content .item img{
-            float: right;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-        }
-        #left-sidebar .survey1 .content .item input{
-            margin: 0 10px;
-            width: 18px;
-            height: 18px;
-            /*appearance:none;*/
-            /*-moz-appearance:none;*/
-            /*-webkit-appearance:none;*/
-            border:none;
-            outline:none;
-            background: #ffffff;
-            border-radius: 3px;
             position: relative;
-            top:3px;
         }
-        #left-sidebar .survey1 .content .item label{
-            cursor: pointer;
-        }
-        #left-sidebar .survey1 .content .item .item-title{
-            font-size: 18px;
-        }
-        /*调查对象*/
-        #left-sidebar .survey2 .title{
-            padding: 20px 10px;
-        }
-        #left-sidebar .survey2 .title .right{
-            float: right;
-        }
-        #left-sidebar .survey2 .title .right span{
-            color: #0088EB;
-            font-size: 14px;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        #left-sidebar .survey2 .content{
-            width: 380px;
-            height: 352px;
-            background: #E9EFF4;
-            margin: 0 auto;
-            border-radius: 5px;
-            padding: 10px 10px;
-            overflow-y:auto;
-        }
-        #left-sidebar .survey2 .content ul{
+        #left-sidebar .tab-page ul{
+            height: 38px;
             margin: 0;
-            padding: 0;
+        }
+        #left-sidebar .tab-page ul li{
+            width: 80px;
+            height: 38px;
+            background: #ECECEC;
+            margin-right: 1px;
             list-style: none;
-        }
-        #left-sidebar .survey2 .content li{
-            list-style: none;
-        }
-        #left-sidebar .survey2 .content input{
-            margin: 0 10px;
-            width: 18px;
-            height: 18px;
-            /*appearance:none;*/
-            /*-moz-appearance:none;*/
-            /*-webkit-appearance:none;*/
-            border:none;
-            outline:none;
-            background: #ffffff;
-            border-radius: 3px;
-            position: relative;
-            top:3px;
-        }
-        #left-sidebar .survey2 .content label{
+            float: left;
+            color: #BFBFBF;
+            text-align: center;
+            line-height: 38px;
+            font-size: 14px;
             cursor: pointer;
         }
-        #left-sidebar .survey2 .content .city{
-            font-size: 18px;
-            margin-bottom: 10px;
+        #left-sidebar .tab-page ul li.active{
+            background: #0088EB;
+            color: #FFFFFF;
         }
-        #left-sidebar .survey2 .content .town{
-            font-size: 14px;
-            margin-bottom: 10px;
+        #left-sidebar .tab-page ._table{
+            border: 1px solid #0088EB;
         }
-        #left-sidebar .survey2 .content .village{
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-
-        #left-sidebar .mission{
-            width: 380px;
-            margin: 20px auto;
-            padding: 0;
-        }
-        #left-sidebar .mission button{
-            width:180px;
-            height:40px;
-            border:1px solid #0088EB;
-            border-radius: 4px;
-            background: #ffffff;
+        #left-sidebar .tab-page .allocation-list{
+            position: absolute;
+            right: 0;
+            top:10px;
             color: #0088EB;
-            font-size: 12px;
-            outline: none;
+            cursor: pointer;
         }
-        #left-sidebar .mission .inventory{
-            float: right;
+        #left-sidebar .tab-page ._table tr td:last-child{
+            cursor: pointer;
         }
-        #left-sidebar .mission button:hover{
-            background: rgba(0,136,235,0.2);
-            outline: none;
+        #left-sidebar .tab-page ._table tr td:nth-child(2){
+            width: 150px;
         }
 
-        /*查看任务开始*/
-        #task-table{
-            width: 1020px;
+        /*任务分配弹框开始*/
+        #GetInvestigator{
+            width: 560px;
             height: 570px;
             background: #ffffff;
             position: absolute;
             top:calc(50% - 285px);
-            left:calc(50% - 510px);
+            left:calc(50% - 280px);
             z-index: 9999;
             border-radius: 5px;
             border-top:5px solid #0088EB;
             box-shadow: 0 0 50px rgba(0,0,0,0.5);
             display: none;
         }
-        #task-table h3{
+        #GetInvestigator h3{
             width: 100%;
         }
-        #task-table .content{
+        #GetInvestigator .content{
             border-top:1px solid #E9E9E9;
-            padding: 8px 10px;
+            border-bottom:1px solid #E9E9E9;
+            /*padding: 8px 10px;*/
+            height: 437px;
+            margin-bottom: 15px;
+        }
+        #GetInvestigator .content .Inv-left{
+            width: 280px;
             height: 435px;
-            margin-bottom: 20px;
+            float: left;
             overflow-y:auto;
+            border-right: 1px solid #E9E9E9;
+            padding: 10px 10px;
         }
-        #task-table .content table th{
-            font-weight: bold;
+        #GetInvestigator .content .Inv-right{
+            width: 280px;
+            height: 435px;
+            float: left;
+            overflow-y:auto;
+            padding: 10px 10px;
         }
-        #task-table .content table tr:nth-child(odd){
-             background: #F9F9F9;
-        }
-        #task-table .content table tr:nth-child(1){
-            background: #E9EFF4;
-        }
-        #task-table .table-btn{
-            display: flex;
-            justify-content:center;
-        }
-        #task-table .table-btn button{
-            width:112px;
-            height:40px;
-            border:1px solid #0088EB;
-            border-radius: 4px;
-            background: #ffffff;
-            color: #0088EB;
+        #GetInvestigator .content p{
+            color: #B5B5B5;
             font-size: 12px;
-            outline: none;
-            margin: 0 10px;
         }
-        #task-table .table-btn button:hover{
-            background: rgba(0,136,235,0.2);
-            outline: none;
+        #GetInvestigator .content li{
+            list-style: none;
+            /*line-height: 30px;*/
+            font-size: 14px;
+            cursor: pointer;
+            margin-bottom: 10px;
         }
-        /*查看任务结束*/
-
-        /*任务清单开始*/
-        #GetTask{
-            width: 1020px;
-            height: 570px;
-            background: #ffffff;
-            position: absolute;
-            top:calc(50% - 285px);
-            left:calc(50% - 510px);
-            z-index: 9999;
-            border-radius: 5px;
-            border-top:5px solid #0088EB;
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
-            display: none;
-        }
-        #GetTask h3{
-            width: 100%;
-        }
-        #GetTask .content{
-            border-top:1px solid #E9E9E9;
-            padding: 8px 10px;
-            height: 435px;
-            margin-bottom: 20px;
-            overflow-y:auto;
-        }
-        #GetTask .content tr:hover{
+        #GetInvestigator .content li:hover{
             background: rgba(0,136,235,0.1);
         }
-        #GetTask .content tr.active{
-            background: rgba(0,136,235,0.2);
-        }
-        #GetTask .content table th{
-            font-weight: bold;
-        }
-        #GetTask .content table tr:nth-child(1){
-            background: #E9EFF4;
-        }
-        #GetTask .table-btn{
+        #GetInvestigator .table-btn{
             display: flex;
-            justify-content:center;
+            justify-content:flex-end;
         }
-        #GetTask .table-btn button{
-            width:120px;
+        #GetInvestigator .table-btn button{
+            width:114px;
             height:40px;
             border:1px solid #0088EB;
             border-radius: 4px;
@@ -412,93 +287,102 @@
             color: #0088EB;
             font-size: 12px;
             outline: none;
-            margin: 0 10px;
+            margin-right: 10px;
         }
-        #GetTask .table-btn button:hover{
+        #GetInvestigator .table-btn button:hover{
             background: rgba(0,136,235,0.2);
             outline: none;
         }
-        #GetTask-search{
+        #GetInvestigator-search{
             position: absolute;
             top:18px;
-            left: 15%;
+            left: 24%;
         }
-        #GetTask-search input,#GetTask-search button{
+        #GetInvestigator-search input,#GetInvestigator-search button{
             border: none;
             outline: none;
         }
-        #GetTask-search button{
+        #GetInvestigator-search button{
             font-size: 18px;
             color: #0088EB;
             background: #ffffff;
         }
-        #GetTask .make-sure{
+        #GetInvestigator .success{
             width: 300px;
-            height: 120px;
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: absolute;
-            top:40%;
-            left:35%;
-            z-index: 10000;
-            text-align: center;
-            display: none;
-        }
-        #GetTask .make-sure button{
-            width:100px;
-            height:40px;
-            background: #ffffff;
-            font-size: 14px;
-            border:none;
-            outline: none;
-            margin: 10px 10px;
-        }
-        /*任务清单结束*/
-
-        #progress-bar{
-            width: 450px;
             height: 140px;
             background: #ffffff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: absolute;
             top:45%;
-            left:30%;
+            left:24%;
             z-index: 10000;
             text-align: center;
             color: #0088EB;
             display: none;
         }
-        #progress-bar .progress{
-            margin: 30px auto;
-            width: 90%;
-        }
-        #progress-bar .progress .progress-bar{
-            background: #0088EB;
-        }
-        #generate-success{
-            width: 450px;
-            height: 140px;
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: absolute;
-            top:45%;
-            left:30%;
-            z-index: 10000;
-            text-align: center;
-            color: #0088EB;
-            display: none;
-        }
-        #generate-success h3{
+        #GetInvestigator .success h3{
             margin: 0;
             line-height:140px;
         }
-        #generate-success img{
+        #GetInvestigator .success img{
             position: absolute;
             top: 10px;
             right: 10px;
             cursor: pointer;
         }
+        /*任务分配弹框结束*/
 
+        /*任务清单开始*/
+        #GetAssignTask{
+            width: 1020px;
+            height: 570px;
+            background: #ffffff;
+            position: absolute;
+            top:calc(50% - 285px);
+            left:calc(50% - 510px);
+            z-index: 9999;
+            border-radius: 5px;
+            border-top:5px solid #0088EB;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            display: none;
+        }
+        #GetAssignTask h3{
+            width: 100%;
+        }
+        #GetAssignTask .content{
+            border-top:1px solid #E9E9E9;
+            padding: 8px 10px;
+            height: 435px;
+            margin-bottom: 20px;
+            overflow-y:auto;
+        }
+        #GetAssignTask .content tr:hover{
+            background: rgba(0,136,235,0.1);
+        }
+        #GetAssignTask .content tr.active{
+            background: rgba(0,136,235,0.2);
+        }
+        #GetAssignTask .content table th{
+            font-weight: bold;
+        }
+        #GetAssignTask .content table tr:nth-child(1){
+            background: #E9EFF4;
+        }
+        #GetAssignTask-search{
+            position: absolute;
+            top:18px;
+            left: 15%;
+        }
+        #GetAssignTask-search input,#GetAssignTask-search button{
+            border: none;
+            outline: none;
+        }
+        #GetAssignTask-search button{
+            font-size: 18px;
+            color: #0088EB;
+            background: #ffffff;
+        }
+        /*任务清单结束*/
     </style>
 </head>
 
@@ -599,74 +483,39 @@
             </div>
             <!--1.设计阶段-->
             <div class="phase-content">
-                <!--任务单元-->
-                <div class="task">
-                    <span class="left-title">任务单元</span>
+                <!--分类目录-->
+                <div class="classify">
+                    <span class="left-title">分类目录</span>
                     <select class="select1"></select>
-                    <select class="select2"></select>
                 </div>
-                <!--调查表1-->
-                <div class="survey1">
-                    <div class="title">
-                        <span class="left-title">调查表</span>
-                        <div class="right">
-                            <span class="selectAll">全选</span><span class="unSelect">取消</span>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <!--<div class="item">-->
-                        <!--<p class="item-title">行政村</p>-->
-                        <!--<p>-->
-                        <!--<label><input type="checkbox">农户登记表</label>-->
-                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
-                        <!--</p>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                        <!--<p class="item-title">自然村</p>-->
-                        <!--<p>-->
-                        <!--<label><input type="checkbox">乡镇登记表</label>-->
-                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
-                        <!--</p>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                        <!--<p class="item-title">村民小组</p>-->
-                        <!--<p>-->
-                        <!--<label><input type="checkbox">区县登记表</label>-->
-                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
-                        <!--</p>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                        <!--<p class="item-title">农户</p>-->
-                        <!--<p>-->
-                        <!--<label><input type="checkbox">实物补偿登记卡</label>-->
-                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
-                        <!--</p>-->
-                        <!--<p>-->
-                        <!--<label><input type="checkbox">工商企业房屋登记表</label>-->
-                        <!--<img src="./images/chart/icon_data_info.png" alt="">-->
-                        <!--</p>-->
-                        <!--</div>-->
-                    </div>
-                </div>
-
-                <!--调查表2-->
-                <div class="survey2">
-                    <div class="title">
-                        <span class="left-title">调查对象</span>
-                        <div class="right">
-                            <span class="selectAll">全选</span><span class="unSelect">取消</span>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <!-- 1.6.5 获取调查数据接口 渲染内容-->
-                        <!-- 1.6.5 获取调查数据接口 渲染内容-->
-                        <!-- 1.6.5 获取调查数据接口 渲染内容-->
-                    </div>
-                </div>
-                <!--任务生成，任务清单-->
-                <div class="mission">
-                    <button class="generate">任务生成</button>
-                    <button class="inventory">任务清单</button>
+                <div class="tab-page">
+                    <ul>
+                        <li class="active" data-status="-1">全部</li>
+                        <li data-status="0">已分配</li>
+                        <li data-status="1">未分配</li>
+                    </ul>
+                    <span class="allocation-list">分配清单</span>
+                    <div class="_table"></div>
+                    <!--<table>-->
+                        <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<th>11</th>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<th>22</th>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<th>33</th>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<th>44</th>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>12</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>12</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>12</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>12</td>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>13</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>13</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>13</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>13</td>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+                    <!--</table>-->
                 </div>
             </div>
             <!--2.实施阶段-->
@@ -677,49 +526,34 @@
 
     </div>
 
-    <!--进度条-->
-    <div id="progress-bar">
-        <h3>生成进度</h3>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                0%
+
+    <!-------任务分配弹框------->
+    <div id="GetInvestigator">
+        <h3 class="container"> 分配人员 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
+        <div class="content">
+            <div class="Inv-left">
+                <p>调查人员列表</p>
+                <ul>
+                    <li>asdasdds</li>
+                    <li>sdfgrth</li>
+                    <li>hrbtvf</li>
+                    <li>dfvsdc</li>
+                    <li>sdcdsre</li>
+                </ul>
             </div>
-        </div>
-    </div>
-    <!--任务生成成功-->
-    <div id="generate-success">
-        <h3></h3>
-        <img src="images/chart/icon_close@2x.png" alt="">
-    </div>
-    <!--查看任务-->
-    <div id="task-table">
-        <h3 class="container">自然村登记表 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
-        <div class="content">
-            <iframe id="inforIframe" src="./sheet-demo.html" style="width: 100%; height: 100%;"></iframe>
-        </div>
-
-        <!--<iframe id="inforIframe" src="./sheet-demo.html" style="width: 100%; height: 100%;"></iframe>-->
-
-        <!--<div class="table-btn">-->
-            <!--<button class="delete">删除</button>-->
-            <!--&lt;!&ndash;<button class="confirm">确定</button>&ndash;&gt;-->
-            <!--&lt;!&ndash;<button class="cancel">取消</button>&ndash;&gt;-->
-        <!--</div>-->
-    </div>
-    <!--任务清单-->
-    <div id="GetTask">
-        <h3 class="container"> 任务清单 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
-        <div class="content">
-
+            <div class="Inv-right">
+                <P>已选择人员</P>
+                <ul></ul>
+            </div>
         </div>
 
         <div class="table-btn">
-            <button class="delete">删除</button>
-            <!--<button class="confirm">确定</button>-->
-            <!--<button class="cancel">取消</button>-->
+            <!--<button class="delete">删除</button>-->
+            <button class="sure">确定</button>
+            <button class="cancel">取消</button>
         </div>
         <!--搜索框-->
-        <div id="GetTask-search" class="search">
+        <div id="GetInvestigator-search" class="search">
             <img src="images/chart/icon_search.png" alt="">
             <input class="searchbar" type="text" placeholder="Search">
             <button class="searchbar-Emptied" type="button">
@@ -729,24 +563,31 @@
             <div class="filedCondition">
             </div>
         </div>
-        <div class="make-sure">
-            <h3>确定要删除吗</h3>
-            <button class="sure">确定</button>
-            <button class="cancel">取消</button>
+        <!--任务分配成功-->
+        <div class="success">
+            <h3>任务分配成功</h3>
+            <img src="images/chart/icon_close@2x.png" alt="">
         </div>
     </div>
-   
 
+    <!--分配清单弹框-->
+    <div id="GetAssignTask">
+        <h3 class="container"> 任务清单 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
+        <div class="content">
 
-
-    <!--informations control panel Start-->
-
-
-    
-
-
-    <!--informations control panel End-->
-
+        </div>
+        <!--搜索框-->
+        <div id="GetAssignTask-search" class="search">
+            <img src="images/chart/icon_search.png" alt="">
+            <input class="searchbar" type="text" placeholder="Search">
+            <button class="searchbar-Emptied" type="button">
+                <img class="close" src="images/chart/icon_close@2x.png" alt="">
+            </button>
+            <button class="selectSearchbar">搜索</button>
+            <div class="filedCondition">
+            </div>
+        </div>
+    </div>
 
 </body>
 
