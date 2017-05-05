@@ -40,6 +40,7 @@ require.config({
         "login": "theChart/login",
         "local": "theChart/localStorage",
         "api": "theChart/api",
+        "user_management": "theChart/user_management",
 
         "bootstrap": "sqlToolJs/bootstrap.min",
         "bootstrapSelect": "sqlToolJs/bootstrap-select.min",
@@ -79,7 +80,7 @@ require.config({
     },
     waitSeconds: 0
 });
-require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api"],
+require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api",'info','user_management'],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, t, a, b, d, echarts, s, st, ch, ma) {
         // console.log(ch)
