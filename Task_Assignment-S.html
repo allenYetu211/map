@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
-    <title>移民快速调查综合服务平台</title>
+    <title>任务指派 | 移民快速调查综合服务平台</title>
     <!--首页加载需要使用到的css样式表-->
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
@@ -132,16 +132,19 @@
     </style>
 
     <style>
-        #left-sidebar{
+        #left-sidebar {
             color: #222222;
         }
+        
         #left-sidebar .phase ul li.active {
             opacity: 1;
         }
-        #left-sidebar .phase .next-btn{
+        
+        #left-sidebar .phase .next-btn {
             right: 0;
         }
-        #left-sidebar .phase .prev-btn span{
+        
+        #left-sidebar .phase .prev-btn span {
             width: 0;
             height: 0;
             display: inline-block;
@@ -149,7 +152,8 @@
             border-right: 14px solid #222;
             border-bottom: 12px solid transparent;
         }
-        #left-sidebar .phase .next-btn span{
+        
+        #left-sidebar .phase .next-btn span {
             width: 0;
             height: 0;
             display: inline-block;
@@ -157,194 +161,225 @@
             border-left: 14px solid #222;
             border-bottom: 12px solid transparent;
         }
-        #left-sidebar .task{
+        
+        #left-sidebar .task {
             padding: 25px 10px;
         }
-        #left-sidebar .left-title{
+        
+        #left-sidebar .left-title {
             color: #0088EB;
             font-size: 18px;
         }
-        #left-sidebar .select1,#left-sidebar .select2{
+        
+        #left-sidebar .select1,
+        #left-sidebar .select2 {
             width: 130px;
             height: 32px;
             background: #E9EFF4 url("images/chart/icon_bigmapfold.png") no-repeat 110px center;
             font-size: 12px;
             padding-left: 10px;
             margin-left: 10px;
-            appearance:none;
-            -moz-appearance:none;
-            -webkit-appearance:none;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
             border: none;
             outline: none;
         }
         /*调查表*/
-        #left-sidebar .survey1 .title{
+        
+        #left-sidebar .survey1 .title {
             padding: 20px 10px;
         }
-        #left-sidebar .survey1 .title .right{
+        
+        #left-sidebar .survey1 .title .right {
             float: right;
         }
-        #left-sidebar .survey1 .title .right span{
+        
+        #left-sidebar .survey1 .title .right span {
             color: #0088EB;
             font-size: 14px;
             margin: 0 5px;
             cursor: pointer;
         }
-        #left-sidebar .survey1 .content{
+        
+        #left-sidebar .survey1 .content {
             width: 380px;
             height: 352px;
             background: #E9EFF4;
             margin: 0 auto;
             border-radius: 5px;
             padding: 10px 10px;
-            overflow-y:auto;
+            overflow-y: auto;
         }
-        #left-sidebar .survey1 .content .item img{
+        
+        #left-sidebar .survey1 .content .item img {
             float: right;
             width: 18px;
             height: 18px;
             cursor: pointer;
         }
-        #left-sidebar .survey1 .content .item input{
+        
+        #left-sidebar .survey1 .content .item input {
             margin: 0 10px;
             width: 18px;
             height: 18px;
             /*appearance:none;*/
             /*-moz-appearance:none;*/
             /*-webkit-appearance:none;*/
-            border:none;
-            outline:none;
+            border: none;
+            outline: none;
             background: #ffffff;
             border-radius: 3px;
             position: relative;
-            top:3px;
+            top: 3px;
         }
-        #left-sidebar .survey1 .content .item label{
+        
+        #left-sidebar .survey1 .content .item label {
             cursor: pointer;
         }
-        #left-sidebar .survey1 .content .item .item-title{
+        
+        #left-sidebar .survey1 .content .item .item-title {
             font-size: 18px;
         }
         /*调查对象*/
-        #left-sidebar .survey2 .title{
+        
+        #left-sidebar .survey2 .title {
             padding: 20px 10px;
         }
-        #left-sidebar .survey2 .title .right{
+        
+        #left-sidebar .survey2 .title .right {
             float: right;
         }
-        #left-sidebar .survey2 .title .right span{
+        
+        #left-sidebar .survey2 .title .right span {
             color: #0088EB;
             font-size: 14px;
             margin: 0 5px;
             cursor: pointer;
         }
-        #left-sidebar .survey2 .content{
+        
+        #left-sidebar .survey2 .content {
             width: 380px;
             height: 352px;
             background: #E9EFF4;
             margin: 0 auto;
             border-radius: 5px;
             padding: 10px 10px;
-            overflow-y:auto;
+            overflow-y: auto;
         }
-        #left-sidebar .survey2 .content ul{
+        
+        #left-sidebar .survey2 .content ul {
             margin: 0;
             padding: 0;
             list-style: none;
         }
-        #left-sidebar .survey2 .content li{
+        
+        #left-sidebar .survey2 .content li {
             list-style: none;
         }
-        #left-sidebar .survey2 .content input{
+        
+        #left-sidebar .survey2 .content input {
             margin: 0 10px;
             width: 18px;
             height: 18px;
             /*appearance:none;*/
             /*-moz-appearance:none;*/
             /*-webkit-appearance:none;*/
-            border:none;
-            outline:none;
+            border: none;
+            outline: none;
             background: #ffffff;
             border-radius: 3px;
             position: relative;
-            top:3px;
+            top: 3px;
         }
-        #left-sidebar .survey2 .content label{
+        
+        #left-sidebar .survey2 .content label {
             cursor: pointer;
         }
-        #left-sidebar .survey2 .content ul li{
+        
+        #left-sidebar .survey2 .content ul li {
             font-size: 18px;
             margin-bottom: 10px;
         }
-        #left-sidebar .survey2 .content ul li label{
+        
+        #left-sidebar .survey2 .content ul li label {
             font-size: 14px;
         }
-
-
-        #left-sidebar .mission{
+        
+        #left-sidebar .mission {
             width: 380px;
             margin: 20px auto;
             padding: 0;
         }
-        #left-sidebar .mission button{
-            width:180px;
-            height:40px;
-            border:1px solid #0088EB;
+        
+        #left-sidebar .mission button {
+            width: 180px;
+            height: 40px;
+            border: 1px solid #0088EB;
             border-radius: 4px;
             background: #ffffff;
             color: #0088EB;
             font-size: 12px;
             outline: none;
         }
-        #left-sidebar .mission .inventory{
+        
+        #left-sidebar .mission .inventory {
             float: right;
         }
-        #left-sidebar .mission button:hover{
-            background: rgba(0,136,235,0.2);
+        
+        #left-sidebar .mission button:hover {
+            background: rgba(0, 136, 235, 0.2);
             outline: none;
         }
-
         /*查看任务开始*/
-        #task-table{
+        
+        #task-table {
             width: 1020px;
             height: 570px;
             background: #ffffff;
             position: absolute;
-            top:calc(50% - 285px);
-            left:calc(50% - 510px);
+            top: calc(50% - 285px);
+            left: calc(50% - 510px);
             z-index: 9999;
             border-radius: 5px;
-            border-top:5px solid #0088EB;
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            border-top: 5px solid #0088EB;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
             display: none;
         }
-        #task-table h3{
+        
+        #task-table h3 {
             width: 100%;
         }
-        #task-table .content{
-            border-top:1px solid #E9E9E9;
+        
+        #task-table .content {
+            border-top: 1px solid #E9E9E9;
             padding: 8px 10px;
             height: 435px;
             margin-bottom: 20px;
-            overflow-y:auto;
+            overflow-y: auto;
         }
-        #task-table .content table th{
+        
+        #task-table .content table th {
             font-weight: bold;
         }
-        #task-table .content table tr:nth-child(odd){
-             background: #F9F9F9;
+        
+        #task-table .content table tr:nth-child(odd) {
+            background: #F9F9F9;
         }
-        #task-table .content table tr:nth-child(1){
+        
+        #task-table .content table tr:nth-child(1) {
             background: #E9EFF4;
         }
-        #task-table .table-btn{
+        
+        #task-table .table-btn {
             display: flex;
-            justify-content:center;
+            justify-content: center;
         }
-        #task-table .table-btn button{
-            width:112px;
-            height:40px;
-            border:1px solid #0088EB;
+        
+        #task-table .table-btn button {
+            width: 112px;
+            height: 40px;
+            border: 1px solid #0088EB;
             border-radius: 4px;
             background: #ffffff;
             color: #0088EB;
@@ -352,56 +387,65 @@
             outline: none;
             margin: 0 10px;
         }
-        #task-table .table-btn button:hover{
-            background: rgba(0,136,235,0.2);
+        
+        #task-table .table-btn button:hover {
+            background: rgba(0, 136, 235, 0.2);
             outline: none;
         }
         /*查看任务结束*/
-
         /*任务清单开始*/
-        #GetTask{
+        
+        #GetTask {
             width: 1020px;
             height: 570px;
             background: #ffffff;
             position: absolute;
-            top:calc(50% - 285px);
-            left:calc(50% - 510px);
+            top: calc(50% - 285px);
+            left: calc(50% - 510px);
             z-index: 9999;
             border-radius: 5px;
-            border-top:5px solid #0088EB;
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            border-top: 5px solid #0088EB;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
             display: none;
         }
-        #GetTask h3{
+        
+        #GetTask h3 {
             width: 100%;
         }
-        #GetTask .content{
-            border-top:1px solid #E9E9E9;
+        
+        #GetTask .content {
+            border-top: 1px solid #E9E9E9;
             padding: 8px 10px;
             height: 435px;
             margin-bottom: 20px;
-            overflow-y:auto;
+            overflow-y: auto;
         }
-        #GetTask .content tr:hover{
-            background: rgba(0,136,235,0.1);
+        
+        #GetTask .content tr:hover {
+            background: rgba(0, 136, 235, 0.1);
         }
-        #GetTask .content tr.active{
-            background: rgba(0,136,235,0.2);
+        
+        #GetTask .content tr.active {
+            background: rgba(0, 136, 235, 0.2);
         }
-        #GetTask .content table th{
+        
+        #GetTask .content table th {
             font-weight: bold;
         }
-        #GetTask .content table tr:nth-child(1){
+        
+        #GetTask .content table tr:nth-child(1) {
             background: #E9EFF4;
         }
-        #GetTask .table-btn{
+        
+        #GetTask .table-btn {
             display: flex;
-            justify-content:center;
+            justify-content: center;
         }
-        #GetTask .table-btn button{
-            width:120px;
-            height:40px;
-            border:1px solid #0088EB;
+        
+        #GetTask .table-btn button {
+            width: 120px;
+            height: 40px;
+            border: 1px solid #0088EB;
             border-radius: 4px;
             background: #ffffff;
             color: #0088EB;
@@ -409,91 +453,102 @@
             outline: none;
             margin: 0 10px;
         }
-        #GetTask .table-btn button:hover{
-            background: rgba(0,136,235,0.2);
+        
+        #GetTask .table-btn button:hover {
+            background: rgba(0, 136, 235, 0.2);
             outline: none;
         }
-        #GetTask-search{
+        
+        #GetTask-search {
             position: absolute;
-            top:18px;
+            top: 18px;
             left: 15%;
         }
-        #GetTask-search input,#GetTask-search button{
+        
+        #GetTask-search input,
+        #GetTask-search button {
             border: none;
             outline: none;
         }
-        #GetTask-search button{
+        
+        #GetTask-search button {
             font-size: 18px;
             color: #0088EB;
             background: #ffffff;
         }
-        #GetTask .make-sure{
+        
+        #GetTask .make-sure {
             width: 300px;
             height: 120px;
             background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: absolute;
-            top:40%;
-            left:35%;
+            top: 40%;
+            left: 35%;
             z-index: 10000;
             text-align: center;
             display: none;
         }
-        #GetTask .make-sure button{
-            width:100px;
-            height:40px;
+        
+        #GetTask .make-sure button {
+            width: 100px;
+            height: 40px;
             background: #ffffff;
             font-size: 14px;
-            border:none;
+            border: none;
             outline: none;
             margin: 10px 10px;
         }
         /*任务清单结束*/
-
-        #progress-bar{
+        
+        #progress-bar {
             width: 450px;
             height: 140px;
             background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: absolute;
-            top:45%;
-            left:30%;
+            top: 45%;
+            left: 30%;
             z-index: 10000;
             text-align: center;
             color: #0088EB;
             display: none;
         }
-        #progress-bar .progress{
+        
+        #progress-bar .progress {
             margin: 30px auto;
             width: 90%;
         }
-        #progress-bar .progress .progress-bar{
+        
+        #progress-bar .progress .progress-bar {
             background: #0088EB;
         }
-        #generate-success{
+        
+        #generate-success {
             width: 450px;
             height: 140px;
             background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: absolute;
-            top:45%;
-            left:30%;
+            top: 45%;
+            left: 30%;
             z-index: 10000;
             text-align: center;
             color: #0088EB;
             display: none;
         }
-        #generate-success h3{
+        
+        #generate-success h3 {
             margin: 0;
-            line-height:140px;
+            line-height: 140px;
         }
-        #generate-success img{
+        
+        #generate-success img {
             position: absolute;
             top: 10px;
             right: 10px;
             cursor: pointer;
         }
-
     </style>
 </head>
 
@@ -559,34 +614,29 @@
             </div>
         </div>
         <div class="toolbar">
-            <button type="button" class="user active"><a href="./index.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>
-            <button type="button" class="user"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>
-            <button type="button" class="user"><a  href="./dataAdmin.html"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></a></button>
+            <button type="button" class="user"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
             <button type="button" class="user"><a href><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></a></button>
         </div>
 
 
     </div>
 
-    <div id="left-sidebar" >
+    <div id="left-sidebar">
         <button class="openCloseSidebar-left" type="button"><span></span></button>
         <div class="left-cnj">
             <div class="phase">
                 <ul>
                     <!--<li class="button_d" data-id="1">-->
-                        <!--<h2>1</h2>-->
-                        <!--<h4>设计阶段</h4>-->
+                    <!--<h2>1</h2>-->
+                    <!--<h4>设计阶段</h4>-->
                     <!--</li>-->
                     <!--<li class="button_d" data-id="2">-->
                     <!--<h2>2</h2>-->
-                        <!--<h4>实施阶段</h4>-->
+                    <!--<h4>实施阶段</h4>-->
                     <!--</li>-->
                     <!--<li class="button_d active" data-id="3">-->
-                        <!--<h2>3</h2>-->
-                        <!--<h4>后扶阶段</h4>-->
+                    <!--<h2>3</h2>-->
+                    <!--<h4>后扶阶段</h4>-->
                     <!--</li>-->
                 </ul>
                 <button type="button" class="prev-btn"><span></span></button>
@@ -665,9 +715,9 @@
         <!--<iframe id="inforIframe" src="./sheet-demo.html" style="width: 100%; height: 100%;"></iframe>-->
 
         <!--<div class="table-btn">-->
-            <!--<button class="delete">删除</button>-->
-            <!--&lt;!&ndash;<button class="confirm">确定</button>&ndash;&gt;-->
-            <!--&lt;!&ndash;<button class="cancel">取消</button>&ndash;&gt;-->
+        <!--<button class="delete">删除</button>-->
+        <!--&lt;!&ndash;<button class="confirm">确定</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;<button class="cancel">取消</button>&ndash;&gt;-->
         <!--</div>-->
     </div>
     <!--任务清单-->
@@ -699,14 +749,14 @@
             <button class="cancel">取消</button>
         </div>
     </div>
-   
+
 
 
 
     <!--informations control panel Start-->
 
 
-    
+
 
 
     <!--informations control panel End-->

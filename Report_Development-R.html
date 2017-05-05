@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
-    <title>信息填报 | 移民快速调查综合服务平台</title>
+    <title>制度制定-报表管理 | 移民快速调查综合服务平台</title>
     <!--首页加载需要使用到的css样式表-->
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
@@ -19,7 +19,6 @@
     <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
     <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
     <link rel="stylesheet" type="text/css" href="css/chartstyle/dataLaySth.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/infor_reported.css">
     <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
 
 
@@ -43,7 +42,8 @@
             </div>
 
             <div class="dataPageList">
-                <a href="./dataLaySth.html" class="active"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">信息填报</a>
+                <a href="./Report_Development-F.html"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>
+                <a href="./Report_Development-R.html" class="active"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>
             </div>
         </div>
 
@@ -51,12 +51,7 @@
 
 
         <div class="toolbar">
-            <button type="button" class="user"><a href="./platform.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>
-            <button type="button" class="user active"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>
-            <button type="button" class="user"><a  href="./dataAdmin.html"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></a></button>
-            <button type="button" class="user"><a href><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></a></button>
+            <button type="button" class="user"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
             <button type="button" class="user"><a href><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></a></button>
         </div>
 
@@ -68,61 +63,64 @@
 
         <div class=" _laysthList listAry_cs ">
             <div class="laysthTitle">
-                <div class="laysthTitle-h2">行政区域</div>
-
+                <div class="laysthTitle-h2">报表</div>
                 <div class="icons-Display">
-                    <span class="_Addlaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
-                    <span class="_Changelaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
-                    <span class="_Deletelaysth"><img src="images/chart/icon_zdzd@2x.png" alt=""></span>
+                    <span class="_Addlaysth"><img src="images/chart/icon_zdplus@2x.png" alt=""></span>
+                    <span class="_Changelaysth"><img src="images/chart/icon_zdedit@2x.png" alt=""></span>
+                    <span class="_Deletelaysth"><img src="images/chart/icon_zddelete@2x.png" alt=""></span>
                 </div>
             </div>
 
-            <div class="selecteInput">
-                <input type="text" name="" value="" placeholder="请搜索">
-                <button type="button">搜索</button>
-            </div>
-
-            <div class="_j_inforReported _laysthList-bgc"></div>
+            <div class="_j_laysthList _laysthList-bgc"></div>
         </div>
 
-
-        <div class="_laySelectList">
-
-            <div class="_selecteTabel">
-                <div class="_selecteLeft">
-                    <div class="_moreInfor">
-                        测试
-                    </div>
-
-                    <div class="_potoshop">
-                        照片
-                    </div>
-                </div>
-
-                <div class="_term">
-
-                </div>
-            </div>
-
-            <div class="reported-iframe">
-                <iframe id="reporteIframe" src="./sheet-demo.html" style="width: 100%;height: 100%;"></iframe>
-            </div>
-
+        <div class="iframe-Viewinfo">
+            <iframe id="viewinfo-sheetFile" src="./sheet-demo.html" width='100%' , height="100%"></iframe>
         </div>
 
+        <div class="_fieldRqpost">
+            <div class="_fieldOpenC">
+                <span></span>
+            </div>
+
+            <div class="_fieldFlex">
+                <div class="_fieldoperating">
+                    <div class="_fieldTab">
+                        <button class="active">字段绑定</button>
+                        <button>字段约束</button>
+                    </div>
+
+
+                </div>
+                <div class="_operating">
+
+                    <div class="operating-l">
+                        <button class="_OpenActive"><img src="images/chart/icon_switch_off@2x.png" alt=""></button>
+                    </div>
+
+                    <div class="operating-r">
+                        <button class="_addTable"><img src="images/chart/icon_zdplus@2x.png" alt=""></button>
+                        <button class="_changeTable"><img src="images/chart/icon_zdedit@2x.png" alt=""></button>
+                        <button class="_deleteTable"><img src="images/chart/icon_zddelete@2x.png" alt=""></button>
+                        <button class="_createTable"><img src="images/chart/icon_zdexport@2x.png" alt=""></button>
+                    </div>
+
+                </div>
+
+                <div class="_dataFiled"></div>
+            </div>
+        </div>
 
 
     </div>
 
     <!--dataDisplay Show Left End-->
 
-
-
-
     <!--Pop-up Data Start-->
-    <div class="popupAddChange _j_popup">
-        <div class="popupTitle">
-            <h2 class="popupTitle-h2">提示</h2>
+
+    <div class="popupAddChange _j_popup _a_translate">
+        <div class="popupTitle _j_translate">
+            <h2 class="popupTitle-h2"></h2>
             <span class="popup_close">
                 <img src="images/chart/icon_close@2x.png" alt="">
             </span>
@@ -134,14 +132,13 @@
         </div>
 
     </div>
+
+
     <!--Pop-up Data End-->
 
-
-
-
-    <div class="popupAddChangeZD _j_popup">
-        <div class="popupTitle">
-            <h2 class="popupTitle-h2">提示</h2>
+    <div class="popupAddChangeZD _j_popup _a_translate">
+        <div class="popupTitle _j_translate">
+            <h2 class="popupTitle-h2">绑定字段</h2>
             <span class="popup_close">
                 <img src="images/chart/icon_close@2x.png" alt="">
             </span>

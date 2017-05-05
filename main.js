@@ -28,14 +28,15 @@ require.config({
         "surveydata": "tool/surveydata",
 
         "chart": "theChart/drawChart",
-        "chartInformations": "theChart/chartinformations",
+        "chartInformations": "theChart/Data_Display",
         "mapIntroduce": "theChart/introduceMap",
-        "dataAdmin": "theChart/dataAdmin",
-        "development": "theChart/development",
-        "dataLaySth": "theChart/dataLaySth",
-        "info": "theChart/info",
+        "dataAdmin": "theChart/Data_Manage",
+        "development": "theChart/Report_Development-F",
+        "dataLaySth": "theChart/Report_Development-R",
+        "info": "theChart/Task_Assignment-S",
+        "info_direction": "theChart/Task_Assignment-F",
         "translatePopup": "theChart/translatePopup",
-        "infor_reported": "theChart/infor_reported",
+        "infor_reported": "theChart/Data_Collection",
         "mainInface": "theChart/mainInface",
         "login": "theChart/login",
         "local": "theChart/localStorage",
@@ -80,7 +81,7 @@ require.config({
     },
     waitSeconds: 0
 });
-require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api",'info','user_management'],
+require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api", 'info', 'user_management', 'info_direction'],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, t, a, b, d, echarts, s, st, ch, ma) {
         // console.log(ch)
