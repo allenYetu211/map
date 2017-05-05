@@ -89,7 +89,7 @@ Sheet.prototype.getRecordCount = function(reportId, termValue, codeValue) {
     var _this = this;
     var recordCount = 0;
     var param = {
-        reportId: reportId,
+        reportID: reportId,
         fieldValue: "'f_term':" + termValue + ",'f_code':" + codeValue
     };
     $.ajax({
@@ -121,8 +121,16 @@ Sheet.prototype.loadValue = function(reportId, termValue, codeValue, pageIndex) 
                 _this._clearVar = _this._SHEET_API.getCellVariables(_this._SHEET_API_HD);
             }
             _this._SHEET_API.setValueToVariable(_this._SHEET_API_HD, _this._clearVar);
-            var result = JSON.parse(response.firstChild.innerHTML);
+
+            //  添加判断
+            if (response.firstChild.innerHTML === '') {
+                var result = []
+            } else {
+                var result = JSON.parse(response.firstChild.innerHTML);
+            }
+            // if (result.variable !== undefined) {
             _this._SHEET_API.setValueToVariable(_this._SHEET_API_HD, result.variable);
+            // }
             //_this._SHEET_API.updateCells(_this._SHEET_API_HD, result.verify);
         }
     })

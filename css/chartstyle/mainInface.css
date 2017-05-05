@@ -1,0 +1,202 @@
+    ._contentInfor .centent-intarce {}
+    
+    .mapSelecte {
+        position: relative;
+    }
+    
+    .mapSelecte input {
+        width: 300px;
+        height: 40px;
+        padding: 0 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 50px;
+    }
+    
+    .mapSelecte button {
+        width: 70px;
+        position: absolute;
+        right: -1px;
+        top: 0;
+        bottom: 0;
+        border-radius: 0 50px 50px 0;
+        color: #0088EB;
+        background-color: #E9EFF4;
+        border: none;
+    }
+    
+    ._contentInfor {
+        /*padding: 0 20px;*/
+        padding-top: 60px;
+        height: 120px;
+        background-color: #0088EB;
+        /*margin: 0 -25px;*/
+    }
+    
+    .max-container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    
+    ._contentInfor button {
+        min-width: 90px;
+        height: 100%;
+        background: transparent;
+        border: none;
+    }
+    
+    ._contentInfor button.active {
+        color: #fff;
+        background-color: #03538D;
+    }
+    
+    ._contentInfor button:hover {
+        background-color: #03538D;
+    }
+    
+    ._main_display {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .grid-introduce ._icon {
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        width: 100%;
+        padding-bottom: 100%;
+        height: 0;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    
+    .grid-introduce ._icon img {
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+    
+    .grid-viewPage ._icon {
+        border: 1px solid #e0e0e0;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 100%;
+        padding-bottom: 100%;
+        height: 0;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    
+    .grid-viewPage ._icon img {
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    ._main_display {
+        margin-top: 40px;
+    }
+    
+    ._main_display .grid-introduce {
+        width: 20%;
+        padding: 0 50px;
+        margin: 10px 0px;
+    }
+    
+    ._footer-display .grid-viewPage.disabled,
+    ._main_display .grid-introduce.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    
+    ._footer-display .grid-viewPage,
+    ._main_display .grid-introduce {
+        text-align: center;
+    }
+    
+    ._footer-display .grid-viewPage a,
+    ._main_display .grid-introduce a {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .mainInface-container {}
+    
+    .mainInface-title {
+        color: #0088EB;
+        padding: 0 10px;
+        font-size: 16px;
+        position: relative;
+    }
+    
+    .mainInface-title:after {
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        top: 40%;
+        border-radius: 50%;
+        background: #0088EB;
+        content: ''
+    }
+    
+    ._mainSelecte {
+        height: 50px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    ._main-bg-1 {
+        background: #FCFCFC;
+        margin-top: 20px;
+        height: calc(100vh - 420px);
+        overflow-y: auto;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        background-color: #F7F7F7;
+        /*position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;*/
+    }
+    
+    ._footer-bg-2 {
+        background: #E9EFF4;
+        width: 100%;
+    }
+    
+    ._footer-infor {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    ._footer-display {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    ._footer-display .grid-viewPage {
+        width: 14.222222%;
+        padding: 0 25px;
+        margin: 10px 0px;
+    }
