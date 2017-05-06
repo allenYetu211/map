@@ -10,8 +10,17 @@
         position: relative;
     }
     
+    .mapSelecte img {
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        width: 20px;
+        height: 20px;
+    }
+    
     .mapSelecte input {
-        width: 300px;
+        width: 320px;
+        text-indent: 20px;
         height: 40px;
         padding: 0 20px;
         border: 1px solid #e0e0e0;
@@ -189,12 +198,13 @@
     
     ._footer-bg-2 .footer_img {
         display: flex;
-        padding:30px;
+        padding: 30px;
     }
-
+    
     ._footer-bg-2 .footer_img img {
         width: 100%;
-    } 
+    }
+    
     ._footer-bg-2 .footer_img div {
         flex: 1;
         padding: 0 10px;
