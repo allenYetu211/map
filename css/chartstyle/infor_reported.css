@@ -41,7 +41,7 @@
     /*line-height: 35px;*/
 }
 ._laysthList-bgc ._parmis {
-    padding: 0 10px;
+    padding: 0;
 }
 ._laysthList-bgc p._j_treeSelect {
     height: 35px;
@@ -76,7 +76,9 @@
 }
 .dataDisplay .listAry_cs ._laysthList-bgc li {
     display: block;
-    height: auto;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
 }
 ._selecteTabel {
     display: flex;
@@ -147,4 +149,35 @@
     right: 0;
     background-color: #0088EB;
     content: '';
+}
+._laysthList-bgc .css-treePrents {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 12px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0088EB;
+    background-color: #f8fcff;
+    border-bottom: 1px solid #e0e0e0;
+}
+._laysthList-bgc .css-treePrents:after {
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: clac(50% - 2px);
+    border-radius: 50%;
+    background-color: #0088EB;
+    content: '';
+}
+._parentsTree h4 {
+    padding: 10px 5px;
+    font-size: 18px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #0088EB;
+    background-color: #f8fcff;
 }

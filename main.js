@@ -18,8 +18,6 @@ require.config({
         "dataAdmin": "theChart/Data_Manage",
         "development": "theChart/Report_Development-F",
         "dataLaySth": "theChart/Report_Development-R",
-        "info": "theChart/Task_Assignment-S",
-        "info_direction": "theChart/Task_Assignment-F",
         "translatePopup": "theChart/translatePopup",
         "infor_reported": "theChart/Data_Collection",
         "mainInface": "theChart/mainInface",
@@ -28,6 +26,8 @@ require.config({
         "local": "theChart/localStorage",
         "api": "theChart/api",
         // "user_management": "theChart/user_management",
+        "info": "theChart/Task_Assignment-S",
+        "info_direction": "theChart/Task_Assignment-F",
 
         "bootstrap": "sqlToolJs/bootstrap.min",
         "bootstrapSelect": "sqlToolJs/bootstrap-select.min",
@@ -68,7 +68,7 @@ require.config({
     waitSeconds: 0
 });
 
-require(["map", "common", "echarts", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api", 'info', 'info_direction'],
+require(["map", "common", "echarts", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api"],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, common, t) {
         var mapHelper = new c("map", {
