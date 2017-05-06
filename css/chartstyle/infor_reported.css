@@ -6,13 +6,22 @@
     position: relative;
 }
 
+.selecteInput img {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 14px;
+    left: 12px;
+}
+
 .selecteInput input {
     height: 40px;
     line-height: 40px;
     flex: 1;
     padding: 0 15px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e9eff4;
     border-radius: 5px;
+    text-indent: 20px;
 }
 
 .selecteInput button {
@@ -76,8 +85,8 @@
 }
 .dataDisplay .listAry_cs ._laysthList-bgc li {
     display: block;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     padding: 0 15px;
 }
 ._selecteTabel {
@@ -98,7 +107,7 @@
     margin-right: 10px;
 }
 ._selecteTabel ._moreInforTabel {
-    width: 200px;
+    min-width: 150px;
     padding: 0 20px;
     height: 45px;
     line-height: 45px;
@@ -120,10 +129,15 @@
 }
 ._laySelectList {
     width: 100%;
+    margin: 8px;
+    margin-left: 0;
+    background: #b9d1e4;
+    border-radius: 4px;
 }
 ._termCounts {
-    height: 45px;
-    line-height: 45px;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
     background-color: #f8fcff;
     padding: 0 10px;
     position: relative;
@@ -139,8 +153,7 @@
     padding: 0 10px;
     position: relative;
 }
-._potoshop:after,
-._term:after {
+._potoshop:after {
     height: 4px;
     display: block;
     position: absolute;
@@ -153,16 +166,20 @@
 ._laysthList-bgc .css-treePrents {
     height: 40px;
     padding: 0 15px;
-    font-size: 12px;
+    font-size: 14px;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #0088EB;
-    background-color: #f8fcff;
-    border-bottom: 1px solid #e0e0e0;
+    background-color: #e9eff4;
+    border-bottom: 1px solid #BBD0E1;
 }
-._laysthList-bgc .css-treePrents:after {
+._laysthList-bgc .css-treePrents span {
+    font-size: 12px;
+}
+
+/*._laysthList-bgc .css-treePrents:after {
     width: 5px;
     height: 5px;
     display: block;
@@ -172,12 +189,18 @@
     border-radius: 50%;
     background-color: #0088EB;
     content: '';
+}*/
+._parentsTree {
+    border: 1px solid #BBD0E1;
+    border-radius: 4px;
 }
 ._parentsTree h4 {
-    padding: 10px 5px;
-    font-size: 18px;
-    border-radius: 10px 10px 0 0;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #BBD0E1;
     color: #0088EB;
-    background-color: #f8fcff;
+    background-color: #b9d1e4;
+}
+.reported-iframe {
+    background: #fff;
 }

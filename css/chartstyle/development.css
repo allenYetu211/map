@@ -20,6 +20,8 @@
 .dataDisplay .listAry_cs ul {
     border-radius: 3px;
     background-color: #fff;
+    max-height: 400px;
+    overflow: scroll;
 }
 
 .dataDisplay .listAry_cs .addListAry {
