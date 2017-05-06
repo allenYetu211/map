@@ -185,12 +185,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 10px;
     }
     
     ._main-bg-1 {
         background: #FCFCFC;
         margin-top: 20px;
-        height: calc(100vh - 420px);
+        height: calc(100vh - 460px);
         overflow-y: auto;
     }
     
