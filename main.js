@@ -42,7 +42,7 @@ require.config({
         "corejs": "theChart/corejs",
         "local": "theChart/localStorage",
         "api": "theChart/api",
-        "user_management": "theChart/user_management",
+        "user_management": "theChart/User_Manage",
 
         "bootstrap": "sqlToolJs/bootstrap.min",
         "bootstrapSelect": "sqlToolJs/bootstrap-select.min",
