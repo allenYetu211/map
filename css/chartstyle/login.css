@@ -1,16 +1,19 @@
 .login {
-    width: 500px;
+    width: 600px;
     position: absolute;
     left: 50%;
     top: 50%;
-    background-color: #fff;
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.60);
+    border: 1px solid #84C7F7;
+    box-shadow: 0 9px 13px 0 rgba(109, 150, 179, 0.6);
+    border-radius: 10px;
 }
 
 .login {
-    padding: 20px 50px 50px;
+    padding: 20px 50px 20px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, .1);
 }
 
@@ -19,12 +22,13 @@
 }
 
 .login .logo .logo-icon {
-    width: 105px;
+    width: 85px;
     margin: 0 auto;
 }
 
 .login .logo .logo-txt {
     margin-top: 30px;
+    padding: 0px 30px;
 }
 
 .login .logo img {
@@ -36,20 +40,25 @@
 }
 
 .userpas div {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .userpas input {
     width: 100%;
-    height: 50px;
+    height: 60px;
     padding: 0 20px;
-    background-color: #E9EFF4;
+    background-color: #e0e8ef;
     border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #5b89ab;
 }
 
-.userpas input[attr="placeholder"] {
-    color: #B8C9D8;
-    font-size: 20px;
+.userpas input::-webkit-input-placeholder {
+    color: #b8c9d8;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 ._loginSendBut {
@@ -70,7 +79,7 @@
 ._loginStyle {
     display: flex;
     position: relative;
-    margin-top: 58px;
+    margin-top: 20px;
 }
 
 ._loginStyle img {
@@ -81,12 +90,16 @@
     width: 25px;
     position: absolute;
     left: -30px;
+    bottom: 0px;
 }
 
 ._loginStyle p {
-    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: 8px;
     font-size: 12px;
-    color: #8CA7BD;
+    color: #b8c9d8;
 }
 
 
@@ -177,7 +190,6 @@ html,
 body,
 .container,
 .header {
-    height: 100%;
 }
 
 
