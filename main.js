@@ -39,6 +39,7 @@ require.config({
         "infor_reported": "theChart/Data_Collection",
         "mainInface": "theChart/mainInface",
         "login": "theChart/login",
+        "corejs": "theChart/corejs",
         "local": "theChart/localStorage",
         "api": "theChart/api",
         "user_management": "theChart/user_management",
@@ -81,7 +82,7 @@ require.config({
     },
     waitSeconds: 0
 });
-require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api", 'info', 'user_management', 'info_direction'],
+require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api", 'info', 'user_management', 'info_direction', 'corejs'],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, t, a, b, d, echarts, s, st, ch, ma) {
         // console.log(ch)

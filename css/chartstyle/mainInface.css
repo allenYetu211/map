@@ -100,14 +100,13 @@
         top: 50%;
         transform: translate(-50%, -50%);
     }
-    
-    ._main_display {
+    /*._main_display {
         margin-top: 40px;
-    }
+    }*/
     
     ._main_display .grid-introduce {
         width: 20%;
-        padding: 0 50px;
+        padding: 0 80px;
         margin: 10px 0px;
     }
     
