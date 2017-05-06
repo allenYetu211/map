@@ -1,5 +1,11 @@
     ._contentInfor .centent-intarce {}
     
+    #top-sidebar .main-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     .mapSelecte {
         position: relative;
     }
