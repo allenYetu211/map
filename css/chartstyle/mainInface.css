@@ -81,6 +81,7 @@
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
+        padding-bottom: 50px;
     }
     
     .grid-introduce ._icon {
@@ -133,7 +134,7 @@
     ._main_display .grid-introduce {
         width: 20%;
         padding: 0 80px;
-        margin: 10px 0px;
+        margin: 10px 0px 20px;
     }
     
     ._footer-display .grid-viewPage.disabled,
@@ -191,7 +192,7 @@
     ._main-bg-1 {
         background: #FCFCFC;
         margin-top: 20px;
-        height: calc(100vh - 460px);
+        min-height: 300px;
         overflow-y: auto;
     }
     
