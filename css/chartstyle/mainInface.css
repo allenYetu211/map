@@ -1,4 +1,11 @@
-    ._contentInfor .centent-intarce {}
+    ._contentInfor .centent-intarce {
+        color: #222;
+    }
+    
+    ._contentInfor .centent-intarce.disabled {
+        color: rgba(34, 34, 34, 0.26);
+        pointer-events: none;
+    }
     
     #top-sidebar .main-title {
         display: flex;
@@ -77,7 +84,8 @@
     }
     
     .grid-introduce ._icon {
-        border: 1px solid #e0e0e0;
+        /*border: 1px solid #e0e0e0;*/
+        background: #e9eff4;
         border-radius: 50%;
         width: 100%;
         padding-bottom: 100%;
@@ -88,13 +96,15 @@
     }
     
     .grid-introduce ._icon p {
-        font-size: 36px;
+        font-size: 40px;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
+        color: #0088eb;
+        font-weight: 900;
     }
     
     .grid-viewPage ._icon {
@@ -130,6 +140,11 @@
     ._main_display .grid-introduce.disabled {
         opacity: 0.5;
         pointer-events: none;
+    }
+    
+    ._footer-display .grid-viewPage.disabled p,
+    ._main_display .grid-introduce.disabled p {
+        color: #8caeca;
     }
     
     ._footer-display .grid-viewPage,

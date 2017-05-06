@@ -548,8 +548,8 @@ input:focus {
 #left-sidebar .search .filedCondition p {
     text-indent: 20px;
     line-height: 30px;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 #left-sidebar .search img {
@@ -576,8 +576,8 @@ input:focus {
 
 #left-sidebar .search button {
     position: absolute;
-    right:0px;
-    width: 40px;
+    right: 0px;
+    width: 42px;
     height: 32px;
     background: #ffffff;
     font-size: 12px;
