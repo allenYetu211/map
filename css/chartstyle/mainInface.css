@@ -87,8 +87,8 @@
         margin-bottom: 10px;
     }
     
-    .grid-introduce ._icon img {
-        width: 70%;
+    .grid-introduce ._icon p {
+        font-size: 36px;
         position: absolute;
         left: 50%;
         top: 50%;
