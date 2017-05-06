@@ -32,7 +32,15 @@
 </head>
 
 <body>
-
+    <div id="container" class="container intro-effect-fadeout">
+        <div id="bg-img" class="bg-img">
+            <div class="bg">
+                <canvas id="particles-left" class="particle-canvas animated fadeIn" width="512" height="672" style="width: 512px; height: 672px; top: 84.5px; left: 0px;"></canvas>
+                <canvas id="particles-middle" class="particle-canvas particle-canvas--blurred" width="769" height="672" style="width: 769px; height: 672px; top: 84.5px; left: 384.5px;"></canvas>
+                <canvas id="particles-right" class="particle-canvas animated fadeIn" width="512" height="672" style="width: 512px; height: 672px; top: 84.5px; left: 1025.33846px;"></canvas>
+            </div>
+        </div>
+    </div>
 
     <div id="map" style="display: none;"></div>
 
@@ -40,7 +48,13 @@
 
         <section class="login">
             <div class="logo">
-                <img src="images/chart/logo@2x.png" alt="">
+                <div class="logo-icon">
+                    <img src="images/chart/log_logo.png" alt="">
+                </div>
+                <div class="logo-txt">
+                    <img src="images/chart/logo_txt.png" alt="">
+
+                </div>
             </div>
 
             <div class="userpas">
@@ -56,11 +70,14 @@
             </div>
 
             <div class="_loginSendBut">
-                <button type="button"> <img src="images/chart/icon_sjzs@2x.png" alt=""></button>
+                <button type="button"> <img src="images/chart/logo_Combined.png" alt=""></button>
             </div>
 
             <div class="_loginStyle">
-                <img src="images/chart/icon_sjzs@2x.png" alt="">
+                <div class="logo-style">
+                    <img src="images/chart/logo_Shape.png" alt="">
+                </div>
+                <p>使用提示：请输入用户名密码，并点击下方的</p>
             </div>
         </section>
 
