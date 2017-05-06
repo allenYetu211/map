@@ -38,10 +38,11 @@
     }
     
     ._contentInfor button {
-        min-width: 90px;
+        min-width: 100px;
         height: 100%;
         background: transparent;
         border: none;
+        font-size: 14px;
     }
     
     ._contentInfor button.active {
@@ -178,6 +179,19 @@
     ._footer-bg-2 {
         background: #E9EFF4;
         width: 100%;
+    }
+    
+    ._footer-bg-2 .footer_img {
+        display: flex;
+        padding:30px;
+    }
+
+    ._footer-bg-2 .footer_img img {
+        width: 100%;
+    } 
+    ._footer-bg-2 .footer_img div {
+        flex: 1;
+        padding: 0 10px;
     }
     
     ._footer-infor {
