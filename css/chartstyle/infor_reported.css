@@ -204,3 +204,7 @@
 .reported-iframe {
     background: #fff;
 }
+.css-treePrents~ul {
+    max-height: 400px;
+    overflow-y: scroll;
+}
