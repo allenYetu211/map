@@ -37,36 +37,41 @@
     color: #0088eb;
 }
 
-
-}
 ._laysthList-bgc {
     overflow-y: auto;
     height: 100%;
 }
+
 ._laysthList-bgc div {
     display: block;
     width: 100%;
     /*height: 35px;*/
     /*line-height: 35px;*/
 }
+
 ._laysthList-bgc ._parmis {
     padding: 0;
 }
+
 ._laysthList-bgc p._j_treeSelect {
     height: 35px;
     line-height: 35px;
     position: relative;
 }
+
 ._laysthList-bgc p._j_treeSelect:hover span:after {
     opacity: 1;
 }
+
 ._laysthList-bgc p._j_treeSelect span {
     display: block;
     cursor: pointer;
 }
+
 ._laysthList-bgc p._j_treeSelect.active span:after {
     opacity: 1;
 }
+
 ._laysthList-bgc p._j_treeSelect span:after {
     height: 100%;
     width: 300px;
@@ -83,12 +88,14 @@
     z-index: -1;
     content: '';
 }
+
 .dataDisplay .listAry_cs ._laysthList-bgc li {
     display: block;
     height: 40px;
     line-height: 40px;
     padding: 0 15px;
 }
+
 ._selecteTabel {
     display: flex;
     justify-content: space-between;
@@ -97,15 +104,18 @@
     overflow: auto;
     padding: 0 5px;
 }
+
 ._selecteTabel ._selecteLeft {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 ._selecteTabel ._moreInfor {
     display: flex;
     margin-right: 10px;
 }
+
 ._selecteTabel ._moreInforTabel {
     min-width: 150px;
     padding: 0 20px;
@@ -113,10 +123,12 @@
     line-height: 45px;
     text-align: center;
 }
+
 ._selecteTabel ._moreInforTabel.active {
     background-color: #f8fcff;
     position: relative;
 }
+
 ._selecteTabel ._moreInforTabel.active:after {
     display: block;
     height: 4px;
@@ -127,13 +139,16 @@
     background-color: #0088EB;
     content: '';
 }
+
 ._laySelectList {
     width: 100%;
     margin: 8px;
     margin-left: 0;
     background: #b9d1e4;
     border-radius: 4px;
+    position: relative;
 }
+
 ._termCounts {
     width: 120px;
     height: 32px;
@@ -143,9 +158,11 @@
     position: relative;
     border: none;
 }
+
 ._term {
     position: relative;
 }
+
 ._potoshop {
     height: 45px;
     line-height: 45px;
@@ -153,6 +170,7 @@
     padding: 0 10px;
     position: relative;
 }
+
 ._potoshop:after {
     height: 4px;
     display: block;
@@ -163,6 +181,7 @@
     background-color: #0088EB;
     content: '';
 }
+
 ._laysthList-bgc .css-treePrents {
     height: 40px;
     padding: 0 15px;
@@ -175,9 +194,11 @@
     background-color: #e9eff4;
     border-bottom: 1px solid #BBD0E1;
 }
+
 ._laysthList-bgc .css-treePrents span {
     font-size: 12px;
 }
+
 
 /*._laysthList-bgc .css-treePrents:after {
     width: 5px;
@@ -190,10 +211,12 @@
     background-color: #0088EB;
     content: '';
 }*/
+
 ._parentsTree {
     border: 1px solid #BBD0E1;
     border-radius: 4px;
 }
+
 ._parentsTree h4 {
     padding: 10px 15px;
     font-size: 16px;
@@ -201,6 +224,88 @@
     color: #0088EB;
     background-color: #b9d1e4;
 }
+
 .reported-iframe {
     background: #fff;
+}
+
+._laySelectList ._potoshopView {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    overflow: hidden;
+}
+
+
+/**/
+
+#slider_name {
+    display: flex;
+}
+
+#slider_name .silder_con {
+    flex: 1;
+    position: relative;
+}
+
+#slider_name .silder_con li {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#slider_name .silder_nav {
+    width: 200px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.silder_con li,
+.silder_nav li {
+    padding: 0 10px;
+    list-style: none;
+}
+
+.silder_nav li img,
+.silder_con li img {
+    width: 100%;
+}
+
+.silder_nav a {
+    padding: 10px;
+    width: 100%;
+    display: block;
+}
+
+.silder_nav div {
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+    border: 10px solid transparent;
+}
+
+.silder_nav li.active div {
+    border: 10px solid #e8f8f9;
+}
+
+.silder_nav div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.silder_panel {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.silder_panel.active {
+    opacity: 1;
 }

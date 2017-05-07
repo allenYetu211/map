@@ -24,7 +24,7 @@ function SheetPanel(divId, zoomSize, editable, withRowColTitle, withComment) {
     var divSave = document.getElementById("divSave");
     divSave.style.top = divSheet.offsetTop + divSheet.offsetHeight - 44 + 'px';
     divSave.style.left = divSheet.offsetLeft + divSheet.offsetWidth / 2 - 198 + 'px';
-    divSave.onclick = function () {
+    divSave.onclick = function() {
         _this._saveValue(_this);
     };
 
@@ -35,7 +35,7 @@ function SheetPanel(divId, zoomSize, editable, withRowColTitle, withComment) {
     divPage.style.position = 'absolute';
     divPage.style.zIndex = 1;
     divPage.style.width = '30%';
-    this._paging = new Paging(divPageId, function (pageIndex) {
+    this._paging = new Paging(divPageId, function(pageIndex) {
         _this._chagnePage(_this, pageIndex);
     });
     divPage.style.top = divSheet.offsetHeight - 40 + 'px';
@@ -43,7 +43,7 @@ function SheetPanel(divId, zoomSize, editable, withRowColTitle, withComment) {
     divSheet.appendChild(divPage);
 
     //range
-    var valueChangedFn = function (value) {
+    var valueChangedFn = function(value) {
         _this._sheet.zoom(value / 100);
     };
     var top = divSheet.offsetTop + divSheet.offsetHeight - 49 + 'px';
@@ -51,22 +51,22 @@ function SheetPanel(divId, zoomSize, editable, withRowColTitle, withComment) {
     initRange(valueChangedFn, zoomSize * 100, top, left);
 }
 
-SheetPanel.prototype.loadStyle = function (reportId, perPage) {
+SheetPanel.prototype.loadStyle = function(reportId, perPage) {
+    console.log('(reportId, perPage):', reportId, perPage)
     this._report = reportId;
     this._pageIndex = -1;
     this._perPage = perPage;
     ZENG.msgbox.show('加载中，请稍后...', 6, 10000000);
-    this._sheet.loadStyle(reportId, function (success) {
+    this._sheet.loadStyle(reportId, function(success) {
         if (success == true) {
             ZENG.msgbox.show('加载成功!', 4, 1500);
-        }
-        else {
+        } else {
             ZENG.msgbox.show('加载失败!', 5, 1500);
         }
     });
 };
 
-SheetPanel.prototype.loadValue = function (report, term, code, pageIndex) {
+SheetPanel.prototype.loadValue = function(report, term, code, pageIndex) {
     this._term = term;
     this._code = code;
     this._sheet.loadValue(report, term, code, pageIndex);
@@ -81,31 +81,31 @@ SheetPanel.prototype.loadValue = function (report, term, code, pageIndex) {
     }
 };
 
-SheetPanel.prototype.attachEvent = function (eventName, fn) {
+SheetPanel.prototype.attachEvent = function(eventName, fn) {
     this._sheet.attachEvent(eventName, fn);
 };
 
-SheetPanel.prototype.getSelectedRange = function () {
+SheetPanel.prototype.getSelectedRange = function() {
     return this._sheet.getSelectedRange();
 };
 
-SheetPanel.prototype.getCellValue = function (row, col) {
+SheetPanel.prototype.getCellValue = function(row, col) {
     return this._sheet.getCellValue(row, col);
 };
 
-SheetPanel.prototype.addComment = function (cellRange, comment) {
+SheetPanel.prototype.addComment = function(cellRange, comment) {
     this._sheet.addComment(cellRange, comment);
 };
 
-SheetPanel.prototype.deleteComment = function (cellRange) {
+SheetPanel.prototype.deleteComment = function(cellRange) {
     this._sheet.deleteComment(cellRange);
 };
 
-SheetPanel.prototype._chagnePage = function (sender, pageIndex) {
+SheetPanel.prototype._chagnePage = function(sender, pageIndex) {
     if (sender._sheet.getAllChanges()) {
         this._paging.setPage(sender._recordCount, sender._perPage, sender._pageIndex);
         var dialog = jDialog.confirm('是否保存更改？', {
-            handler: function (button, dialog) {
+            handler: function(button, dialog) {
                 sender._sheet.saveValue(sender._report, sender._pageIndex);
                 sender.recordCount = sender._sheet.getRecordCount(sender._report, sender._term, sender._code);
                 sender._sheet.loadValue(sender._report, sender._term, sender._code, pageIndex);
@@ -116,22 +116,21 @@ SheetPanel.prototype._chagnePage = function (sender, pageIndex) {
                 ZENG.msgbox.show('保存成功!', 4, 1500);
             }
         }, {
-            handler: function (button, dialog) {
+            handler: function(button, dialog) {
                 sender._sheet.loadValue(sender._report, sender._term, sender._code, pageIndex);
                 sender._pageIndex = pageIndex;
                 sender._sheet.resetHistory();
                 dialog.close();
                 sender._paging.setPage(sender._recordCount, sender._perPage, pageIndex);
             }
-        }, {closeable: false});
-    }
-    else {
+        }, { closeable: false });
+    } else {
         sender.loadValue(sender._report, sender._term, sender._code, pageIndex);
         sender._pageIndex = pageIndex;
     }
 };
 
-SheetPanel.prototype._saveValue = function (sender) {
+SheetPanel.prototype._saveValue = function(sender) {
     sender._sheet.saveValue(sender._report, sender._pageIndex);
     sender._sheet.loadValue(sender._report, sender._term, sender._code, sender._pageIndex);
     sender._recordCount = this._sheet.getRecordCount(sender._report, sender._term, sender._code);
