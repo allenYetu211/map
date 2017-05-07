@@ -79,9 +79,12 @@
         }
 
 
-        function ins_displaySheet(withComment) {
-            withComment = withComment || true
-            _sheetPanel = new SheetPanel("sheet-markup", 1, true, true, withComment);
+        function ins_displaySheet(_tf, _host) {
+            var _cf = _tf || true
+            if (_host = 'Data_Collection.html') {
+                _cf = false
+            }
+            _sheetPanel = new SheetPanel("sheet-markup", 1, true, _cf, true);
 
         }
 
