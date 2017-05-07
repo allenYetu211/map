@@ -27,12 +27,13 @@
     <script src="main.js"></script>
 
     <style>
-        #user-left{
+        #user-left {
             background: #FFFFFF;
             border-radius: 5px;
-            height: 100%;
+            height: 500px;
         }
-        #user-left h3{
+        
+        #user-left h3 {
             color: #0088EB;
             font-size: 20px;
             background: #F7F7F7;
@@ -40,35 +41,20 @@
             border-radius: 5px 5px 0 0;
             padding-left: 20px;
         }
-        #user-left h4{
-            padding: 10px 20px;
-            position: relative;
+        
+        #user-left dt {
+            font-size: 14px;
+            font-weight: bold;
         }
-        #user-left h4 span{
-            cursor: pointer;
+        
+        #user-left dd {
+            font-size: 14px;
+            padding-left: 2em;
         }
-        #user-left h4 img{
-            position: absolute;
-            top:12px;
-            right: 20px;
-            transition: all 0.6s;
+        
+        #user-left dl p {
+            padding: 0 10px;
         }
-        #user-left h4 img.active{
-            transform:rotate(180deg);
-        }
-        #user-left ul li{
-            padding-left: 50px;
-
-        }
-        .tableList #userTableList{
-            background: #FFFFFF;
-            height: 90%;
-            padding: 8px;
-        }
-        .tableList #userTableList tr:first-child{
-            background: #e9eff4;
-        }
-
     </style>
 </head>
 
@@ -80,7 +66,7 @@
 
         <div class="tsidebar-l">
             <div class="logo">
-                <a href="index.html"><img src="images/chart/logo@2x.png" alt=""></a>
+                <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
             </div>
 
             <div class="dataPageList">
@@ -109,18 +95,16 @@
             <!-- tree Start-->
             <div id="user-left">
                 <h3>用户管理</h3>
-                <div>
-                    <h4 class="_user"><span class="_user">用户管理</span><img src="images/chart/icon_bigmapfold.png" alt=""> </h4>
-                    <ul class="_user"></ul>
-                </div>
-                <div>
-                    <h4><span class="_users">用户组管理</span></h4>
-                    <ul></ul>
-                </div>
-                <div>
-                    <h4 class="_role"><span class="_role">角色管理</span><img src="images/chart/icon_bigmapfold.png" alt=""> </h4>
-                    <ul class="_role"></ul>
-                </div>
+                <dl>
+                    <dt><p>用户管理</p></dt>
+                    <dd>用来计算的仪器 ... ...</dd>
+
+                    <dt><p>用户组管理</p></dt>
+                    <dd>以视觉方式显示信息的装置 ... ...</dd>
+
+                    <dt><p>角色管理</p></dt>
+                    <dd>以视觉方式显示信息的装置 ... ...</dd>
+                </dl>
             </div>
             <!-- tree End-->
         </div>
@@ -128,15 +112,16 @@
         <!--<div class="management">
         </div>-->
 
-        <div class="tableList table-List">
+        <div class="tableList">
             <div class="addSeve">
                 <button class="addListData" type="button"><img src="images/chart/icon_zdplus@2x.png">添加</button>
                 <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png">编辑</button>
                 <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png">删除</button>
                 <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png">提交</button>
+
             </div>
 
-            <div id="userTableList">
+            <div class="user">
 
             </div>
         </div>

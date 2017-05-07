@@ -151,6 +151,7 @@ input:focus {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: none;
+    cursor: pointer;
 }
 
 #top-sidebar .toolbar button.active {
@@ -509,91 +510,94 @@ input:focus {
     -webkit-overflow-scrolling: touch;
 }
 
-#top-sidebar .search {
-    /*width: 400px;*/
-    height: 60px;
-    border-bottom: 1px solid #e9e9e9;
-    border-left: 1px solid #e9e9e9;
-    border-right: 1px solid #e9e9e9;
-    background-color: #ffffff;
-    position: relative;
-    /*left: 400px;*/
+#left-sidebar .search {
+    position: absolute;
+    top: 80px;
+    width: 224px;
+    height: 32px;
+    left: 440px;
+    z-index: 990;
+    background: #ffffff;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
 }
 
-#top-sidebar .search .filedCondition {
-    width: 80%;
+#left-sidebar .search .filedCondition {
+    width: 100%;
     max-height: 300px;
     display: none;
     position: absolute;
-    top: 92%;
-    left: 2%;
+    top: 115%;
+    left: 0;
     right: 0;
     background-color: #ffffff;
-    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.40);
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.23);
     z-index: 9999;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 5px 15px;
     overflow-y: auto;
     color: #222;
+    font-size: 12px;
+    line-height: 30px;
 }
 
-#top-sidebar .search .filedCondition span {
+#left-sidebar .search .filedCondition span {
     display: inline-block;
-    height: 40px;
     color: #0088EB;
 }
 
-#top-sidebar .search .filedCondition p {
-    height: 40px;
+#left-sidebar .search .filedCondition p {
     text-indent: 20px;
-    line-height: 40px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
 }
 
-#top-sidebar .search img {
-    padding: 18px 18px 18px 18px;
+#left-sidebar .search img {
+    padding: 6px;
     float: left;
-    width: 60px;
-    height: 59px;
-    background-color: #fff;
+    width: 32px;
+    height: 32px;
     box-sizing: border-box;
 }
 
-#top-sidebar .search input.searchbar {
-    font-size: 18px;
+#left-sidebar .search input.searchbar {
+    font-size: 12px;
     color: #222222;
-    line-height: 39px;
-    width: 260px;
-    padding: 10px 0px;
+    line-height: 28px;
+    width: 150px;
+    padding: 2px 0px;
     border: 0px;
     margin: 0;
     float: left;
     outline: 0;
+    text-indent: 4px;
 }
 
-#top-sidebar .search button {
-    float: right;
-    width: 70px;
-    height: 59px;
-    background: #ffffff;
-    font-size: 18px;
+#left-sidebar .search button {
+    position: absolute;
+    right: 0px;
+    width: 46px;
+    height: 32px;
+    background: transparent;
+    font-size: 12px;
     font-weight: bold;
     color: #0088EB;
-    letter-spacing: 5px;
     text-align: center;
     border: 0;
     cursor: pointer;
     outline: 0;
 }
 
-#top-sidebar .search button.searchbar-Emptied {
+#left-sidebar .search button.searchbar-Emptied {
     position: absolute;
-    width: 30px;
-    height: 20px;
-    top: 20px;
-    right: 65px;
+    width: 24px;
+    height: 24px;
+    top: 4px;
+    right: 35px;
 }
 
-#top-sidebar .search button.searchbar-Emptied img {
+#left-sidebar .search button.searchbar-Emptied img {
     width: 100%;
     padding: 0;
     height: auto;

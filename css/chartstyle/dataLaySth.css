@@ -67,7 +67,8 @@
     padding: 0 15px;
     justify-content: space-between;
     align-items: center;
-    background-color: #f7f7f7;
+    background-color: #b9d1e4;
+    border-radius: 4px 4px 0px 0px;
 }
 
 .dataDisplay .laysthTitle .laysthTitle-h2 {

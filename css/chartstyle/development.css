@@ -11,7 +11,9 @@
     bottom: 0;
     z-index: 9;
     background-color: #e9eff4;
-    padding: 5px;
+    padding: 0px;
+    margin: 8px;
+    border-radius: 4px;
     float: left;
 }
 
@@ -63,7 +65,7 @@
 }
 
 .dataDisplay .listAry_cs li:hover {
-    background-color: #e0f0f8;
+    background-color: #f1f1f1;
 }
 
 .dataDisplay .listAry_cs li span {

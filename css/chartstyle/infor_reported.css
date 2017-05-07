@@ -6,23 +6,35 @@
     position: relative;
 }
 
+.selecteInput img {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 14px;
+    left: 12px;
+}
+
 .selecteInput input {
     height: 40px;
     line-height: 40px;
     flex: 1;
     padding: 0 15px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e9eff4;
     border-radius: 5px;
+    text-indent: 20px;
 }
 
 .selecteInput button {
     height: 40px;
-    line-height: 40px;
+    line-height: 34px;
     border: none;
     background-color: rgb(223, 238, 247);
     position: absolute;
-    right: 0;
+    right: 5px;
+    width: 60px;
+    border-radius: 0px 4px 4px 0px;
     top: 5px;
+    color: #0088eb;
 }
 
 
@@ -38,7 +50,7 @@
     /*line-height: 35px;*/
 }
 ._laysthList-bgc ._parmis {
-    padding: 0 10px;
+    padding: 0;
 }
 ._laysthList-bgc p._j_treeSelect {
     height: 35px;
@@ -73,7 +85,9 @@
 }
 .dataDisplay .listAry_cs ._laysthList-bgc li {
     display: block;
-    height: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
 }
 ._selecteTabel {
     display: flex;
@@ -93,7 +107,7 @@
     margin-right: 10px;
 }
 ._selecteTabel ._moreInforTabel {
-    width: 200px;
+    min-width: 150px;
     padding: 0 20px;
     height: 45px;
     line-height: 45px;
@@ -115,10 +129,15 @@
 }
 ._laySelectList {
     width: 100%;
+    margin: 8px;
+    margin-left: 0;
+    background: #b9d1e4;
+    border-radius: 4px;
 }
 ._termCounts {
-    height: 45px;
-    line-height: 45px;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
     background-color: #f8fcff;
     padding: 0 10px;
     position: relative;
@@ -134,8 +153,7 @@
     padding: 0 10px;
     position: relative;
 }
-._potoshop:after,
-._term:after {
+._potoshop:after {
     height: 4px;
     display: block;
     position: absolute;
@@ -144,4 +162,49 @@
     right: 0;
     background-color: #0088EB;
     content: '';
+}
+._laysthList-bgc .css-treePrents {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0088EB;
+    background-color: #e9eff4;
+    border-bottom: 1px solid #BBD0E1;
+}
+._laysthList-bgc .css-treePrents span {
+    font-size: 12px;
+}
+
+/*._laysthList-bgc .css-treePrents:after {
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: clac(50% - 2px);
+    border-radius: 50%;
+    background-color: #0088EB;
+    content: '';
+}*/
+._parentsTree {
+    border: 1px solid #BBD0E1;
+    border-radius: 4px;
+}
+._parentsTree h4 {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #BBD0E1;
+    color: #0088EB;
+    background-color: #b9d1e4;
+}
+.reported-iframe {
+    background: #fff;
+}
+.css-treePrents~ul {
+    max-height: 400px;
+    overflow-y: scroll;
 }

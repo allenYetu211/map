@@ -6,26 +6,11 @@ require.config({
         // "jquery": "jquery/jquery-3.1.1.min",
         "leaflet": "leaflet/leaflet",
         "map": "leaflet/map",
-        "ztree": "ztree/jquery.ztree.all",
-        "mousewheel": "perfect/jquery.mousewheel",
-        "perfect": "perfect/perfect-scrollbar",
-        "menutree": "tool/menutree",
-        "floattool": "tool/floattool",
-        "lefttool": "tool/lefttool",
         "userservice": "tool/userservice",
-        "render": "tool/render",
-        "point": "tool/point",
-        "point2": "tool/point2",
         "pie": "tool/pie",
-        "drag": "tool/drag",
         "config": "tool/config",
         "bar": "tool/bar",
-        "somoselect": "tool/somoselect",
-        "statictable": "tool/statictable",
-        "staticchart": "tool/staticchart",
-
-        "markercluster": "tool/markercluster",
-        "surveydata": "tool/surveydata",
+        "common": "tool/common",
 
         "chart": "theChart/drawChart",
         "chartInformations": "theChart/Data_Display",
@@ -33,16 +18,16 @@ require.config({
         "dataAdmin": "theChart/Data_Manage",
         "development": "theChart/Report_Development-F",
         "dataLaySth": "theChart/Report_Development-R",
-        "info": "theChart/Task_Assignment-S",
-        "info_direction": "theChart/Task_Assignment-F",
         "translatePopup": "theChart/translatePopup",
         "infor_reported": "theChart/Data_Collection",
         "mainInface": "theChart/mainInface",
         "login": "theChart/login",
-        "corejs": "theChart/corejs",
+        // "corejs": "theChart/corejs",
         "local": "theChart/localStorage",
         "api": "theChart/api",
-        "user_management": "theChart/User_Manage",
+        // "user_management": "theChart/user_management",
+        "info": "theChart/Task_Assignment-S",
+        "info_direction": "theChart/Task_Assignment-F",
 
         "bootstrap": "sqlToolJs/bootstrap.min",
         "bootstrapSelect": "sqlToolJs/bootstrap-select.min",
@@ -82,28 +67,13 @@ require.config({
     },
     waitSeconds: 0
 });
-require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api", 'info', 'user_management', 'info_direction', 'corejs'],
+
+require(["map", "common", "echarts", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api", 'info', 'info_direction'],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
-    function(c, t, a, b, d, echarts, s, st, ch, ma) {
-        // console.log(ch)
-        c.loadMap("map", "t");
-        // t.initTree("ywdtTree");
-        b.initEvent();
-        a.loadFloatTool()
-            // ma.load()
-            // d.dragBox("box",function(e){
-            // 	console.log(e.width());
-            // 	console.log(e.height());
-            // 	console.log(e);
-            // 	var $o = e[0], $img = e.find("img");
-            // 	$img.css({width: e.width(),
-            // 	height:e.height()});
-            // 	console.log()
-            // });
-            // d.dragBox("main_table",function(e){
-            // });
-            // d.dragBox("main_char",function(e){
-            // });
-
-
+    function(c, common, t) {
+        var mapHelper = new c("map", {
+            basemap: 'vec'
+        });
+        common.mapHelper = mapHelper;
+        common.map = mapHelper.map;
     });
