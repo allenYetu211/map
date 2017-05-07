@@ -100,6 +100,7 @@ input:focus {
     color: #333;
     padding: 0 15px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 #top-sidebar .dataPageList a:hover {

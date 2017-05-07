@@ -61,7 +61,8 @@
 
 .dataDisplay .listAry_cs li.active {
     position: relative;
-    background-color: #f9f9f9;
+    background-color: #dcdcdc;
+    color: #0088eb;
 }
 
 .dataDisplay .listAry_cs li:hover {
@@ -135,7 +136,7 @@
     left: 0;
     right: 0;
     z-index: 99;*/
-    background-color: #f7f7f7;
+    background-color: #b9d1e4;
     border-radius: 5px 5px 0px 0px;
 }
 
@@ -235,21 +236,22 @@
     margin: 0 3px;
     border-radius: 4px;
     background-color: transparent;
-    border: 1px solid #0088eb;
+    /*border: 1px solid #0088eb;*/
     /*padding: 0 12px;*/
     font-size: 14px;
     cursor: pointer;
-    width: 35px;
+    width: 24px;
     overflow: hidden;
     white-space: nowrap;
-    transition: width 0.5s;
+    /*transition: width 0.5s;
     -webkit-transition: width 0.5s;
-    -o-transition: width 0.5s;
+    -o-transition: width 0.5s;*/
 }
 
-.addSeve button:hover {
+
+/*.addSeve button:hover {
     width: 85px;
-}
+}*/
 
 .addSeve button img {
     width: 20px;
