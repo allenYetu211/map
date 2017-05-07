@@ -309,3 +309,9 @@
 .silder_panel.active {
     opacity: 1;
 }
+
+.css-treePrents~ul {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
