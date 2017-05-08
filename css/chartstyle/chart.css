@@ -1554,7 +1554,7 @@ div.login_informations button._close {
     background-color: transparent;
     border: 1px solid #7789cc;
     border-radius: 3px;
-    margin: 5px;
+    /*margin: 5px;*/
     font-size: 12px;
 }
 
@@ -2108,6 +2108,8 @@ table th {
 ._dataGet ._getsql,
 ._dataGet ._reset {
     color: #0088EB;
+    height: 30px;
+    padding: 0 15px;
 }
 
 #controlPanel ._dataGet .condition .filedState .filedCondition {
@@ -2205,6 +2207,7 @@ table th {
 ._dataGet .query-builder .rules-group-container {
     background-color: #f3f4f6;
     border: none;
+    margin: 10px 0px;
 }
 
 .dark ._dataGet .query-builder .rules-group-container {
@@ -2228,7 +2231,6 @@ table th {
 
 ._dataGet .form-control {
     background-color: #c4cad5;
-    color: #fff;
     border: none;
 }
 
@@ -2245,16 +2247,29 @@ table th {
 }
 
 ._dataGet .btn-danger {
-    /*color: #232C4D;*/
+    color: #232C4D;
+    background-color: #c4cad5;
     border: none;
+    height: 34px;
 }
 
 ._dataGet .btn-danger:hover {
-    background-color: #232C4D;
+    background-color: #c4cad5;
+    color: #333;
 }
 
 ._dataGet .query-builder .rules-list>*:last-child::before {
     border: none;
+}
+
+.rules-list {
+    padding: 0 !important;
+}
+
+.rule-actions .btn-danger {}
+
+.rule-value-container input {
+    text-indent: 5px;
 }
 
 
