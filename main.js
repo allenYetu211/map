@@ -68,7 +68,7 @@ require.config({
     waitSeconds: 0
 });
 
-require(["map", "common", "echarts", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api", 'info', 'info_direction'],
+require(["map", "common", "echarts", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api"],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, common, t) {
         var mapHelper = new c("map", {
