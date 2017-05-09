@@ -1,167 +1,167 @@
 .dataDisplay {
-    height: 100%;
-    padding-top: 60px;
-    background-color: #e9eff4;
+  height: 100%;
+  padding-top: 60px;
+  background-color: #e9eff4;
 }
 
 .dataDisplay .listAry_cs {
-    width: 300px;
-    min-width: 300px;
-    top: 60px;
-    bottom: 0;
-    z-index: 9;
-    background-color: #e9eff4;
-    padding: 0px;
-    margin: 8px;
-    border-radius: 4px;
-    float: left;
+  width: 300px;
+  min-width: 300px;
+  top: 60px;
+  bottom: 0;
+  z-index: 9;
+  background-color: #e9eff4;
+  padding: 0px;
+  margin: 8px;
+  border-radius: 4px;
+  float: left;
 }
 
 .dataDisplay .listAry_cs ul {
-    border-radius: 3px;
-    background-color: #fff;
+  border-radius: 3px;
+  background-color: #fff;
 }
 
 .dataDisplay .listAry_cs .addListAry {
-    padding: 5px;
-    background: #fff;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 12px;
-    color: #0088eb;
+  padding: 5px;
+  background: #fff;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #0088eb;
 }
 
 .dataDisplay .listAry_cs ._listinfoAdd {
-    height: calc(100% - 45px);
-    overflow: auto;
-    padding: 10px 0px;
-    background: #fff;
-    border-radius: 0px 0px 5px 5px;
+  height: calc(100% - 45px);
+  overflow: auto;
+  padding: 10px 0px;
+  background: #fff;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .dataDisplay .listAry_cs .addListAry img {
-    width: 20px;
-    height: 20px;
-    vertical-align: top;
-    margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+  margin-right: 5px;
 }
 
 .dataDisplay .listAry_cs li {
-    padding: 0 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: 35px;
-    -webkit-transition: background 0.3s;
-    -o-transition: background 0.3s;
-    transition: background 0.3s;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 35px;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .dataDisplay .listAry_cs li.active {
-    position: relative;
-    background-color: #dcdcdc;
-    color: #0088eb;
+  position: relative;
+  background-color: #dcdcdc;
+  color: #0088eb;
 }
 
 .dataDisplay .listAry_cs li:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .dataDisplay .listAry_cs li span {
-    cursor: pointer;
-    margin: 0 2px;
+  cursor: pointer;
+  margin: 0 2px;
 }
 
 .dataDisplay .listAry_cs li span.group {
-    display: block;
-    min-width: 50%;
+  display: block;
+  min-width: 50%;
 }
 
 .dataDisplay .listAry_cs li div.gr-feature {
-    float: right;
-    opacity: 0;
-    -webkit-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-    pointer-events: none;
+  float: right;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  pointer-events: none;
 }
 
 .dataDisplay .listAry_cs li.active div.gr-feature {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .dataDisplay .listAry_cs li:hover div.gr-feature {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .dataDisplay .listAry_cs li .gr-feature span {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }
 
 .dataDisplay .listAry_cs li .gr-feature img {
-    width: 100%;
+  width: 100%;
 }
 
 .dataDisplay .listAry_cs input.change-group {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
 }
 
 .dataDisplay .listAry_cs input._show {
-    display: block;
+  display: block;
 }
 
 .dataDisplay ._listinfo {
-    /*padding-top: 45px;*/
-    /*height: 100%;
+  /*padding-top: 45px;*/
+  /*height: 100%;
     overflow: auto;*/
 }
 
 .dataDisplay .laysthTitle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 45px;
-    line-height: 45px;
-    padding: 0 15px;
-    /*position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 15px;
+  /*position: absolute;
     left: 0;
     right: 0;
     z-index: 99;*/
-    background-color: #b9d1e4;
-    border-radius: 5px 5px 0px 0px;
+  background-color: #b9d1e4;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .dataDisplay .laysthTitle .icons-Display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dataDisplay .laysthTitle .laysthTitle-h2 {
-    font-size: 16px;
-    color: #2a9bec;
-    font-weight: 700;
+  font-size: 16px;
+  color: #2a9bec;
+  font-weight: 700;
 }
 
 .dataDisplay .laysthTitle .icons-Display span {
-    display: block;
-    width: 20px;
-    height: 20px;
-    margin: 0 2px;
-    cursor: pointer;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 2px;
+  cursor: pointer;
 }
 
 .dataDisplay .laysthTitle .icons-Display span img {
-    width: 100%;
+  width: 100%;
 }
 
 
@@ -172,78 +172,78 @@
 }*/
 
 .dataDisplay .tableList {
-    width: calc(100%-300px);
-    padding: 5px;
-    height: 100%;
-    overflow: auto;
-    background-color: #e9eff4;
-    /*position: relative;*/
+  width: calc(100%-300px);
+  padding: 5px;
+  height: 100%;
+  overflow: auto;
+  background-color: #e9eff4;
+  /*position: relative;*/
 }
 
 .dataDisplay .tableList th {
-    min-width: 90px;
+  min-width: 90px;
 }
 
 .dataDisplay .tableList td {
-    text-align: center;
-    position: relative;
-    height: 40px;
+  text-align: center;
+  position: relative;
+  height: 40px;
 }
 
 .dataDisplay .tableList td._null {
-    background-color: rgba(182, 36, 38, 0.1);
+  background-color: rgba(182, 36, 38, 0.1);
 }
 
 .dataDisplay .tableList td input,
 .dataDisplay .tableList td select {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    padding: 5px 10px;
-    border: none;
-    display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  padding: 5px 10px;
+  border: none;
+  display: none;
 }
 
 .dataDisplay .addSeve {
-    padding: 10px 5px;
-    display: flex;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 5px 5px 0px 0px;
+  padding: 10px 5px;
+  display: flex;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .tebleListinfo {
-    background-color: #fff;
-    padding: 8px;
-    height: calc(100% - 55px);
-    overflow: scroll;
+  background-color: #fff;
+  padding: 8px;
+  height: calc(100% - 55px);
+  overflow: scroll;
 }
 
 ._deleteTr.active,
 ._addTr.active {
-    background-color: #ffe8e8;
+  background-color: #ffe8e8;
 }
 
 ._deleteTr.action,
 ._addTr.action {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .addSeve button {
-    border: none;
-    margin: 0 3px;
-    border-radius: 4px;
-    background-color: transparent;
-    /*border: 1px solid #0088eb;*/
-    /*padding: 0 12px;*/
-    font-size: 14px;
-    cursor: pointer;
-    width: 24px;
-    overflow: hidden;
-    white-space: nowrap;
-    /*transition: width 0.5s;
+  border: none;
+  margin: 0 3px;
+  border-radius: 4px;
+  background-color: transparent;
+  /*border: 1px solid #0088eb;*/
+  /*padding: 0 12px;*/
+  font-size: 14px;
+  cursor: pointer;
+  width: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  /*transition: width 0.5s;
     -webkit-transition: width 0.5s;
     -o-transition: width 0.5s;*/
 }
@@ -254,84 +254,84 @@
 }*/
 
 .addSeve button img {
-    width: 20px;
-    height: 20px;
-    vertical-align: top;
-    margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+  margin-right: 10px;
 }
 
 .addSeve button:focus {
-    outline: none;
+  outline: none;
 }
 
 .addListData.active,
 .changeListData.active,
 .deleteListData.active {
-    background-color: rgba(0, 136, 235, .2);
+  background-color: rgba(0, 136, 235, .2);
 }
 
 .al-popup-prompt {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
 }
 
 .al-popup-prompt .al-popup {
-    width: 300px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    padding: 5px 15px;
-    border-top: 3px solid #0088eb;
-    -webkit-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 5px 15px;
+  border-top: 3px solid #0088eb;
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .al-popup-prompt .al-popup .al-closer {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 -15px;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0px 15px;
 }
 
 .al-popup-prompt .al-popup .al-closer button {
-    background: transparent;
-    border: none;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 
 .al-popup-prompt .al-popup .al-closer button img {
-    width: 100%;
+  width: 100%;
 }
 
 .al-popup-prompt .al-popup .al-prompt-informations {
-    text-align: center;
-    margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .al-popup-prompt .al-popup .al-prompt-informations+button {
-    border: 1px solid #e0e0e0;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px auto;
+  border: 1px solid #e0e0e0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
 }
 
 .al-popup-prompt .al-popup .al-prompt-informations+button img {
-    width: 15px;
-    height: 15px;
-    vertical-align: middle;
-    margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
 }

@@ -231,11 +231,17 @@
 
 ._laySelectList ._potoshopView {
     position: absolute;
-    top: 50px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
+    top: 45px;
+    left: 0;
+    bottom: -1px;
+    right: 0px;
     overflow: hidden;
+    background-color: #fff;
+    display: none;
+}
+
+._laySelectList ._potoshopView.open {
+    display: block;
 }
 
 
