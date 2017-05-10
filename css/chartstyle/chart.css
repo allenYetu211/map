@@ -585,6 +585,7 @@ input:focus {
 
 #left-sidebar.dark .search input.searchbar {
   background-color: #0c1123;
+  color:#fff;
 }
 
 #left-sidebar .search button {
@@ -738,12 +739,26 @@ input:focus {
 }
 
 .type-big,
-.type-middle {
+.type-middle,
+.type-small {
   min-height: 270px;
   overflow-y: auto;
   box-shadow: 0px 0px 1px #E9E9E9;
   box-sizing: border-box;
   /*background-color:red;*/
+}
+.type-small  {
+  width: 33.333%
+}
+.type-big > div,
+.type-middle > div,
+.type-small > div{
+  flex: 1;
+  border-right: 1px solid #f9f7f7;
+}
+
+.dark .type-small > div {
+  color:#fff;
 }
 
 .typeText {
@@ -1429,19 +1444,18 @@ div.login_informations button._close {
 **/
 
 #controlPanel.dark {
-  position: absolute;
+  /*position: absolute;
   top: 50%;
   left: 50%;
   width: 1020px;
-  /*min-height: 500px;*/
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
   background-color: #11224B;
-  z-index: 9999;
+  /*z-index: 9999;
   display: none;
   border-radius: 5px;
-  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);
+  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.30);*/
 }
 
 #controlPanel.dark.open {
@@ -1472,15 +1486,15 @@ div.login_informations button._close {
 }
 
 #controlPanel.dark .cp-leftList {
-  color: #fff;
-  width: 200px;
-  background-color: #11224B;
-  border-right: 1px solid #0E142A;
+  /*width: 200px;
   padding: 10px 0px;
   max-height: 660px;
   overflow-y: scroll;
-  box-sizing: border-box;
-}
+  box-sizing: border-box;*/
+  color: #fff;
+  background-color: #11224B;
+  border-right: 1px solid #0E142A;
+  }
 
 #controlPanel.dark .openCloseSidebar-cp-leftList {
   position: absolute;
@@ -1559,11 +1573,11 @@ div.login_informations button._close {
 }
 
 #controlPanel.dark .cp-rightIntroduce {
-  flex: 1;
   background-color: #11224B;
+  /*flex: 1;
   max-height: 660px;
   overflow-y: scroll;
-  box-sizing: border-box;
+  box-sizing: border-box;*/
 }
 
 ._dataGet button {
