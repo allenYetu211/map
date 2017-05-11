@@ -2,29 +2,29 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="renderer" content="webkit">
-    <title>制度制定-字段管理 | 移民快速调查综合服务平台</title>
-    <!--首页加载需要使用到的css样式表-->
-    <link rel="stylesheet" type="text/css" href="css/demo.css">
-    <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
-    <!--<link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit">
+  <title>制度制定-字段管理 | 移民快速调查综合服务平台</title>
+  <!--首页加载需要使用到的css样式表-->
+  <link rel="stylesheet" type="text/css" href="css/demo.css">
+  <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
+  <!--<link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
     <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">-->
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
-    <link rel="stylesheet" type="text/css" href="css/index_tool.css">
-    <link rel="stylesheet" type="text/css" href="css/statictable.css">
-    <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
-    <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
+  <link rel="stylesheet" type="text/css" href="css/index_tool.css">
+  <link rel="stylesheet" type="text/css" href="css/statictable.css">
+  <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
+  <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
 
 
-    <script src="echarts.min.js"></script>
-    <script src="md5.js"></script>
-    <script src="require.js"></script>
-    <script src="main.js"></script>
+  <script src="echarts.min.js"></script>
+  <script src="md5.js"></script>
+  <script src="require.js"></script>
+  <script src="main.js"></script>
 
 
 </head>
@@ -32,80 +32,93 @@
 <body>
 
 
-    <div id="map"></div>
-    <div id="top-sidebar">
+  <div id="map"></div>
+  <div id="top-sidebar">
 
-        <div class="tsidebar-l">
-            <div class="logo">
-                <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
-            </div>
+    <div class="tsidebar-l">
+      <div class="logo">
+        <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
+      </div>
 
-            <div class="dataPageList">
-                <a href="./Report_Development-F.html" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>
-                <a href="./Report_Development-R.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>
-            </div>
-        </div>
-
-        <div class="toolbar">
-            <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
-            <!--<button type="button" class="userDropOut"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></button>-->
-        </div>
-
+      <div class="dataPageList">
+        <a href="./Report_Development-F.html" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>
+        <a href="./Report_Development-R.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>
+      </div>
     </div>
 
-    <!--dataDisplay Show Left Stant-->
+    <div class="toolbar">
+      <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
+      <!--<button type="button" class="userDropOut"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></button>-->
+    </div>
 
-    <div class="dataDisplay">
+  </div>
 
-        <div class="listAry listAry_cs">
-            <div class="laysthTitle">
-                <div class="laysthTitle-h2">字段分组</div>
-                <div class="icons-Display">
-                    <span class="_j_d_Addlaysth"><img src="images/chart/icon_zdplus@2x.png" alt=""></span>
-                    <span class="_j_d_Changelaysth"><img src="images/chart/icon_zdedit@2x.png" alt=""></span>
-                    <span class="_j_d_Deletelaysth"><img src="images/chart/icon_zddelete@2x.png" alt=""></span>
-                </div>
-            </div>
-            <div class="_listinfoAdd">
-                <div class="_listinfo"></div>
-                <!--<div class="addListAry"><img src="images/chart/icon_zdplus@2x.png" alt="">新增</div>-->
-            </div>
+  <!--dataDisplay Show Left Stant-->
+
+  <div class="dataDisplay">
+
+    <div class="listAry listAry_cs">
+      <div class="laysthTitle">
+        <div class="laysthTitle-h2">字段分组</div>
+        <div class="icons-Display">
+          <span class="_j_d_Addlaysth"><img src="images/chart/icon_zdplus@2x.png" alt=""></span>
+          <span class="_j_d_Changelaysth"><img src="images/chart/icon_zdedit@2x.png" alt=""></span>
+          <span class="_j_d_Deletelaysth"><img src="images/chart/icon_zddelete@2x.png" alt=""></span>
         </div>
+      </div>
+      <div class="_listinfoAdd">
+        <div class="_listinfo"></div>
+        <!--<div class="addListAry"><img src="images/chart/icon_zdplus@2x.png" alt="">新增</div>-->
+      </div>
+    </div>
 
-        <!--<div class="management">
+    <!--<div class="management">
         </div>-->
 
-        <div class="tableList">
-            <div class="addSeve">
-                <button class="addListData" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
-                <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
-                <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
-                <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
-
-            </div>
-
-            <div class="tebleListinfo">
-
-            </div>
+    <div class="tableList">
+      <div class="addSeve">
+        <div>
+          <button class="addListData" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
+          <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
+          <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
+          <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
         </div>
 
-
-    </div>
-
-    <!--dataDisplay Show Left End-->
-
-    <div class="al-popup-prompt">
-
-        <div class="al-popup">
-
-            <div class="al-closer">
-                <span>提示：</span>
-                <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
+        <div>
+            <div class="_selecteIcon">
+                <img src="images/chart/icon_search.png" alt="">
             </div>
-            <p class="al-prompt-informations"></p>
-            <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt="">关闭</button>
+
+            <input type="text" class="developmentSelect" placeholder="请输入 ，回车查询">
+            <!--<button class="_selecteBtn">
+                搜索
+            </button>-->
+
         </div>
+      </div>
+
+      <div class="tebleListinfo">
+
+      </div>
     </div>
+
+
+  </div>
+
+  <!--dataDisplay Show Left End-->
+
+  <div class="al-popup-prompt">
+
+    <div class="al-popup">
+
+      <div class="al-closer">
+        <span>提示：</span>
+        <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
+      </div>
+      <p class="al-prompt-informations"></p>
+      <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt="">关闭</button>
+    </div>
+  </div>
 
 </body>
 

@@ -17,6 +17,7 @@ function Sheet(divId, zoomSize, withRowColTitle, withComment) {
     this._zoomSize = zoomSize;
     this._withComment = withComment;
     this._clearVar = [];
+    // this._serviceUrl = '/thememap/ZJService/NewReportService/ReportService.asmx/';
     this._serviceUrl = 'http://122.224.94.108:8002/ZJService/NewReportService/ReportService.asmx/';
     this._namespace = 'TH.ReportSystem';
     var _this = this;
@@ -178,13 +179,33 @@ Sheet.prototype.attachEvent = function(eventName, fn) {
     this._SHEET_API_HD.sheet.on(eventName, fn);
 };
 
-Sheet.prototype.getSelectedRange = function() {
-    var ss = this._SHEET_API_HD.sheet,
-        sm = ss.getSelectionModel(),
-        pos = sm.getMinMaxPos();
-    var minLetter = this._toLetter(pos.mincol) + pos.minrow;
-    var maxLetter = this._toLetter(pos.maxcol) + pos.maxrow;
-    return minLetter + ':' + maxLetter;
+Sheet.prototype.getSelectedRange = function () {
+    var ss = this._SHEET_API_HD.sheet, sm = ss.getSelectionModel(), pos = sm.getMinMaxPos();
+    var rowMin = pos.minrow;
+    var colMin = pos.mincol;
+    var rowMax = pos.maxrow;
+    var colMax = pos.maxcol;
+    var isMergedCell = this._SHEET_API.isMergedCell(this._SHEET_API_HD, this._SHEET_API_HD.sheet.sheetId, rowMax, colMax);
+    if (isMergedCell == true) {
+        var floatings = this._SHEET_API.getJsonData(this._SHEET_API_HD).floatings;
+        var len = floatings.length;
+        for (var i = 0; i < len; i++) {
+            var range = floatings[i].jsonObj;
+            if (rowMax >= range[0] && rowMax <= range[2] && colMax >= range[1] && colMax <= range[3]) {
+                rowMax = range[0];
+                colMax = range[1];
+                break;
+            }
+        }
+    }
+    var minLetter = this._toLetter(colMin) + rowMin;
+    if (rowMin == rowMax && colMin == colMax) {
+        return minLetter;
+    }
+    else {
+        var maxLetter = this._toLetter(colMax) + rowMax;
+        return minLetter + ':' + maxLetter;
+    }
 };
 
 Sheet.prototype.addComment = function(cellRange, comment) {
