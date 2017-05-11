@@ -209,9 +209,54 @@
 .dataDisplay .addSeve {
   padding: 10px 5px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 50px;
   background-color: #fff;
   border-radius: 5px 5px 0px 0px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dataDisplay .addSeve div {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.dataDisplay .addSeve ._selecteIcon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.dataDisplay .addSeve ._selecteBtn {
+  position: absolute;
+  right: 0;
+  top: -3px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(50%);
+  transition: all 0.5s;
+}
+
+.dataDisplay .addSeve ._selecteBtn.active {
+  transform: translateX(50%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dataDisplay .addSeve .developmentSelect {
+  border: none;
+  width: 80px;
+  padding: 5px 10px 5px 30px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.5s;
+}
+
+.dataDisplay .addSeve .developmentSelect:focus {
+  width: 200px;
 }
 
 .tebleListinfo {
