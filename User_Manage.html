@@ -27,13 +27,25 @@
     <script src="main.js"></script>
 
     <style>
-        #user-left {
+        .dataContent{
+            height: 100%;
+            padding-top: 60px;
+            background-color: #e9eff4;
+        }
+        .dataContent .user-left-bar {
             background: #FFFFFF;
             border-radius: 5px;
-            height: 500px;
+            height: 100%;
+            width: 300px;
+            min-width: 300px;
+            top: 60px;
+            bottom: 0;
+            z-index: 9;
+            padding: 0px;
+            margin: 8px;
+            float: left;
         }
-
-        #user-left h3 {
+        .dataContent .user-left-bar h3 {
             color: #0088EB;
             font-size: 20px;
             background: #F7F7F7;
@@ -41,19 +53,27 @@
             border-radius: 5px 5px 0 0;
             padding-left: 20px;
         }
-
-        #user-left dt {
-            font-size: 14px;
-            font-weight: bold;
+        .dataContent .user-left-bar h4{
+            line-height: 40px;
+            padding-left: 20px;
+            padding-bottom: 0;
+            font-size:14px;
+            position: relative;
         }
-
-        #user-left dd {
-            font-size: 14px;
-            padding-left: 2em;
+        .dataContent .user-left-bar h4 span{
+            cursor: pointer;
         }
-
-        #user-left dl p {
-            padding: 0 10px;
+        .dataContent .user-left-bar h4 img{
+            position: absolute;
+            right: 20px;
+            top: 14px;
+        }
+        .dataContent .user-left-bar ul li{
+            padding-left: 50px;
+            line-height: 30px;
+        }
+        .dataContent .tableList{
+            height: 100%;
         }
     </style>
 </head>
@@ -75,42 +95,48 @@
         </div>
     </div>
 
-    <div class="toolbar">
-        <button type="button" class="user"><a href="./index.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>
-        <button type="button" class="user active"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>
-        <button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>
-        <button type="button" class="user"><a  href="./dataAdmin.html"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></a></button>
-        <button type="button" class="user"><a href><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></a></button>
-        <button type="button" class="user"><a href><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></a></button>
-        <button type="button" class="user"><a href><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></a></button>
-    </div>
+    <!--<div class="toolbar">-->
+        <!--<button type="button" class="user"><a href="./index.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>-->
+        <!--<button type="button" class="user active"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>-->
+        <!--<button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>-->
+        <!--<button type="button" class="user"><a  href="./dataAdmin.html"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></a></button>-->
+        <!--<button type="button" class="user"><a href><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></a></button>-->
+        <!--<button type="button" class="user"><a href><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></a></button>-->
+        <!--<button type="button" class="user"><a href><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></a></button>-->
+    <!--</div>-->
 
 </div>
 
-<!--dataDisplay Show Left Stant-->
+<!--dataContent Show Left Stant-->
 
-<div class="dataDisplay">
+<div class="dataContent">
 
-    <div class="listAry listAry_cs">
-        <!-- tree Start-->
-        <div id="user-left">
-            <h3>用户管理</h3>
-            <dl>
-                <dt><p>用户管理</p></dt>
-                <dd>用来计算的仪器 ... ...</dd>
-
-                <dt><p>用户组管理</p></dt>
-                <dd>以视觉方式显示信息的装置 ... ...</dd>
-
-                <dt><p>角色管理</p></dt>
-                <dd>以视觉方式显示信息的装置 ... ...</dd>
-            </dl>
+    <!-- tree Start-->
+    <div class="user-left-bar">
+        <h3>用户管理</h3>
+        <div>
+            <h4><span>用户管理</span><img src="images/chart/icon_bigmapfold.png"></h4>
+            <ul>
+                <li>爱是妒忌介绍的</li>
+                <li>爱是妒忌介绍的</li>
+                <li>爱是妒忌介绍的</li>
+            </ul>
         </div>
-        <!-- tree End-->
-    </div>
+        <div>
+            <h4><span>用户组管理</span></h4>
+            <ul></ul>
+        </div>
+        <div>
+            <h4><span>角色管理</span><img src="images/chart/icon_bigmapfold.png"></h4>
+            <ul>
+                <li>爱是妒忌介绍的</li>
+                <li>爱是妒忌介绍的</li>
+                <li>爱是妒忌介绍的</li>
+            </ul>
+        </div>
 
-    <!--<div class="management">
-    </div>-->
+    </div>
+    <!-- tree End-->
 
     <div class="tableList">
         <div class="addSeve">
@@ -129,20 +155,8 @@
 
 </div>
 
-<!--dataDisplay Show Left End-->
+<!--dataContent Show Left End-->
 
-<div class="al-popup-prompt">
-
-    <div class="al-popup">
-
-        <div class="al-closer">
-            <span>提示：</span>
-            <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
-        </div>
-        <p class="al-prompt-informations"></p>
-        <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt="">关闭</button>
-    </div>
-</div>
 
 </body>
 
