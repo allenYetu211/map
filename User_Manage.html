@@ -76,6 +76,7 @@
             padding-left: 50px;
             line-height: 30px;
         }
+        /*右边部分*/
         .dataContent .tableList{
             background: #FFFFFF;
             padding: 5px;
@@ -93,14 +94,49 @@
         .dataContent .tableList .handle button{
             border: none;
             background: none;
+            outline: none;
             cursor: pointer;
+            border-radius: 4px;
+        }
+        .dataContent .tableList .handle button.active{
+            background: rgba(0, 136, 235, .2);
         }
         .dataContent .tableList .handle button img{
             width: 20px;
             height:20px;
         }
+        #userTableList tr.active{
+            background: #ffe8e8;
+        }
+        #userTableList td>input,#userTableList td>div,#userTableList td>select{
+            display: none;
+        }
+        /*下拉多选框*/
+        #userTableList .mulDic_div{
+            padding: 0;
+            background: sandybrown;
+            position: relative;
+        }
+        #userTableList .mulDic_input{
+            width: 100%;
+            height:100%;
+            border: none;
+        }
+        #userTableList .mulDic_btn{
+            position: absolute;
+            right: 1px;
+            top:1px;
+            border: none;
+            background: #FFFFFF;
+            outline:none;
+            cursor: pointer;
+        }
         #userTableList .mulDic_ul{
             background: seagreen;
+            position: absolute;
+            z-index: 9999;
+            width: 100%;
+            display: none;
         }
         #userTableList .mulDic_ul li{
             list-style: none;
