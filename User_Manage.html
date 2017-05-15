@@ -109,16 +109,18 @@
             background: #ffe8e8;
         }
         #userTableList td>input,#userTableList td>div,#userTableList td>select{
+            height: 100%;
+            width:100%;
             display: none;
+            border:none;
         }
         /*下拉多选框*/
         #userTableList .mulDic_div{
             padding: 0;
-            background: sandybrown;
             position: relative;
         }
         #userTableList .mulDic_input{
-            width: 100%;
+            width: 90%;
             height:100%;
             border: none;
         }
@@ -132,7 +134,9 @@
             cursor: pointer;
         }
         #userTableList .mulDic_ul{
-            background: seagreen;
+            border:1px solid #f9f9f9;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            background: #FFFFFF;
             position: absolute;
             z-index: 9999;
             width: 100%;
