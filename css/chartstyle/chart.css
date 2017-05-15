@@ -585,7 +585,7 @@ input:focus {
 
 #left-sidebar.dark .search input.searchbar {
   background-color: #0c1123;
-  color:#fff;
+  color: #fff;
 }
 
 #left-sidebar .search button {
@@ -747,18 +747,20 @@ input:focus {
   box-sizing: border-box;
   /*background-color:red;*/
 }
-.type-small  {
+
+.type-small {
   width: 33.333%
 }
-.type-big > div,
-.type-middle > div,
-.type-small > div{
+
+.type-big>div,
+.type-middle>div,
+.type-small>div {
   flex: 1;
   border-right: 1px solid #f9f7f7;
 }
 
-.dark .type-small > div {
-  color:#fff;
+.dark .type-small>div {
+  color: #fff;
 }
 
 .typeText {
@@ -1203,6 +1205,10 @@ input:focus {
   padding: 0 15px;
 }
 
+.js_ontp ._childParents {
+  padding: 0 15px;
+}
+
 #CatalogPopup-ul>li>ul {
   padding: 0 15px;
   /*display: none;*/
@@ -1218,8 +1224,9 @@ input:focus {
 
 .BaseMap {
   height: 54px;
-  box-sizing: border-box;
   padding: 16px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .BaseMap img {
@@ -1230,6 +1237,7 @@ input:focus {
 .BaseMap span {
   font-size: 14px;
   margin-left: 10px;
+  position: relative;
 }
 
 .BaseMap button {
@@ -1241,12 +1249,17 @@ input:focus {
   cursor: pointer;
 }
 
+.BaseMap span {
+  position: relative;
+}
+
 .js_ontp span {
   display: inline-block;
   width: 24px;
   height: 24px;
   box-sizing: border-box;
   padding: 5px;
+  position: relative;
 }
 
 .js_ontp span img {
@@ -1256,6 +1269,35 @@ input:focus {
 
 .right-options {
   float: right;
+}
+
+.right-options ._popMove {
+  width: 70px;
+  display: none;
+  position: absolute;
+  left: -20px;
+  top: 20px;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  z-index: 999;
+}
+
+.right-options ._popMove button {
+  width: 100%;
+  height: auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.right-options ._popMove button:first-child {
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .CatalogPopup-ul>li>ul {}
@@ -1494,7 +1536,7 @@ div.login_informations button._close {
   color: #fff;
   background-color: #11224B;
   border-right: 1px solid #0E142A;
-  }
+}
 
 #controlPanel.dark .openCloseSidebar-cp-leftList {
   position: absolute;
@@ -1605,12 +1647,12 @@ div.login_informations button._close {
   box-shadow: 0px 0px 1px #0E142A;
 }
 
- .single-text {
+.single-text {
   font-size: 30px;
   padding: 0 15px;
 }
 
- .single-text span {
+.single-text span {
   font-size: 12px;
 }
 

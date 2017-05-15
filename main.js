@@ -11,6 +11,8 @@ require.config({
         "config": "tool/config",
         "bar": "tool/bar",
         "common": "tool/common",
+        "markercluster":"tool/markercluster",
+		"surveydata":"tool/surveydata",
 
         "chart": "theChart/drawChart",
         "chartInformations": "theChart/Data_Display",
