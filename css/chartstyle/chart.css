@@ -699,8 +699,8 @@ input:focus {
 #right-sidebar .information button.introduceButton,
 #left-sidebar .information button.introduceButton {
   position: absolute;
-  right: 15px;
-  top: 14px;
+  right: 30px;
+  top: 10px;
   display: block;
   width: 14px;
   height: 14px;
@@ -712,8 +712,8 @@ input:focus {
 #right-sidebar .information button,
 #left-sidebar .information button {
   position: absolute;
-  right: 35px;
-  top: 14px;
+  right: 50px;
+  top: 10px;
   /*display: block;*/
   width: 14px;
   height: 14px;
@@ -1668,6 +1668,9 @@ div.login_informations button._close {
   align-items: center;
   margin: 8px 0px 16px;
 }
+._dataGet .sql-SelecteButton {
+  margin: 10px 0;
+}
 
 ._dataGet .selectField .selcetInfo {
   display: flex;
@@ -1940,6 +1943,16 @@ div.login_informations button._close {
   /*display: none;*/
 }
 
+.showFieldDataTab {
+  flex: 1;
+  width: 100%;
+  overflow: auto;
+}
+
+.showFieldDataTab tr._column th {
+  min-width: 100px;
+}
+
 .showFieldData table {
   color: #fff;
 }
@@ -2045,10 +2058,10 @@ table th {
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);*/
-  left: 50px;
-  right: 50px;
-  bottom: 100px;
-  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  top: 0;
   background-color: #fff;
   z-index: 9999;
   display: none;
@@ -2234,12 +2247,13 @@ table th {
 }
 
 ._dataGet .select {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   color: #222;
   box-sizing: border-box;
   padding: 10px;
-  /*position: absolute;*/
-  /*width: 850px;*/
 }
 
 #controlPanel ._dataGet .addRuleValue div:first-child {

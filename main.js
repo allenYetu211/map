@@ -5,6 +5,7 @@ require.config({
         "jquery": "jquery/jquery-1.11.1.min",
         // "jquery": "jquery/jquery-3.1.1.min",
         "leaflet": "leaflet/leaflet",
+        "leafletmeasure":"leaflet/leafletmeasure",
         "map": "leaflet/map",
         "userservice": "tool/userservice",
         "pie": "tool/pie",
