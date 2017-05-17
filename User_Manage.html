@@ -158,6 +158,53 @@
         #userTableList .mulDic_ul li{
             list-style: none;
         }
+        /*显示成功*/
+        .show-success{
+            width: 200px;
+            height: 100px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            z-index: 10000;
+            text-align: center;
+            color: #0088EB;
+            display: none;
+        }
+        .show-success h3{
+            margin: 0;
+            line-height: 100px;
+            font-size: 20px;
+            color: #0088EB;
+        }
+        /*角色列表*/
+        #userTableList li{
+            list-style: none;
+            overflow: hidden;
+            padding: 2px 10px;
+            border-radius: 5px;
+        }
+        #userTableList ul{
+            list-style: none;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        #userTableList>ul>li{
+            background: #E9EFF4;
+            margin: 5px;
+        }
+        #userTableList>ul>li>ul{
+            background: #FFFFFF;
+            margin: 10px;
+        }
+        #userTableList>ul>li>ul>li{
+            background: #F3F4F5;
+            margin: 5px;
+        }
     </style>
 </head>
 
@@ -230,7 +277,9 @@
 </div>
 
 <!--dataContent Show Left End-->
-
+<div class="show-success">
+    <h3>成功</h3>
+</div>
 
 </body>
 
