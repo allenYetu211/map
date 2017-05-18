@@ -748,6 +748,10 @@ input:focus {
   /*background-color:red;*/
 }
 
+.type-big {
+  width: 100%;
+}
+
 .type-small {
   width: 33.333%
 }
@@ -757,6 +761,18 @@ input:focus {
 .type-small>div {
   flex: 1;
   border-right: 1px solid #f9f7f7;
+}
+
+._inforpicture {
+  display: flex;
+}
+
+._inforpicture ._picture {
+  width: 400px;
+}
+
+._inforpicture ._picture img {
+  width: 100%;
 }
 
 .dark .type-small>div {
@@ -1668,6 +1684,7 @@ div.login_informations button._close {
   align-items: center;
   margin: 8px 0px 16px;
 }
+
 ._dataGet .sql-SelecteButton {
   margin: 10px 0;
 }
@@ -2206,10 +2223,104 @@ table th {
 }
 
 ._dataGet ._getsql,
+._dataGet ._statistics,
 ._dataGet ._reset {
   color: #0088EB;
   height: 30px;
   padding: 0 15px;
+}
+
+._dataGet ._statistics {
+  display: none;
+}
+
+
+.statisticsPane {
+  display: none;
+  position: absolute;
+  background: #fff;
+  padding: 10px 100px;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  min-height: 300px;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, .1);
+  border-top: 5px solid #0088EB;
+}
+
+.statisticsPane .al-row {
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.statisticsPane .statisticsPane-title.al-row {
+  border-bottom: 1px solid #e0e0e0;
+  justify-content: space-between;
+  margin: 0 -100px;
+  padding: 10px 15px;
+}
+
+
+.statistics-filed {
+  position: relative;
+}
+
+.statistics-filed button.addrule {
+  position: absolute;
+  right: -60px;
+  top: 10px;
+}
+
+.addStatistics-filed>div {
+  width: 50%;
+}
+
+.addStatistics-filed .statisticsPane-select,
+.statisticsPane-select {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.addStatistics-filed .statisticsPane-select select,
+.statisticsPane-select>input {
+  width: 100%;
+  height: 35px;
+}
+
+.statisticsPane-select ul {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+}
+
+.statisticsPane-select ul li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+.statisticsPane-select ul li input {
+  margin: 0 10px 0 0;
+}
+
+.statisticsPane-select ul li label {
+  cursor: pointer;
+  margin: 0;
+}
+
+.statisticsPane-select {
+  position: relative;
+}
+
+.statisticsPane-moreSelect {
+  position: absolute;
+  z-index: 99;
+  background: #fff;
+  left: 10px;
+  right: 10px;
+  display: none;
 }
 
 #controlPanel ._dataGet .condition .filedState .filedCondition {
@@ -2254,6 +2365,10 @@ table th {
   color: #222;
   box-sizing: border-box;
   padding: 10px;
+}
+
+._dataGet .select.display {
+  height: auto;
 }
 
 #controlPanel ._dataGet .addRuleValue div:first-child {
@@ -2384,3 +2499,38 @@ button._hide {
 /**
 *   information control panel styleCss   END
 **/
+
+._j_cliearOpens {
+  width: 25px;
+  position: absolute;
+  top: 5px;
+  right: 11px;
+  bottom: 6px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+._j_cliearOpens:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-left: 4px solid transparent;
+  border-top: 6px solid #000;
+  border-right: 4px solid transparent;
+}
+
+.st_uploadInformation {
+  display: flex;
+  justify-content: center
+}
+
+.st_uploadInformation button {
+  height: 35px;
+  padding: 0 20px;
+  margin: 0 20px;
+}

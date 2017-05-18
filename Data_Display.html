@@ -2,201 +2,201 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="renderer" content="webkit">
-    <title>数据展示 | 移民快速调查综合服务平台</title>
-    <!--首页加载需要使用到的css样式表-->
-    <link rel="stylesheet" type="text/css" href="css/demo.css">
-    <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
-    <!--<link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit">
+  <title>数据展示 | 移民快速调查综合服务平台</title>
+  <!--首页加载需要使用到的css样式表-->
+  <link rel="stylesheet" type="text/css" href="css/demo.css">
+  <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
+  <!--<link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
     <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">-->
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
-    <link rel="stylesheet" type="text/css" href="css/index_tool.css">
-    <link rel="stylesheet" type="text/css" href="css/statictable.css">
-    <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
-    <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
+  <link rel="stylesheet" type="text/css" href="css/index_tool.css">
+  <link rel="stylesheet" type="text/css" href="css/statictable.css">
+  <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+  <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
 
 
-    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap.min.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/awesome-bootstrap-checkbox.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-slider.min.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/selectize.bootstrap3.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/query-builder.default.css" id="qb-theme">
-    <link rel="stylesheet" href="css/sqlToolStyle/builder.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/bootstrap.min.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/awesome-bootstrap-checkbox.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-slider.min.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/selectize.bootstrap3.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/query-builder.default.css" id="qb-theme">
+  <link rel="stylesheet" href="css/sqlToolStyle/builder.css">
 
 
 
-    <script src="echarts.min.js"></script>
-    <script src="md5.js"></script>
-    <script src="require.js"></script>
-    <script src="main.js"></script>
+  <script src="echarts.min.js"></script>
+  <script src="md5.js"></script>
+  <script src="require.js"></script>
+  <script src="main.js"></script>
 
 
-    <style>
-        .contentHolder {
-            position: relative;
-            margin: 0px auto;
-            padding: 0px;
-            width: 243;
-            height: 400px;
-            overflow: hidden;
-        }
-        
-        .contentHolder .content {
-            width: 243;
-            height: 720px;
-        }
-        
-        .spacer {
-            text-align: center
-        }
-        
-        .legend {
-            width: 13px;
-            height: 13px;
-            background: #44b9b0;
-            display: inline-block;
-            border-radius: 0px;
-            border: 1px solid grey;
-            font-size: 14px;
-        }
-        
-        .legend-info {
-            font-size: 12px;
-            padding-left: 3px;
-            vertical-align: top;
-        }
-        
-        .subject-brief {
-            position: absolute;
-            width: 320px;
-            background: white;
-            box-shadow: 2px 5px 5px rgba(0, 0, 0, .3);
-            padding: 10px;
-            left: 400px;
-            top: 0;
-            font-size: 14px;
-            z-index: 100;
-        }
-        
-        .subject-brief .brief-header {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-        }
-        
-        .subject-brief .brief-body .brief-title {
-            font-weight: bold;
-            margin: 5px 0;
-        }
-        
-        .subject-brief .brief-body .brief-content P {
-            font-size: 13px;
-            line-height: 25px;
-        }
-        
-        body {
-            background-color: #eee
-        }
-        
-        .box {
-            width: 200px;
-            height: 100px;
-            cursor: move;
-        }
-        
-        .main_tabletop {
-            width: 100%;
-            height: 30px;
-            background: #5193e8;
-        }
-        
-        .theme-map-point {
-            border: none;
-            background: none;
-        }
-        
-        div.theme-map-point.leaflet-label-right:before,
-        div.theme-map-point.leaflet-label-left:after {
-            border: none
-        }
-        
-        .optWrapper ul li:hover {
-            cursor: pointer;
-            background: #f5f5f5
-        }
-    </style>
+  <style>
+    .contentHolder {
+      position: relative;
+      margin: 0px auto;
+      padding: 0px;
+      width: 243;
+      height: 400px;
+      overflow: hidden;
+    }
+    
+    .contentHolder .content {
+      width: 243;
+      height: 720px;
+    }
+    
+    .spacer {
+      text-align: center
+    }
+    
+    .legend {
+      width: 13px;
+      height: 13px;
+      background: #44b9b0;
+      display: inline-block;
+      border-radius: 0px;
+      border: 1px solid grey;
+      font-size: 14px;
+    }
+    
+    .legend-info {
+      font-size: 12px;
+      padding-left: 3px;
+      vertical-align: top;
+    }
+    
+    .subject-brief {
+      position: absolute;
+      width: 320px;
+      background: white;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, .3);
+      padding: 10px;
+      left: 400px;
+      top: 0;
+      font-size: 14px;
+      z-index: 100;
+    }
+    
+    .subject-brief .brief-header {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    
+    .subject-brief .brief-body .brief-title {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    
+    .subject-brief .brief-body .brief-content P {
+      font-size: 13px;
+      line-height: 25px;
+    }
+    
+    body {
+      background-color: #eee
+    }
+    
+    .box {
+      width: 200px;
+      height: 100px;
+      cursor: move;
+    }
+    
+    .main_tabletop {
+      width: 100%;
+      height: 30px;
+      background: #5193e8;
+    }
+    
+    .theme-map-point {
+      border: none;
+      background: none;
+    }
+    
+    div.theme-map-point.leaflet-label-right:before,
+    div.theme-map-point.leaflet-label-left:after {
+      border: none
+    }
+    
+    .optWrapper ul li:hover {
+      cursor: pointer;
+      background: #f5f5f5
+    }
+  </style>
 </head>
 
 <body>
-    <!-- <button id="test2">
+  <!-- <button id="test2">
         test
 </button> -->
-    <div id="map" style=" position:absolute;width:100%;height: 100%;"></div>
-    <div class="subject-brief" style="left: 331px;top: 125px;display:none">
+  <div id="map" style=" position:absolute;width:100%;height: 100%;"></div>
+  <div class="subject-brief" style="left: 331px;top: 125px;display:none">
+  </div>
+  <!--浮动工具栏 -->
+  <div class="float-tool-title">
+    <div class="title"></div>
+    <div class="right-arrow"></div>
+  </div>
+  <div id="main_char" class="main_graphic" style="display:none">
+    <div class="main_tabletop">
+      <div class="tabtop_left">统计图</div>
+      <div class="tabtop_rt"></div>
     </div>
-    <!--浮动工具栏 -->
-    <div class="float-tool-title">
-        <div class="title"></div>
-        <div class="right-arrow"></div>
-    </div>
-    <div id="main_char" class="main_graphic" style="display:none">
-        <div class="main_tabletop">
-            <div class="tabtop_left">统计图</div>
-            <div class="tabtop_rt"></div>
-        </div>
-        <div class="static_nav">
-            <span class="indicator">指标：</span>
-            <div class="SumoSelect" tabindex="0">
-                <select multiple="multiple" class="SlectBox SumoUnder" tabindex="-1">
+    <div class="static_nav">
+      <span class="indicator">指标：</span>
+      <div class="SumoSelect" tabindex="0">
+        <select multiple="multiple" class="SlectBox SumoUnder" tabindex="-1">
                     <option value="总人口(人)">总人口(人)</option>
                 </select>
-                <p class="CaptionCont SelectBox" id="main_char_sel">
-                    <span title=" 总人口(人) "> 总人口(人) </span>
-                    <label><i></i></label>
-                </p>
-                <div class="optWrapper multiple" id="main_char_sel_con">
-                    <ul class="options">
-                        <li class="opt selected"><span><i></i></span>
-                            <label title="总人口(人)">总人口(人)</label>
-                        </li>
-                        <li class="opt"><span><i></i></span>
-                            <label title="总人口(人)">总人口(人)</label>
-                        </li>
-                    </ul>
-                    <div class="MultiControls">
-                        <p class="btnOk">OK</p>
-                        <p class="btnCancel">Cancel</p>
-                    </div>
-                </div>
-            </div>
+        <p class="CaptionCont SelectBox" id="main_char_sel">
+          <span title=" 总人口(人) "> 总人口(人) </span>
+          <label><i></i></label>
+        </p>
+        <div class="optWrapper multiple" id="main_char_sel_con">
+          <ul class="options">
+            <li class="opt selected"><span><i></i></span>
+              <label title="总人口(人)">总人口(人)</label>
+            </li>
+            <li class="opt"><span><i></i></span>
+              <label title="总人口(人)">总人口(人)</label>
+            </li>
+          </ul>
+          <div class="MultiControls">
+            <p class="btnOk">OK</p>
+            <p class="btnCancel">Cancel</p>
+          </div>
         </div>
-        <div id="static_chart" style="display: block;margin-top:30px;"></div>
+      </div>
+    </div>
+    <div id="static_chart" style="display: block;margin-top:30px;"></div>
+  </div>
+
+
+
+  <div id="top-sidebar" class="">
+    <div class="sidebar-l">
+      <div class="logo">
+        <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
+      </div>
+      <div class="dataPageList">
+        <a href="./Task_Assignment-F.html"><img src="images/chart/icon_sjzs@2x.png" alt="">数据展示</a>
+      </div>
+    </div>
+    <div class="toolbar">
+      <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
+      <!--<button type="button" class="userDropOut"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></button>-->
     </div>
 
 
+  </div>
 
-    <div id="top-sidebar" class="">
-        <div class="sidebar-l">
-            <div class="logo">
-                <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
-            </div>
-            <div class="dataPageList">
-                <a href="./Task_Assignment-F.html"><img src="images/chart/icon_sjzs@2x.png" alt="">数据展示</a>
-            </div>
-        </div>
-        <div class="toolbar">
-            <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
-            <!--<button type="button" class="userDropOut"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></button>-->
-        </div>
-
-
-    </div>
-
-    <!--<div class="formData  ">
+  <!--<div class="formData  ">
         <h2><img src="images/chart/logo@2x.png" alt=""></h2>
         <div class="user">
             <label for="">用户名</label>
@@ -216,177 +216,234 @@
 
 
 
-    <div id="left-sidebar" class="">
-        <button class="openCloseSidebar-left" type="button"><span></span></button>
-        <div class="left-cnj">
-            <div class="phase">
-                <ul>
-                </ul>
-                <button type="button" class="prev-button"><span></span></button>
-                <button type="button" class="next-button"><span></span></button>
-            </div>
-        </div>
-        <div class="search">
-            <img src="images/chart/icon_search.png" alt="">
-            <input class="searchbar" type="text" placeholder="Search">
-            <button class="searchbar-Emptied" type="button">
+  <div id="left-sidebar" class="">
+    <button class="openCloseSidebar-left" type="button"><span></span></button>
+    <div class="left-cnj">
+      <div class="phase">
+        <ul>
+        </ul>
+        <button type="button" class="prev-button"><span></span></button>
+        <button type="button" class="next-button"><span></span></button>
+      </div>
+    </div>
+    <div class="search">
+      <img src="images/chart/icon_search.png" alt="">
+      <input class="searchbar" type="text" placeholder="Search">
+      <button class="searchbar-Emptied" type="button">
                     <img src="images/chart/icon_close@2x.png" alt="">
                     </button>
-            <button class="selectSearchbar">搜索</button>
-            <div class="filedCondition">
-            </div>
-        </div>
+      <button class="selectSearchbar">搜索</button>
+      <div class="filedCondition">
+      </div>
     </div>
-    <div id="right-sidebar" class="">
-        <div class="CatalogPopup">
-            <div class="BaseMap">
-                <img src="images/chart/icon_layer@2x.png" alt=""><span>底图加载</span>
-                <button class="clearmap">取消选择</button>
-            </div>
-            <ul id="CatalogPopup-ul"></ul>
-        </div>
-        <button class="openCloseSidebar-right" type="button"><span></span></button>
-        <div class="right-cnj"></div>
-
-        <div id="map-control">
-            <ul class="">
-                <li><button class="layer"><img src="images/chart/icon_layer.png" alt=""></button></li>
-                <li><button class="line"><img src="images/chart/icon_line.png" alt=""></button></li>
-                <li><button class="distance"><img src="images/chart/icon_mapdistance.png" alt=""></button></li>
-                <li><button class="area"><img src="images/chart/icon_maparea.png" alt=""></button></li>
-                <li><button class="zoomout"><img src="images/chart/icon_mapzoomout.png" alt=""></button></li>
-                <li><button class="zoomin"><img src="images/chart/icon_mapzoomin.png" alt=""></button></li>
-                <li class="mapmodelist">
-                    <button class="mapmode"><img src="images/chart/icon_mapmode.png" alt=""></button>
-                    <div class="mapmode_choice">
-                        <button id="vec_type" class="map1 active"><img src="images/chart/mapmode1active.png" alt=""></button>
-                        <button id="img_type" class="map2 "><img src="images/chart/mapmode2.png" alt=""></button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-
-
+  </div>
+  <div id="right-sidebar" class="">
+    <div class="CatalogPopup">
+      <div class="BaseMap">
+        <img src="images/chart/icon_layer@2x.png" alt=""><span>底图加载</span>
+        <button class="clearmap">取消选择</button>
+      </div>
+      <ul id="CatalogPopup-ul"></ul>
     </div>
-    <div class="popupMenuInformation  ">
-        <div class="popupClose"><span>详情</span><span class="_close"><img src="images/chart/icon_close@2x.png" alt=""></span></div>
-        <hr>
-        <div class="popupMenuInformation-child"></div>
+    <button class="openCloseSidebar-right" type="button"><span></span></button>
+    <div class="right-cnj"></div>
+
+    <div id="map-control">
+      <ul class="">
+        <li><button class="layer"><img src="images/chart/icon_layer.png" alt=""></button></li>
+        <li><button class="line"><img src="images/chart/icon_line.png" alt=""></button></li>
+        <li><button class="distance"><img src="images/chart/icon_mapdistance.png" alt=""></button></li>
+        <li><button class="area"><img src="images/chart/icon_maparea.png" alt=""></button></li>
+        <li><button class="zoomout"><img src="images/chart/icon_mapzoomout.png" alt=""></button></li>
+        <li><button class="zoomin"><img src="images/chart/icon_mapzoomin.png" alt=""></button></li>
+        <li class="mapmodelist">
+          <button class="mapmode"><img src="images/chart/icon_mapmode.png" alt=""></button>
+          <div class="mapmode_choice">
+            <button id="vec_type" class="map1 active"><img src="images/chart/mapmode1active.png" alt=""></button>
+            <button id="img_type" class="map2 "><img src="images/chart/mapmode2.png" alt=""></button>
+          </div>
+        </li>
+      </ul>
     </div>
 
 
-    <!--informations control panel Start-->
+
+  </div>
+  <div class="popupMenuInformation  ">
+    <div class="popupClose"><span>详情</span><span class="_close"><img src="images/chart/icon_close@2x.png" alt=""></span></div>
+    <hr>
+    <div class="popupMenuInformation-child"></div>
+  </div>
 
 
-    <div id="controlPanel" class=" ">
+  <!--informations control panel Start-->
 
-        <div class="cp-title">
-            <h2>数据详情</h2>
-            <span class="_close"><img src="images/chart/icon_close@2x.png" alt=""></span>
+
+  <div id="controlPanel" class=" ">
+
+    <div class="cp-title">
+      <h2>数据详情</h2>
+      <span class="_close"><img src="images/chart/icon_close@2x.png" alt=""></span>
+    </div>
+
+    <div class="cp-information">
+      <div class="cp-leftList">
+        <div class="_tbmLaber" data-onin="0">主题分析</div>
+
+        <ul data-onin="0" class="cp-oninter themeAnalysis" style="display:block">
+        </ul>
+        <div class="_tbmLaber" data-onin="1">报表展示</div>
+
+        <ul data-onin="1" class="cp-oninter reportShow">
+        </ul>
+        <div class="_tbmLaber  reportID" data-onin="2">数据查询</div>
+
+        <ul data-onin="2" class="cp-oninter">
+        </ul>
+
+
+      </div>
+
+      <div class="cp-rightIntroduce">
+
+        <!--主题分析-->
+        <div data-onin="0" class="cp-pointer _themeAnalyse" style="display:block">
+          <div class="draw-chart">
+            <div class="intro-l"></div>
+            <div class="intro-r"></div>
+          </div>
+          <div class="draw-bottom">
+          </div>
         </div>
 
-        <div class="cp-information">
-            <div class="cp-leftList">
-                <div class="_tbmLaber" data-onin="0">主题分析</div>
+        <!--报表展示-->
 
-                <ul data-onin="0" class="cp-oninter themeAnalysis" style="display:block">
-                </ul>
-                <div class="_tbmLaber" data-onin="1">报表展示</div>
-
-                <ul data-onin="1" class="cp-oninter reportShow">
-                </ul>
-                <div class="_tbmLaber  reportID" data-onin="2">数据查询</div>
-
-                <ul data-onin="2" class="cp-oninter">
-                </ul>
+        <div data-onin="1" class="cp-pointer _reportShow">
 
 
-            </div>
 
-            <div class="cp-rightIntroduce">
+          <div class="extFiled">
 
-                <!--主题分析-->
-                <div data-onin="0" class="cp-pointer _themeAnalyse" style="display:block">
-                    <div class="draw-chart">
-                        <div class="intro-l"></div>
-                        <div class="intro-r"></div>
-                    </div>
-                    <div class="draw-bottom">
-                    </div>
+            <iframe id="sheetFile" name="sheetFile" src="./sheet-demo.html" width="100%" height="100%" ;></iframe>
+          </div>
+
+
+
+        </div>
+
+        <!--数据查询条件设置-->
+
+        <div data-onin="2" class="cp-pointer _dataGet">
+          <div class="select display">
+            <div class="selectField">
+              <div class="filed">选择字段</div>
+              <div class="selcetInfo"></div>
+              <div class="addFiled">
+                <button>+</button>
+                <div class="tableField">
+                  <div class="_tableFieldclose">
+                    <span> <img src="images/chart/icon_close@2x.png" alt=""></span>
+                  </div>
+                  <ul></ul>
                 </div>
+              </div>
+            </div>
+            <div id="sql-builder"></div>
+            <div class="sql-SelecteButton">
+              <button class="_getsql">查询数据</button>
+              <button class="_reset">清空信息</button>
+              <button class="_statistics">统计总汇</button>
+            </div>
 
-                <!--报表展示-->
-
-                <div data-onin="1" class="cp-pointer _reportShow">
-
-
-
-                    <div class="extFiled">
-
-                        <iframe id="sheetFile" name="sheetFile" src="./sheet-demo.html" width="100%" height="100%" ;></iframe>
-                    </div>
-
-
-
+            <div class="statisticsPane">
+              <div class="statisticsPane-title al-row">
+                <div class="statisticsPane-test">
+                  统计总汇
                 </div>
-
-                <!--数据查询条件设置-->
-
-                <div data-onin="2" class="cp-pointer _dataGet">
-                    <div class="select">
-                        <div class="selectField">
-                            <div class="filed">选择字段</div>
-                            <div class="selcetInfo"></div>
-                            <div class="addFiled">
-                                <button>+</button>
-                                <div class="tableField">
-                                    <div class="_tableFieldclose">
-                                        <span> <img src="images/chart/icon_close@2x.png" alt=""></span>
-                                    </div>
-                                    <ul></ul>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div id="sql-builder"></div>
-                         <div class="sql-SelecteButton">
-                            <button class="_getsql">查询数据</button>
-                            <button class="_reset">清空信息</button>
-                         </div>
-
-                    </div>
-
-                    <!-- 显示查询数据内容 -->
-
-                    <div class="showFieldData">
-
-                        <div class="FieldDataloading">
-                            <div class="spinner">
-                                <div class="bounce1"></div>
-                                <div class="bounce2"></div>
-                                <div class="bounce3"></div>
-                            </div>
-                        </div>
-
-                        <div class="showFieldDataTab">
-
-                        </div>
-
-                    </div>
-
+                <div class="statisticsPane-right _j_stcloser">
+                  <img src="images/chart/icon_close@2x.png" alt="">
                 </div>
+              </div>
+
+              <div class="statisticsPane-information">
+                <div class="_packet al-row">
+                  <span>分组字段</span>
+                  <div class="statisticsPane-select">
+                    <!--<select name="" id="">
+                          <option value="">户籍类别</option>
+                      </select>-->
+                      <input data type="text" id="field">
+                      <span class="_j_cliearOpens"></span>
+                      <div class="statisticsPane-moreSelect">
+                          <ul>
+                              
+                          </ul>
+                      </div>
+                  </div>
+                </div>
+                <div class="statistics-filed">
+                  <button class="addrule">
+                    添加规则
+                  </button>
+
+                  <div class="addStatistics-filed  al-row">
+                    <div class="_sta_filed al-row">
+                      <span>字段分组</span>
+                      <div class="statisticsPane-select">
+                        <select>
+                          <option>房屋面积</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="_sta_way al-row">
+                      <span>统计方式：</span>
+                      <div class="statisticsPane-select">
+                        <select>
+                          <option>房屋面积</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            <div class="st_uploadInformation">
+              <button class="_j_stsubmit">提交</button>
+              <button class="_j_stcloser">取消</button>
+            </div>
+              
+            </div>
+
+          </div>
+
+          <!-- 显示查询数据内容 -->
+
+          <div class="showFieldData">
+
+            <div class="FieldDataloading">
+              <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+              </div>
+            </div>
+
+            <div class="showFieldDataTab">
 
             </div>
+
+          </div>
+
         </div>
 
+      </div>
     </div>
 
-    <!--informations control panel End-->
+  </div>
+
+  <!--informations control panel End-->
 
 </body>
 
