@@ -310,7 +310,7 @@ input:focus {
     position: relative;
 }
 
-.vi-pages {
+/*.vi-pages {
     position: absolute;
     left: 0;
     right: 0;
@@ -355,7 +355,7 @@ input:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+}*/
 
 .isShow {
     justify-content: flex-end;

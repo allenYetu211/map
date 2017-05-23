@@ -25,6 +25,7 @@ require.config({
         "infor_reported": "theChart/Data_Collection",
         "mainInface": "theChart/mainInface",
         "login": "theChart/login",
+        "getLs": "theChart/GetLocalStorage",
         // "corejs": "theChart/corejs",
         "local": "theChart/localStorage",
         "api": "theChart/api",
@@ -71,7 +72,7 @@ require.config({
     waitSeconds: 0
 });
 
-require(["map", "common", "echarts", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api","info","info_direction","User_Manage"],
+require(["map", "common", "echarts", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api","info","info_direction","User_Manage",'getLs'],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, common, t) {
         var mapHelper = new c("map", {

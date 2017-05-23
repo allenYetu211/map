@@ -1677,6 +1677,21 @@ div.login_informations button._close {
   /*// max-height: 840px;
     // overflow-y: auto;*/
 }
+.cp-pointer ._themeAnalyse.open {
+  display: block;
+}
+.cp-pointer.open {
+  display: block;
+}
+.cp-pointer._dataGet.open {
+  display: flex;
+  flex-direction: column;
+  height: 94%;
+}
+.cp-pointer._dataGet.open .showFieldData {
+  flex: 1;
+}
+
 
 ._dataGet .selectField {
   display: flex;
@@ -2075,8 +2090,8 @@ table th {
     -webkit-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);*/
-  left: 0;
-  right: 0;
+  left: 70px;
+  right: 70px;
   bottom: 50px;
   top: 0;
   background-color: #fff;
@@ -2179,6 +2194,7 @@ table th {
   height: 100%;
   overflow-y: scroll;
   box-sizing: border-box;
+  position: relative;
 }
 
 #controlPanel .draw-chart .information .type-big {
@@ -2224,13 +2240,15 @@ table th {
 
 ._dataGet ._getsql,
 ._dataGet ._statistics,
+._dataGet ._downloadTable,
 ._dataGet ._reset {
   color: #0088EB;
   height: 30px;
   padding: 0 15px;
 }
 
-._dataGet ._statistics {
+._dataGet ._statistics,
+._dataGet ._downloadTable {
   display: none;
 }
 
@@ -2321,6 +2339,59 @@ table th {
   left: 10px;
   right: 10px;
   display: none;
+}
+.vi-pages,
+.si-pages {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    padding: 15px;
+    color: #333;
+    border-radius: 5px;
+    background: #f9f9f9;
+    font-size: 12px;
+    z-index: 99;
+}
+
+.vi-pages button,
+.si-pages button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.vi-pages button img,
+.si-pages button img {
+    width: 100%;
+}
+
+.vi-pages input,
+.si-pages input {
+    width: 50px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin: 0 5px;
+    color: #333;
+    padding: 5px;
+}
+
+.vi-pages .selectIn,
+.si-pages .selectIn {
+    margin: 0 10px;
+}
+
+.vi-pages,
+.si-pages,
+.numberCount,
+.selectCount,
+.isShow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #controlPanel ._dataGet .condition .filedState .filedCondition {

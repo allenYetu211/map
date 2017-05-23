@@ -307,7 +307,7 @@
       <div class="cp-rightIntroduce">
 
         <!--主题分析-->
-        <div data-onin="0" class="cp-pointer _themeAnalyse" style="display:block">
+        <div data-onin="0" class="cp-pointer _themeAnalyse">
           <div class="draw-chart">
             <div class="intro-l"></div>
             <div class="intro-r"></div>
@@ -349,10 +349,38 @@
               </div>
             </div>
             <div id="sql-builder"></div>
+
+
             <div class="sql-SelecteButton">
               <button class="_getsql">查询数据</button>
               <button class="_reset">清空信息</button>
+              <button class="_downloadTable">下载表单</button>
               <button class="_statistics">统计总汇</button>
+            </div>
+            <!--页面切换-->
+            <div class="si-pages">
+
+              <div class="numberCount">
+                每页显示 <input type="number" name="" value="20"> 条数据
+              </div>
+              <div class="selectCount">
+
+                <button type="button" class="prev-all"><img src="images/chart/icon_page_prevall@2x.png" alt=""></button>
+                <button type="button" class="prev"><img src="images/chart/icon_page_prev@2x.png" alt=""></button>
+                <div class="selectIn">
+                  第 <input type="number" value="1"> 页 共 <span></span> 页
+                </div>
+                <button type="button" class="next"><img src="images/chart/icon_page_next@2x.png" alt=""></button>
+                <button type="button" class="next-all"><img src="images/chart/icon_page_nextall@2x.png" alt=""></button>
+
+              </div>
+
+
+
+              <div class="isShow">
+                共 <span></span> 记录
+              </div>
+
             </div>
 
             <div class="statisticsPane">
@@ -372,13 +400,13 @@
                     <!--<select name="" id="">
                           <option value="">户籍类别</option>
                       </select>-->
-                      <input data type="text" id="field">
-                      <span class="_j_cliearOpens"></span>
-                      <div class="statisticsPane-moreSelect">
-                          <ul>
-                              
-                          </ul>
-                      </div>
+                    <input data type="text" id="field">
+                    <span class="_j_cliearOpens"></span>
+                    <div class="statisticsPane-moreSelect">
+                      <ul>
+
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <div class="statistics-filed">
@@ -409,14 +437,17 @@
                 </div>
               </div>
 
-            <div class="st_uploadInformation">
-              <button class="_j_stsubmit">提交</button>
-              <button class="_j_stcloser">取消</button>
-            </div>
-              
+              <div class="st_uploadInformation">
+                <button class="_j_stsubmit">提交</button>
+                <button class="_j_stcloser">取消</button>
+
+              </div>
+
             </div>
 
           </div>
+
+
 
           <!-- 显示查询数据内容 -->
 
