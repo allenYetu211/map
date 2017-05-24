@@ -27,11 +27,12 @@
     <script src="main.js"></script>
 
     <style>
-        .dataContent{
+        .dataContent {
             height: 100%;
             padding-top: 60px;
             background-color: #e9eff4;
         }
+        
         .dataContent .user-left-bar {
             background: #FFFFFF;
             border-radius: 5px;
@@ -45,6 +46,7 @@
             margin: 8px;
             float: left;
         }
+        
         .dataContent .user-left-bar h3 {
             color: #0088EB;
             font-size: 20px;
@@ -53,40 +55,47 @@
             border-radius: 5px 5px 0 0;
             padding-left: 20px;
         }
-        .dataContent .user-left-bar h4{
+        
+        .dataContent .user-left-bar h4 {
             line-height: 40px;
             padding-left: 20px;
             padding-bottom: 0;
-            font-size:14px;
+            font-size: 14px;
             position: relative;
         }
-        .dataContent .user-left-bar h4 span{
+        
+        .dataContent .user-left-bar h4 span {
             cursor: pointer;
         }
-        .dataContent .user-left-bar h4 img{
+        
+        .dataContent .user-left-bar h4 img {
             position: absolute;
             right: 20px;
             top: 14px;
             transition: all 0.5s;
         }
-        .dataContent .user-left-bar h4 img.active{
-            transform:rotate(180deg)
+        
+        .dataContent .user-left-bar h4 img.active {
+            transform: rotate(180deg)
         }
-        .dataContent .user-left-bar ul li{
+        
+        .dataContent .user-left-bar ul li {
             padding-left: 50px;
             line-height: 30px;
             cursor: pointer;
             transition: all 0.3s;
         }
-        .dataContent .user-left-bar ul li:hover{
+        
+        .dataContent .user-left-bar ul li:hover {
             background: #f1f1f1;
         }
-        .dataContent .user-left-bar ul li.active{
+        
+        .dataContent .user-left-bar ul li.active {
             background: #dcdcdc;
-
         }
         /*右边部分*/
-        .dataContent .tableList{
+        
+        .dataContent .tableList {
             background: #FFFFFF;
             padding: 5px;
             height: 100%;
@@ -95,43 +104,54 @@
             margin: 8px;
             border-radius: 5px;
         }
-        .dataContent .tableList .handle{
+        
+        .dataContent .tableList .handle {
             padding: 10px 5px;
             border-bottom: 1px solid #f9f9f9;
             margin-bottom: 10px;
         }
-        .dataContent .tableList .handle button{
+        
+        .dataContent .tableList .handle button {
             border: none;
             background: none;
             outline: none;
             cursor: pointer;
             border-radius: 4px;
         }
-        .dataContent .tableList .handle button.active{
+        
+        .dataContent .tableList .handle button.active {
             background: rgba(0, 136, 235, .2);
         }
-        .dataContent .tableList .handle button img{
+        
+        .dataContent .tableList .handle button img {
             width: 20px;
-            height:20px;
+            height: 20px;
         }
-        #userTableList{
+        
+        #userTableList {
             height: calc(100% - 60px);
             /*width: 100%;*/
             overflow: auto;
         }
-        #userTableList th{
+        
+        #userTableList th {
             min-width: 80px;
-            width:200px;
+            width: 200px;
         }
-        #userTableList tr.active{
+        
+        #userTableList tr.active {
             background: #ffe8e8;
         }
-        #userTableList td{
+        
+        #userTableList td {
             text-align: center;
             /*position: relative;*/
             /*height: 40px;*/
         }
-        #userTableList td>input,#userTableList td>div,#userTableList td>select{
+        
+        #userTableList td>input,
+        #userTableList td>div,
+        #userTableList td>select {
             width: 100%;
             height: 100%;
             /*position: absolute;*/
@@ -142,38 +162,44 @@
             display: none;
         }
         /*下拉多选框*/
-        #userTableList .mulDic_div{
+        
+        #userTableList .mulDic_div {
             padding: 0;
             position: relative;
         }
-        #userTableList .mulDic_input{
+        
+        #userTableList .mulDic_input {
             width: 100%;
-            height:100%;
+            height: 100%;
             border: none;
         }
-        #userTableList .mulDic_btn{
+        
+        #userTableList .mulDic_btn {
             position: absolute;
             right: 1px;
-            top:1px;
+            top: 1px;
             border: none;
             background: #FFFFFF;
-            outline:none;
+            outline: none;
             cursor: pointer;
         }
-        #userTableList .mulDic_ul{
-            border:1px solid #f9f9f9;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        
+        #userTableList .mulDic_ul {
+            border: 1px solid #f9f9f9;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             background: #FFFFFF;
             position: absolute;
             z-index: 9999;
             width: 100%;
             display: none;
         }
-        #userTableList .mulDic_ul li{
+        
+        #userTableList .mulDic_ul li {
             list-style: none;
         }
         /*显示成功*/
-        .show-success{
+        
+        .show-success {
             width: 200px;
             height: 100px;
             background: #ffffff;
@@ -189,44 +215,52 @@
             color: #0088EB;
             display: none;
         }
-        .show-success h3{
+        
+        .show-success h3 {
             margin: 0;
             line-height: 100px;
             font-size: 20px;
             color: #0088EB;
         }
         /*角色列表*/
-        #userTableList li{
+        
+        #userTableList li {
             list-style: none;
             overflow: hidden;
             padding: 4px 10px;
             border-radius: 5px;
             float: left;
         }
-        #userTableList ul{
+        
+        #userTableList ul {
             list-style: none;
             overflow: hidden;
             border-radius: 5px;
         }
-        #userTableList>ul>li{
+        
+        #userTableList>ul>li {
             background: #E9EFF4;
             margin: 5px;
             width: 98%;
         }
-        #userTableList>ul>li input{
+        
+        #userTableList>ul>li input {
             margin-left: 10px;
         }
-        #userTableList>ul>li>ul{
+        
+        #userTableList>ul>li>ul {
             background: #FFFFFF;
             margin: 10px;
             padding: 2px;
         }
-        #userTableList>ul>li>ul>li{
+        
+        #userTableList>ul>li>ul>li {
             width: 98%;
             background: #F3F4F5;
             margin: 5px;
         }
-        #userTableList>ul>li>ul>li>ul{
+        
+        #userTableList>ul>li>ul>li>ul {
             background: #FFFFFF;
             margin: 5px;
         }
@@ -236,21 +270,21 @@
 <body>
 
 
-<div id="map"></div>
-<div id="top-sidebar">
+    <div id="map"></div>
+    <div id="top-sidebar">
 
-    <div class="tsidebar-l">
-        <div class="logo">
-            <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
-        </div>
+        <div class="tsidebar-l">
+            <div class="logo">
+                <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""><span>移民安置综合管理服务平台</span></a>
+            </div>
 
-        <!--<div class="dataPageList">-->
+            <!--<div class="dataPageList">-->
             <!--<a href="./development.html" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>-->
             <!--<a href="./dataLaySth.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>-->
-        <!--</div>-->
-    </div>
+            <!--</div>-->
+        </div>
 
-    <!--<div class="toolbar">-->
+        <!--<div class="toolbar">-->
         <!--<button type="button" class="user"><a href="./index.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>-->
         <!--<button type="button" class="user active"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>-->
         <!--<button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>-->
@@ -258,53 +292,53 @@
         <!--<button type="button" class="user"><a href><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></a></button>-->
         <!--<button type="button" class="user"><a href><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></a></button>-->
         <!--<button type="button" class="user"><a href><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></a></button>-->
-    <!--</div>-->
-
-</div>
-
-<!--dataContent Show Left Stant-->
-
-<div class="dataContent">
-
-    <!-- tree Start-->
-    <div class="user-left-bar">
-        <h3>用户管理</h3>
-        <div class="_user">
-            <h4><span>用户管理</span><img src="images/chart/icon_bigmapfold.png"></h4>
-            <ul></ul>
-        </div>
-        <div class="_users">
-            <h4><span>用户组管理</span></h4>
-            <ul></ul>
-        </div>
-        <div class="_role">
-            <h4><span>角色管理</span><img src="images/chart/icon_bigmapfold.png"></h4>
-            <ul></ul>
-        </div>
+        <!--</div>-->
 
     </div>
-    <!-- tree End-->
 
-    <div class="tableList">
-        <div class="handle">
-            <button class="addListData" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
-            <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
-            <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
-            <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
+    <!--dataContent Show Left Stant-->
+
+    <div class="dataContent">
+
+        <!-- tree Start-->
+        <div class="user-left-bar">
+            <h3>用户管理</h3>
+            <div class="_user">
+                <h4><span>用户管理</span><img src="images/chart/icon_bigmapfold.png"></h4>
+                <ul></ul>
+            </div>
+            <div class="_users">
+                <h4><span>用户组管理</span></h4>
+                <ul></ul>
+            </div>
+            <div class="_role">
+                <h4><span>角色管理</span><img src="images/chart/icon_bigmapfold.png"></h4>
+                <ul></ul>
+            </div>
+
+        </div>
+        <!-- tree End-->
+
+        <div class="tableList">
+            <div class="handle">
+                <button class="addListData" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
+                <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
+                <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
+                <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
+            </div>
+
+            <div id="userTableList">
+
+            </div>
         </div>
 
-        <div id="userTableList">
 
-        </div>
     </div>
 
-
-</div>
-
-<!--dataContent Show Left End-->
-<div class="show-success">
-    <h3>成功</h3>
-</div>
+    <!--dataContent Show Left End-->
+    <div class="show-success">
+        <h3>成功</h3>
+    </div>
 
 </body>
 
