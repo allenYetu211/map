@@ -1,0 +1,208 @@
+<!-- saved from url=(0074)file:///C:/Users/zhangss/Desktop/%E7%BB%BC%E5%90%88%E6%9C%8D%E5%8A%A1.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <title>制度制定 | 移民快速调查综合服务平台</title>
+    <!--首页加载需要使用到的css样式表-->
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">
+    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
+    <link rel="stylesheet" type="text/css" href="css/index_tool.css">
+    <link rel="stylesheet" type="text/css" href="css/statictable.css">
+    <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
+    <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+    <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
+    <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
+
+
+    <script src="echarts.min.js"></script>
+    <script src="md5.js"></script>
+    <script src="require.js"></script>
+    <script src="main.js"></script>
+
+    <style>
+        .dataContent {
+            height: 100%;
+            padding-top: 60px;
+            background-color: #e9eff4;
+        }
+        /*右边部分开始*/
+        .dataContent .system-left-bar {
+            background: #FFFFFF;
+            border-radius: 5px;
+            height: 100%;
+            width: 300px;
+            min-width: 300px;
+            top: 60px;
+            bottom: 0;
+            z-index: 9;
+            padding: 0px;
+            margin: 8px;
+            float: left;
+        }
+        .system-left-bar h3{
+            height: 45px;
+            line-height: 45px;
+            padding: 0 15px;
+            background-color: #b9d1e4;
+            border-radius: 5px 5px 0px 0px;
+            color: #2a9bec;
+        }
+        .system-left-bar h3 button{
+            border: none;
+            background: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 4px;
+            position: relative;
+            top:4px;
+        }
+        .system-left-bar h3 button img{
+            width: 20px;
+            height: 20px;
+        }
+        .system-left-bar ul{
+            height: 500px;
+            overflow: auto;
+            border: 1px solid #b9d1e4;
+        }
+        .system-left-bar ul li{
+            height: 35px;
+            line-height: 35px;
+            padding: 0 15px;
+            transition:all 0.2s;
+        }
+        .system-left-bar ul li:hover{
+            background: #f1f1f1;
+        }
+        .system-left-bar ul li.active{
+            background: #dcdcdc;
+        }
+        .system-left-bar ul li span{
+            cursor: pointer;
+        }
+        .system-left-bar ul li input{
+            display: none;
+        }
+
+        /*右边部分结束*/
+
+        /*右边部分*/
+
+        .dataContent .tableList {
+            background: #FFFFFF;
+            padding: 5px;
+            height: 100%;
+            width: calc(100% - 325px);
+            overflow: auto;
+            margin: 8px;
+            border-radius: 5px;
+        }
+
+        .dataContent .tableList .handle {
+            padding: 10px 5px;
+            border-bottom: 1px solid #f9f9f9;
+            margin-bottom: 10px;
+        }
+
+        .dataContent .tableList .handle button {
+            border: none;
+            background: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .dataContent .tableList .handle button.active {
+            background: rgba(0, 136, 235, .2);
+        }
+
+        .dataContent .tableList .handle button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        #userTableList {
+            height: calc(100% - 60px);
+            /*width: 100%;*/
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+<div id="map"></div>
+<div id="top-sidebar">
+
+    <div class="tsidebar-l">
+        <div class="logo">
+            <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""><span>移民安置综合管理服务平台</span></a>
+        </div>
+
+        <!--<div class="dataPageList">-->
+        <!--<a href="./development.html" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>-->
+        <!--<a href="./dataLaySth.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>-->
+        <!--</div>-->
+    </div>
+
+    <!--<div class="toolbar">-->
+    <!--<button type="button" class="user"><a href="./index.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>-->
+    <!--<button type="button" class="user active"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>-->
+    <!--<button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>-->
+    <!--<button type="button" class="user"><a  href="./dataAdmin.html"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></a></button>-->
+    <!--<button type="button" class="user"><a href><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></a></button>-->
+    <!--<button type="button" class="user"><a href><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></a></button>-->
+    <!--<button type="button" class="user"><a href><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></a></button>-->
+    <!--</div>-->
+
+</div>
+
+<!--dataContent Show Left Stant-->
+
+<div class="dataContent">
+
+    <!-- tree Start-->
+    <div class="system-left-bar">
+        <div>
+            <h3>
+                目录管理
+                <button class="addCatalogue" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
+                <button class="changeCatalogue" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
+                <button class="deleteCatalogue" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
+            </h3>
+            <ul class="catalogue">
+
+            </ul>
+        </div>
+    </div>
+    <!-- tree End-->
+
+    <div class="tableList">
+        <div class="handle">
+            <button class="addListData" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
+            <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
+            <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
+            <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
+        </div>
+
+        <div id="systemTableList">
+
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
