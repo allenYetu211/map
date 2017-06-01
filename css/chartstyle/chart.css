@@ -147,7 +147,8 @@ input:focus {
 }
 
 #top-sidebar .logo img {
-    width: 40px;
+    width: 100%;
+    vertical-align: middle;
 }
 
 #top-sidebar .toolbar {
@@ -643,6 +644,9 @@ input:focus {
 #left-sidebar,
 #right-sidebar {
     opacity: 1;
+    transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
 }
 
 
@@ -710,15 +714,9 @@ input:focus {
 
 #right-sidebar .information button.introduceButton,
 #left-sidebar .information button.introduceButton {
-    position: absolute;
     right: 30px;
-    top: 10px;
     display: block;
-    width: 14px;
-    height: 14px;
-    z-index: 9;
     background: url('../../images/chart/icon_link.png');
-    background-size: 100% 100%;
 }
 
 #right-sidebar .information button,
@@ -726,7 +724,6 @@ input:focus {
     position: absolute;
     right: 50px;
     top: 10px;
-    /*display: block;*/
     width: 14px;
     height: 14px;
     z-index: 9;
@@ -1297,6 +1294,20 @@ input:focus {
 
 .right-options {
     float: right;
+    display: flex;
+    justify-content: flex-end;
+    height: 38px;
+    align-items: center;
+}
+.right-options button {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+}
+.right-options button img {
+    width: 100%;
 }
 
 .right-options ._popMove {
@@ -2262,10 +2273,10 @@ table th {
     padding: 0 15px;
 }
 
-._dataGet ._statistics,
+/*._dataGet ._statistics,
 ._dataGet ._downloadTable {
     display: none;
-}
+}*/
 
 .statisticsPane {
     display: none;
@@ -2450,6 +2461,7 @@ table th {
     color: #222;
     box-sizing: border-box;
     padding: 10px;
+    position: relative;
 }
 
 ._dataGet .select.display {
@@ -2618,4 +2630,17 @@ button._hide {
     height: 35px;
     padding: 0 20px;
     margin: 0 20px;
+}
+
+.masking-animation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color:rgba(0,0,0,.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
 }

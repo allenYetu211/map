@@ -7,8 +7,8 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    right: 240px !important;
-    left: auto !important;
+    /*right: 240px !important;*/
+    left: 30% !important;
     top: auto !important;
     bottom: 60px !important;
     transform: translateX(-50%);

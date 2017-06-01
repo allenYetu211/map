@@ -101,7 +101,7 @@
     justify-content: space-between;
     align-items: center;
     white-space: nowrap;
-    overflow: auto;
+    /*overflow: auto;*/
     padding: 0 5px;
 }
 
@@ -122,6 +122,25 @@
     height: 45px;
     line-height: 45px;
     text-align: center;
+    position: relative;
+}
+
+
+._selecteTabel ._moreInforTabel ._mt_mouserPop {
+    display: none;
+    height: 45px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    line-height: 45px;
+    background-color:#fff;
+    z-index: 999;
+    border: 1px solid #e0e0e0;
+}
+
+
+._selecteTabel ._moreInforTabel:hover  ._mt_mouserPop{
+    display: block;
 }
 
 ._selecteTabel ._moreInforTabel.active {

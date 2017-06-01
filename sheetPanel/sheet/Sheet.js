@@ -44,7 +44,7 @@ function Sheet(divId, zoomSize, withRowColTitle, withComment) {
     _this._SHEET_API.zoom(this._SHEET_API_HD, zoomSize);
 }
 
-Sheet.prototype.loadStyle = function(reportId, callback) {
+Sheet.prototype.loadStyle = function(reportId, callback, fn) {
     var _this = this;
     var param = {
         reportId: reportId,
@@ -85,6 +85,11 @@ Sheet.prototype.loadStyle = function(reportId, callback) {
             }
         }
     })
+    fn(_this)
+    // if (!flag) {
+    //     _this._SHEET_API.toggleColumnName(_this._SHEET_API_HD);
+    //     _this._SHEET_API.toggleRowName(_this._SHEET_API_HD);
+    // }
 };
 
 Sheet.prototype.getRecordCount = function(reportId, termValue, codeValue) {
@@ -175,8 +180,12 @@ Sheet.prototype.resetHistory = function() {
     this._SHEET_API.resetHistory(this._SHEET_API_HD);
 };
 
-Sheet.prototype.attachEvent = function(eventName, fn) {
+Sheet.prototype.attachEvent = function(eventName, flag,fn) {
     this._SHEET_API_HD.sheet.on(eventName, fn);
+     if (!flag) {
+            this._SHEET_API.toggleColumnName(this._SHEET_API_HD);
+            this._SHEET_API.toggleRowName(this._SHEET_API_HD);
+        }
 };
 
 Sheet.prototype.getSelectedRange = function () {

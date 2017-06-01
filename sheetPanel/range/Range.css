@@ -1,8 +1,8 @@
 .srs-slider {
     z-index: 1;
     position: absolute;
-    right: 40px !important;
-    left: auto !important;
+    /*right: 40px !important;*/
+    left: 60% !important;
     top: auto !important;
     bottom: 50px !important;
     display: block;

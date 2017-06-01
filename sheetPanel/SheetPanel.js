@@ -8,6 +8,18 @@ document.write('<script src="sheetPanel/range/Range.js" type="text/javascript"><
 document.write('<div id="divSave" data-toolbar="user-options" class="btn-toolbar pull-left"><i class="fa fa-save"></i></div>');
 
 function SheetPanel(divId, zoomSize, editable, withRowColTitle, withComment) {
+    // this._report;
+    // this._term;
+    // this._code;
+    // this._pageIndex;
+    // this._perPage;
+    // this._recordCount;
+    // this._editable = editable;
+    // var _this = this;
+
+    // this._sheet = new Sheet(divId, zoomSize, withRowColTitle, withComment);
+    // var divSheet = document.getElementById(divId);
+
     this._report;
     this._term;
     this._code;
@@ -19,10 +31,15 @@ function SheetPanel(divId, zoomSize, editable, withRowColTitle, withComment) {
 
     this._sheet = new Sheet(divId, zoomSize, withRowColTitle, withComment);
     var divSheet = document.getElementById(divId);
+    var screenTop = divSheet.offsetTop + divSheet.offsetHeight;
+    var bottom = window.screen.height - 140;
+    if (screenTop > bottom) {
+        screenTop = screenTop - (screenTop - bottom);
+    }
 
     //save
     var divSave = document.getElementById("divSave");
-    divSave.style.top = divSheet.offsetTop + divSheet.offsetHeight - 44 + 'px';
+    divSave.style.top = divSheet.offsetTop + divSheet.offsetHeight - 144 + 'px';
     divSave.style.left = divSheet.offsetLeft + divSheet.offsetWidth / 2 - 198 + 'px';
     divSave.onclick = function() {
         _this._saveValue(_this);
@@ -51,7 +68,7 @@ function SheetPanel(divId, zoomSize, editable, withRowColTitle, withComment) {
     initRange(valueChangedFn, zoomSize * 100, top, left);
 }
 
-SheetPanel.prototype.loadStyle = function(reportId, perPage) {
+SheetPanel.prototype.loadStyle = function(reportId, perPage, flag) {
     console.log('(reportId, perPage):', reportId, perPage)
     this._report = reportId;
     this._pageIndex = -1;
@@ -62,6 +79,11 @@ SheetPanel.prototype.loadStyle = function(reportId, perPage) {
             ZENG.msgbox.show('加载成功!', 4, 1500);
         } else {
             ZENG.msgbox.show('加载失败!', 5, 1500);
+        }
+    }, function (_t) {
+        if (!flag) {
+            _t._SHEET_API.toggleColumnName(_t._SHEET_API_HD);
+            _t._SHEET_API.toggleRowName(_t._SHEET_API_HD);
         }
     });
 };
@@ -81,8 +103,8 @@ SheetPanel.prototype.loadValue = function(report, term, code, pageIndex) {
     }
 };
 
-SheetPanel.prototype.attachEvent = function(eventName, fn) {
-    this._sheet.attachEvent(eventName, fn);
+SheetPanel.prototype.attachEvent = function(eventName,flag, fn) {
+    this._sheet.attachEvent(eventName,flag, fn);
 };
 
 SheetPanel.prototype.getSelectedRange = function() {
