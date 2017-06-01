@@ -33,6 +33,7 @@ require.config({
         "info": "theChart/Task_Assignment-S",
         "info_direction": "theChart/Task_Assignment-F",
         "System_Setting": "theChart/System_Setting",
+        "Dic_Manage": "theChart/Dic_Manage",
 
         "bootstrap": "sqlToolJs/bootstrap.min",
         "bootstrapSelect": "sqlToolJs/bootstrap-select.min",
@@ -73,7 +74,7 @@ require.config({
     waitSeconds: 0
 });
 
-require(["map", "common", "echarts", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api","info","info_direction","User_Manage",'getLs','System_Setting'],
+require(["map", "common", "echarts", "chartInformations", "mapIntroduce", "dataAdmin", "development", "dataLaySth", "translatePopup", "infor_reported", "mainInface", "login", "local", "api","info","info_direction","User_Manage",'getLs','System_Setting','Dic_Manage'],
     //require(["map", "menutree", "floattool", "lefttool", "drag", "echarts", "somoselect", "statictable", "chart", "chartInformations"],
     function(c, common, t) {
         var mapHelper = new c("map", {
