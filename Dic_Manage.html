@@ -32,7 +32,7 @@
             padding-top: 60px;
             background-color: #e9eff4;
         }
-        /*右边部分开始*/
+        /*左边部分开始*/
         .dataContent .system-left-bar {
             background: #FFFFFF;
             border-radius: 5px;
@@ -86,7 +86,7 @@
             height: 20px;
         }
         .system-left-bar ul{
-            height: 250px;
+            height: 80%;
             overflow: auto;
         }
         .system-left-bar ul li{
@@ -108,8 +108,48 @@
         .system-left-bar ul li input{
             display: none;
         }
+        /*新增弹框*/
+        .dicA,.dicC{
+            position: absolute;
+            top:calc(50% - 70px);
+            left:calc(50% - 150px);
+            width: 300px;
+            height: 140px;
+            background: #FFFFFF;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 0 0 12px #c3c3c3;
+            display: none;
+        }
+        .dicA h3,.dicC h3{
+            padding: 5px;
+            color: #0088EB;
+        }
+        .dicA>div,.dicC>div{
+            padding: 5px;
+            font-size: 14px;
+        }
+        .dicA .name,.dicC .name{
+            margin-left: 20px;
+        }
+        .dicA .isBtn,.dicC .isBtn{
+            text-align: center;
+        }
+        .dicA button,.dicC button{
+            margin: 8px;
+            width: 60px;
+            border: none;
+            background: #f1f1f1;
+            outline:none;
+            cursor: pointer;
+        }
+        .dicA .inputCN,.dicC .inputCN{
+            width: 190px;
+        }
+        /*左边部分结束*/
 
-        /*右边部分结束*/
+
+
 
         /*右边部分*/
 
@@ -178,7 +218,30 @@
             border: none;
             display: none;
         }
-        
+        /*显示成功*/
+        .show-success {
+            width: 200px;
+            height: 100px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            z-index: 10000;
+            text-align: center;
+            color: #0088EB;
+            display: none;
+        }
+
+        .show-success h3 {
+            margin: 0;
+            line-height: 100px;
+            font-size: 20px;
+            color: #0088EB;
+        }
     </style>
 </head>
 
@@ -249,6 +312,19 @@
     </div>
 
 
+</div>
+
+<div class="dicA">
+    <h3>新建字典表</h3>
+    <div class="name">中文名：<input class="inputCN" type="text"></div>
+    <div class="name">英文名：<span>TB_DIC_</span><input class="inputEN" type="text"></div>
+    <div class="isBtn"><button class="confirm">确认</button><button class="cancel">取消</button></div>
+</div>
+<div class="dicC">
+    <h3>修改字典表</h3>
+    <div class="name">中文名：<input class="inputCN" type="text"></div>
+    <div class="name">英文名：<span></span></div>
+    <div class="isBtn"><button class="confirm">确认</button><button class="cancel">取消</button></div>
 </div>
 
 <div class="show-success">
