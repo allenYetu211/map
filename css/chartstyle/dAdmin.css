@@ -126,6 +126,7 @@ input:focus {
 
 .exhibition._changeNew .mapPosition {
     background-color: #E9EFF4;
+    position: relative;
 }
 
 .exhibition._changeNew .mapPosition .module-md div {
@@ -382,4 +383,78 @@ input:focus {
 
 ._j_translate:hover {
     cursor: move;
+}
+
+
+.ImportData {
+    position: relative;
+    overflow: hidden;
+}
+
+#TemplateUp {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 99;
+}
+
+#manageIframe{
+    display: none;
+    position: absolute;
+    top: 65px;
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+    z-index: 9999;
+    padding-top: 30px;
+    background-color:#fff;
+    border-top: 5px solid #0088eb;
+    background-color:#fff;
+}
+
+#manageIframe > span {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+#manageIframe > span  img {
+    width: 100%;
+    cursor: pointer;
+}
+
+#manageIframeFile {
+    border-top: 1px solid #e0e0e0;
+}
+
+.errorPopup {
+    display: none;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color:#fff;
+    border-top: 5px solid #0088eb;
+    box-shadow: 1px 1px 15px rgba(0,0,0,.2);
+}
+.errorPopup .errorTitle {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 10px;
+
+}
+.errorPopup .errorTitle h2 {
+    margin: 0;
+    font-size: 16px;
 }

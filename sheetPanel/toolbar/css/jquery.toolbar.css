@@ -1,12 +1,19 @@
-﻿.btn-toolbar {
+﻿.x-body {
+    font-size: 100%;
+}
+
+.btn-toolbar {
     background: #364347;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     text-align: center;
     padding: 10px;
     border-radius: 6px;
     display: block;
     transition: none;
+    position: absolute;
+    display: none;
+    z-index: 2;
 }
 
 .btn-toolbar > i {

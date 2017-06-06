@@ -2,327 +2,355 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="renderer" content="webkit">
-    <title>数据管理 | 移民快速调查综合服务平台</title>
-    <!--首页加载需要使用到的css样式表-->
-    <link rel="stylesheet" type="text/css" href="css/demo.css">
-    <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
-    <!--<link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit">
+  <title>数据管理 | 移民快速调查综合服务平台</title>
+  <!--首页加载需要使用到的css样式表-->
+  <link rel="stylesheet" type="text/css" href="css/demo.css">
+  <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
+  <!--<link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
     <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">-->
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
-    <link rel="stylesheet" type="text/css" href="css/index_tool.css">
-    <link rel="stylesheet" type="text/css" href="css/statictable.css">
-    <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/dAdmin.css">
-    <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
-    <!--sqlTool STYLE-->
-    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap.min.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/awesome-bootstrap-checkbox.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-slider.min.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/selectize.bootstrap3.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/query-builder.default.css" id="qb-theme">
-    <link rel="stylesheet" href="css/sqlToolStyle/builder.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="css/index_tool.css">
+  <link rel="stylesheet" type="text/css" href="css/statictable.css">
+  <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/dAdmin.css">
+  <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
+
+  <!--sqlTool STYLE-->
+  <link rel="stylesheet" href="css/sqlToolStyle/bootstrap.min.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/awesome-bootstrap-checkbox.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-slider.min.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/selectize.bootstrap3.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/query-builder.default.css" id="qb-theme">
+  <link rel="stylesheet" href="css/sqlToolStyle/builder.css">
 
 
-    <script src="echarts.min.js"></script>
-    <script src="md5.js"></script>
-    <script src="require.js"></script>
-    <script src="main.js"></script>
+  <script src="echarts.min.js"></script>
+  <script src="md5.js"></script>
+  <script src="require.js"></script>
+  <script src="main.js"></script>
 
 
 
 
 
-    <style>
-        .contentHolder {
-            position: relative;
-            margin: 0px auto;
-            padding: 0px;
-            width: 243;
-            height: 400px;
-            overflow: hidden;
-        }
-        
-        .contentHolder .content {
-            width: 243;
-            height: 720px;
-        }
-        
-        .spacer {
-            text-align: center
-        }
-        
-        .legend {
-            width: 13px;
-            height: 13px;
-            background: #44b9b0;
-            display: inline-block;
-            border-radius: 0px;
-            border: 1px solid grey;
-            font-size: 14px;
-        }
-        
-        .legend-info {
-            font-size: 12px;
-            padding-left: 3px;
-            vertical-align: top;
-        }
-        
-        .subject-brief {
-            position: absolute;
-            width: 320px;
-            background: white;
-            box-shadow: 2px 5px 5px rgba(0, 0, 0, .3);
-            padding: 10px;
-            left: 400px;
-            top: 0;
-            font-size: 14px;
-            z-index: 100;
-        }
-        
-        .subject-brief .brief-header {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-        }
-        
-        .subject-brief .brief-body .brief-title {
-            font-weight: bold;
-            margin: 5px 0;
-        }
-        
-        .subject-brief .brief-body .brief-content P {
-            font-size: 13px;
-            line-height: 25px;
-        }
-        
-        body {
-            background-color: #eee
-        }
-        
-        .box {
-            width: 200px;
-            height: 100px;
-            cursor: move;
-        }
-        
-        .main_tabletop {
-            width: 100%;
-            height: 30px;
-            background: #5193e8;
-        }
-        
-        .theme-map-point {
-            border: none;
-            background: none;
-        }
-        
-        div.theme-map-point.leaflet-label-right:before,
-        div.theme-map-point.leaflet-label-left:after {
-            border: none
-        }
-        
-        .optWrapper ul li:hover {
-            cursor: pointer;
-            background: #f5f5f5
-        }
-        
-        .mouseMove {}
-        
-        #test2 {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100px;
-            height: 20px;
-            z-index: 9999999999;
-            background-color: #fff;
-        }
-    </style>
+  <style>
+    .contentHolder {
+      position: relative;
+      margin: 0px auto;
+      padding: 0px;
+      width: 243;
+      height: 400px;
+      overflow: hidden;
+    }
+    
+    .contentHolder .content {
+      width: 243;
+      height: 720px;
+    }
+    
+    .spacer {
+      text-align: center
+    }
+    
+    .legend {
+      width: 13px;
+      height: 13px;
+      background: #44b9b0;
+      display: inline-block;
+      border-radius: 0px;
+      border: 1px solid grey;
+      font-size: 14px;
+    }
+    
+    .legend-info {
+      font-size: 12px;
+      padding-left: 3px;
+      vertical-align: top;
+    }
+    
+    .subject-brief {
+      position: absolute;
+      width: 320px;
+      background: white;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, .3);
+      padding: 10px;
+      left: 400px;
+      top: 0;
+      font-size: 14px;
+      z-index: 100;
+    }
+    
+    .subject-brief .brief-header {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    
+    .subject-brief .brief-body .brief-title {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    
+    .subject-brief .brief-body .brief-content P {
+      font-size: 13px;
+      line-height: 25px;
+    }
+    
+    body {
+      background-color: #eee
+    }
+    
+    .box {
+      width: 200px;
+      height: 100px;
+      cursor: move;
+    }
+    
+    .main_tabletop {
+      width: 100%;
+      height: 30px;
+      background: #5193e8;
+    }
+    
+    .theme-map-point {
+      border: none;
+      background: none;
+    }
+    
+    div.theme-map-point.leaflet-label-right:before,
+    div.theme-map-point.leaflet-label-left:after {
+      border: none
+    }
+    
+    .optWrapper ul li:hover {
+      cursor: pointer;
+      background: #f5f5f5
+    }
+    
+    .mouseMove {}
+    
+    #test2 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 20px;
+      z-index: 9999999999;
+      background-color: #fff;
+    }
+  </style>
 </head>
 
 <body>
 
 
-    <div class="subject-brief" style="left: 331px;top: 125px;display:none">
+  <div class="subject-brief" style="left: 331px;top: 125px;display:none">
+  </div>
+  <!--浮动工具栏 -->
+  <div class="float-tool-title">
+    <div class="title"></div>
+    <div class="right-arrow"></div>
+  </div>
+  <div id="main_char" class="main_graphic" style="display:none">
+    <div class="main_tabletop">
+      <div class="tabtop_left">统计图</div>
+      <div class="tabtop_rt"></div>
     </div>
-    <!--浮动工具栏 -->
-    <div class="float-tool-title">
-        <div class="title"></div>
-        <div class="right-arrow"></div>
-    </div>
-    <div id="main_char" class="main_graphic" style="display:none">
-        <div class="main_tabletop">
-            <div class="tabtop_left">统计图</div>
-            <div class="tabtop_rt"></div>
-        </div>
-        <div class="static_nav">
-            <span class="indicator">指标：</span>
-            <div class="SumoSelect" tabindex="0">
-                <select multiple="multiple" class="SlectBox SumoUnder" tabindex="-1">
+    <div class="static_nav">
+      <span class="indicator">指标：</span>
+      <div class="SumoSelect" tabindex="0">
+        <select multiple="multiple" class="SlectBox SumoUnder" tabindex="-1">
                     <option value="总人口(人)">总人口(人)</option>
                 </select>
-                <p class="CaptionCont SelectBox" id="main_char_sel">
-                    <span title=" 总人口(人) "> 总人口(人) </span>
-                    <label><i></i></label>
-                </p>
-                <div class="optWrapper multiple" id="main_char_sel_con">
-                    <ul class="options">
-                        <li class="opt selected"><span><i></i></span>
-                            <label title="总人口(人)">总人口(人)</label>
-                        </li>
-                        <li class="opt"><span><i></i></span>
-                            <label title="总人口(人)">总人口(人)</label>
-                        </li>
-                    </ul>
-                    <div class="MultiControls">
-                        <p class="btnOk">OK</p>
-                        <p class="btnCancel">Cancel</p>
-                    </div>
-                </div>
-            </div>
+        <p class="CaptionCont SelectBox" id="main_char_sel">
+          <span title=" 总人口(人) "> 总人口(人) </span>
+          <label><i></i></label>
+        </p>
+        <div class="optWrapper multiple" id="main_char_sel_con">
+          <ul class="options">
+            <li class="opt selected"><span><i></i></span>
+              <label title="总人口(人)">总人口(人)</label>
+            </li>
+            <li class="opt"><span><i></i></span>
+              <label title="总人口(人)">总人口(人)</label>
+            </li>
+          </ul>
+          <div class="MultiControls">
+            <p class="btnOk">OK</p>
+            <p class="btnCancel">Cancel</p>
+          </div>
         </div>
-        <div id="static_chart" style="display: block;margin-top:30px;"></div>
+      </div>
     </div>
+    <div id="static_chart" style="display: block;margin-top:30px;"></div>
+  </div>
 
 
 
-    <div id="top-sidebar" class="">
+  <div id="top-sidebar" class="">
 
-        <div class="sidebar-l">
-            <div class="logo">
-                <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
-            </div>
-            <div class="dataPageList">
-                <a href="./Task_Assignment-F.html"><img src="images/chart/icon_sjgl@2x.png" alt="">数据管理</a>
-            </div>
-        </div>
-        <div class="toolbar">
-            <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
-            <!--<button type="button" class="userDropOut"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></button>-->
-        </div>
+    <div class="sidebar-l">
+      <div class="logo">
+        <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
+      </div>
+      <div class="dataPageList">
+        <a href="./Task_Assignment-F.html"><img src="images/chart/icon_sjgl@2x.png" alt="">数据管理</a>
+      </div>
     </div>
+    <div class="toolbar">
+      <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
+      <!--<button type="button" class="userDropOut"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></button>-->
+    </div>
+  </div>
 
 
-    <!--    新页面内容  -->
-    <div class="exhibition _changeNew">
+  <!--    新页面内容  -->
+  <div class="exhibition _changeNew">
 
-        <!-- tree Start-->
-        <div class="dAdminTree">
+    <!-- tree Start-->
+    <div class="dAdminTree">
 
-            <!-- 列表渲染格式-->
-            <!--<div class="datasheet">
+      <!-- 列表渲染格式-->
+      <!--<div class="datasheet">
         <ul>
           <li></li>
         </ul>
     </div>-->
 
+    </div>
+    <!-- tree End-->
+
+
+    <!--map Start-->
+    <div class="mapPosition">
+
+      <div id="manageIframe">
+        <span><img src="images/chart/icon_close@2x.png" alt=""></span>
+        <iframe id="manageIframeFile" name="manageIframeFile" src="./sheet-demo.html" width="100%" height="100%"></iframe>
+      </div>
+      <div class="module-header">
+
+        <div class="module-md">
+          <div class="md-m active">地图</div>
+          <div class="md-d">数据</div>
         </div>
-        <!-- tree End-->
 
+        <div class="module-features">
 
-        <!--map Start-->
-        <div class="mapPosition">
-
-
-            <div class="module-header">
-
-                <div class="module-md">
-                    <div class="md-m active">地图</div>
-                    <div class="md-d">数据</div>
-                </div>
-
-                <div class="module-features">
-
-                    <!--<div class="module-select">
+          <!--<div class="module-select">
                         <span><img src="images/chart/icon_search.png" alt=""></span>
                         <input type="text" placeholder="搜索">
                     </div>-->
 
-                    <div class="f-i dataInfo">
-                        <img src="images/chart/icon_data_info@2x.png">
-                    </div>
-                    <div class="f-i outputExcle">
-                        <img src="images/chart/icon_data_download@2x.png">
-                    </div>
-                    <div class="f-i dataMap">
-                        <img src="images/chart/icon_data_map@2x.png">
-                    </div>
-                    <div class="f-i selectPop dataSearch">
-                        <img src="images/chart/icon_data_search@2x.png">
-                    </div>
-                </div>
+          <div class="f-i ImportData">
+            <input type="file" id="TemplateUp">
+            <img src="images/chart/icon_data_info@2x.png">
+          </div>
+
+          <div class="f-i TemplateDownload">
+            <img src="images/chart/icon_data_info@2x.png">
+          </div>
+
+          <div class="f-i dataInfo">
+            <img src="images/chart/icon_data_info@2x.png">
+          </div>
+          <div class="f-i outputExcle">
+            <img src="images/chart/icon_data_download@2x.png">
+          </div>
+          <div class="f-i dataMap">
+            <img src="images/chart/icon_data_map@2x.png">
+          </div>
+          <div class="f-i selectPop dataSearch">
+            <img src="images/chart/icon_data_search@2x.png">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mapFiled-view">
+        <div class="search" style="top: 20px;left: 20px;">
+          <img src="images/chart/icon_search.png" alt="">
+          <input class="searchbar" type="text" placeholder="Search">
+          <button class="searchbar-Emptied" type="button">
+                    <img src="images/chart/icon_close@2x.png" alt="">
+                    </button>
+          <button class="selectSearchbar">搜索</button>
+          <div class="filedCondition">
+          </div>
+        </div>
+
+        <div id="map" style=" position:absolute; left: 5px; right: 5px; top:5px;bottom: 5px;"></div>
+
+
+        <div id="dataView">
+
+          <div class="dataView-Pages">
+
+          </div>
+
+          <div class="vi-pages">
+
+            <div class="numberCount">
+              每页显示 <input type="number" name="" value="20"> 条数据
+            </div>
+            <div class="selectCount">
+
+              <button type="button" class="prev-all"><img src="images/chart/icon_page_prevall@2x.png" alt=""></button>
+              <button type="button" class="prev"><img src="images/chart/icon_page_prev@2x.png" alt=""></button>
+              <div class="selectIn">
+                第 <input type="number" value="1"> 页 共 <span></span> 页
+              </div>
+              <button type="button" class="next"><img src="images/chart/icon_page_next@2x.png" alt=""></button>
+              <button type="button" class="next-all"><img src="images/chart/icon_page_nextall@2x.png" alt=""></button>
 
             </div>
 
-            <div class="mapFiled-view">
-
-                <div id="map" style=" position:absolute; left: 5px; right: 5px; top:5px;bottom: 5px;"></div>
-
-                <div id="dataView">
-
-                    <div class="dataView-Pages">
-
-                    </div>
-
-                    <div class="vi-pages">
-
-                        <div class="numberCount">
-                            每页显示 <input type="number" name="" value="20"> 条数据
-                        </div>
-                        <div class="selectCount">
-
-                            <button type="button" class="prev-all"><img src="images/chart/icon_page_prevall@2x.png" alt=""></button>
-                            <button type="button" class="prev"><img src="images/chart/icon_page_prev@2x.png" alt=""></button>
-                            <div class="selectIn">
-                                第 <input type="number" value="1"> 页 共 <span></span> 页
-                            </div>
-                            <button type="button" class="next"><img src="images/chart/icon_page_next@2x.png" alt=""></button>
-                            <button type="button" class="next-all"><img src="images/chart/icon_page_nextall@2x.png" alt=""></button>
-
-                        </div>
 
 
-
-                        <div class="isShow">
-                            共 <span></span> 记录
-                        </div>
-
-                    </div>
-
-
-                </div>
+            <div class="isShow">
+              共 <span></span> 记录
             </div>
+
+          </div>
+
 
         </div>
-        <!--map End-->
+
+
+      </div>
+
     </div>
+    <!--map End-->
+  </div>
 
 
-    <!-- Select Popup Start-->
+  <!-- Select Popup Start-->
 
-    <div class="SelectPopup  _dataGet _a_translate">
+  <div class="SelectPopup  _dataGet _a_translate">
 
-        <div class="_selectTitle _j_translate">
-            <h2>数据展示</h2>
+    <div class="_selectTitle _j_translate">
+      <h2>数据展示</h2>
 
-            <button class="_closePop" type="button">
+      <button class="_closePop" type="button">
                 <img src="images/chart/icon_close@2x.png" alt="">
             </button>
 
+    </div>
+    <div class="select ">
+      <div class="masking-animation">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
         </div>
-        <div class="select ">
-             <div class="masking-animation">
-              <div class="spinner">
-                <div class="bounce1"></div>
-                <div class="bounce2"></div>
-                <div class="bounce3"></div>
-              </div>
-            </div>
-            <!--<div class="selectField">
+      </div>
+      <!--<div class="selectField">
                 <div class="filed">选择字段</div>
                 <div class="selcetInfo"></div>
                 <div class="addFiled">
@@ -337,112 +365,124 @@
             </div>-->
 
 
-            <div id="sql-builder"></div>
-            <div class="sql-SelecteButton">
-                <button class="_getsql">查询数据</button>
-                <button class="_reset">清空信息</button>
-                <button class="_statistics">统计总汇</button>
-                <button class="_downloadTable">下载表单</button>
-            </div>
-            <div class="showFieldDataTab"></div>
-            <!--页面切换-->
-            <div class="si-pages">
+      <div id="sql-builder"></div>
+      <div class="sql-SelecteButton">
+        <button class="_getsql">查询数据</button>
+        <button class="_reset">清空信息</button>
+        <button class="_statistics">统计总汇</button>
+        <button class="_downloadTable">下载表单</button>
+      </div>
+      <div class="showFieldDataTab"></div>
+      <!--页面切换-->
+      <div class="si-pages">
 
-                <div class="numberCount">
-                    每页显示 <input type="number" name="" value="20"> 条数据
-                </div>
-                <div class="selectCount">
+        <div class="numberCount">
+          每页显示 <input type="number" name="" value="20"> 条数据
+        </div>
+        <div class="selectCount">
 
-                    <button type="button" class="prev-all"><img src="images/chart/icon_page_prevall@2x.png" alt=""></button>
-                    <button type="button" class="prev"><img src="images/chart/icon_page_prev@2x.png" alt=""></button>
-                    <div class="selectIn">
-                        第 <input type="number" value="1"> 页 共 <span></span> 页
-                    </div>
-                    <button type="button" class="next"><img src="images/chart/icon_page_next@2x.png" alt=""></button>
-                    <button type="button" class="next-all"><img src="images/chart/icon_page_nextall@2x.png" alt=""></button>
-
-                </div>
-
-
-
-                <div class="isShow">
-                    共 <span></span> 记录
-                </div>
-
-            </div>
-
-            <div class="statisticsPane">
-                <div class="statisticsPane-title al-row">
-                    <div class="statisticsPane-test">
-                        统计总汇
-                    </div>
-                    <div class="statisticsPane-right _j_stcloser">
-                        <img src="images/chart/icon_close@2x.png" alt="">
-                    </div>
-                </div>
-
-
-
-                <div class="statisticsPane-information">
-                    <div class="_packet al-row">
-                        <span>分组字段</span>
-                        <div class="statisticsPane-select">
-                            <!--<select name="" id="">
-                          <option value="">户籍类别</option>
-                      </select>-->
-                            <input data type="text" id="field">
-                            <span class="_j_cliearOpens"></span>
-                            <div class="statisticsPane-moreSelect">
-                                <ul>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="statistics-filed">
-                        <button class="addrule">
-                    添加规则
-                  </button>
-
-                        <div class="addStatistics-filed  al-row">
-                            <div class="_sta_filed al-row">
-                                <span>字段分组</span>
-                                <div class="statisticsPane-select">
-                                    <select>
-                          <option>房屋面积</option>
-                        </select>
-                                </div>
-                            </div>
-
-                            <div class="_sta_way al-row">
-                                <span>统计方式：</span>
-                                <div class="statisticsPane-select">
-                                    <select>
-                          <option>房屋面积</option>
-                        </select>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="st_uploadInformation">
-                    <button class="_j_stsubmit">提交</button>
-                    <button class="_j_stcloser">取消</button>
-
-                </div>
-
-            </div>
+          <button type="button" class="prev-all"><img src="images/chart/icon_page_prevall@2x.png" alt=""></button>
+          <button type="button" class="prev"><img src="images/chart/icon_page_prev@2x.png" alt=""></button>
+          <div class="selectIn">
+            第 <input type="number" value="1"> 页 共 <span></span> 页
+          </div>
+          <button type="button" class="next"><img src="images/chart/icon_page_next@2x.png" alt=""></button>
+          <button type="button" class="next-all"><img src="images/chart/icon_page_nextall@2x.png" alt=""></button>
 
         </div>
 
+
+
+        <div class="isShow">
+          共 <span></span> 记录
+        </div>
+
+      </div>
+
+      <div class="statisticsPane">
+        <div class="statisticsPane-title al-row">
+          <div class="statisticsPane-test">
+            统计总汇
+          </div>
+          <div class="statisticsPane-right _j_stcloser">
+            <img src="images/chart/icon_close@2x.png" alt="">
+          </div>
+        </div>
+
+
+
+        <div class="statisticsPane-information">
+          <div class="_packet al-row">
+            <span>分组字段</span>
+            <div class="statisticsPane-select">
+              <!--<select name="" id="">
+                          <option value="">户籍类别</option>
+                      </select>-->
+              <input data type="text" id="field">
+              <span class="_j_cliearOpens"></span>
+              <div class="statisticsPane-moreSelect">
+                <ul>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="statistics-filed">
+            <button class="addrule">
+                    添加规则
+                  </button>
+
+            <div class="addStatistics-filed  al-row">
+              <div class="_sta_filed al-row">
+                <span>字段分组</span>
+                <div class="statisticsPane-select">
+                  <select>
+                          <option>房屋面积</option>
+                        </select>
+                </div>
+              </div>
+
+              <div class="_sta_way al-row">
+                <span>统计方式：</span>
+                <div class="statisticsPane-select">
+                  <select>
+                          <option>房屋面积</option>
+                        </select>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="st_uploadInformation">
+          <button class="_j_stsubmit">提交</button>
+          <button class="_j_stcloser">取消</button>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- Slect Popup End-->
+  </div>
+
+  <!-- Slect Popup End-->
 
 
+  <div class="errorPopup">
+    <div class="errorTitle">
+      <h2>错误信息</h2>
+      <span class="errorCloser">
+           <img src="images/chart/icon_close@2x.png" alt="">
+      </span>
+    </div>
 
+    <div class="errorInformation">
+        
+    </div>
+
+  </div>
 
 
 

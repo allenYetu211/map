@@ -528,7 +528,7 @@ input:focus {
     -webkit-overflow-scrolling: touch;
 }
 
-#left-sidebar .search {
+ .search {
     position: absolute;
     top: 80px;
     width: 224px;
@@ -540,7 +540,7 @@ input:focus {
     border-radius: 4px;
 }
 
-#left-sidebar .search .filedCondition {
+.search .filedCondition {
     width: 100%;
     max-height: 300px;
     display: none;
@@ -559,19 +559,19 @@ input:focus {
     line-height: 30px;
 }
 
-#left-sidebar .search .filedCondition span {
+.search .filedCondition span {
     display: inline-block;
     color: #0088EB;
 }
 
-#left-sidebar .search .filedCondition p {
+.search .filedCondition p {
     text-indent: 20px;
     line-height: 30px;
     padding: 0;
     margin: 0;
 }
 
-#left-sidebar .search img {
+.search img {
     padding: 6px;
     float: left;
     width: 32px;
@@ -579,11 +579,11 @@ input:focus {
     box-sizing: border-box;
 }
 
-#left-sidebar.dark .search img {
+.dark .search img {
     background-color: #0c1123;
 }
 
-#left-sidebar .search input.searchbar {
+ .search input.searchbar {
     font-size: 12px;
     color: #222222;
     line-height: 28px;
@@ -596,12 +596,12 @@ input:focus {
     text-indent: 4px;
 }
 
-#left-sidebar.dark .search input.searchbar {
+.dark .search input.searchbar {
     background-color: #0c1123;
     color: #fff;
 }
 
-#left-sidebar .search button {
+ .search button {
     position: absolute;
     right: 0px;
     width: 46px;
@@ -616,11 +616,11 @@ input:focus {
     outline: 0;
 }
 
-#left-sidebar.dark .search button {
+.dark .search button {
     background: #0c1123;
 }
 
-#left-sidebar .search button.searchbar-Emptied {
+ .search button.searchbar-Emptied {
     position: absolute;
     width: 24px;
     height: 24px;
@@ -628,13 +628,13 @@ input:focus {
     right: 42px;
 }
 
-#left-sidebar .search button.searchbar-Emptied img {
+ .search button.searchbar-Emptied img {
     width: 100%;
     padding: 0;
     height: auto;
 }
 
-#left-sidebar .introduct {
+ .introduct {
     width: 400px;
     padding: 20px;
     box-sizing: border-box;

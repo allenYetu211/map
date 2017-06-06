@@ -315,7 +315,8 @@
   background-color: rgba(0, 136, 235, .2);
 }
 
-.al-popup-prompt {
+.al-popup-prompt,
+.accessory-popup {
   display: none;
   position: absolute;
   top: 0;
@@ -325,12 +326,13 @@
   z-index: 9999;
 }
 
-.al-popup-prompt .al-popup {
+.al-popup-prompt .al-popup,
+.accessory-popup .ac-popup {
   width: 300px;
   position: absolute;
   left: 50%;
   top: 50%;
-  padding: 5px 15px;
+  padding: 5px 15px 10px;
   border-top: 3px solid #0088eb;
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
@@ -340,14 +342,40 @@
   text-align: center;
 }
 
-.al-popup-prompt .al-popup .al-closer {
+.accessory-popup .ac-popup .ac-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 0 -15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accessory-popup .ac-popup .ac-title button {
+  margin: 0;
+}
+
+.al-popup-prompt .al-popup .al-closer .accessory-popup .ac-popup .btn-parents {
   display: flex;
   justify-content: space-between;
   margin: 0 -15px;
   border-bottom: 1px solid #e0e0e0;
   padding: 0px 15px;
 }
+.al-popup-prompt .al-popup .al-closer {
+  display: flex;
+  justify-content: space-between;
+}
 
+ .Progressbar{
+    height: 5px;
+    background: #0088eb;
+    display: block;
+    width: 0%;
+    transition: width 0.3s;
+    -webkit-transition: width 0.3s;
+    -o-transition: width 0.3s;
+}
 .al-popup-prompt .al-popup .al-closer button {
   background: transparent;
   border: none;
@@ -362,7 +390,7 @@
 
 .al-popup-prompt .al-popup .al-prompt-informations {
   text-align: center;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
 }
 
 .al-popup-prompt .al-popup .al-prompt-informations+button {
@@ -372,11 +400,68 @@
   align-items: center;
   justify-content: center;
   margin: 10px auto;
+  cursor: pointer;
 }
 
-.al-popup-prompt .al-popup .al-prompt-informations+button img {
+.btn-parents{
+  margin: 10px 0;
+}
+
+.accessory-popup .ac-popup button {
+  border: 1px solid #e0e0e0;
+  background: transparent;
+  margin: 10px auto;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.uploadAccessory input {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9;
+  opacity: 0;
+}
+
+.al-popup-prompt .al-popup .al-prompt-informations+button img .accessory-popup .ac-popup button img {
   width: 15px;
   height: 15px;
   vertical-align: middle;
   margin-right: 5px;
+}
+
+.examineAccessoryPopup {
+  display: none;
+  width: 600px;
+  height: 600px;
+  padding: 50px;
+  background-color:#333;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+}
+.examineAccessoryPopup img {
+  width: 100%;
+}
+
+
+.accessory-popup .ac-popup button.closeAcPopup {
+  border: none;
+}
+.examineAccessoryPopup .examineAccessory-closer {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 999;
 }

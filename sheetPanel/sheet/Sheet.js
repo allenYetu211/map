@@ -195,6 +195,9 @@ Sheet.prototype.getSelectedRange = function () {
     var rowMax = pos.maxrow;
     var colMax = pos.maxcol;
     var isMergedCell = this._SHEET_API.isMergedCell(this._SHEET_API_HD, this._SHEET_API_HD.sheet.sheetId, rowMax, colMax);
+    var rowcol = this._SHEET_API.getCell(this._SHEET_API_HD, this._SHEET_API_HD.sheet.sheetId, rowMax, colMax)
+
+    var _value = this.getCellValue(rowcol.abminrow, rowcol.abmincol)
     if (isMergedCell == true) {
         var floatings = this._SHEET_API.getJsonData(this._SHEET_API_HD).floatings;
         var len = floatings.length;
@@ -209,7 +212,13 @@ Sheet.prototype.getSelectedRange = function () {
     }
     var minLetter = this._toLetter(colMin) + rowMin;
     if (rowMin == rowMax && colMin == colMax) {
-        return minLetter;
+        // return minLetter;
+        return {
+            minLetter: minLetter,
+            value: _value,
+            row: rowcol.abminrow,
+            col: rowcol.abmincol
+        }
     }
     else {
         var maxLetter = this._toLetter(colMax) + rowMax;
@@ -271,6 +280,10 @@ Sheet.prototype.zoom = function(zoomSize) {
         this._SHEET_API.zoom(this._SHEET_API_HD, zoomSize);
         this._zoomSize = zoomSize;
     }
+};
+
+Sheet.prototype.setFocus = function (row, col) {
+    this._SHEET_API.setFocus(this._SHEET_API_HD, row, col);
 };
 
 Sheet.prototype._loadDictionary = function(reportId) {

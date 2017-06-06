@@ -114,13 +114,19 @@ SheetPanel.prototype.getSelectedRange = function() {
 SheetPanel.prototype.getCellValue = function(row, col) {
     return this._sheet.getCellValue(row, col);
 };
-
+SheetPanel.prototype.setCellValue = function(row, col, val) {
+    return this._sheet.setCellValue(row, col, val);
+};
 SheetPanel.prototype.addComment = function(cellRange, comment) {
     this._sheet.addComment(cellRange, comment);
 };
 
 SheetPanel.prototype.deleteComment = function(cellRange) {
     this._sheet.deleteComment(cellRange);
+};
+
+SheetPanel.prototype.setFocus = function (row, col) {
+    this._sheet.setFocus(row, col);
 };
 
 SheetPanel.prototype._chagnePage = function(sender, pageIndex) {
