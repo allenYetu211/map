@@ -120,6 +120,7 @@
     ._contentInfor button.active {
       color: #fff;
       background-color: #03538D;
+      font-weight: bold;
     }
     
     ._contentInfor button:hover {
