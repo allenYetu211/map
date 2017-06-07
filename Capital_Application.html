@@ -1,0 +1,284 @@
+<!-- saved from url=(0074)file:///C:/Users/zhangss/Desktop/%E7%BB%BC%E5%90%88%E6%9C%8D%E5%8A%A1.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <title>系统配置 | 移民快速调查综合服务平台</title>
+    <!--首页加载需要使用到的css样式表-->
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">
+    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
+    <link rel="stylesheet" type="text/css" href="css/index_tool.css">
+    <link rel="stylesheet" type="text/css" href="css/statictable.css">
+    <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
+    <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+    <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
+    <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
+
+
+    <script src="echarts.min.js"></script>
+    <script src="md5.js"></script>
+    <script src="require.js"></script>
+    <script src="main.js"></script>
+
+    <style>
+        .dataContent {
+            height: 100%;
+            padding-top: 60px;
+            background-color: #e9eff4;
+        }
+        /*右边部分开始*/
+        .dataContent .capital-left-bar {
+            background: #FFFFFF;
+            border-radius: 5px;
+            height: 100%;
+            width: 300px;
+            min-width: 300px;
+            top: 60px;
+            bottom: 0;
+            z-index: 9;
+            padding: 0px;
+            margin: 8px;
+            float: left;
+        }
+        .capital-left-bar h3{
+            height: 45px;
+            line-height: 45px;
+            padding: 0 15px;
+            background-color: #f7f7f7;
+            border-radius: 5px 5px 0px 0px;
+            color: #0088EB;
+        }
+
+        /*右边部分结束*/
+
+        /*右边部分*/
+
+        .dataContent .tableList {
+            background: #FFFFFF;
+            padding: 5px;
+            height: 100%;
+            width: calc(100% - 325px);
+            overflow: auto;
+            margin: 8px;
+            border-radius: 5px;
+        }
+
+        .dataContent .tableList .handle {
+            padding: 10px 5px;
+            border-bottom: 1px solid #f9f9f9;
+            margin-bottom: 10px;
+        }
+
+        .dataContent .tableList .handle button {
+            border: none;
+            background: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .dataContent .tableList .handle .createData{
+            cursor: pointer;
+            border:1px solid #0088EB;
+            color: #FFFFFF;
+            background: #0088EB;
+            position: relative;
+            bottom: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            display: inline-block;
+            padding: 0 5px;
+            margin-left: 5px;
+            display: none;
+        }
+
+        .dataContent .tableList .handle button.active {
+            background: rgba(0, 136, 235, .2);
+        }
+
+        .dataContent .tableList .handle button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        #capitalTableList {
+            height: calc(100% - 60px);
+            /*width: 100%;*/
+            overflow: auto;
+        }
+        #capitalTableList th {
+            min-width: 80px;
+            width: 200px;
+        }
+
+        #capitalTableList tr.active {
+            background: #ffe8e8;
+        }
+
+        #capitalTableList td {
+            text-align: center;
+            /*position: relative;*/
+            /*height: 40px;*/
+        }
+
+        #capitalTableList td>input,
+        #capitalTableList td>div,
+        #capitalTableList td>select {
+            width: 100%;
+            height: 100%;
+            /*position: absolute;*/
+            /*left: 0;*/
+            /*bottom: 0;*/
+            /*top: 0;*/
+            border: none;
+            display: none;
+        }
+
+        /*下拉多选框*/
+
+        #capitalTableList .mulDic_div {
+            padding: 0;
+            position: relative;
+        }
+
+        #capitalTableList .mulDic_input {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        #capitalTableList .mulDic_btn {
+            position: absolute;
+            right: 1px;
+            top: 1px;
+            border: none;
+            background: #FFFFFF;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #capitalTableList .mulDic_ul {
+            border: 1px solid #f9f9f9;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            background: #FFFFFF;
+            position: absolute;
+            z-index: 9999;
+            width: 100%;
+            display: none;
+        }
+
+        #capitalTableList .mulDic_ul li {
+            list-style: none;
+        }
+
+        /*显示成功*/
+        .show-success {
+            width: 200px;
+            height: 100px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            z-index: 10000;
+            text-align: center;
+            color: #0088EB;
+            display: none;
+        }
+
+        .show-success h3 {
+            margin: 0;
+            line-height: 100px;
+            font-size: 20px;
+            color: #0088EB;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div id="map"></div>
+<div id="top-sidebar">
+
+    <div class="tsidebar-l">
+        <div class="logo">
+            <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
+        </div>
+
+        <!--<div class="dataPageList">-->
+        <!--<a href="./development.html" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>-->
+        <!--<a href="./dataLaySth.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>-->
+        <!--</div>-->
+    </div>
+
+    <div class="toolbar">
+    <!--<button type="button" class="user"><a href="./index.html"><img src="images/chart/icon_sjzs@2x.png" alt=""><span>数据展示</span></a></button>-->
+    <!--<button type="button" class="user active"><a href="./development.html"><img src="images/chart/icon_zdzd@2x.png" alt=""><span>制度制定</span></a></button>-->
+    <!--<button type="button" class="user"><a href><img src="images/chart/icon_rwzp@2x.png" alt=""><span>任务指派</span></a></button>-->
+    <!--<button type="button" class="user"><a  href="./dataAdmin.html"><img src="images/chart/icon_sjgl@2x.png" alt=""><span>数据管理</span></a></button>-->
+    <!--<button type="button" class="user"><a href><img src="images/chart/icon_yhgl@2x.png" alt=""><span>用户管理</span></a></button>-->
+    <!--<button type="button" class="user"><a href><img src="images/chart/icon_xtpz@2x.png" alt=""><span>系统配置</span></a></button>-->
+    <button type="button" class="user"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
+    </div>
+
+</div>
+
+<!--dataContent Show Left Stant-->
+
+<div class="dataContent">
+
+    <!-- tree Start-->
+    <div class="capital-left-bar">
+        <h3>资金申请</h3>
+        <div>
+            <ul>
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </div>
+    </div>
+    <!-- tree End-->
+
+    <div class="tableList">
+        <div class="handle">
+            <button class="addListData" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
+            <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
+            <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
+            <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
+            <span class="createData">生成</span>
+        </div>
+
+        <div id="capitalTableList">
+
+        </div>
+    </div>
+
+
+</div>
+
+<div class="show-success">
+    <h3>成功</h3>
+</div>
+
+</body>
+
+</html>
