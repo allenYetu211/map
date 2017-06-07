@@ -136,46 +136,29 @@
         }
 
         .dataContent .tableList .handle button {
-            border: none;
+            border: 1px solid #0088EB;
             background: none;
             outline: none;
-            cursor: pointer;
             border-radius: 4px;
-        }
-
-        .dataContent .tableList .handle .createData{
-            cursor: pointer;
-            border:1px solid #0088EB;
-            color: #FFFFFF;
-            background: #0088EB;
-            position: relative;
-            bottom: 4px;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;
-            display: inline-block;
-            padding: 0 5px;
-            margin-left: 5px;
-            display: none;
+            color: #0088EB;
+            width: 80px;
+            height: 30px;
+            padding: 0;
         }
 
         .dataContent .tableList .handle button.active {
             background: rgba(0, 136, 235, .2);
         }
 
-        .dataContent .tableList .handle button img {
-            width: 20px;
-            height: 20px;
-        }
-
         #capitalTableList {
             height: calc(100% - 60px);
-            /*width: 100%;*/
+            width: 100%;
             overflow: auto;
         }
         #capitalTableList th {
             min-width: 80px;
             width: 200px;
+            background: #e9eff4;
         }
 
         #capitalTableList tr.active {
@@ -186,56 +169,6 @@
             text-align: center;
             /*position: relative;*/
             /*height: 40px;*/
-        }
-
-        #capitalTableList td>input,
-        #capitalTableList td>div,
-        #capitalTableList td>select {
-            width: 100%;
-            height: 100%;
-            /*position: absolute;*/
-            /*left: 0;*/
-            /*bottom: 0;*/
-            /*top: 0;*/
-            border: none;
-            display: none;
-        }
-
-        /*下拉多选框*/
-
-        #capitalTableList .mulDic_div {
-            padding: 0;
-            position: relative;
-        }
-
-        #capitalTableList .mulDic_input {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        #capitalTableList .mulDic_btn {
-            position: absolute;
-            right: 1px;
-            top: 1px;
-            border: none;
-            background: #FFFFFF;
-            outline: none;
-            cursor: pointer;
-        }
-
-        #capitalTableList .mulDic_ul {
-            border: 1px solid #f9f9f9;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            background: #FFFFFF;
-            position: absolute;
-            z-index: 9999;
-            width: 100%;
-            display: none;
-        }
-
-        #capitalTableList .mulDic_ul li {
-            list-style: none;
         }
 
         /*显示成功*/
@@ -261,6 +194,21 @@
             line-height: 100px;
             font-size: 20px;
             color: #0088EB;
+        }
+
+        .aaa{
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            top:100px;
+            left: 100px;
+        }
+        .bbb{
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            top:40%;
+            left:40%;
         }
     </style>
 </head>
@@ -321,15 +269,113 @@
 
     <div class="tableList">
         <div class="handle">
-            <button class="addListData" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
-            <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
-            <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
-            <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
-            <span class="createData">生成</span>
+            <button id="fa">发起申请</button>
         </div>
 
         <div id="capitalTableList">
-
+            <table>
+                <tr>
+                    <th>申请单编号</th>
+                    <th>发起人</th>
+                    <th>发起时间</th>
+                    <th>当前进度</th>
+                    <th>审批状态</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a id="xx" href="#">详情</a></td>
+                    <td><a id="ss" href="#">审批</a></td>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a href="#">详情</a></td>
+                    <td><a href="#">审批</a></td>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a href="#">详情</a></td>
+                    <td><a href="#">审批</a></td>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a href="#">详情</a></td>
+                    <td><a href="#">审批</a></td>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a href="#">详情</a></td>
+                    <td><a href="#">审批</a></td>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a href="#">详情</a></td>
+                    <td><a href="#">审批</a></td>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a href="#">详情</a></td>
+                    <td><a href="#">审批</a></td>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a href="#">详情</a></td>
+                    <td><a href="#">审批</a></td>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a href="#">详情</a></td>
+                    <td><a href="#">审批</a></td>
+                </tr>
+                <tr>
+                    <td>20170522010</td>
+                    <td>王敏</td>
+                    <td>20170522</td>
+                    <td>移民监理</td>
+                    <td>未审批</td>
+                    <td><a href="#">详情</a></td>
+                    <td><a href="#">审批</a></td>
+                </tr>
+            </table>
+            <br><br><br>
+            <img style="width: 100%" src="images/chart/Capital_Application_1.png" alt="">
         </div>
     </div>
 
@@ -339,7 +385,8 @@
 <div class="show-success">
     <h3>成功</h3>
 </div>
-
+<img class="aaa" src="images/chart/Capital_Application_2.png" alt="">
+<img class="bbb" src="images/chart/Capital_Application_3.png" alt="">
 </body>
 
 </html>
