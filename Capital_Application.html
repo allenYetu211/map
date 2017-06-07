@@ -46,13 +46,73 @@
             margin: 8px;
             float: left;
         }
-        .capital-left-bar h3{
-            height: 45px;
-            line-height: 45px;
-            padding: 0 15px;
+        .capital-left-bar h3.title{
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
             background-color: #f7f7f7;
             border-radius: 5px 5px 0px 0px;
             color: #0088EB;
+            font-size: 18px;
+        }
+        .capital-left-bar>div{
+            margin: 10px 0;
+        }
+        .capital-left-bar>div>h4{
+            line-height: 40px;
+            padding-left: 20px;
+            padding-bottom: 0;
+            position: relative;
+        }
+        .capital-left-bar>div>h4 img{
+            position: absolute;
+            top:14px;
+            right:17px;
+            transition: all 0.5s;
+        }
+        .capital-left-bar>div>h4 img.active{
+            transform:rotate(180deg);
+        }
+        .capital-left-bar ul li{
+            position: relative;
+            list-style: none;
+            padding-left: 48px;
+            line-height: 40px;
+            height: 40px;
+        }
+        .capital-left-bar ul li:hover{
+            background: #f9f9f9;
+        }
+        .capital-left-bar ul li.active{
+            background: #EEEEEE;
+        }
+        .capital-left-bar ul li .dot{
+            display: none;
+        }
+        .capital-left-bar ul li button,.capital-left-bar h4 button{
+            position: absolute;
+            top:10px;
+            right: 48px;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            background: #e9eff4;
+            border: none;
+            outline: none;
+            color: #0088EB;
+            -webkit-border-radius:20px;
+            -moz-border-radius:20px;
+            border-radius:20px;
+        }
+        .capital-left-bar ul li .dot{
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            z-index: 20;
+            width: 8px;
+            height: 8px;
+            background: #7ed321;
+            border-radius: 4px;
         }
 
         /*右边部分结束*/
@@ -216,10 +276,9 @@
             <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
         </div>
 
-        <!--<div class="dataPageList">-->
-        <!--<a href="./development.html" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>-->
-        <!--<a href="./dataLaySth.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>-->
-        <!--</div>-->
+        <div class="dataPageList">
+        <a href="###"><img src="images/chart/icon_yhgl@2x.png" alt="">资金申请</a>
+        </div>
     </div>
 
     <div class="toolbar">
@@ -240,20 +299,22 @@
 
     <!-- tree Start-->
     <div class="capital-left-bar">
-        <h3>资金申请</h3>
-        <div>
-            <ul>
-                <li>111</li>
-                <li>222</li>
-                <li>333</li>
-            </ul>
+        <h3 class="title">资金申请</h3>
+        <div class="application">
+            <!--<h4>我的申请/审批<button>4</button><img src="images/chart/icon_bigmapfold.png"></h4>-->
+            <!--<ul>-->
+                <!--<li><span>111</span><button>4</button><div class="dot"></div></li>-->
+                <!--<li><span>222</span><button>4</button><div class="dot"></div></li>-->
+                <!--<li><span>333</span><button>4</button><div class="dot"></div></li>-->
+            <!--</ul>-->
         </div>
-        <div>
-            <ul>
-                <li>111</li>
-                <li>222</li>
-                <li>333</li>
-            </ul>
+        <div class="approval">
+            <!--<h4>待审批</h4>-->
+            <!--<ul>-->
+                <!--<li><span>111</span><button>4</button><div class="dot"></div></li>-->
+                <!--<li><span>222</span><button>4</button><div class="dot"></div></li>-->
+                <!--<li><span>333</span><button>4</button><div class="dot"></div></li>-->
+            <!--</ul>-->
         </div>
     </div>
     <!-- tree End-->
