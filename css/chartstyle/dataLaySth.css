@@ -165,7 +165,9 @@
 }
 
 .popupAddChange ._popupSelect ._drop,
-.popupAddChangeZD ._popupSelect ._drop {
+.popupAddChangeZD ._popupSelect ._drop,
+._selectMb-parent  ._drop {
+  
   width: 25px;
   position: absolute;
   top: 1;
@@ -176,7 +178,8 @@
 }
 
 .popupAddChange ._popupSelect ._drop:after,
-.popupAddChangeZD ._popupSelect ._drop:after {
+.popupAddChangeZD ._popupSelect ._drop:after,
+._selectMb-parent  ._drop:after {
   display: block;
   content: '';
   position: absolute;
@@ -218,9 +221,9 @@
   background: #fff;
 }
 
-.popupAddChange ._liSelect li._selected {
+/*.popupAddChange ._liSelect li._selected {
   background-color: #e0e0e0;
-}
+}*/
 
 .popupAddChange ._liSelect li {
   padding: 0 10px;
@@ -228,11 +231,23 @@
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  position: relative;
 }
 
 .popupAddChange ._liSelect li:hover,
 {
   background-color: #e0e0e0;
+}
+
+.popupAddChange ._liSelect li input {
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    z-index: -1;
+}
+
+.popupAddChange ._liSelect li label {
+    padding-left: 20px;
 }
 
 .popupAddChange .qfButton,

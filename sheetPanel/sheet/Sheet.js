@@ -222,7 +222,9 @@ Sheet.prototype.getSelectedRange = function () {
     }
     else {
         var maxLetter = this._toLetter(colMax) + rowMax;
-        return minLetter + ':' + maxLetter;
+        return {
+          minLetter:  minLetter + ':' + maxLetter
+        } 
     }
 };
 
