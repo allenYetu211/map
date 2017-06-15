@@ -765,14 +765,14 @@ input:focus {
   width: 14px;
   height: 14px;
   top: 10px;
-  right: 30px;
+  right: 50px;
   display: block;
   background: url('../../images/chart/icon_link.png');
 }
 
 #right-sidebar .information button._isMap,
 #left-sidebar .information button._isMap {
-  right: 50px;
+  right: 30px;
   top: 10px;
   z-index: 9;
   border: 0px;
@@ -2288,6 +2288,21 @@ table th {
   position: relative;
 }
 
+.cp-rightIntroduce .cp-dataInfor {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: #fff;
+}
+.cp-dataInfor.open {
+  display: flex;
+}
 #controlPanel .draw-chart .information .type-big {
   margin-bottom: 10px;
   box-shadow: 0px 0px 1px #c7c7c7;
@@ -2715,7 +2730,7 @@ button._hide {
   display: none;
   position: absolute;
   width: 800px;
-  height: 840px;
+  height: 750px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -18,8 +18,8 @@
   <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
   <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
   <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
-      <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
 
 
   <link rel="stylesheet" href="css/sqlToolStyle/bootstrap.min.css">
@@ -184,10 +184,10 @@
   <div id="top-sidebar" class="">
     <div class="sidebar-l">
       <div class="logo">
-        <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
+        <a href="javascript:;"><img src="images/chart/logo@2x.png" alt=""></a>
       </div>
       <div class="dataPageList">
-        <a href="./Task_Assignment-F.html"><img src="images/chart/icon_sjzs@2x.png" alt="">数据展示</a>
+        <a href="javascript:;"><img src="images/chart/icon_sjzs@2x.png" alt="">数据展示</a>
       </div>
     </div>
     <div class="toolbar">
@@ -310,6 +310,9 @@
 
         <!--主题分析-->
         <div data-onin="0" class="cp-pointer _themeAnalyse">
+          <div class="cp-dataInfor">
+            暂无数据
+          </div>
           <div class="draw-chart">
             <div class="intro-l"></div>
             <div class="intro-r"></div>
@@ -336,7 +339,11 @@
         <!--数据查询条件设置-->
 
         <div data-onin="2" class="cp-pointer _dataGet">
+
           <div class="select display">
+            <div class="cp-dataInfor">
+              暂无数据
+            </div>
             <div class="masking-animation">
               <div class="spinner">
                 <div class="bounce1"></div>
@@ -415,68 +422,68 @@
 
           </div>
 
-          
-            <div class="statisticsPane">
-              <div class="statisticsPane-title al-row">
-                <div class="statisticsPane-test">
-                  统计汇总
-                </div>
-                <div class="statisticsPane-right _j_stcloser">
-                  <img src="images/chart/icon_close@2x.png" alt="">
-                </div>
-              </div>
 
-              <div class="statisticsPane-information">
-                <div class="_packet al-row">
-                  <span>分组字段</span>
-                  <div class="statisticsPane-select">
-                    <!--<select name="" id="">
+          <div class="statisticsPane">
+            <div class="statisticsPane-title al-row">
+              <div class="statisticsPane-test">
+                统计汇总
+              </div>
+              <div class="statisticsPane-right _j_stcloser">
+                <img src="images/chart/icon_close@2x.png" alt="">
+              </div>
+            </div>
+
+            <div class="statisticsPane-information">
+              <div class="_packet al-row">
+                <span>分组字段</span>
+                <div class="statisticsPane-select">
+                  <!--<select name="" id="">
                           <option value="">户籍类别</option>
                       </select>-->
-                    <input data type="text" id="field">
-                    <span class="_j_cliearOpens"></span>
-                    <div class="statisticsPane-moreSelect">
-                      <ul>
+                  <input data type="text" id="field">
+                  <span class="_j_cliearOpens"></span>
+                  <div class="statisticsPane-moreSelect">
+                    <ul>
 
-                      </ul>
-                    </div>
+                    </ul>
                   </div>
                 </div>
-                <div class="statistics-filed">
-                  <button class="addrule">
+              </div>
+              <div class="statistics-filed">
+                <button class="addrule">
                     添加规则
                   </button>
 
-                  <div class="addStatistics-filed  al-row">
-                    <div class="_sta_filed al-row">
-                      <span>统计字段</span>
-                      <div class="statisticsPane-select">
-                        <select>
+                <div class="addStatistics-filed  al-row">
+                  <div class="_sta_filed al-row">
+                    <span>统计字段</span>
+                    <div class="statisticsPane-select">
+                      <select>
                           <option>房屋面积</option>
                         </select>
-                      </div>
                     </div>
-
-                    <div class="_sta_way al-row">
-                      <span>统计方式：</span>
-                      <div class="statisticsPane-select">
-                        <select>
-                          <option>房屋面积</option>
-                        </select>
-                      </div>
-                    </div>
-
                   </div>
+
+                  <div class="_sta_way al-row">
+                    <span>统计方式：</span>
+                    <div class="statisticsPane-select">
+                      <select>
+                          <option>房屋面积</option>
+                        </select>
+                    </div>
+                  </div>
+
                 </div>
               </div>
+            </div>
 
-              <div class="st_uploadInformation">
-                <button class="_j_stsubmit">提交</button>
-                <button class="_j_stcloser">取消</button>
-
-              </div>
+            <div class="st_uploadInformation">
+              <button class="_j_stsubmit">提交</button>
+              <button class="_j_stcloser">取消</button>
 
             </div>
+
+          </div>
 
 
         </div>
