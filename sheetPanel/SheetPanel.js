@@ -74,7 +74,8 @@ SheetPanel.prototype.loadStyle = function(reportId, perPage, flag) {
     this._pageIndex = -1;
     this._perPage = perPage;
     ZENG.msgbox.show('加载中，请稍后...', 6, 10000000);
-    this._sheet.loadStyle(reportId, function(success) {
+    this._sheet.loadStyle(reportId, function(success, _page) {
+        this._perPage = _page
         if (success == true) {
             ZENG.msgbox.show('加载成功!', 4, 1500);
         } else {
@@ -83,7 +84,7 @@ SheetPanel.prototype.loadStyle = function(reportId, perPage, flag) {
     }, function (_t) {
         if (!flag) {
             _t._SHEET_API.toggleColumnName(_t._SHEET_API_HD);
-            _t._SHEET_API.toggleRowName(_t._SHEET_API_HD);
+             _t._SHEET_API.toggleRowName(_t._SHEET_API_HD);
         }
     });
 };

@@ -128,39 +128,17 @@
       _sheetPanel.deleteComment(cellRange);
     }
 
-    function ins_loadvalue(report, term, code) {
-      _sheetPanel.loadValue(report, term, code, 1);
-    }
 
+
+    /**
+     * 设置表格框内容
+     * @parameter
+     * row: reportID
+     * col:  term
+     * val:  code
+     */
     function ins_setCellValue(row, col, val) {
       _sheetPanel.setCellValue(row, col, val);
-    }
-
-    var _flag = true
-
-    function ins_sheetPanel(report, perPage, label) {
-      _sheetPanel.loadStyle(report, perPage, label);
-      if (_flag) {
-        cell(label)
-        _flag = false
-      }
-    }
-
-
-    function cell(label) {
-      _sheetPanel.attachEvent('cellmouseup', label, function() {
-        parent.C.ifr._selectedRange(_sheetPanel.getSelectedRange())
-      });
-    }
-
-
-    function ins_displaySheet(_tf, _host) {
-      var _cf = _tf || true
-      if (_host = 'Data_Collection.html') {
-        _cf = false
-      }
-      _sheetPanel = new SheetPanel("sheet-markup", 1, true, _cf, true);
-
     }
 
     function ins_addmake(cellRange, comment) {
@@ -176,14 +154,53 @@
       pirntArea('sheet-markup');
     }
 
-    // function print(targetNode) {
-    //   _pirntArea(targetNode)
-    // }
-    // ins_displaySheet();
-    // _sheetPanel.attachEvent('cellmouseup', function() {
-    //     console.log('321321')
-    //     parent.__test__()
-    // });
+    /**
+     * 初始化
+     * @parameter
+     * tf: 是否显示 横 || 纵条列、  A B C D  ||  1 2 3 4
+     * g:  是否加载红色标记
+     * s:  保存按钮
+     */
+
+    function ins_displaySheet(tf, g, s) {
+      var _tf = tf ? true : false
+      var _g = g ? true : false
+      var _s = s ? true : false
+      _sheetPanel = new SheetPanel("sheet-markup", 1, _s, _tf, _g);
+    }
+
+    /**
+     * 加载表格样式
+     * @parameter
+     * report:   reportID
+     * perPage:  填写 15
+     * label:    填写 false
+     */
+    var _flag = true
+    function ins_sheetPanel(report, perPage, label) {
+      _sheetPanel.loadStyle(report, perPage, label);
+      if (_flag) {
+        cell(label)
+        _flag = false
+      }
+    }
+
+    function cell(label) {
+      _sheetPanel.attachEvent('cellmouseup', label, function() {
+        parent.C.ifr._selectedRange(_sheetPanel.getSelectedRange())
+      });
+    }
+    /**
+     * 加载表格数据
+     * @parameter
+     * report: reportID
+     * term:  阶段信息
+     * code:  code
+     */
+    function ins_loadvalue(report, term, code) {
+      _sheetPanel.loadValue(report, term, code, 1);
+    }
+
   </script>
 </body>
 
