@@ -200,20 +200,26 @@
             width: 20px;
             height: 20px;
         }
-
-        .dataContent .tableList .handle .export{
-            cursor: pointer;
-            border:1px solid #0088EB;
+		.dataContent .tableList .handle .export{
+			cursor: pointer;
+			position: relative;
+			top: -1px;
+			display: inline-block;
+            /*border:1px solid #0088EB;
             color: #0088EB;
-            position: relative;
             bottom: 4px;
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
             border-radius: 4px;
             display: inline-block;
             padding: 0 5px;
-            margin-left: 5px;
-            
+            margin-left: 5px;*/
+           	padding: 0 6px;
+		}
+        .dataContent .tableList .handle .export img{
+            cursor: pointer;
+           	height: 18px;
+           	width: 18px;
         }
 
         #dicTableList {
@@ -326,12 +332,15 @@
 		}
 		/*导入*/
 		.file{
+			cursor: pointer;
 			position: absolute;
 			width: 35px;
 			height: 20px;
 			left: 0px;
 			opacity: 0;
+			z-index: 100;
 		}
+		
 		/* 左侧列表 */
 		.system-left-bar .Dictionary li span{
 			display: block;
@@ -411,7 +420,7 @@
             <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
             
            
-            <span class='export'>导入<input type="file" id="file" name="file" class="file" accept=".xlc,.xlm,.xls,.xlt,.xlw,.xlsx"/></span>
+            <span class='export'><img src="images/chart/daoru.png"/><input type="file" id="file" name="file" class="file" accept=".xlc,.xlm,.xls,.xlt,.xlw,.xlsx"/></span>
     		
         </div>
 
