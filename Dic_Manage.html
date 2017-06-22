@@ -52,18 +52,30 @@
         .system-left-bar .dicSearch{
             padding: 10px 0;
         }
+        .system-left-bar .dicSearch .search_wrap{
+        	border: 1px solid #dfeef7;
+        	height: 38px;
+        	border-radius: 5px;
+        	overflow: hidden;
+        	position: relative;
+        }
         .system-left-bar .dicSearch input{
-            height: 36px;
-            width: 200px;
+            height: 100%;
+            width: 75%;
+            border: 0;
+            line-height: 100%;
+            text-indent: 34px;
+            
         }
         .system-left-bar .dicSearch button{
-            margin-left: 10px;
-            height: 30px;
-            border-radius: 5px;
-            background: none;
+            width: 25%;
+            height: 100%;
+          	color: #0088eb;
+            background: #dfeef7;
             outline: none;
-            border: 1px solid #c3c3c3;
+            border: 0;
             cursor: pointer;
+            float: right;
         }
         .system-left-bar h3{
             height: 36px;
@@ -146,6 +158,9 @@
         .dicA .inputCN,.dicC .inputCN{
             width: 190px;
         }
+        .dicA .inputEN,.dicC .inputEN{
+            width: 190px;
+        }
         /*左边部分结束*/
 
 
@@ -198,6 +213,7 @@
             display: inline-block;
             padding: 0 5px;
             margin-left: 5px;
+            
         }
 
         #dicTableList {
@@ -292,7 +308,36 @@
         .Dictionary li{
             cursor: pointer;
         }
-        
+        /*搜索框X*/
+       .dicSearch .dicSearch-close{
+		    position: absolute;
+		    /*top: 85px;
+		    left: 210px;*/
+		   	left:70%;
+		   	top: 6px;
+		    cursor: pointer;
+		    color: red;
+		}
+		 /*搜索框logo*/
+		.dicSearch .search_logo{
+			position: absolute;
+			left: 5px;
+			top: 5px;
+		}
+		/*导入*/
+		.file{
+			position: absolute;
+			width: 35px;
+			height: 20px;
+			left: 0px;
+			opacity: 0;
+		}
+		/* 左侧列表 */
+		.system-left-bar .Dictionary li span{
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
     </style>
 </head>
 
@@ -306,11 +351,13 @@
         <div class="logo">
             <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
         </div>
-
-        <!--<div class="dataPageList">-->
-        <!--<a href="./development.html" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>-->
-        <!--<a href="./dataLaySth.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>-->
-        <!--</div>-->
+		<div class="dataPageList">
+        	<a href="javascript:;"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字典管理</a>
+        </div>
+        <!--<div class="dataPageList">
+        <a href="./development.html" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>
+        <a href="./dataLaySth.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>
+        </div>-->
     </div>
     
     <div class="toolbar">
@@ -337,8 +384,11 @@
     <div class="system-left-bar">
         <div>
             <div class="dicSearch">
-                <input type="text">
-                <button class="SearchBtn">搜索</button>
+            	<div class="search_wrap">
+            		<img class="search_logo" src="images/chart/icon_search.png"/>
+            		<input type="text" placeholder="请搜索"><span class="dicSearch-close">x</span>
+                	<button class="SearchBtn">搜索</button>
+            	</div>
             </div>
             <h3>
                 字典表
@@ -359,12 +409,14 @@
             <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
             <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
             <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
-            <input id="file" type="file" name="file">
-            <span class="export">导入</span>
+            
+           
+            <span class='export'>导入<input type="file" id="file" name="file" class="file" accept=".xlc,.xlm,.xls,.xlt,.xlw,.xlsx"/></span>
+    		
         </div>
 
         <div id="dicTableList">
-
+			
         </div>
     </div>
 
@@ -374,7 +426,7 @@
 <div class="dicA">
     <h3>新建字典表</h3>
     <div class="name">中文名：<input class="inputCN" type="text"></div>
-    <div class="name">英文名：<span>TB_DIC_</span><input class="inputEN" type="text"></div>
+    <div class="name">英文名：<span style="display: none;">TB_DIC_</span><input class="inputEN" type="text"></div>
     <div class="isBtn"><button class="confirm">确认</button><button class="cancel">取消</button></div>
 </div>
 <div class="dicC">
