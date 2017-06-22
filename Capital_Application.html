@@ -203,13 +203,11 @@
         /*表格控件的样式*/
         .tableControl,.infoTableControl{
             position: fixed;
-            top: 50%;
             left:50%;
             margin-left:-590px;
-            top: 15%;
+            top: 10%;
             width: 1180px;
-            min-height: 75%;
-            height: auto;
+			height: 80%;
             border-radius: 2px;
             border-top: 3px solid #0088eb;
             background: #fff;
@@ -229,7 +227,17 @@
             margin-right: 28px;
             margin-top: 13px;
         }
-
+        .tableControl .tableContent{
+        	height: 81%;
+        }
+		/* 提交    取消*/
+		.tableControl .btn_wrap{
+			height: 70px;
+			text-align: center;
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+		}
         /*审批*/
         #approval{
             width: 400px;
@@ -332,20 +340,18 @@
 		/*输入框*/
 		.from{
 			display: inline-block;
-			margin-left: 50%;
+			float: right;
+			position: relative;
 		}
 		.from .inp{
 			display: inline-block;
 			border: 1px solid #0088eb;
 			border-radius: 5px;
-			height: 30px;
-			width:150px;
-			text-indent: 5px;
+			height: 34px;
+			width: 200px;
+			text-indent: 34px;
 		}
-		/* 提交    取消*/
-		.btn_wrap{
-			text-align: center;
-		}
+		
 		#git,#cancel{
 			height: 28px;
 			width: 60px;
@@ -354,6 +360,12 @@
 			background: #fff;
 			color: #0088eb;
 			margin: 20px auto;
+		}
+		/*搜索框logo*/
+		.from .search_logo{
+			position: absolute;
+			left: 5px;
+			top: 5px;
 		}
     </style>
 </head>
@@ -416,8 +428,8 @@
         <div class="handle">
             <button id="fa">发起申请</button>
             <div class="from">
-            	<input class="inp" type="text" placeholder="请输入" />
-            	<button id="cha">查询</button>
+            	<img class="search_logo" src="images/chart/icon_search.png"/>
+            	<input class="inp" type="text" placeholder="请输入 , 回车查询" />
             </div>
         </div>
         <div id="capitalTableList">
@@ -447,7 +459,7 @@
         <div class="tableControl">
             <h1 class="tableHeader">发起申请<span><img src="images/chart/icon_close@2x.png"/></span></h1>
             <div class="tableContent">
-                <iframe id="launchApplication" name="launchApplication" src="./sheet-demo.html" width="100%" height="500px"></iframe>
+                <iframe id="launchApplication" name="launchApplication" src="./sheet-demo.html" width="100%" height="100%"></iframe>
             </div>
             <div class="btn_wrap">
             	<button id="git">提交</button>
