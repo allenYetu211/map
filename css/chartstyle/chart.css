@@ -1364,6 +1364,7 @@ input:focus {
 }
 
 .right-options button {
+  display: none;
   width: 24px;
   height: 24px;
   padding: 5px;
@@ -1992,7 +1993,7 @@ div.login_informations button._close {
 .showFieldData {
   /*display: none;*/
   padding: 10px;
-  overflow-x: auto;
+  overflow: auto;
   width: 100%;
   position: relative;
   min-height: 100px;

@@ -47,3 +47,26 @@ $('#sheetFile')[0].contentWindow.ins_loadvalue(_into, ch.tl.termID, s_code)
 1.
   用户信息需要通过localStorage.js中获取。
   具体请查看 localStorage.js 底部返回的 retunrObj。
+
+
+  ###弹窗
+  html:
+
+  ```html
+      <div class="al-popup-prompt">
+
+        <div class="al-popup">
+
+            <div class="al-closer">
+                <span>提示：</span>
+                <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
+            </div>
+            <p class="al-prompt-informations"></p>
+        </div>
+    </div>
+  ```
+
+css:
+   需要引用development.css文件， /css/development.css 文件夹中
+
+js: 需要手动控制`al-popup-prompt`的隐藏与显示， 默认为隐藏。
