@@ -221,6 +221,16 @@
            	height: 18px;
            	width: 18px;
         }
+        
+        .dataContent .tableList .handle .export .pointer{
+        	position: absolute;
+        	top: 0;
+        	left:0;
+        	width: 20px;
+        	height: 20px;
+        	cursor: pointer;
+        	z-index: 101;;
+        }
 
         #dicTableList {
             height: calc(100% - 60px);
@@ -322,7 +332,8 @@
 		   	left:70%;
 		   	top: 6px;
 		    cursor: pointer;
-		    color: red;
+		    color: #058BEC;
+		    font-weight: bold;
 		}
 		 /*搜索框logo*/
 		.dicSearch .search_logo{
@@ -414,13 +425,16 @@
 
     <div class="tableList">
         <div class="handle">
-            <button class="addListData" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
-            <button class="changeListData" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
-            <button class="deleteListData" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
-            <button class="serverListData" type="button"><img src="images/chart/icon_zdright@2x.png"></button>
+            <button class="addListData" type="button" title="添加"><img src="images/chart/icon_zdplus@2x.png"></button>
+            <button class="changeListData" type="button" title="修改"><img src="images/chart/icon_zdedit@2x.png"></button>
+            <button class="deleteListData" type="button" title="删除"><img src="images/chart/icon_zddelete@2x.png"></button>
+            <button class="serverListData" type="button" title="保存"><img src="images/chart/icon_zdright@2x.png"></button>
             
-           
-            <span class='export'><img src="images/chart/daoru.png"/><input type="file" id="file" name="file" class="file" accept=".xlc,.xlm,.xls,.xlt,.xlw,.xlsx"/></span>
+           <span class='export'>
+            	<div class="pointer" title="导入"></div>
+            	<input type="file" id="file" name="file"  class="file" accept=".xlc,.xlm,.xls,.xlt,.xlw,.xlsx"/>
+            	<img src="images/chart/daoru.png"/>
+            </span>
     		
         </div>
 
