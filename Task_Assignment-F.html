@@ -2,620 +2,648 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="renderer" content="webkit">
-    <title>任务分配 | 移民快速调查综合服务平台</title>
-    <!--首页加载需要使用到的css样式表-->
-    <link rel="stylesheet" type="text/css" href="css/demo.css">
-    <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
-    <link rel="stylesheet" type="text/css" href="css/index_tool.css">
-    <link rel="stylesheet" type="text/css" href="css/statictable.css">
-    <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
-    <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit">
+  <title>任务分配 | 移民快速调查综合服务平台</title>
+  <!--首页加载需要使用到的css样式表-->
+  <link rel="stylesheet" type="text/css" href="css/demo.css">
+  <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
+  <link rel="stylesheet" type="text/css" href="css/index_tool.css">
+  <link rel="stylesheet" type="text/css" href="css/statictable.css">
+  <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+  <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
 
 
-    <!--sqlTool STYLE-->
-    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap.min.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/awesome-bootstrap-checkbox.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-slider.min.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/selectize.bootstrap3.css">
-    <link rel="stylesheet" href="css/sqlToolStyle/query-builder.default.css" id="qb-theme">
-    <link rel="stylesheet" href="css/sqlToolStyle/builder.css">
+  <!--sqlTool STYLE-->
+  <link rel="stylesheet" href="css/sqlToolStyle/bootstrap.min.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/awesome-bootstrap-checkbox.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/bootstrap-slider.min.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/selectize.bootstrap3.css">
+  <link rel="stylesheet" href="css/sqlToolStyle/query-builder.default.css" id="qb-theme">
+  <link rel="stylesheet" href="css/sqlToolStyle/builder.css">
 
 
 
-    <script src="echarts.min.js"></script>
-    <script src="md5.js"></script>
-    <script src="require.js"></script>
-    <script src="main.js"></script>
+  <script src="echarts.min.js"></script>
+  <script src="md5.js"></script>
+  <script src="require.js"></script>
+  <script src="main.js"></script>
 
 
-    <style>
-        .contentHolder {
-            position: relative;
-            margin: 0px auto;
-            padding: 0px;
-            width: 243px;
-            height: 400px;
-            overflow: hidden;
-        }
-        
-        .contentHolder .content {
-            width: 243px;
-            height: 720px;
-        }
-        
-        .spacer {
-            text-align: center
-        }
-        
-        .legend {
-            width: 13px;
-            height: 13px;
-            background: #44b9b0;
-            display: inline-block;
-            border-radius: 0px;
-            border: 1px solid grey;
-            font-size: 14px;
-        }
-        
-        .legend-info {
-            font-size: 12px;
-            padding-left: 3px;
-            vertical-align: top;
-        }
-        
-        .subject-brief {
-            position: absolute;
-            width: 320px;
-            background: white;
-            box-shadow: 2px 5px 5px rgba(0, 0, 0, .3);
-            padding: 10px;
-            left: 400px;
-            top: 0;
-            font-size: 14px;
-            z-index: 100;
-        }
-        
-        .subject-brief .brief-header {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-        }
-        
-        .subject-brief .brief-body .brief-title {
-            font-weight: bold;
-            margin: 5px 0;
-        }
-        
-        .subject-brief .brief-body .brief-content P {
-            font-size: 13px;
-            line-height: 25px;
-        }
-        
-        body {
-            background-color: #eee
-        }
-        
-        .box {
-            width: 200px;
-            height: 100px;
-            cursor: move;
-        }
-        
-        .main_tabletop {
-            width: 100%;
-            height: 30px;
-            background: #5193e8;
-        }
-        
-        .theme-map-point {
-            border: none;
-            background: none;
-        }
-        
-        div.theme-map-point.leaflet-label-right:before,
-        div.theme-map-point.leaflet-label-left:after {
-            border: none
-        }
-        
-        .optWrapper ul li:hover {
-            cursor: pointer;
-            background: #f5f5f5
-        }
-    </style>
+  <style>
+    .contentHolder {
+      position: relative;
+      margin: 0px auto;
+      padding: 0px;
+      width: 243px;
+      height: 400px;
+      overflow: hidden;
+    }
+    
+    .contentHolder .content {
+      width: 243px;
+      height: 720px;
+    }
+    
+    .spacer {
+      text-align: center
+    }
+    
+    .legend {
+      width: 13px;
+      height: 13px;
+      background: #44b9b0;
+      display: inline-block;
+      border-radius: 0px;
+      border: 1px solid grey;
+      font-size: 14px;
+    }
+    
+    .legend-info {
+      font-size: 12px;
+      padding-left: 3px;
+      vertical-align: top;
+    }
+    
+    .subject-brief {
+      position: absolute;
+      width: 320px;
+      background: white;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, .3);
+      padding: 10px;
+      left: 400px;
+      top: 0;
+      font-size: 14px;
+      z-index: 100;
+    }
+    
+    .subject-brief .brief-header {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    
+    .subject-brief .brief-body .brief-title {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    
+    .subject-brief .brief-body .brief-content P {
+      font-size: 13px;
+      line-height: 25px;
+    }
+    
+    body {
+      background-color: #eee
+    }
+    
+    .box {
+      width: 200px;
+      height: 100px;
+      cursor: move;
+    }
+    
+    .main_tabletop {
+      width: 100%;
+      height: 30px;
+      background: #5193e8;
+    }
+    
+    .theme-map-point {
+      border: none;
+      background: none;
+    }
+    
+    div.theme-map-point.leaflet-label-right:before,
+    div.theme-map-point.leaflet-label-left:after {
+      border: none
+    }
+    
+    .optWrapper ul li:hover {
+      cursor: pointer;
+      background: #f5f5f5
+    }
+  </style>
 
-    <style>
-        #left-sidebar {
-            color: #222222;
-        }
-        
-        #left-sidebar .phase ul li.active {
-            opacity: 1;
-        }
-        
-        #left-sidebar .phase .next-btn {
-            right: 0;
-        }
-        
-        #left-sidebar .phase .prev-btn span {
-            width: 0;
-            height: 0;
-            display: inline-block;
-            border-top: 12px solid transparent;
-            border-right: 14px solid #222;
-            border-bottom: 12px solid transparent;
-        }
-        
-        #left-sidebar .phase .next-btn span {
-            width: 0;
-            height: 0;
-            display: inline-block;
-            border-top: 12px solid transparent;
-            border-left: 14px solid #222;
-            border-bottom: 12px solid transparent;
-        }
-        
-        #left-sidebar .classify {
-            padding: 25px 10px;
-        }
-        
-        #left-sidebar .left-title {
-            color: #0088EB;
-            font-size: 18px;
-        }
-        
-        #left-sidebar .select1 {
-            width: 260px;
-            height: 32px;
-            background: #E9EFF4 url("images/chart/icon_bigmapfold.png") no-repeat 240px center;
-            font-size: 12px;
-            padding-left: 10px;
-            margin-left: 10px;
-            appearance: none;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            border: none;
-            outline: none;
-        }
-        
-        #left-sidebar .tab-page {
-            width: 380px;
-            height: 300px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        #left-sidebar .tab-page table tr:nth-child(1) {
-            background: #E9EFF4;
-        }
-        
-        #left-sidebar .tab-page ul {
-            height: 38px;
-            margin: 0;
-        }
-        
-        #left-sidebar .tab-page ul li {
-            width: 80px;
-            height: 38px;
-            background: #ECECEC;
-            margin-right: 1px;
-            list-style: none;
-            float: left;
-            color: #BFBFBF;
-            text-align: center;
-            line-height: 38px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-        
-        #left-sidebar .tab-page ul li.active {
-            background: #0088EB;
-            color: #FFFFFF;
-        }
-        
-        #left-sidebar .tab-page ._table {
-            border: 1px solid #0088EB;
-        }
-        
-        #left-sidebar .tab-page .allocation-list {
-            position: absolute;
-            right: 0;
-            top: 10px;
-            color: #0088EB;
-            cursor: pointer;
-        }
-        
-        #left-sidebar .tab-page ._table tr td:last-child {
-            cursor: pointer;
-        }
-        
-        #left-sidebar .tab-page ._table tr td:nth-child(2) {
-            width: 140px;
-        }
-        /*任务分配弹框开始*/
-        
-        #GetInvestigator {
-            width: 560px;
-            height: 560px;
-            background: #ffffff;
-            position: absolute;
-            top: calc(50% - 285px);
-            left: calc(50% - 280px);
-            z-index: 9999;
-            border-radius: 5px;
-            border-top: 5px solid #0088EB;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-            display: none;
-        }
-        
-        #GetInvestigator h3 {
-            width: 100%;
-            margin-top: 10px;
-            font-size: 20px;
-        }
-        
-        #GetInvestigator .content {
-            border-top: 1px solid #E9E9E9;
-            border-bottom: 1px solid #E9E9E9;
-            /*padding: 8px 10px;*/
-            height: 437px;
-            margin-bottom: 15px;
-        }
-        
-        #GetInvestigator .content .Inv-left {
-            width: 280px;
-            height: 435px;
-            float: left;
-            overflow-y: auto;
-            border-right: 1px solid #E9E9E9;
-            padding: 10px 10px;
-        }
-        
-        #GetInvestigator .content .Inv-right {
-            width: 280px;
-            height: 435px;
-            float: left;
-            overflow-y: auto;
-            padding: 10px 10px;
-        }
-        
-        #GetInvestigator .content p {
-            color: #B5B5B5;
-            font-size: 12px;
-        }
-        
-        #GetInvestigator .content li {
-            list-style: none;
-            /*line-height: 30px;*/
-            font-size: 14px;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-        
-        #GetInvestigator .content li:hover {
-            background: rgba(0, 136, 235, 0.1);
-        }
-        
-        #GetInvestigator .table-btn {
-            display: flex;
-            justify-content: flex-end;
-        }
-        
-        #GetInvestigator .table-btn button {
-            width: 114px;
-            height: 40px;
-            border: 1px solid #0088EB;
-            border-radius: 4px;
-            background: #ffffff;
-            color: #0088EB;
-            font-size: 12px;
-            outline: none;
-            margin-right: 10px;
-        }
-        
-        #GetInvestigator .table-btn button:hover {
-            background: rgba(0, 136, 235, 0.2);
-            outline: none;
-        }
-        
-        #GetInvestigator-search {
-            position: absolute;
-            top: 8px;
-            left: 24%;
-        }
-        
-        #GetInvestigator-search input,
-        #GetInvestigator-search button {
-            border: none;
-            outline: none;
-        }
-        
-        #GetInvestigator-search button {
-            font-size: 18px;
-            color: #0088EB;
-            background: #ffffff;
-        }
-        
-        #GetInvestigator .success {
-            width: 300px;
-            height: 140px;
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            z-index: 10000;
-            text-align: center;
-            color: #0088EB;
-            display: none;
-        }
-        
-        #GetInvestigator .success h3 {
-            margin: 0;
-            line-height: 140px;
-            font-size: 20px;
-        }
-        
-        #GetInvestigator .success img {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-        /*任务分配弹框结束*/
-        /*任务清单开始*/
-        
-        #GetAssignTask {
-            width: 1020px;
-            height: 570px;
-            background: #ffffff;
-            position: absolute;
-            top: calc(50% - 285px);
-            left: calc(50% - 510px);
-            z-index: 9999;
-            border-radius: 5px;
-            border-top: 5px solid #0088EB;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-            display: none;
-        }
-        
-        #GetAssignTask h3 {
-            width: 100%;
-            margin-top: 10px;
-            font-size: 20px;
-        }
-        
-        #GetAssignTask .content {
-            border-top: 1px solid #E9E9E9;
-            padding: 8px 10px;
-            height: 435px;
-            margin-bottom: 20px;
-            overflow-y: auto;
-        }
-        
-        #GetAssignTask .content tr:hover {
-            background: rgba(0, 136, 235, 0.1);
-        }
-        
-        #GetAssignTask .content tr.active {
-            background: rgba(0, 136, 235, 0.2);
-        }
-        
-        #GetAssignTask .content table th {
-            font-weight: bold;
-        }
-        
-        #GetAssignTask .content table tr:nth-child(1) {
-            background: #E9EFF4;
-        }
-        
-        #GetAssignTask-search {
-            position: absolute;
-            top: 8px;
-            left: 15%;
-        }
-        
-        #GetAssignTask-search input,
-        #GetAssignTask-search button {
-            border: none;
-            outline: none;
-        }
-        
-        #GetAssignTask-search button {
-            font-size: 18px;
-            color: #0088EB;
-            background: #ffffff;
-        }
-        /*任务清单结束*/
-    </style>
+  <style>
+    #left-sidebar {
+      color: #222222;
+    }
+    
+    #left-sidebar .phase ul li.active {
+      opacity: 1;
+    }
+    
+    #left-sidebar .phase .next-btn {
+      right: 0;
+    }
+    
+    #left-sidebar .phase .prev-btn span {
+      width: 0;
+      height: 0;
+      display: inline-block;
+      border-top: 12px solid transparent;
+      border-right: 14px solid #222;
+      border-bottom: 12px solid transparent;
+    }
+    
+    #left-sidebar .phase .next-btn span {
+      width: 0;
+      height: 0;
+      display: inline-block;
+      border-top: 12px solid transparent;
+      border-left: 14px solid #222;
+      border-bottom: 12px solid transparent;
+    }
+    
+    #left-sidebar .classify {
+      padding: 25px 10px;
+    }
+    
+    #left-sidebar .left-title {
+      color: #0088EB;
+      font-size: 18px;
+    }
+    
+    #left-sidebar .select1 {
+      width: 260px;
+      height: 32px;
+      background: #E9EFF4 url("images/chart/icon_bigmapfold.png") no-repeat 240px center;
+      font-size: 12px;
+      padding-left: 10px;
+      margin-left: 10px;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      outline: none;
+    }
+    
+    #left-sidebar .tab-page {
+      width: 380px;
+      height: 300px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    #left-sidebar .tab-page table tr:nth-child(1) {
+      background: #E9EFF4;
+    }
+    
+    #left-sidebar .tab-page ul {
+      height: 38px;
+      margin: 0;
+    }
+    
+    #left-sidebar .tab-page ul li {
+      width: 80px;
+      height: 38px;
+      background: #ECECEC;
+      margin-right: 1px;
+      list-style: none;
+      float: left;
+      color: #BFBFBF;
+      text-align: center;
+      line-height: 38px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    
+    #left-sidebar .tab-page ul li.active {
+      background: #0088EB;
+      color: #FFFFFF;
+    }
+    
+    #left-sidebar .tab-page ._table {
+      border: 1px solid #0088EB;
+    }
+    
+    #left-sidebar .tab-page .allocation-list {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      color: #0088EB;
+      cursor: pointer;
+    }
+    
+    #left-sidebar .tab-page ._table tr td:last-child {
+      cursor: pointer;
+    }
+    
+    #left-sidebar .tab-page ._table tr td:nth-child(2) {
+      width: 140px;
+    }
+    /*任务分配弹框开始*/
+    
+    #GetInvestigator {
+      width: 560px;
+      height: 560px;
+      background: #ffffff;
+      position: absolute;
+      top: calc(50% - 285px);
+      left: calc(50% - 280px);
+      z-index: 9999;
+      border-radius: 5px;
+      border-top: 5px solid #0088EB;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+    
+    #GetInvestigator h3 {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    
+    #GetInvestigator .content {
+      border-top: 1px solid #E9E9E9;
+      border-bottom: 1px solid #E9E9E9;
+      /*padding: 8px 10px;*/
+      height: 437px;
+      margin-bottom: 15px;
+    }
+    
+    #GetInvestigator .content .Inv-left {
+      width: 280px;
+      height: 435px;
+      float: left;
+      overflow-y: auto;
+      border-right: 1px solid #E9E9E9;
+      padding: 10px 10px;
+    }
+    
+    #GetInvestigator .content .Inv-right {
+      width: 280px;
+      height: 435px;
+      float: left;
+      overflow-y: auto;
+      padding: 10px 10px;
+    }
+    
+    #GetInvestigator .content p {
+      color: #B5B5B5;
+      font-size: 12px;
+    }
+    
+    #GetInvestigator .content li {
+      list-style: none;
+      /*line-height: 30px;*/
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    
+    #GetInvestigator .content li:hover {
+      background: rgba(0, 136, 235, 0.1);
+    }
+    
+    #GetInvestigator .table-btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    #GetInvestigator .table-btn button {
+      width: 114px;
+      height: 40px;
+      border: 1px solid #0088EB;
+      border-radius: 4px;
+      background: #ffffff;
+      color: #0088EB;
+      font-size: 12px;
+      outline: none;
+      margin-right: 10px;
+    }
+    
+    #GetInvestigator .table-btn button:hover {
+      background: rgba(0, 136, 235, 0.2);
+      outline: none;
+    }
+    
+    #GetInvestigator-search {
+      position: absolute;
+      top: 8px;
+      left: 24%;
+    }
+    
+    #GetInvestigator-search input,
+    #GetInvestigator-search button {
+      border: none;
+      outline: none;
+    }
+    
+    #GetInvestigator-search button {
+      font-size: 18px;
+      color: #0088EB;
+      background: #ffffff;
+    }
+    
+    #GetInvestigator .success {
+      width: 300px;
+      height: 140px;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      z-index: 10000;
+      text-align: center;
+      color: #0088EB;
+      display: none;
+    }
+    
+    #GetInvestigator .success h3 {
+      margin: 0;
+      line-height: 140px;
+      font-size: 20px;
+    }
+    
+    #GetInvestigator .success img {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+    /*任务分配弹框结束*/
+    /*任务清单开始*/
+    
+    #GetAssignTask {
+      width: 1020px;
+      height: 570px;
+      background: #ffffff;
+      position: absolute;
+      top: calc(50% - 285px);
+      left: calc(50% - 510px);
+      z-index: 9999;
+      border-radius: 5px;
+      border-top: 5px solid #0088EB;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+    
+    #GetAssignTask h3 {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    
+    #GetAssignTask .content {
+      border-top: 1px solid #E9E9E9;
+      padding: 8px 10px;
+      height: 435px;
+      margin-bottom: 20px;
+      overflow-y: auto;
+    }
+    
+    #GetAssignTask .content tr:hover {
+      background: rgba(0, 136, 235, 0.1);
+    }
+    
+    #GetAssignTask .content tr.active {
+      background: rgba(0, 136, 235, 0.2);
+    }
+    
+    #GetAssignTask .content table th {
+      font-weight: bold;
+    }
+    
+    #GetAssignTask .content table tr:nth-child(1) {
+      background: #E9EFF4;
+    }
+    
+    #GetAssignTask-search {
+      position: absolute;
+      top: 8px;
+      left: 15%;
+    }
+    
+    #GetAssignTask-search input,
+    #GetAssignTask-search button {
+      border: none;
+      outline: none;
+    }
+    
+    #GetAssignTask-search button {
+      font-size: 18px;
+      color: #0088EB;
+      background: #ffffff;
+    }
+    /*任务清单结束*/
+  </style>
 </head>
 
 <body>
-    <!-- <button id="test2">
+  <!-- <button id="test2">
         test
 </button> -->
-    <div id="map" style=" position:absolute;width:100%;height: 100%;"></div>
-    <div class="subject-brief" style="left: 331px;top: 125px;display:none">
+  <div id="map" style=" position:absolute;width:100%;height: 100%;"></div>
+  <div class="subject-brief" style="left: 331px;top: 125px;display:none">
+  </div>
+  <!--浮动工具栏 -->
+  <div class="float-tool-title">
+    <div class="title"></div>
+    <div class="right-arrow"></div>
+  </div>
+  <div id="main_char" class="main_graphic" style="display:none">
+    <div class="main_tabletop">
+      <div class="tabtop_left">统计图</div>
+      <div class="tabtop_rt"></div>
     </div>
-    <!--浮动工具栏 -->
-    <div class="float-tool-title">
-        <div class="title"></div>
-        <div class="right-arrow"></div>
-    </div>
-    <div id="main_char" class="main_graphic" style="display:none">
-        <div class="main_tabletop">
-            <div class="tabtop_left">统计图</div>
-            <div class="tabtop_rt"></div>
-        </div>
-        <div class="static_nav">
-            <span class="indicator">指标：</span>
-            <div class="SumoSelect" tabindex="0">
-                <select multiple="multiple" class="SlectBox SumoUnder" tabindex="-1">
+    <div class="static_nav">
+      <span class="indicator">指标：</span>
+      <div class="SumoSelect" tabindex="0">
+        <select multiple="multiple" class="SlectBox SumoUnder" tabindex="-1">
                     <option value="总人口(人)">总人口(人)</option>
                 </select>
-                <p class="CaptionCont SelectBox" id="main_char_sel">
-                    <span title=" 总人口(人) "> 总人口(人) </span>
-                    <label><i></i></label>
-                </p>
-                <div class="optWrapper multiple" id="main_char_sel_con">
-                    <ul class="options">
-                        <li class="opt selected"><span><i></i></span>
-                            <label title="总人口(人)">总人口(人)</label>
-                        </li>
-                        <li class="opt"><span><i></i></span>
-                            <label title="总人口(人)">总人口(人)</label>
-                        </li>
-                    </ul>
-                    <div class="MultiControls">
-                        <p class="btnOk">OK</p>
-                        <p class="btnCancel">Cancel</p>
-                    </div>
-                </div>
-            </div>
+        <p class="CaptionCont SelectBox" id="main_char_sel">
+          <span title=" 总人口(人) "> 总人口(人) </span>
+          <label><i></i></label>
+        </p>
+        <div class="optWrapper multiple" id="main_char_sel_con">
+          <ul class="options">
+            <li class="opt selected"><span><i></i></span>
+              <label title="总人口(人)">总人口(人)</label>
+            </li>
+            <li class="opt"><span><i></i></span>
+              <label title="总人口(人)">总人口(人)</label>
+            </li>
+          </ul>
+          <div class="MultiControls">
+            <p class="btnOk">OK</p>
+            <p class="btnCancel">Cancel</p>
+          </div>
         </div>
-        <div id="static_chart" style="display: block;margin-top:30px;"></div>
+      </div>
     </div>
+    <div id="static_chart" style="display: block;margin-top:30px;"></div>
+  </div>
 
-    <div id="top-sidebar" class="">
-        <div class="sidebar-l">
-            <div class="logo">
-                <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
-            </div>
-            <div class="dataPageList">
-                <a href="javascript:;"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">任务生成</a>
-                <a href="javascript:;" class="active"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">任务分配</a>
-            </div>
-        </div>
-        <div class="toolbar">
-            <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
-            <!--<button type="button" class="userDropOut"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></button>-->
-        </div>
-
-
+  <div id="top-sidebar" class="">
+    <div class="sidebar-l">
+      <div class="logo">
+        <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
+      </div>
+      <div class="dataPageList">
+        <a href="Task_Assignment-S.html"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">任务生成</a>
+        <a href="javascript:;" class="active"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">任务分配</a>
+      </div>
+    </div>
+    <div class="toolbar">
+      <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
+      <!--<button type="button" class="userDropOut"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></button>-->
     </div>
 
 
-    <div id="left-sidebar">
-        <button class="openCloseSidebar-left" type="button"><span></span></button>
-        <div class="left-cnj">
-            <div class="phase">
-                <ul>
-                    <!--<li class="button_d" data-id="1">-->
-                    <!--<h2>1</h2>-->
-                    <!--<h4>设计阶段</h4>-->
-                    <!--</li>-->
-                    <!--<li class="button_d" data-id="2">-->
-                    <!--<h2>2</h2>-->
-                    <!--<h4>实施阶段</h4>-->
-                    <!--</li>-->
-                    <!--<li class="button_d active" data-id="3">-->
-                    <!--<h2>3</h2>-->
-                    <!--<h4>后扶阶段</h4>-->
-                    <!--</li>-->
-                </ul>
-                <button type="button" class="prev-btn"><span></span></button>
-                <button type="button" class="next-btn"><span></span></button>
-            </div>
-            <!--1.设计阶段-->
-            <div class="phase-content">
-                <!--分类目录-->
-                <div class="classify">
-                    <span class="left-title">分类目录</span>
-                    <select class="select1"></select>
-                </div>
-                <div class="tab-page">
-                    <ul>
-                        <li class="active" data-status="-1">全部</li>
-                        <li data-status="1">已分配</li>
-                        <li data-status="0">未分配</li>
-                    </ul>
-                    <span class="allocation-list">分配清单</span>
-                    <div class="_table"></div>
-                </div>
-            </div>
-            <!--2.实施阶段-->
+  </div>
 
-            <!--3.后扶阶段-->
 
+  <div id="left-sidebar">
+    <button class="openCloseSidebar-left" type="button"><span></span></button>
+    <div class="left-cnj">
+      <div class="phase">
+        <ul>
+          <!--<li class="button_d" data-id="1">-->
+          <!--<h2>1</h2>-->
+          <!--<h4>设计阶段</h4>-->
+          <!--</li>-->
+          <!--<li class="button_d" data-id="2">-->
+          <!--<h2>2</h2>-->
+          <!--<h4>实施阶段</h4>-->
+          <!--</li>-->
+          <!--<li class="button_d active" data-id="3">-->
+          <!--<h2>3</h2>-->
+          <!--<h4>后扶阶段</h4>-->
+          <!--</li>-->
+        </ul>
+        <button type="button" class="prev-btn"><span></span></button>
+        <button type="button" class="next-btn"><span></span></button>
+      </div>
+      <!--1.设计阶段-->
+      <div class="phase-content">
+        <!--分类目录-->
+        <div class="classify">
+          <span class="left-title">分类目录</span>
+          <select class="select1"></select>
         </div>
-        <div class="search">
-            <img src="images/chart/icon_search.png" alt="">
-            <input class="searchbar" type="text" placeholder="Search">
-            <button class="searchbar-Emptied" type="button">
+        <div class="tab-page">
+          <ul>
+            <li class="active" data-status="-1">全部</li>
+            <li data-status="1">已分配</li>
+            <li data-status="0">未分配</li>
+          </ul>
+          <span class="allocation-list">分配清单</span>
+          <div class="_table"></div>
+        </div>
+      </div>
+      <!--2.实施阶段-->
+
+      <!--3.后扶阶段-->
+
+    </div>
+    <div class="search">
+      <img src="images/chart/icon_search.png" alt="">
+      <input class="searchbar" type="text" placeholder="Search">
+      <button class="searchbar-Emptied" type="button">
                     <img src="images/chart/icon_close@2x.png" alt="">
                     </button>
-            <button class="selectSearchbar">搜索</button>
-            <div class="filedCondition">
-            </div>
-        </div>
+      <button class="selectSearchbar">搜索</button>
+      <div class="filedCondition">
+      </div>
     </div>
 
+  </div>
 
-    <!-------任务分配弹框------->
-    <div id="GetInvestigator">
-        <h3 class="container"> 分配人员 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
-        <div class="content">
-            <div class="Inv-left">
-                <p>调查人员列表</p>
-                <ul></ul>
-            </div>
-            <div class="Inv-right">
-                <P>已选择人员</P>
-                <ul></ul>
-            </div>
+  <div id="map-control" style="top: 90px;right: 20px;">
+    <ul class="">
+      <li><button class="layer"><img src="images/chart/icon_layer.png" alt=""></button></li>
+      <li><button class="line"><img src="images/chart/icon_line.png" alt=""></button></li>
+      <li><button class="distance"><img src="images/chart/icon_mapdistance.png" alt=""></button></li>
+      <li><button class="area"><img src="images/chart/icon_maparea.png" alt=""></button></li>
+      <li><button class="zoomout"><img src="images/chart/icon_mapzoomout.png" alt=""></button></li>
+      <li><button class="zoomin"><img src="images/chart/icon_mapzoomin.png" alt=""></button></li>
+      <li class="mapmodelist">
+        <button class="mapmode"><img src="images/chart/icon_mapmode.png" alt=""></button>
+        <div class="mapmode_choice">
+          <button id="vec_type" class="map1 active"><img src="images/chart/mapmode1active.png" alt=""></button>
+          <button id="img_type" class="map2"><img src="images/chart/mapmode2.png" alt=""></button>
         </div>
+      </li>
+    </ul>
+  </div>
 
-        <div class="table-btn">
-            <!--<button class="delete">删除</button>-->
-            <button class="sure">确定</button>
-            <button class="cancel">取消</button>
-        </div>
-        <!--搜索框-->
-        <div id="GetInvestigator-search" class="search">
-            <img src="images/chart/icon_search.png" alt="">
-            <input class="searchbar" type="text" placeholder="Search">
-            <button class="searchbar-Emptied" type="button">
+
+  <div class="CatalogPopup" style="right: 20px; top: 140px;">
+    <div class="BaseMap">
+      <img src="images/chart/icon_layer@2x.png" alt=""><span>底图加载</span>
+      <button class="clearmap">取消选择</button>
+    </div>
+    <ul id="CatalogPopup-ul"></ul>
+  </div>
+
+
+  <!-------任务分配弹框------->
+  <div id="GetInvestigator">
+    <h3 class="container"> 分配人员 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
+    <div class="content">
+      <div class="Inv-left">
+        <p>调查人员列表</p>
+        <ul></ul>
+      </div>
+      <div class="Inv-right">
+        <P>已选择人员</P>
+        <ul></ul>
+      </div>
+    </div>
+
+    <div class="table-btn">
+      <!--<button class="delete">删除</button>-->
+      <button class="sure">确定</button>
+      <button class="cancel">取消</button>
+    </div>
+    <!--搜索框-->
+    <div id="GetInvestigator-search" class="search">
+      <img src="images/chart/icon_search.png" alt="">
+      <input class="searchbar" type="text" placeholder="Search">
+      <button class="searchbar-Emptied" type="button">
                 <img class="close" src="images/chart/icon_close@2x.png" alt="">
             </button>
-            <button class="selectSearchbar">搜索</button>
-            <div class="filedCondition">
-            </div>
-        </div>
-        <!--任务分配成功-->
-        <div class="success">
-            <h3>任务分配成功</h3>
-            <img src="images/chart/icon_close@2x.png" alt="">
-        </div>
+      <button class="selectSearchbar">搜索</button>
+      <div class="filedCondition">
+      </div>
     </div>
+    <!--任务分配成功-->
+    <div class="success">
+      <h3>任务分配成功</h3>
+      <img src="images/chart/icon_close@2x.png" alt="">
+    </div>
+  </div>
 
-    <!--分配清单弹框-->
-    <div id="GetAssignTask">
-        <h3 class="container"> 任务清单 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
-        <div class="content">
+  <!--分配清单弹框-->
+  <div id="GetAssignTask">
+    <h3 class="container"> 任务清单 <img class="pull-right" src="images/chart/icon_close@2x.png" alt=""></h3>
+    <div class="content">
 
-        </div>
-        <!--搜索框-->
-        <div id="GetAssignTask-search" class="search">
-            <img src="images/chart/icon_search.png" alt="">
-            <input class="searchbar" type="text" placeholder="Search">
-            <button class="searchbar-Emptied" type="button">
+    </div>
+    <!--搜索框-->
+    <div id="GetAssignTask-search" class="search">
+      <img src="images/chart/icon_search.png" alt="">
+      <input class="searchbar" type="text" placeholder="Search">
+      <button class="searchbar-Emptied" type="button">
                 <img class="close" src="images/chart/icon_close@2x.png" alt="">
             </button>
-            <button class="selectSearchbar">搜索</button>
-            <div class="filedCondition">
-            </div>
-        </div>
+      <button class="selectSearchbar">搜索</button>
+      <div class="filedCondition">
+      </div>
     </div>
+  </div>
 
 </body>
 

@@ -16,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="css/statictable.css">
   <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
   <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
   <link rel="stylesheet" type="text/css" href="css/chartstyle/dAdmin.css">
   <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
   <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
@@ -200,7 +201,7 @@
         <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
       </div>
       <div class="dataPageList">
-        <a href="./Task_Assignment-F.html"><img src="images/chart/icon_sjgl@2x.png" alt="">数据管理</a>
+        <a href="javascript:;"><img src="images/chart/icon_sjgl@2x.png" alt="">数据管理</a>
       </div>
     </div>
     <div class="toolbar">
@@ -231,10 +232,11 @@
     <div class="mapPosition">
 
       <div id="manageIframe">
+        <h5></h5>
         <span><img src="images/chart/icon_close@2x.png" alt=""></span>
 
         <iframe id="manageIframeFile" name="manageIframeFile" src="./sheet-demo.html" width="100%" height="100%"></iframe>
-        
+
       </div>
       <div class="module-header">
 
@@ -245,42 +247,94 @@
 
         <div class="module-features">
 
-      
+          <div class="f-i dataInfo">
+            <img src="images/chart/icon_data_info@2x.png" alt="详细信息">
+            <div class="popInfor">
+              详情查看
+            </div>
+          </div>
+
+          <div class="f-i dataMap">
+            <img src="images/chart/icon_data_map@2x.png" alt="地图信息">
+            <div class="popInfor">
+              地图切换
+            </div>
+          </div>
+
+<div class="f-i selectPop dataSearch">
+            <img src="images/chart/icon_data_search@2x.png" alt="搜索数据">
+            <div class="popInfor">
+              数据查询
+            </div>
+          </div>
+
+
+          <div class="f-i outputExcle">
+            <img src="images/chart/icon_data_download@2x.png" alt="文件下载">
+            <div class="popInfor">
+              数据导出
+            </div>
+          </div>
+
+          
+
+           <div class="f-i TemplateDownload">
+            <img src="images/chart/icon_Template.png" alt="模板下载">
+            <div class="popInfor">
+              模板下载
+            </div>
+          </div>
 
           <div class="f-i ImportData">
             <input type="file" id="TemplateUp">
-            <img src="images/chart/icon_ImageUp.png"  alt="文件导入">
+            <img src="images/chart/icon_ImageUp.png" alt="文件导入">
+            <div class="popInfor">
+              数据导入
+            </div>
           </div>
 
-          <div class="f-i TemplateDownload">
-            <img src="images/chart/icon_Template.png" alt="模板下载">
-          </div>
-
-          <div class="f-i dataInfo">
-            <img src="images/chart/icon_data_info@2x.png"  alt="详细信息">
-          </div>
-          <div class="f-i outputExcle">
-            <img src="images/chart/icon_data_download@2x.png"  alt="文件下载">
-          </div>
-          <div class="f-i dataMap">
-            <img src="images/chart/icon_data_map@2x.png"  alt="地图信息">
-          </div>
-          <div class="f-i selectPop dataSearch">
-            <img src="images/chart/icon_data_search@2x.png"  alt="搜索数据">
-          </div>
+         
         </div>
 
       </div>
 
       <div class="mapFiled-view">
-        <div class="search" style="top: 20px;left: 20px;">
-          <img src="images/chart/icon_search.png" alt="">
-          <input class="searchbar" type="text" placeholder="Search">
-          <button class="searchbar-Emptied" type="button">
+
+        <div class="map-parents">
+          <div class="search" style="top: 20px;left: 20px;">
+            <img src="images/chart/icon_search.png" alt="">
+            <input class="searchbar" type="text" placeholder="Search">
+            <button class="searchbar-Emptied" type="button">
                     <img src="images/chart/icon_close@2x.png" alt="">
                     </button>
-          <button class="selectSearchbar">搜索</button>
-          <div class="filedCondition">
+            <button class="selectSearchbar">搜索</button>
+            <div class="filedCondition">
+            </div>
+          </div>
+          <div id="map-control" style="top: 20px;right: 20px;">
+            <ul class="">
+              <li><button class="layer"><img src="images/chart/icon_layer.png" alt=""></button></li>
+              <li><button class="line"><img src="images/chart/icon_line.png" alt=""></button></li>
+              <li><button class="distance"><img src="images/chart/icon_mapdistance.png" alt=""></button></li>
+              <li><button class="area"><img src="images/chart/icon_maparea.png" alt=""></button></li>
+              <li><button class="zoomout"><img src="images/chart/icon_mapzoomout.png" alt=""></button></li>
+              <li><button class="zoomin"><img src="images/chart/icon_mapzoomin.png" alt=""></button></li>
+              <li class="mapmodelist">
+                <button class="mapmode"><img src="images/chart/icon_mapmode.png" alt=""></button>
+                <div class="mapmode_choice">
+                  <button id="vec_type" class="map1 active"><img src="images/chart/mapmode1active.png" alt=""></button>
+                  <button id="img_type" class="map2"><img src="images/chart/mapmode2.png" alt=""></button>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="CatalogPopup" style="right: 20px; top: 60px;">
+            <div class="BaseMap">
+              <img src="images/chart/icon_layer@2x.png" alt=""><span>底图加载</span>
+              <button class="clearmap">取消选择</button>
+            </div>
+            <ul id="CatalogPopup-ul"></ul>
           </div>
         </div>
 
@@ -320,12 +374,13 @@
 
 
         </div>
-
-
       </div>
 
+
     </div>
-    <!--map End-->
+
+  </div>
+  <!--map End-->
   </div>
 
 
@@ -334,7 +389,7 @@
   <div class="SelectPopup  _dataGet _a_translate">
 
     <div class="_selectTitle _j_translate">
-      <h2>数据展示</h2>
+      <h2>数据查询</h2>
 
       <button class="_closePop" type="button">
                 <img src="images/chart/icon_close@2x.png" alt="">
@@ -478,13 +533,23 @@
     </div>
 
     <div class="errorInformation">
-        
+
     </div>
 
   </div>
 
 
+  <div class="al-popup-prompt">
 
+    <div class="al-popup">
+
+      <div class="al-closer">
+        <span>提示：</span>
+        <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
+      </div>
+      <p class="al-prompt-informations"></p>
+    </div>
+  </div>
 
 
 

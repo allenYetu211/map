@@ -57,6 +57,7 @@
   -webkit-transition: background 0.3s;
   -o-transition: background 0.3s;
   transition: background 0.3s;
+  cursor: pointer;
 }
 
 .dataDisplay .listAry_cs li.active {
@@ -70,7 +71,6 @@
 }
 
 .dataDisplay .listAry_cs li span {
-  cursor: pointer;
   margin: 0 2px;
 }
 
@@ -464,4 +464,15 @@
   top: 10px;
   cursor: pointer;
   z-index: 999;
+}
+
+.deleteLaysth{
+  display: none;
+  margin-top: 10px;
+}
+
+.deleteLaysth button {
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  padding: 5px 10px;
 }
