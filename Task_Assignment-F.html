@@ -186,8 +186,10 @@
     }
     
     #left-sidebar .tab-page {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
       width: 380px;
-      height: 300px;
       margin: 0 auto;
       position: relative;
     }
@@ -221,7 +223,10 @@
     }
     
     #left-sidebar .tab-page ._table {
+      display: flex;
+      flex-direction: column;
       border: 1px solid #0088EB;
+      overflow: auto;
     }
     
     #left-sidebar .tab-page .allocation-list {
@@ -234,6 +239,7 @@
     
     #left-sidebar .tab-page ._table tr td:last-child {
       cursor: pointer;
+      color:#0088EB;
     }
     
     #left-sidebar .tab-page ._table tr td:nth-child(2) {
@@ -329,18 +335,25 @@
       position: absolute;
       top: 8px;
       left: 24%;
+      border: 1px solid #e0e0e0;
+       box-shadow: 0 2px 24px 0 rgba(0, 0, 0,0);
     }
     
     #GetInvestigator-search input,
     #GetInvestigator-search button {
       border: none;
       outline: none;
+      line-height: 25px;
     }
     
     #GetInvestigator-search button {
-      font-size: 18px;
+      font-size: 12px;
       color: #0088EB;
       background: #ffffff;
+    }
+
+    #GetInvestigator-search button.selectSearchbar {
+        height: 30px;
     }
     
     #GetInvestigator .success {
@@ -377,7 +390,6 @@
     
     #GetAssignTask {
       width: 1020px;
-      height: 570px;
       background: #ffffff;
       position: absolute;
       top: calc(50% - 285px);
@@ -423,8 +435,12 @@
       position: absolute;
       top: 8px;
       left: 15%;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0);
     }
-    
+    #GetAssignTask-search input {
+        height: 28px;
+    }
     #GetAssignTask-search input,
     #GetAssignTask-search button {
       border: none;
@@ -432,11 +448,28 @@
     }
     
     #GetAssignTask-search button {
-      font-size: 18px;
+      font-size: 12px;
       color: #0088EB;
       background: #ffffff;
     }
+
+    #GetAssignTask-search button.selectSearchbar {
+        height: 29px;
+    }
     /*任务清单结束*/
+    
+    .left-cnj {
+      overflow: hidden;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .phase-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
   </style>
 </head>
 

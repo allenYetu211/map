@@ -17,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="css/statictable.css">
   <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
   <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
   <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
 
 
@@ -511,6 +512,12 @@
       position: absolute;
       top: 18px;
       left: 15%;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0);
+    }
+    
+    #GetTask-search input {
+      height: 28px;
     }
     
     #GetTask-search input,
@@ -518,9 +525,11 @@
       border: none;
       outline: none;
     }
-    
+    #GetTask-search button.selectSearchbar {
+      height: 29px;
+    }
     #GetTask-search button {
-      font-size: 18px;
+      font-size: 12px;
       color: #0088EB;
       background: #ffffff;
     }
@@ -580,7 +589,8 @@
     }
     
     #generate-success {
-      width: 450px;
+      display: none;
+      width: 300px;
       height: 140px;
       background: #ffffff;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -592,14 +602,12 @@
       -o-transform: translate(-50%, -50%);
       z-index: 10000;
       text-align: center;
-      color: #0088EB;
-      display: none;
+      border-top: 3px solid #0088FB;
     }
     
     #generate-success h3 {
       margin: 0;
       line-height: 140px;
-      font-size: 20px;
     }
     
     #generate-success img {
@@ -664,7 +672,7 @@
       </div>
       <div class="dataPageList">
         <a href="javascript:;" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">任务生成</a>
-        <a href="javascript:;"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">任务分配</a>
+        <a href="Task_Assignment-F.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">任务分配</a>
       </div>
     </div>
     <div class="toolbar">
@@ -841,17 +849,25 @@
     </div>
   </div>
 
-
-
-
   <!--informations control panel Start-->
-
-
-
-
-
   <!--informations control panel End-->
 
+  <div class="al-popup-prompt">
+
+    <div class="al-popup">
+
+      <div class="al-closer">
+        <span>提示：</span>
+        <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
+      </div>
+      <p class="al-prompt-informations"></p>
+      <!--<div class="deleteLaysth">
+        <button class="_affirm" type="button">确认</button>
+        <button class="_cancel" type="button">取消</button>
+      </div>-->
+      <!--<button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt="">关闭</button>-->
+    </div>
+  </div>
 
 </body>
 

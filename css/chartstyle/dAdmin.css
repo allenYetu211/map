@@ -89,21 +89,20 @@ input:focus {
 }
 
 .exhibition .mapPosition .module-features .f-i .popInfor {
-    display: none;
-    width: auto;
-    padding: 5px;
-    border: 1px solid #e0e0e0;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    z-index: 9999;
-    white-space: nowrap;
-    background-color: #fff;
-
-    transform: translate(-50%, 0);
+  display: none;
+  width: auto;
+  padding: 5px;
+  border: 1px solid #e0e0e0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 9999;
+  white-space: nowrap;
+  background-color: #fff;
+  transform: translate(-50%, 0);
 }
 
-.exhibition .mapPosition .module-features .f-i:hover .popInfor{
+.exhibition .mapPosition .module-features .f-i:hover .popInfor {
   display: block;
 }
 
@@ -121,6 +120,7 @@ input:focus {
   background-color: #FFF;
   position: relative;
 }
+
 .exhibition .mapFiled-view .map-parents {
   width: 100%;
   top: 100%;
@@ -137,6 +137,10 @@ input:focus {
 .dataView-Pages th,
 .dataView-Pages td {
   min-width: 150px;
+}
+
+.dataView-Pages td {
+  cursor: pointer;
 }
 
 .dataView-Pages tr.active {
@@ -215,6 +219,7 @@ input:focus {
   line-height: 40px;
   margin: 0;
   position: relative;
+  cursor: pointer;
 }
 
 .exhibition._changeNew .tree-parents .tree-branch:after {
@@ -427,17 +432,17 @@ input:focus {
 
 #manageIframe {
   /*display: none;*/
-    position: absolute;
-    top: 125px;
-    right: 55px;
-    left: 55px;
-    bottom: 55px;
-    z-index: -1;
-    /*padding-top: 30px;*/
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-top: 5px solid #0088eb;
-    background-color: #fff;
+  position: absolute;
+  top: 125px;
+  right: 55px;
+  left: 55px;
+  bottom: 55px;
+  z-index: -1;
+  /*padding-top: 30px;*/
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: 5px solid #0088eb;
+  background-color: #fff;
 }
 
 #manageIframe.open {
@@ -451,9 +456,11 @@ input:focus {
   right: 10px;
   top: 5px;
 }
+
 #manageIframe h5 {
   padding: 0 10px;
 }
+
 #manageIframe>span img {
   width: 100%;
   cursor: pointer;

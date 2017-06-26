@@ -2,210 +2,238 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="renderer" content="webkit">
-    <title>字典管理 | 移民快速调查综合服务平台</title>
-    <!--首页加载需要使用到的css样式表-->
-    <link rel="stylesheet" type="text/css" href="css/demo.css">
-    <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
-    <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
-    <link rel="stylesheet" type="text/css" href="css/index_tool.css">
-    <link rel="stylesheet" type="text/css" href="css/statictable.css">
-    <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
-    <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
-    <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit">
+  <title>字典管理 | 移民快速调查综合服务平台</title>
+  <!--首页加载需要使用到的css样式表-->
+  <link rel="stylesheet" type="text/css" href="css/demo.css">
+  <link rel="stylesheet" type="text/css" href="css/zTreeStyle/zTreeStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/newStyle/newStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/newStyle/leftbar.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet-icon.css">
+  <link rel="stylesheet" type="text/css" href="css/index_tool.css">
+  <link rel="stylesheet" type="text/css" href="css/statictable.css">
+  <link rel="stylesheet" type="text/css" href="css/sumoselect.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/chart.css">
+  <link rel="stylesheet" type="text/css" href="css/chartstyle/development.css">
+  <link rel="stylesheet" type="text/css" href="lib/perfect/perfect-scrollbar.css">
 
 
-    <script src="echarts.min.js"></script>
-    <script src="md5.js"></script>
-    <script src="require.js"></script>
-    <script src="main.js"></script>
+  <script src="echarts.min.js"></script>
+  <script src="md5.js"></script>
+  <script src="require.js"></script>
+  <script src="main.js"></script>
 
-    <style>
-        .dataContent {
-            height: 100%;
-            padding-top: 60px;
-            background-color: #e9eff4;
-        }
-        /*左边部分开始*/
-        .dataContent .system-left-bar {
-            background: #FFFFFF;
-            border-radius: 5px;
-            height: 100%;
-            width: 300px;
-            min-width: 300px;
-            top: 60px;
-            bottom: 0;
-            z-index: 9;
-            padding: 0px;
-            margin: 8px;
-            float: left;
-        }
-        .system-left-bar>div{
-            padding: 0 10px;
-        }
-        .system-left-bar .dicSearch{
-            padding: 10px 0;
-        }
-        .system-left-bar .dicSearch .search_wrap{
-        	border: 1px solid #dfeef7;
-        	height: 38px;
-        	border-radius: 5px;
-        	overflow: hidden;
-        	position: relative;
-        }
-        .system-left-bar .dicSearch input{
-            height: 100%;
-            width: 75%;
-            border: 0;
-            line-height: 100%;
-            text-indent: 34px;
-            
-        }
-        .system-left-bar .dicSearch button{
-            width: 25%;
-            height: 100%;
-          	color: #0088eb;
-            background: #dfeef7;
-            outline: none;
-            border: 0;
-            cursor: pointer;
-            float: right;
-        }
-        .system-left-bar h3{
-            height: 36px;
-            line-height: 36px;
-            padding: 0 15px;
-            background-color: #b9d1e4;
-            color: #2a9bec;
-        }
-        .system-left-bar h3 button{
-            border: none;
-            background: none;
-            outline: none;
-            cursor: pointer;
-            border-radius: 4px;
-            position: relative;
-            top:4px;
-        }
-        .system-left-bar h3 button img{
-            width: 20px;
-            height: 20px;
-        }
-        .system-left-bar ul{
-            height: 80%;
-            overflow: auto;
-        }
-        .system-left-bar ul li{
-            height: 35px;
-            line-height: 35px;
-            padding: 0 15px;
-            transition:all 0.2s;
-            list-style: none;
-        }
-        .system-left-bar ul li:hover{
-            background: #f1f1f1;
-        }
-        .system-left-bar ul li.active{
-            background: #dcdcdc;
-        }
-        .system-left-bar ul li span{
-            cursor: pointer;
-        }
-        .system-left-bar ul li input{
-            display: none;
-        }
-        /*新增弹框*/
-        .dicA,.dicC{
-            position: absolute;
-            top:calc(50% - 70px);
-            left:calc(50% - 150px);
-            width: 300px;
-            height: 140px;
-            background: #FFFFFF;
-            border: 1px solid #dddddd;
-            border-radius: 5px;
-            box-shadow: 0 0 12px #c3c3c3;
-            display: none;
-        }
-        .dicA h3,.dicC h3{
-            padding: 5px;
-            color: #0088EB;
-        }
-        .dicA>div,.dicC>div{
-            padding: 5px;
-            font-size: 14px;
-        }
-        .dicA .name,.dicC .name{
-            margin-left: 20px;
-        }
-        .dicA .isBtn,.dicC .isBtn{
-            text-align: center;
-        }
-        .dicA button,.dicC button{
-            margin: 8px;
-            width: 60px;
-            border: none;
-            background: #f1f1f1;
-            outline:none;
-            cursor: pointer;
-        }
-        .dicA .inputCN,.dicC .inputCN{
-            width: 190px;
-        }
-        .dicA .inputEN,.dicC .inputEN{
-            width: 190px;
-        }
-        /*左边部分结束*/
-
-
-
-
-        /*右边部分*/
-
-        .dataContent .tableList {
-            background: #FFFFFF;
-            padding: 5px;
-            height: 100%;
-            width: calc(100% - 325px);
-            overflow: auto;
-            margin: 8px;
-            border-radius: 5px;
-        }
-
-        .dataContent .tableList .handle {
-            padding: 10px 5px;
-            border-bottom: 1px solid #f9f9f9;
-            margin-bottom: 10px;
-        }
-
-        .dataContent .tableList .handle button {
-            border: none;
-            background: none;
-            outline: none;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .dataContent .tableList .handle button.active {
-            background: rgba(0, 136, 235, .2);
-        }
-
-        .dataContent .tableList .handle button img {
-            width: 20px;
-            height: 20px;
-        }
-		.dataContent .tableList .handle .export{
-			cursor: pointer;
-			position: relative;
-			top: -1px;
-			display: inline-block;
-            /*border:1px solid #0088EB;
+  <style>
+    .dataContent {
+      height: 100%;
+      padding-top: 60px;
+      background-color: #e9eff4;
+    }
+    /*左边部分开始*/
+    
+    .dataContent .system-left-bar {
+      background: #FFFFFF;
+      border-radius: 5px;
+      height: 100%;
+      width: 300px;
+      min-width: 300px;
+      top: 60px;
+      bottom: 0;
+      z-index: 9;
+      padding: 0px;
+      margin: 8px;
+      float: left;
+    }
+    
+    .system-left-bar>div {
+      padding: 0 10px;
+    }
+    
+    .system-left-bar .dicSearch {
+      padding: 10px 0;
+    }
+    
+    .system-left-bar .dicSearch .search_wrap {
+      border: 1px solid #dfeef7;
+      height: 38px;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .system-left-bar .dicSearch input {
+      height: 100%;
+      width: 75%;
+      border: 0;
+      line-height: 100%;
+      text-indent: 34px;
+    }
+    
+    .system-left-bar .dicSearch button {
+      width: 25%;
+      height: 100%;
+      color: #0088eb;
+      background: #dfeef7;
+      outline: none;
+      border: 0;
+      cursor: pointer;
+      float: right;
+    }
+    
+    .system-left-bar h3 {
+      height: 36px;
+      line-height: 36px;
+      padding: 0 15px;
+      background-color: #b9d1e4;
+      color: #2a9bec;
+    }
+    
+    .system-left-bar h3 button {
+      border: none;
+      background: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 4px;
+      position: relative;
+      top: 4px;
+    }
+    
+    .system-left-bar h3 button img {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .system-left-bar ul {
+      height: 80%;
+      overflow: auto;
+    }
+    
+    .system-left-bar ul li {
+      height: 35px;
+      line-height: 35px;
+      padding: 0 15px;
+      transition: all 0.2s;
+      list-style: none;
+    }
+    
+    .system-left-bar ul li:hover {
+      background: #f1f1f1;
+    }
+    
+    .system-left-bar ul li.active {
+      background: #dcdcdc;
+    }
+    
+    .system-left-bar ul li span {
+      cursor: pointer;
+    }
+    
+    .system-left-bar ul li input {
+      display: none;
+    }
+    /*新增弹框*/
+    
+    .dicA,
+    .dicC {
+      position: absolute;
+      top: calc(50% - 70px);
+      left: calc(50% - 150px);
+      width: 300px;
+      height: 140px;
+      background: #FFFFFF;
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+      box-shadow: 0 0 12px #c3c3c3;
+      display: none;
+      border-top: 3px solid #0088EB;
+    }
+    
+    .dicA h3,
+    .dicC h3 {
+      padding: 5px;
+      color: #0088EB;
+    }
+    
+    .dicA>div,
+    .dicC>div {
+      padding: 5px;
+      font-size: 14px;
+    }
+    
+    .dicA .name,
+    .dicC .name {
+      margin-left: 20px;
+    }
+    
+    .dicA .isBtn,
+    .dicC .isBtn {
+      text-align: center;
+    }
+    
+    .dicA button,
+    .dicC button {
+      margin: 8px;
+      width: 60px;
+      border: none;
+      background: #f1f1f1;
+      outline: none;
+      cursor: pointer;
+    }
+    
+    .dicA .inputCN,
+    .dicC .inputCN {
+      width: 190px;
+    }
+    
+    .dicA .inputEN,
+    .dicC .inputEN {
+      width: 190px;
+    }
+    /*左边部分结束*/
+    /*右边部分*/
+    
+    .dataContent .tableList {
+      background: #FFFFFF;
+      padding: 5px;
+      height: 100%;
+      width: calc(100% - 325px);
+      overflow: auto;
+      margin: 8px;
+      border-radius: 5px;
+    }
+    
+    .dataContent .tableList .handle {
+      padding: 10px 5px;
+      border-bottom: 1px solid #f9f9f9;
+      margin-bottom: 10px;
+    }
+    
+    .dataContent .tableList .handle button {
+      border: none;
+      background: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    .dataContent .tableList .handle button.active {
+      background: rgba(0, 136, 235, .2);
+    }
+    
+    .dataContent .tableList .handle button img {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .dataContent .tableList .handle .export {
+      cursor: pointer;
+      position: relative;
+      top: -1px;
+      display: inline-block;
+      /*border:1px solid #0088EB;
             color: #0088EB;
             bottom: 4px;
             -webkit-border-radius: 4px;
@@ -214,174 +242,183 @@
             display: inline-block;
             padding: 0 5px;
             margin-left: 5px;*/
-           	padding: 0 6px;
-		}
-        .dataContent .tableList .handle .export img{
-            cursor: pointer;
-           	height: 18px;
-           	width: 18px;
-        }
-        
-        .dataContent .tableList .handle .export .pointer{
-        	position: absolute;
-        	top: 0;
-        	left:0;
-        	width: 20px;
-        	height: 20px;
-        	cursor: pointer;
-        	z-index: 101;;
-        }
-
-        #dicTableList {
-            height: calc(100% - 60px);
-            /*width: 100%;*/
-            overflow: auto;
-        }
-        #dicTableList th {
-            min-width: 80px;
-            width: 200px;
-        }
-
-        #dicTableList tr.active {
-            background: #ffe8e8;
-        }
-
-        #dicTableList td {
-            text-align: center;
-            /*position: relative;*/
-            /*height: 40px;*/
-        }
-
-        #dicTableList td>input,
-        #dicTableList td>div,
-        #dicTableList td>select {
-            width: 100%;
-            height: 100%;
-            /*position: absolute;*/
-            /*left: 0;*/
-            /*bottom: 0;*/
-            /*top: 0;*/
-            border: none;
-            display: none;
-        }
-        /*显示成功*/
-        .show-success {
-            width: 200px;
-            height: 100px;
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            z-index: 10000;
-            text-align: center;
-            color: #0088EB;
-            display: none;
-        }
-
-        .al-popup-prompt .al-prompt-informations {
-            margin: 0;
-            line-height: 100px;
-            font-size: 20px;
-            color: #0088EB;
-        }
-        /*导入错误提示*/
-        .errorLogBox{
-            width: 350px;
-            position: absolute;
-            top: 40%;
-            left: 40%;
-            background: #fff;
-            border-top: 5px solid #0088EB;
-            border-radius: 3px 3px 0 0;
-            box-shadow: 1px 1px 8px rgba(0, 0, 0, .1);
-            z-index: 9999;
-            display: none;
-        }
-        .errorLogBox h2{
-            padding: 0 20px;
-            line-height: 40px;
-            border-bottom: 1px solid #d0d0d0;
-            cursor: move;
-        }
-        .errorLogBox .closeBox{
-            float: right;
-            width: 25px;
-            height: 25px;
-            cursor: pointer;
-            position: relative;
-            top:8px;
-        }
-        .errorLogBox .content{
-            max-height: 200px;
-            overflow-y: auto;
-            padding: 5px;
-        }
-        /*显示手型*/
-        .Dictionary li{
-            cursor: pointer;
-        }
-        /*搜索框X*/
-       .dicSearch .dicSearch-close{
-		    position: absolute;
-		    /*top: 85px;
+      padding: 0 6px;
+    }
+    
+    .dataContent .tableList .handle .export img {
+      cursor: pointer;
+      height: 18px;
+      width: 18px;
+    }
+    
+    .dataContent .tableList .handle .export .pointer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      z-index: 101;
+      ;
+    }
+    
+    #dicTableList {
+      height: calc(100% - 60px);
+      /*width: 100%;*/
+      overflow: auto;
+    }
+    
+    #dicTableList th {
+      min-width: 80px;
+      width: 200px;
+    }
+    
+    #dicTableList tr.active {
+      background: #ffe8e8;
+    }
+    
+    #dicTableList td {
+      text-align: center;
+      /*position: relative;*/
+      /*height: 40px;*/
+    }
+    
+    #dicTableList td>input,
+    #dicTableList td>div,
+    #dicTableList td>select {
+      width: 100%;
+      height: 100%;
+      /*position: absolute;*/
+      /*left: 0;*/
+      /*bottom: 0;*/
+      /*top: 0;*/
+      border: none;
+      display: none;
+    }
+    /*显示成功*/
+    
+    .show-success {
+      width: 200px;
+      height: 100px;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      z-index: 10000;
+      text-align: center;
+      color: #0088EB;
+      display: none;
+    }
+    
+    .al-popup-prompt .al-prompt-informations {
+      margin: 0;
+    }
+    /*导入错误提示*/
+    
+    .errorLogBox {
+      width: 350px;
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      background: #fff;
+      border-top: 5px solid #0088EB;
+      border-radius: 3px 3px 0 0;
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, .1);
+      z-index: 9999;
+      display: none;
+    }
+    
+    .errorLogBox h2 {
+      padding: 0 20px;
+      line-height: 40px;
+      border-bottom: 1px solid #d0d0d0;
+      cursor: move;
+    }
+    
+    .errorLogBox .closeBox {
+      float: right;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      position: relative;
+      top: 8px;
+    }
+    
+    .errorLogBox .content {
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 5px;
+    }
+    /*显示手型*/
+    
+    .Dictionary li {
+      cursor: pointer;
+    }
+    /*搜索框X*/
+    
+    .dicSearch .dicSearch-close {
+      position: absolute;
+      /*top: 85px;
 		    left: 210px;*/
-		   	left:70%;
-		   	top: 6px;
-		    cursor: pointer;
-		    color: #058BEC;
-		    font-weight: bold;
-		}
-		 /*搜索框logo*/
-		.dicSearch .search_logo{
-			position: absolute;
-			left: 5px;
-			top: 5px;
-		}
-		/*导入*/
-		.file{
-			cursor: pointer;
-			position: absolute;
-			width: 35px;
-			height: 20px;
-			left: 0px;
-			opacity: 0;
-			z-index: 100;
-		}
-		
-		/* 左侧列表 */
-		.system-left-bar .Dictionary li span{
-			display: block;
-			height: 100%;
-			width: 100%;
-		}
-    </style>
+      left: 70%;
+      top: 6px;
+      cursor: pointer;
+      color: #058BEC;
+      font-weight: bold;
+    }
+    /*搜索框logo*/
+    
+    .dicSearch .search_logo {
+      position: absolute;
+      left: 5px;
+      top: 5px;
+    }
+    /*导入*/
+    
+    .file {
+      cursor: pointer;
+      position: absolute;
+      width: 35px;
+      height: 20px;
+      left: 0px;
+      opacity: 0;
+      z-index: 100;
+    }
+    /* 左侧列表 */
+    
+    .system-left-bar .Dictionary li span {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
 
 
-<div id="map"></div>
-<div id="top-sidebar">
+  <div id="map"></div>
+  <div id="top-sidebar">
 
     <div class="tsidebar-l">
-        <div class="logo">
-            <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
-        </div>
-		<div class="dataPageList">
-        	<a href="javascript:;"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字典管理</a>
-        </div>
-        <!--<div class="dataPageList">
+      <div class="logo">
+        <a href="mainInface.html"><img src="images/chart/logo@2x.png" alt=""></a>
+      </div>
+      <div class="dataPageList">
+        <a href="javascript:;"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字典管理</a>
+      </div>
+      <!--<div class="dataPageList">
         <a href="./development.html" class="active"><img src="images/chart/icon_zdzd_zdgl@2x.png" alt="">字段管理</a>
         <a href="./dataLaySth.html"><img src="images/chart/icon_zdzd_bbgl@2x.png" alt="">报表管理</a>
         </div>-->
     </div>
-    
+
     <div class="toolbar">
-        <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
+      <button type="button" class="backMain"><a href="mainInface.html"><img src="images/chart/icon_tcdl@2x.png" alt=""><span>返回首页</span></a></button>
     </div>
 
     <!--<div class="toolbar">-->
@@ -394,85 +431,85 @@
     <!--<button type="button" class="user"><a href><img src="images/chart/icon_tcdl@2x.png" alt=""><span>退出登陆</span></a></button>-->
     <!--</div>-->
 
-</div>
+  </div>
 
-<!--dataContent Show Left Stant-->
+  <!--dataContent Show Left Stant-->
 
-<div class="dataContent">
+  <div class="dataContent">
 
     <!-- tree Start-->
     <div class="system-left-bar">
-        <div>
-            <div class="dicSearch">
-            	<div class="search_wrap">
-            		<img class="search_logo" src="images/chart/icon_search.png"/>
-            		<input type="text" placeholder="请搜索"><span class="dicSearch-close">x</span>
-                	<button class="SearchBtn">搜索</button>
-            	</div>
-            </div>
-            <h3>
-                字典表
-                <button title="新增" class="addDictionary" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
-                <button title="修改" class="changeDictionary" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
-                <button title="删除" class="deleteDictionary" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
-            </h3>
-            <ul class="Dictionary">
-
-            </ul>
+      <div>
+        <div class="dicSearch">
+          <div class="search_wrap">
+            <img class="search_logo" src="images/chart/icon_search.png" />
+            <input type="text" placeholder="请搜索"><span class="dicSearch-close">x</span>
+            <button class="SearchBtn">搜索</button>
+          </div>
         </div>
+        <h3>
+          字典表
+          <button title="新增" class="addDictionary" type="button"><img src="images/chart/icon_zdplus@2x.png"></button>
+          <button title="修改" class="changeDictionary" type="button"><img src="images/chart/icon_zdedit@2x.png"></button>
+          <button title="删除" class="deleteDictionary" type="button"><img src="images/chart/icon_zddelete@2x.png"></button>
+        </h3>
+        <ul class="Dictionary">
+
+        </ul>
+      </div>
     </div>
     <!-- tree End-->
 
     <div class="tableList">
-        <div class="handle">
-            <button class="addListData" type="button" title="添加"><img src="images/chart/icon_zdplus@2x.png"></button>
-            <button class="changeListData" type="button" title="修改"><img src="images/chart/icon_zdedit@2x.png"></button>
-            <button class="deleteListData" type="button" title="删除"><img src="images/chart/icon_zddelete@2x.png"></button>
-            <button class="serverListData" type="button" title="保存"><img src="images/chart/icon_zdright@2x.png"></button>
-            
-           <span class='export'>
+      <div class="handle">
+        <button class="addListData" type="button" title="添加"><img src="images/chart/icon_zdplus@2x.png"></button>
+        <button class="changeListData" type="button" title="修改"><img src="images/chart/icon_zdedit@2x.png"></button>
+        <button class="deleteListData" type="button" title="删除"><img src="images/chart/icon_zddelete@2x.png"></button>
+        <button class="serverListData" type="button" title="保存"><img src="images/chart/icon_zdright@2x.png"></button>
+
+        <span class='export'>
             	<div class="pointer" title="导入"></div>
             	<input type="file" id="file" name="file"  class="file" accept=".xlc,.xlm,.xls,.xlt,.xlw,.xlsx"/>
             	<img src="images/chart/daoru.png"/>
             </span>
-    		
-        </div>
 
-        <div id="dicTableList">
-			
-        </div>
+      </div>
+
+      <div id="dicTableList">
+
+      </div>
     </div>
 
 
-</div>
+  </div>
 
-<div class="dicA">
+  <div class="dicA">
     <h3>新建字典表</h3>
     <div class="name">中文名：<input class="inputCN" type="text"></div>
     <div class="name">英文名：<span style="display: none;">TB_DIC_</span><input class="inputEN" type="text"></div>
     <div class="isBtn"><button class="confirm">确认</button><button class="cancel">取消</button></div>
-</div>
-<div class="dicC">
+  </div>
+  <div class="dicC">
     <h3>修改字典表</h3>
     <div class="name">中文名：<input class="inputCN" type="text"></div>
     <div class="name">英文名：<span></span></div>
     <div class="isBtn"><button class="confirm">确认</button><button class="cancel">取消</button></div>
-</div>
+  </div>
 
-    <div class="al-popup-prompt">
-        <div class="al-popup">
-            <div class="al-closer">
-                <span>提示：</span>
-                <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
-            </div>
-            <p class="al-prompt-informations"></p>
-        </div>
+  <div class="al-popup-prompt">
+    <div class="al-popup">
+      <div class="al-closer">
+        <span>提示：</span>
+        <button class="al-closer-b"><img src="images/chart/icon_close@2x.png" alt=""></button>
+      </div>
+      <p class="al-prompt-informations"></p>
     </div>
+  </div>
 
-<div class="errorLogBox">
+  <div class="errorLogBox">
     <h2 id="move">提示<img class="closeBox" src="images/chart/icon_close@2x.png" alt=""></h2>
     <div class="content"></div>
-</div>
+  </div>
 </body>
 
 </html>
