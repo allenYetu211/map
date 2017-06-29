@@ -146,12 +146,19 @@ input:focus {
   text-decoration: none;
 }
 
-#top-sidebar.dark .dataPageList a {
+#top-sidebar.dark .dataPageList a,
+#top-sidebar.dark .dataPageList a.active {
   color: #fff;
+  background-color: #151E3E;
 }
 
 #top-sidebar .dataPageList a:hover {
   background-color: #f4f4f4;
+}
+
+#top-sidebar.dark .dataPageList a:hover {
+  color: #fff;
+  background-color: #3e486d;
 }
 
 #top-sidebar .dataPageList a img {
@@ -342,7 +349,8 @@ input:focus {
 
 /************ BOTTOM ************/
 
-.dark #map-control {
+.dark #map-control,
+#map-control.dakr {
   background: #151E3E;
 }
 
@@ -358,7 +366,7 @@ input:focus {
   border-radius: 4px;
 }
 
-.dark #map-control ul li {
+#map-control.dakr ul li {
   background: #151E3E;
 }
 
@@ -373,7 +381,7 @@ input:focus {
   list-style: none;
 }
 
-.dark #map-control ul li:hover {
+#map-control.dakr ul li:hover {
   background: #0c1123;
 }
 
@@ -1766,7 +1774,7 @@ div.login_informations button._close {
 .cp-pointer._dataGet.open {
   display: flex;
   flex-direction: column;
-  height: 94%;
+  height: 92%;
 }
 
 .cp-pointer._dataGet.open .showFieldData {
@@ -2443,6 +2451,11 @@ table th {
   display: none;
 }
 
+.si-pages.dakr {
+  background-color: #1b2341;
+  color: #fff;
+}
+
 .vi-pages,
 .si-pages {
   position: absolute;
@@ -2627,6 +2640,7 @@ table th {
 
 .dark ._dataGet .form-control {
   background-color: #232C4D;
+  color: #fff;
 }
 
 ._dataGet .btn-success {
@@ -2727,7 +2741,7 @@ button._hide {
   display: none;
   position: absolute;
   width: 800px;
-  height: 750px;
+  height: 670px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2736,6 +2750,11 @@ button._hide {
   flex-direction: column;
   border-top: 5px solid #0088EB;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, .3)
+}
+
+#slide-pop h4 {
+  padding: 3px 15px 10px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 #slide-pop.dakr {
@@ -2749,7 +2768,7 @@ button._hide {
 #slide-pop .slide-close {
   position: absolute;
   right: 15px;
-  top: 15px;
+  top: 8px;
   color: #fff;
   z-index: 9999;
 }
@@ -2795,6 +2814,10 @@ button._hide {
 
 #slide-pop .typeTexttitle {
   display: none;
+}
+
+#slide-pop ._inforpicture ._picture img {
+  width: 80%;
 }
 
 ._inforpicture {

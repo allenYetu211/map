@@ -9,7 +9,7 @@ document.write('<script type="text/javascript" src="sheetPanel/sheet/EnterpriseS
 document.write('<script type="text/javascript" src="sheetPanel/sheet/EnterpriseSheet/src/EnterpriseSheet/Config.js"></script>');
 document.write('<script type="text/javascript" src="sheetPanel/sheet/EnterpriseSheet/enterprisesheet.js"></script>');
 document.write('<script type="text/javascript" src="sheetPanel/sheet/EnterpriseSheet/src/EnterpriseSheet/api/SheetAPI.js"></script>');
-
+// http://122.224.94.108:8002/THService/ReportService.asmx
 
 function Sheet(divId, zoomSize, withRowColTitle, withComment) {
   this._SHEET_API = null;
@@ -18,8 +18,8 @@ function Sheet(divId, zoomSize, withRowColTitle, withComment) {
   this._withComment = withComment;
   this._withRowColTitle = withRowColTitle;
   this._clearVar = [];
-  // this._serviceUrl = '/thememap/ZJService/NewReportService/ReportService.asmx/';
-  this._serviceUrl = 'http://122.224.94.108:8002/ZJService/NewReportService/ReportService.asmx/';
+  this._serviceUrl = '/thememap/THService/ReportService.asmx';
+  // this._serviceUrl = 'http://122.224.94.108:8002/THService/ReportService.asmx';
   this._namespace = 'TH.ReportSystem';
   var _this = this;
   Ext.onReady(function() {
@@ -165,7 +165,7 @@ Sheet.prototype.saveValue = function(reportId, pageIndex) {
   };
   $.ajax({
     url: _this._serviceUrl + 'SavePageVariable',
-    type: 'GET',
+    type: 'POST',
     async: false,
     data: param,
     success: function(response) {

@@ -362,20 +362,22 @@
   border-bottom: 1px solid #e0e0e0;
   padding: 0px 15px;
 }
+
 .al-popup-prompt .al-popup .al-closer {
   display: flex;
   justify-content: space-between;
 }
 
- .Progressbar{
-    height: 5px;
-    background: #0088eb;
-    display: block;
-    width: 0%;
-    transition: width 0.3s;
-    -webkit-transition: width 0.3s;
-    -o-transition: width 0.3s;
+.Progressbar {
+  height: 5px;
+  background: #0088eb;
+  display: block;
+  width: 0%;
+  transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
 }
+
 .al-popup-prompt .al-popup .al-closer button {
   background: transparent;
   border: none;
@@ -390,7 +392,7 @@
 
 .al-popup-prompt .al-popup .al-prompt-informations {
   text-align: center;
-  /*margin-top: 10px;*/
+  margin-top: 10px;
 }
 
 .al-popup-prompt .al-popup .al-prompt-informations+button {
@@ -403,7 +405,7 @@
   cursor: pointer;
 }
 
-.btn-parents{
+.btn-parents {
   margin: 10px 0;
 }
 
@@ -436,37 +438,53 @@
 
 .examineAccessoryPopup {
   display: none;
-  width: 600px;
-  height: 600px;
-  padding: 50px;
-  background-color:#333;
+  width: 800px;
+  height: 670px;
+  /*padding: 50px;*/
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   z-index: 999;
-}
-.examineAccessoryPopup img {
-  width: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  flex-direction: column;
+  border-top: 5px solid #0088EB;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, .3);
 }
 
+.examineAccessoryPopup h4 {
+  padding: 3px 15px 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.examineAccessoryPopup img.accessoryPic {
+  width: 80%;
+}
+.examineAccessoryPopup .examin-pictrue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+}
 
 .accessory-popup .ac-popup button.closeAcPopup {
   border: none;
 }
+
 .examineAccessoryPopup .examineAccessory-closer {
   width: 25px;
   height: 25px;
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 0px;
   cursor: pointer;
   z-index: 999;
 }
 
-.deleteLaysth{
+.deleteLaysth {
   display: none;
   margin-top: 10px;
 }
@@ -475,4 +493,22 @@
   background-color: transparent;
   border: 1px solid #e0e0e0;
   padding: 5px 10px;
+}
+
+.examineAccessoryPopup .contorl {
+  height: 50px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+}
+
+.examineAccessoryPopup .contorl button {
+  flex: 1;
+  background-color: transparent;
+  color: fff;
+  border: none;
+  border-right: 1px solid #e0e0e0;
+}
+
+.examineAccessoryPopup .contorl button:last-child {
+  border: none;
 }

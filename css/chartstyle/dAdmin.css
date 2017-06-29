@@ -171,6 +171,100 @@ input:focus {
   background-color: #e9eff4;
 }
 
+.exhibition._changeNew.dakr .dAdminTree {
+  background: #151E3E;
+}
+
+.exhibition._changeNew.dakr .tree-parents {
+  background: #151E3E;
+}
+
+.exhibition._changeNew.dakr .tree-radius>p {
+  background: #2c3554;
+}
+
+.exhibition._changeNew.dakr .tree-parents .tree-bg {
+  background: #222c4e;
+  color: #fff;
+}
+
+.exhibition._changeNew.dakr .tree-parents .tree-p-branch ul li.active {
+  background: #151E3E;
+}
+
+.exhibition._changeNew.dakr .mapPosition {
+  background: #151E3E;
+}
+
+.exhibition._changeNew.dakr .mapFiled-view {
+  background: #151E3E;
+}
+
+.exhibition._changeNew.dakr .mapPosition .module-md div {
+  background: #151E3E;
+}
+
+.exhibition._changeNew.dakr .mapPosition .module-md div.active {
+  background: #2c3554;
+}
+
+.exhibition._changeNew.dakr .search {
+  background: #2c3554;
+  color: #fff;
+}
+
+.exhibition._changeNew.dakr .search input.searchbar {
+  background: transparent;
+  color: #fff;
+}
+
+.exhibition._changeNew.dakr .vi-pages {
+  background: #2c3554;
+  color:#fff;
+}
+
+.exhibition._changeNew.dakr ._Tr-translate
+{
+  background: #2c3554;
+  color:#fff;
+}
+.exhibition._changeNew.dakr  .dataView-Pages td {
+  background:#151E3E;
+  color:#fff;
+}
+
+._a_translate.dakr {
+  background:#151E3E;
+}
+._a_translate.dakr ._selectTitle {
+  background:#2c3554;
+  color: #fff;
+}
+
+._a_translate.dakr .query-builder .rule-container {
+  background:#1c2544;
+  color: #fff;
+}
+
+._a_translate.dakr .form-control {
+    background:#2e3756;
+    color: #fff;
+}
+
+._a_translate.dakr  .btn-danger {
+  background:#2e3756;
+    color: #fff;
+}
+
+._a_translate.dakr .query-builder .rules-group-container {
+  background:#2c3a56;
+}
+._a_translate.dakr .select {
+  background:#151E3E;
+}
+.exhibition._changeNew.dakr  .dataView-Pages tr.active {
+  background: #222c4e;
+}
 .exhibition._changeNew .tree-parents {
   padding: 10px;
 }
