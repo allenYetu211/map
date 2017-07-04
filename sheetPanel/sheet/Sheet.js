@@ -1,4 +1,4 @@
-﻿document.write('<link rel="stylesheet" type="text/css" href="sheetPanel/sheet/extjs4.2.1/ext-theme-gray-all.css"></link>');
+document.write('<link rel="stylesheet" type="text/css" href="sheetPanel/sheet/extjs4.2.1/ext-theme-gray-all.css"></link>');
 document.write('<link rel="stylesheet" type="text/css" href="sheetPanel/sheet/EnterpriseSheet/resources/css/common.css"></link>');
 document.write('<link rel="stylesheet" type="text/css" href="sheetPanel/sheet/EnterpriseSheet/resources/css/sheet.css"></link>');
 document.write('<link rel="stylesheet" type="text/css" href="sheetPanel/sheet/EnterpriseSheet/resources/css/toolbar.css"></link>');
@@ -18,8 +18,8 @@ function Sheet(divId, zoomSize, withRowColTitle, withComment) {
   this._withComment = withComment;
   this._withRowColTitle = withRowColTitle;
   this._clearVar = [];
-  this._serviceUrl = '/thememap/THService/ReportService.asmx';
-  // this._serviceUrl = 'http://122.224.94.108:8002/THService/ReportService.asmx';
+  this._serviceUrl = '/thememap/THService/ReportService.asmx/';
+  // this._serviceUrl = 'http://122.224.94.108:8002/THService/ReportService.asmx/';
   this._namespace = 'TH.ReportSystem';
   var _this = this;
   Ext.onReady(function() {
